@@ -1,0 +1,21 @@
+10/21/2021
+Features:
+Save a user story
+- User story class created
+- iteration class created
+- working on writing to file (Need to test)
+
+Recall user stories
+- need to work on reading from file
+
+Assign a developer to a User Story (3)
+- to do
+
+Create Iteration (4)
+- Iteration class
+- need to connect to ScrumMaster class
+See Kanban Board (5)
+
+Exit (0)
+- this has been implemented
+- files closed
