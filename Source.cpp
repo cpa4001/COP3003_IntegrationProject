@@ -54,7 +54,7 @@ int main() {
 	} while (userInputKey);
 
 	//close the csv to clear memmory
-	savedUserStories.close();
+	writeToUserStories.close();
 
 	return 0;
 }

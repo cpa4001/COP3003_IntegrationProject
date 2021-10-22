@@ -6,6 +6,14 @@
 
 #include "Iteration.h"
 
+
+/**
+* Constructor for Iteration
+* Parameters:
+* iterationName		Name of the iteration
+* iterationType		Type of iteration: sprint, release, iteration, etc.
+* iterationLength	Lenght of iteration in days
+*/
 Iteration::Iteration(std::string iterationName,
 	std::string iterationType,
 	int iterationLength)  
@@ -27,20 +35,40 @@ void Iteration::setIterationType(std::string value) { iterationType = value; }
 void Iteration::setIterationLength(int value) { iterationLength = value; }
 void Iteration::setEstimatedVelocity(int value) { estimatedVelocity = value; }
 
+/**
+* adds UserStory to the backlog(list of userstories)
+* Parameters:
+* userstory		userstory object
+*/
 void Iteration::addUserStory(UserStory& userstory) {
 	productBacklog.push_back(userstory);
 }
 
+/**
+* prints names of user stories in the iteration's backolog to console
+*/
 void Iteration::printStories() {
 	for (int index = 0; index < productBacklog.size(); index++) {
 		std::cout << productBacklog[index].getStoryName() << std::endl;
 	}
 }
 
+/**
+* Constructor for Sprint - Calls Iteration constructor
+* Parameters:
+* sprintName				Name of sprint
+* iterationLengthInDays		lenght of the iteration in days
+*/
 Sprint::Sprint(std::string sprintName, int iterationLengthInDays) : Iteration(sprintName, "Sprint", iterationLengthInDays) {
 
 }
 
+/**
+* Constructor for Sprint - Calls Iteration constructor
+* Parameters:
+* sprintName				Name of sprint
+* iterationLengthInDays		lenght of the iteration in days
+*/
 Release::Release(std::string releaseName, int iterationLengthInDays) :
 	Iteration(releaseName, "Release", iterationLengthInDays) {
 

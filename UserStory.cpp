@@ -6,6 +6,10 @@
 
 #include "UserStory.h"
 
+
+/**
+	default constructor - intialize empty UserStory
+*/
 UserStory::UserStory() {
 	storyName = "";
 	storyBody = "";
@@ -15,6 +19,14 @@ UserStory::UserStory() {
 	storyID++;
 }
 
+/**
+	default constructor - intialize empty UserStory
+	Parameters:
+	storyName	Name of user story
+	storyBody	Description of user story
+	storyPoints	integer value of points assigned to story
+
+*/
 UserStory::UserStory(std::string storyName, std::string storyBody, int storyPoints) {
 	this->storyName = storyName;
 	this->storyBody = storyBody;
@@ -50,4 +62,7 @@ void UserStory::setStoryName(std::string value) { storyName = value; }
 void UserStory::setStoryBody(std::string value) { storyBody = value; }
 void UserStory::setStoryPoints(int value) { storyPoints = value; }
 
+/**
+* sets the Userstory to complete 
+*/
 void UserStory::completeUserStory() { isFinished = true; }
