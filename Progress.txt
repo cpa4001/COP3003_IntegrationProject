@@ -14,8 +14,9 @@ Assign a developer to a User Story (3)
 Create Iteration (4)
 - Iteration class
 - need to connect to ScrumMaster class
-See Kanban Board (5)
 
+See Kanban Board (5)
+- to do 
 Exit (0)
 - this has been implemented
 - files closed
