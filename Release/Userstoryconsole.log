@@ -1,0 +1,12 @@
+﻿  Backlog.cpp
+C:\Users\chris\source\repos\Userstoryconsole\Backlog.cpp(37,28): warning C4018: '<': signed/unsigned mismatch
+  Collaborator.cpp
+  Iteration.cpp
+C:\Users\chris\source\repos\Userstoryconsole\Iteration.cpp(51,28): warning C4018: '<': signed/unsigned mismatch
+  Source.cpp
+  UserStory.cpp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 196 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Userstoryconsole.vcxproj -> C:\Users\chris\source\repos\Userstoryconsole\Release\Userstoryconsole.exe

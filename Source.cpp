@@ -14,6 +14,7 @@ std::ostream& operator<<(std::ostream& out, UserStory &userstory);
 UserStory createUserStory();
 void saveUserStory(UserStory& userstory, std::ofstream& savedUserStories);
 bool is_empty(std::ifstream& pFile);
+void createAndSaveStory(std::ofstream& writeToUserStories);
 
 int main() {
 
@@ -24,31 +25,35 @@ int main() {
 	if (writeToUserStories.is_open() && is_empty(readFromUserStories))
 	{
 		writeToUserStories << "Story ID, Story Body, Story Description, Status,";
-		writeToUserStories << "Current Developers\n";
+		writeToUserStories << " Current Developers\n";
 	}
 	else std::cout << "Unable to open file";
 
 	int	userInputKey = 0;
 	do {
-		
 
-
-		std::cout << "Add a User Story (1)" << std::endl;
-		std::cout << "Look up Product Backlog (2)" << std::endl;
+		std::cout << "Add a User Story                   (1)" << std::endl;
+		std::cout << "Look up Product Backlog		   (2)" << std::endl;
 		std::cout << "Assign a developer to a User Story (3)" << std::endl;
-		std::cout << "Create Iteration (4)" << std::endl;
-		std::cout << "See Kanban Board (5)" << std::endl;
-		std::cout << "Exit (0)" << std::endl;
+		std::cout << "Create Iteration		   (4)" << std::endl;
+		std::cout << "See Kanban Board					(5)" << std::endl;
+		std::cout << "Exit								(0)" << std::endl;
+		
 		std::cin >> userInputKey;
+		std::cin.clear();
+		//cin.ignore();
 
 
 		switch (userInputKey) {
 			case 1:
-				UserStory newStory = createUserStory();
-				//ask for input
-				//create userstory based on input
-				//save to file
-				saveUserStory(newStory, writeToUserStories);
+				createAndSaveStory(writeToUserStories);
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+			case 4:
+				break;
 		}
 
 	} while (userInputKey);
@@ -72,6 +77,7 @@ UserStory createUserStory() {
 	std::cout << "Story Name: "; 
 	std::cin >> storyName;
 	std::cout << std::endl;
+	//std::cin.clear();
 
 	std::cout << "Story Description: ";
 	std::cin >> storyBody;
@@ -89,7 +95,7 @@ void saveUserStory(UserStory &userstory, std::ofstream &savedUserStories) {
 	
 	if (savedUserStories.is_open())
 	{
-		savedUserStories << userstory.getStoryName() << ", " << userstory.getStoryBody() << ", " << userstory.getStoryPoints();
+		savedUserStories << userstory.getStoryName() << ", " << userstory.getStoryBody() << ", " << userstory.getStoryPoints() << "\n";
 	}
 	else std::cout << "Unable to open file";
 }
@@ -101,4 +107,13 @@ https://newbedev.com/checking-for-an-empty-file-in-c
 bool is_empty(std::ifstream& pFile)
 {
 	return pFile.peek() == std::ifstream::traits_type::eof();
+}
+
+void createAndSaveStory(std::ofstream& writeToUserStories) {
+	//ask for input
+	//create userstory based on input
+	UserStory newStory = createUserStory();
+
+	//save to file
+	saveUserStory(newStory, writeToUserStories);
 }

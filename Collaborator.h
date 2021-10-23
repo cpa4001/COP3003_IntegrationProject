@@ -5,10 +5,11 @@ class Collaborator
 {
 private:
 	std::string collaboratorName;
-	int collaboratorID;
+	
 	std::string role;
 	std::vector<int> storiesWorkingOn;
 public:
+	static int collaboratorID;
 	Collaborator();
 	Collaborator(std::string collaboratorName, std::string role);
 	

@@ -1,5 +1,6 @@
 #include "Collaborator.h"
 
+int Collaborator::collaboratorID = 0;
 /**
 	default constructor - intialize empty Collaborator
 */

@@ -6,6 +6,7 @@
 
 #include "UserStory.h"
 
+int UserStory::storyID = 0;
 
 /**
 	default constructor - intialize empty UserStory

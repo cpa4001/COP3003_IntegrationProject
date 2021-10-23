@@ -12,11 +12,13 @@ private:
 	std::string storyName;
 	std::string storyBody;
 	int storyPoints;
-	//Id used to track stories 
-	int storyID;
+	
 	bool isFinished;
 
 public:
+	//Id used to track stories 
+	static int storyID;
+
 	//constructors
 	UserStory();
 	UserStory(std::string storyName, std::string storyBody, int storyPoints);
