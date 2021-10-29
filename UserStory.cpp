@@ -53,7 +53,6 @@ UserStory::UserStory(UserStory& userstory) {
 }
 */
 
-
 std::string UserStory::getStoryName() { return storyName; }
 std::string UserStory::getStoryBody() { return storyBody; }
 int UserStory::getStoryPoints() { return storyPoints; }
