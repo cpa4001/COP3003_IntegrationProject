@@ -8,9 +8,9 @@ So that       (**Why** I want to accomplish)          <br>
  
 
 Milestone 1:
-- users shall be able to create user stories
-- users shall be able to look up user stories created
-- system shall be able to save user stories to a csv file
+- Users shall be able to create user stories
+- Users shall be able to look up user stories created
+- System shall be able to save user stories to a csv file
 
 
 ## Getting Started
