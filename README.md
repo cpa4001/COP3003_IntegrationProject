@@ -5,10 +5,12 @@ A basic layout for a user story looks like: <br>
 As a who      (**Who** wants to accomplish something) <br>
 I want a what (**What** I want to accomplish)         <br>
 So that       (**Why** I want to accomplish)          <br>
+ 
 
-Users will be able to:
-- create user stories
-- look at created stories 
+Milestone 1:
+- users shall be able to create user stories
+- users shall be able to look up user stories created
+- system shall be able to save user stories to a csv file
 
 
 ## Getting Started
