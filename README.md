@@ -11,16 +11,12 @@ Milestone 1:
 - Users shall be able to create user stories
 - Users shall be able to look up user stories created
 - System shall be able to save user stories to a csv file
-- Users should be able to continuosly perform the above until exiting the program
+- Users should be able to continuously perform the above until exiting the program
 
 
 ## Getting Started
 ``` sh
 > git clone https://github.com/cpa4001/COP3003_IntegrationProject UserStoryApp
-
-#Runs your Blazor Application
-> cd UserStoryApp
-> dotnet watch run
 ```
 
 
