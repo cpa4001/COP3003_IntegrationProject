@@ -14,23 +14,13 @@ Milestone 1:
 
 
 ## Getting Started
-Download the .NET SDK
 ``` sh
-# Verifies .NET SDK has been downloaded correctly
-> dotnet
-
-#Creates new Blazor Application
-> dotnet new blazorserver -o UserStoryApp --no-https
-#OR
 > git clone https://github.com/cpa4001/COP3003_IntegrationProject UserStoryApp
 
 #Runs your Blazor Application
 > cd UserStoryApp
 > dotnet watch run
 ```
-Make sure to have ASP.NET and web development workload downloaded in Visual Studio to run your Blazor app in the terminal within Visual Studio.
-
-To Run your project within Visual Studio, open the Client folder of your project in the terminal, and run the dotnet watch run command.
 
 
 ## Software
