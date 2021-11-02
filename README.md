@@ -5,30 +5,19 @@ A basic layout for a user story looks like: <br>
 As a who      (**Who** wants to accomplish something) <br>
 I want a what (**What** I want to accomplish)         <br>
 So that       (**Why** I want to accomplish)          <br>
+ 
 
-Users will be able to:
-- create user stories
-- look at created stories 
+Milestone 1:
+- Users shall be able to create user stories
+- Users shall be able to look up user stories created
+- System shall be able to save user stories to a csv file
+- Users should be able to continuously perform the above until exiting the program
 
 
 ## Getting Started
-Download the .NET SDK
 ``` sh
-# Verifies .NET SDK has been downloaded correctly
-> dotnet
-
-#Creates new Blazor Application
-> dotnet new blazorserver -o UserStoryApp --no-https
-#OR
 > git clone https://github.com/cpa4001/COP3003_IntegrationProject UserStoryApp
-
-#Runs your Blazor Application
-> cd UserStoryApp
-> dotnet watch run
 ```
-Make sure to have ASP.NET and web development workload downloaded in Visual Studio to run your Blazor app in the terminal within Visual Studio.
-
-To Run your project within Visual Studio, open the Client folder of your project in the terminal, and run the dotnet watch run command.
 
 
 ## Software
