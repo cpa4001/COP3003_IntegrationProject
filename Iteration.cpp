@@ -53,23 +53,3 @@ void Iteration::printStories() {
 	}
 }
 
-/**
-* Constructor for Sprint - Calls Iteration constructor
-* Parameters:
-* sprintName				Name of sprint
-* iterationLengthInDays		lenght of the iteration in days
-*/
-Sprint::Sprint(std::string sprintName, int iterationLengthInDays) : Iteration(sprintName, "Sprint", iterationLengthInDays) {
-
-}
-
-/**
-* Constructor for Sprint - Calls Iteration constructor
-* Parameters:
-* sprintName				Name of sprint
-* iterationLengthInDays		lenght of the iteration in days
-*/
-Release::Release(std::string releaseName, int iterationLengthInDays) :
-	Iteration(releaseName, "Release", iterationLengthInDays) {
-
-}

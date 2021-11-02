@@ -141,14 +141,22 @@
   <ItemGroup>
     <ClInclude Include="Backlog.h" />
     <ClInclude Include="Collaborator.h" />
+    <ClInclude Include="Developer.h" />
     <ClInclude Include="Iteration.h" />
+    <ClInclude Include="Release.h" />
+    <ClInclude Include="ScrumMaster.h" />
+    <ClInclude Include="Sprint.h" />
     <ClInclude Include="UserStory.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Backlog.cpp" />
     <ClCompile Include="Collaborator.cpp" />
+    <ClCompile Include="Developer.cpp" />
     <ClCompile Include="Iteration.cpp" />
+    <ClCompile Include="Release.cpp" />
+    <ClCompile Include="ScrumMaster.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="Sprint.cpp" />
     <ClCompile Include="UserStory.cpp" />
   </ItemGroup>
   <ItemGroup>

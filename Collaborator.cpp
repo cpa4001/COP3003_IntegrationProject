@@ -24,11 +24,3 @@ Collaborator::Collaborator(std::string collaboratorName, std::string role) {
 }
 
 
-ScrumMaster::ScrumMaster(std::string collaboratorName) : Collaborator(collaboratorName, "Scrum Master") {}
-
-/**
-* 
-*/
-void ScrumMaster::assignStoryToCollaborator(int collaboratorID, int storyID) {
-
-}

@@ -50,22 +50,3 @@ public:
 	void addUserStory(UserStory& userstory);
 	void printStories();
 };
-
-class Sprint : public Iteration
-{
-private:
-	
-
-public: 
-	Sprint(std::string sprintName, int iterationLengthInDays);
-
-
-};
-
-class Release : public Iteration
-{
-
-
-public:
-	Release(std::string releaseName, int iterationLengthInDays);
-};

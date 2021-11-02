@@ -8,7 +8,14 @@
 #include <fstream>
 #include "UserStory.h"
 #include "Backlog.h"
+
 #include "Iteration.h"
+#include "Sprint.h"
+#include "Release.h"
+
+#include "Collaborator.h"
+#include "Developer.h"
+#include "ScrumMaster.h"
 
 //could have some of these functions in a file class
 std::ostream& operator<<(std::ostream& out, UserStory &userstory);

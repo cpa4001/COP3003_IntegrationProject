@@ -15,20 +15,5 @@ public:
 	
 };
 
-class ScrumMaster : public Collaborator
-{
-public:
-	ScrumMaster(std::string collaboratorName);
 
-	void assignStoryToCollaborator(int collaboratorID, int storyID);
-	
-};
-
-class Developer : public Collaborator
-{
-public:
-	Developer();
-	
-
-};
 
