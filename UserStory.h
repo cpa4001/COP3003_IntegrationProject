@@ -22,6 +22,8 @@ private:
 		DONE
 	};
 
+	Status status;
+
 public:
 	//Id used to track stories 
 	static int storyID;

@@ -15,7 +15,7 @@ UserStory::UserStory() {
 	storyName = "";
 	storyBody = "";
 	storyPoints = 0;
-	isFinished = false;
+	status = TO_DO;
 
 	storyID++;
 }
@@ -38,7 +38,7 @@ UserStory::UserStory(std::string storyName, std::string storyBody, int storyPoin
 	else {
 		this->storyPoints = storyPoints;
 	}
-	isFinished = false;
+	status = TO_DO;
 
 	storyID++;
 }
@@ -65,4 +65,4 @@ void UserStory::setStoryPoints(int value) { storyPoints = value; }
 /**
 * sets the Userstory to complete 
 */
-void UserStory::completeUserStory() { isFinished = true; }
+void UserStory::completeUserStory() { status = DONE; }

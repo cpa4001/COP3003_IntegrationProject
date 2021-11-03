@@ -1,2 +1,10 @@
-﻿  Source.cpp
+﻿  Backlog.cpp
+C:\Users\chris\source\repos\Userstoryconsole\Backlog.cpp(37,28): warning C4018: '<': signed/unsigned mismatch
+  Iteration.cpp
+C:\Users\chris\source\repos\Userstoryconsole\Iteration.cpp(51,28): warning C4018: '<': signed/unsigned mismatch
+  Release.cpp
+  Source.cpp
+  Sprint.cpp
+  UserStory.cpp
+  Generating Code...
   Userstoryconsole.vcxproj -> C:\Users\chris\source\repos\Userstoryconsole\Debug\Userstoryconsole.exe
