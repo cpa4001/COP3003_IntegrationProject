@@ -4,7 +4,8 @@
 	Purpose: Declaration file for Backlog class
 */
 
-#pragma once
+#ifndef BACKLOG_H
+#define BACKLOG_H
 #include <iostream>
 #include <vector>
 #include "UserStory.h"
@@ -23,4 +24,4 @@ public:
 	void addUserStory(UserStory &userstory);
 	void printStories();
 };
-
+#endif

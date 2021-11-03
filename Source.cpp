@@ -9,11 +9,9 @@
 #include "UserStory.h"
 #include "Backlog.h"
 
-#include "Iteration.h"
 #include "Sprint.h"
 #include "Release.h"
 
-#include "Collaborator.h"
 #include "Developer.h"
 #include "ScrumMaster.h"
 
@@ -38,13 +36,14 @@ int main() {
 
 	if (writeToUserStories.is_open() && is_empty(readFromUserStories))
 	{
-		writeToUserStories << "Story ID, Description, Status,";
+		writeToUserStories << "Story ID, Description, Story Points, Status,";
 		writeToUserStories << " Current Developers\n";
 	}
 
 	int	userInputKey = 0;
 	do {
 
+		std::cout << "Please Pick an option(0-5)" << std::endl;
 		std::cout << "Add a User Story                   (1)" << std::endl;
 		std::cout << "Look up Product Backlog		   (2)" << std::endl;
 		std::cout << "Assign a developer to a User Story (3)" << std::endl;
@@ -181,8 +180,11 @@ void lookUpProductBackLog(std::ifstream& readFromUserStories) {
 		}
 		readFromUserStories.close();
 	}
-
-	else std::cout << "Unable to open file";
+	else
+	{
+		std::cout << "Unable to open file";
+	}
+		
 
 }
 

@@ -4,7 +4,8 @@
 	Purpose: Declaration file for Iteration class
 */
 
-#pragma once
+#ifndef ITERATION_H
+#define ITERATION_H
 #include <string>
 #include <vector>
 #include "Backlog.h"
@@ -50,3 +51,4 @@ public:
 	void addUserStory(UserStory& userstory);
 	void printStories();
 };
+#endif

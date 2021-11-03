@@ -4,8 +4,10 @@
 	Purpose: Declaration file for UserStory class
 */
 
-#pragma once
+#ifndef USERSTORY_H
+#define USERSTORY_H
 #include <string>
+//friend class Collaborator;
 class UserStory
 {
 private:
@@ -13,7 +15,12 @@ private:
 	std::string storyBody;
 	int storyPoints;
 	
-	bool isFinished;
+
+	enum Status {
+		TO_DO,
+		IN_PROGRESS,
+		DONE
+	};
 
 public:
 	//Id used to track stories 
@@ -29,6 +36,7 @@ public:
 	std::string getStoryName(); 
 	std::string getStoryBody(); 
 	int getStoryPoints();
+	
 
 	//setters
 	void setStoryName(std::string value);
@@ -38,4 +46,4 @@ public:
 	void completeUserStory();
 	
 };
-
+#endif
