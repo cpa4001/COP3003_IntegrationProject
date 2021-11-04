@@ -46,10 +46,10 @@ int main() {
 		std::cout << "Please Pick an option(0-5)" << std::endl;
 		std::cout << "Add a User Story                   (1)" << std::endl;
 		std::cout << "Look up Product Backlog		   (2)" << std::endl;
-		std::cout << "Assign a developer to a User Story (3)" << std::endl;
+		std::cout << "Assign a User Story to a developer (3)" << std::endl;
 		std::cout << "Create Iteration		   (4)" << std::endl;
-		std::cout << "See Kanban Board					(5)" << std::endl;
-		std::cout << "Exit								(0)" << std::endl;
+		std::cout << "See Kanban Board		   (5)" << std::endl;
+		std::cout << "Exit				   (0)" << std::endl;
 
 		createBorder();
 		
@@ -57,8 +57,11 @@ int main() {
 		std::cin.clear();
 		std::cin.ignore();
 
+		Collaborator* collaborator = new Developer("");
 
 		switch (userInputKey) {
+			case 0:
+				break;
 			case 1:
 				createAndSaveStory(writeToUserStories);
 				createBorder();
@@ -67,10 +70,20 @@ int main() {
 				lookUpProductBackLog(readFromUserStories);
 				createBorder();
 				break;
-			case 3:
+			case 3: 
+				int inputStoryID;
+				std::cout << "What Story ID is the developer woking on: ";
+				std::cin >> inputStoryID;
+				collaborator->assignStory(inputStoryID);
+				std::cout << "The developer is now working on storyID " << inputStoryID << std::endl;
+				createBorder();
 				break;
-			case 4:
+			case 4: case 5:
+				std::cout << "This feature has not been devloped yet" << std::endl;
 				break;
+			default:
+				std::cout << "You entered in an invalid number please enter an integer (0-5)" << std::endl;
+				
 		}
 
 	} while (userInputKey);
@@ -121,7 +134,8 @@ UserStory createUserStory() {
 	std::cout << "Story Points: ";
 	std::cin >> storyPoints;
 	std::cout << std::endl;
-
+	createBorder();
+	std::cout << "You can see your new story in the Userstories.csv file in the same directory as this project" << std::endl;
 	UserStory newStory(storyName, storyBody, storyPoints);
 	return newStory;
 }

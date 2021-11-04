@@ -24,3 +24,4 @@ Collaborator::Collaborator(std::string collaboratorName, std::string role) {
 }
 
 
+std::string Collaborator::getcollaboratorName() { return collaboratorName; }

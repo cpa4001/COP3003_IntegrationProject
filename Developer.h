@@ -3,7 +3,9 @@
 class Developer : public Collaborator
 {
 public:
-	Developer();
+	Developer(std::string name);
+
+	void assignStory(int storyID);
 
 };
 
