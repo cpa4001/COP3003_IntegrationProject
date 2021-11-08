@@ -1,9 +1,8 @@
 #include "ScrumMaster.h"
-ScrumMaster::ScrumMaster(std::string collaboratorName) : Collaborator(collaboratorName, "Scrum Master") {}
+ScrumMaster::ScrumMaster(std::string collaboratorName)
+    : Collaborator(collaboratorName, "Scrum Master") {}
 
 /**
-*
-*/
-void ScrumMaster::assignStoryToCollaborator(int collaboratorID, int storyID) {
-
-}
+ *
+ */
+void ScrumMaster::assignStoryToCollaborator(int collaboratorID, int storyID) {}

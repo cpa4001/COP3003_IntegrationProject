@@ -2,26 +2,25 @@
 
 int Collaborator::collaboratorID = 0;
 /**
-	default constructor - intialize empty Collaborator
+        default constructor - intialize empty Collaborator
 */
 Collaborator::Collaborator() {
-	collaboratorName = "";
+  collaboratorName = "";
 
-	collaboratorID++;
+  collaboratorID++;
 }
 
 /**
-* Constructor for Collaborator
-* Parameters:
-* collaboratorName	name of the collaborator
-* role				role of collaborator within the project
-*/
+ * Constructor for Collaborator
+ * Parameters:
+ * collaboratorName	name of the collaborator
+ * role				role of collaborator within the project
+ */
 Collaborator::Collaborator(std::string collaboratorName, std::string role) {
-	this->collaboratorName = collaboratorName;
-	this->role = role;
+  this->collaboratorName = collaboratorName;
+  this->role = role;
 
-	collaboratorID++;
+  collaboratorID++;
 }
-
 
 std::string Collaborator::getcollaboratorName() { return collaboratorName; }
