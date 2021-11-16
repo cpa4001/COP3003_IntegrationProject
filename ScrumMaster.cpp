@@ -5,4 +5,7 @@ ScrumMaster::ScrumMaster(std::string collaboratorName)
 /**
  *
  */
-void ScrumMaster::assignStoryToCollaborator(int collaboratorID, int storyID) {}
+void ScrumMaster::assignStory(int storyID) {
+  storiesWorkingOn.push_back(storyID);
+  developers.push_back(Collaborator::collaboratorID);
+}

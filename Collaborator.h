@@ -10,6 +10,7 @@ class Collaborator {
 
  protected:
   std::vector<int> storiesWorkingOn;
+  std::vector<int> developers;
 
  public:
   static int collaboratorID;

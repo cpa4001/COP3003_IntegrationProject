@@ -140,9 +140,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Backlog.h" />
+    <ClInclude Include="Board.h" />
     <ClInclude Include="Collaborator.h" />
     <ClInclude Include="Developer.h" />
     <ClInclude Include="Iteration.h" />
+    <ClInclude Include="KanbanBoard.h" />
     <ClInclude Include="Release.h" />
     <ClInclude Include="ScrumMaster.h" />
     <ClInclude Include="Sprint.h" />
@@ -150,9 +152,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Backlog.cpp" />
+    <ClCompile Include="Board.cpp" />
     <ClCompile Include="Collaborator.cpp" />
     <ClCompile Include="Developer.cpp" />
     <ClCompile Include="Iteration.cpp" />
+    <ClCompile Include="KanbanBoard.cpp" />
     <ClCompile Include="Release.cpp" />
     <ClCompile Include="ScrumMaster.cpp" />
     <ClCompile Include="Source.cpp" />

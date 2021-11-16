@@ -29,11 +29,13 @@ int main() {
   std::ofstream writeToUserStories("UserStories.csv", std::ios::app);
   std::ifstream readFromUserStories("UserStories.csv");
 
+  // if the file is open and empty populate the header for the csv
   if (writeToUserStories.is_open() && is_empty(readFromUserStories)) {
     writeToUserStories << "Story ID, Description, Story Points, Status,";
     writeToUserStories << " Current Developers\n";
   }
 
+  // give the menu until the user chooses to exit
   int userInputKey = 0;
   do {
     std::cout << "Please Pick an option(0-5)" << std::endl;
@@ -46,6 +48,11 @@ int main() {
 
     createBorder();
 
+    std::cin >> userInputKey;
+    std::cin.clear();
+    std::cin.ignore();
+
+    /* Will try to implement input validation
     // Input validation to get to an integer
     if (std::cin >> userInputKey) {
       break;
@@ -55,10 +62,17 @@ int main() {
       std::cin.clear();
       std::cin.ignore();
     }
+
     std::cin.clear();
     std::cin.ignore();
+    */
 
-    Collaborator* collaborator = new Developer("");
+    // Collaborator* collaborator = new Developer("");
+    Collaborator* collaborator;
+
+    // variables to hold input
+    int inputInt;
+    std::string inputString;
 
     switch (userInputKey) {
       case 0:
@@ -72,15 +86,39 @@ int main() {
         createBorder();
         break;
       case 3:
-        int inputStoryID;
-        std::cout << "What Story ID is the developer woking on: ";
-        std::cin >> inputStoryID;
-        collaborator->assignStory(inputStoryID);
-        std::cout << "The developer is now working on storyID " << inputStoryID
-                  << std::endl;
+        std::cout << "Are you a:\n(1) Scrum Master\n(2) Developer" << std::endl;
+        std::cin >> inputInt;
+
+        if (inputInt == 1) {
+          std::cout << "What Story ID is the Scrum Master woking on: ";
+          std::cin >> inputInt;
+          std::cout << "What is the Scrum Master's name?";
+          std::cin >> inputString;
+
+          collaborator = new ScrumMaster(inputString);
+          collaborator->assignStory(inputInt);
+
+          std::cout << inputString << " is now working on storyID " << inputInt
+                    << std::endl;
+        } else if (inputInt == 2) {
+          std::cout << "What Story ID is the developer woking on: ";
+          std::cin >> inputInt;
+          // std::cout << std::endl;
+
+          std::cout << "What is this Developer's Name?";
+          std::cin >> inputString;
+          collaborator = new Developer(inputString);
+          collaborator->assignStory(inputInt);
+
+          std::cout << inputString << " is now working on storyID " << inputInt
+                    << std::endl;
+        }
+
         createBorder();
         break;
       case 4:
+        std::cout << "What is the name of the iteration?";
+        std::cin >> inputInt;
       case 5:
         std::cout << "This feature has not been devloped yet" << std::endl;
         break;
@@ -128,7 +166,7 @@ UserStory createUserStory() {
   std::getline(std::cin, storyName);
   std::cout << std::endl;
 
-  // std::cin.clear();
+  std::cin.clear();
 
   std::cout << "Story Description: ";
   std::getline(std::cin, storyBody);

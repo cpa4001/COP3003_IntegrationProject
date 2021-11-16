@@ -5,6 +5,7 @@ class ScrumMaster : public Collaborator {
  public:
   ScrumMaster(std::string collaboratorName);
 
-  void assignStoryToCollaborator(int collaboratorID, int storyID);
+  //might include collaborator id
+  void assignStory(int storyID);
 };
 #endif
