@@ -6,10 +6,25 @@
 
 #include "Backlog.h"
 
+#include <iostream>
+
 /**
         default constructor - intialize empty Backlog
 */
-Backlog::Backlog() { productBacklog = {}; }
+Backlog::Backlog(std::ifstream& readFromUserStories) {
+  // create a buffer for each line
+  std::string line;
+  if (readFromUserStories.is_open()) {
+    while (getline(readFromUserStories, line)) {
+      // std::cout << line << '\n';
+      row.push_back(line);
+      matrix.push_back(row);
+    }
+    readFromUserStories.close();
+  } else {
+    std::cout << "Unable to open file";
+  }
+}
 
 /*
 Backlog::~Backlog() {
@@ -22,8 +37,8 @@ Backlog::~Backlog() {
  * Parameters:
  * userstory		userstory object
  */
-void Backlog::addUserStory(UserStory& userstory) {
-  productBacklog.push_back(userstory);
+void Backlog::addUserStory(UserStory& userStory) {
+  productBacklog.push_back(userStory);
 }
 
 /**
@@ -34,3 +49,14 @@ void Backlog::printStories() {
     std::cout << productBacklog[index].getStoryName() << std::endl;
   }
 }
+
+std::vector<std::vector<std::string>> Backlog::getMatrix() { return matrix; }
+
+std::vector<UserStory> Backlog::getProductBacklog() { return productBacklog; }
+
+/*
+std::ostream& operator<<(std::ostream& out, UserStory& userStory) {
+  out << userStory.getStoryName();
+  return out;
+}
+*/

@@ -32,6 +32,7 @@ class UserStory {
   std::string getStoryName();
   std::string getStoryBody();
   int getStoryPoints();
+  int getStatus();
 
   // setters
   void setStoryName(std::string value);

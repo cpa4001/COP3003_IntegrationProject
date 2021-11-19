@@ -14,7 +14,7 @@
 #include "UserStory.h"
 class Iteration {
  private:
-  Backlog backlog;
+  // Backlog backlog;
   std::string iterationName;
 
   // we could have type and length left blank

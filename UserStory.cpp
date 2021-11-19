@@ -57,6 +57,8 @@ std::string UserStory::getStoryName() { return storyName; }
 std::string UserStory::getStoryBody() { return storyBody; }
 int UserStory::getStoryPoints() { return storyPoints; }
 
+int UserStory::getStatus() { return status; }
+
 void UserStory::setStoryName(std::string value) { storyName = value; }
 void UserStory::setStoryBody(std::string value) { storyBody = value; }
 void UserStory::setStoryPoints(int value) { storyPoints = value; }

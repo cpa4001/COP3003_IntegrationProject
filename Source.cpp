@@ -9,6 +9,7 @@
 
 #include "Backlog.h"
 #include "Developer.h"
+#include "KanbanBoard.h"
 #include "Release.h"
 #include "ScrumMaster.h"
 #include "Sprint.h"
@@ -16,23 +17,36 @@
 
 // could have some of these functions in a file class
 std::ostream& operator<<(std::ostream& out, UserStory& userstory);
-UserStory createUserStory();
-void saveUserStory(UserStory& userstory, std::ofstream& savedUserStories);
+UserStory createUserStory(Backlog& backlog);
+void saveUserStory(UserStory& userstory, std::ofstream& savedUserStories,
+                   Backlog& backlog);
 bool is_empty(std::ifstream& pFile);
-void createAndSaveStory(std::ofstream& writeToUserStories);
+void createAndSaveStory(std::ofstream& writeToUserStories, Backlog& backlog);
 void lookUpProductBackLog(std::ifstream& readFromUserStories);
 void createBorder();
 
 int main() {
+  std::cout << "Welcome to a user story project managment tool developed by "
+               "Christian Apostoli."
+            << std::endl;
+  std::cout << "You can use this console application to keep track of user "
+               "stories in an Agile development team"
+            << std::endl;
+  createBorder();
+
   // Open the UserStory file
   // Note: ios is a namespace within std namespace, so use the following
   std::ofstream writeToUserStories("UserStories.csv", std::ios::app);
   std::ifstream readFromUserStories("UserStories.csv");
 
+  // Create the backlog that will act as temp database
+  Backlog masterBacklog(readFromUserStories);
+  KanbanBoard kanbanBoard;
+
   // if the file is open and empty populate the header for the csv
   if (writeToUserStories.is_open() && is_empty(readFromUserStories)) {
-    writeToUserStories << "Story ID, Description, Story Points, Status,";
-    writeToUserStories << " Current Developers\n";
+    writeToUserStories << "Story ID, Story Name, Description, Story Points, "
+                          "Status, Current Developers\n";
   }
 
   // give the menu until the user chooses to exit
@@ -46,11 +60,10 @@ int main() {
     std::cout << "See Kanban Board		   (5)" << std::endl;
     std::cout << "Exit				   (0)" << std::endl;
 
-    createBorder();
-
     std::cin >> userInputKey;
     std::cin.clear();
     std::cin.ignore();
+    createBorder();
 
     /* Will try to implement input validation
     // Input validation to get to an integer
@@ -74,11 +87,13 @@ int main() {
     int inputInt;
     std::string inputString;
 
+    Iteration* iteration;
+
     switch (userInputKey) {
       case 0:
         break;
       case 1:
-        createAndSaveStory(writeToUserStories);
+        createAndSaveStory(writeToUserStories, masterBacklog);
         createBorder();
         break;
       case 2:
@@ -118,9 +133,24 @@ int main() {
         break;
       case 4:
         std::cout << "What is the name of the iteration?";
+        std::cin >> inputString;
+
+        std::cout << "Will this iteration be a:\n (1) Release\n(2) Sprint";
         std::cin >> inputInt;
+
+        if (inputInt == 1) {
+          iteration = new Release(inputString, 0);
+        } else if (inputInt == 2) {
+          iteration = new Sprint(inputString, 0);
+        }
+
       case 5:
         std::cout << "This feature has not been devloped yet" << std::endl;
+
+        for (int index = 0; index < masterBacklog.getProductBacklog().size();
+             index++) {
+          kanbanBoard.addStoryToMap(masterBacklog.getProductBacklog()[index]);
+        }
         break;
       default:
         std::cout
@@ -156,7 +186,7 @@ std::ostream& operator<<(std::ostream& out, UserStory& userstory) {
  * Returns:
  * newStory	new UserStory object created
  */
-UserStory createUserStory() {
+UserStory createUserStory(Backlog& backlog) {
   std::string storyName;
   std::string storyBody;
   int storyPoints;
@@ -180,6 +210,7 @@ UserStory createUserStory() {
                "same directory as this project"
             << std::endl;
   UserStory newStory(storyName, storyBody, storyPoints);
+  backlog.addUserStory(newStory);
   return newStory;
 }
 
@@ -189,14 +220,17 @@ UserStory createUserStory() {
  * savedUserStories		ofstream object of output file
  * userstory				userstory object
  */
-void saveUserStory(UserStory& userstory, std::ofstream& savedUserStories) {
+void saveUserStory(UserStory& userstory, std::ofstream& savedUserStories,
+                   Backlog& backlog) {
   if (savedUserStories.is_open()) {
     savedUserStories << userstory.storyID << " ," << userstory.getStoryName()
                      << ", " << userstory.getStoryBody() << ", "
-                     << userstory.getStoryPoints() << "\n";
+                     << userstory.getStoryPoints() << ", "
+                     << userstory.getStatus() << "\n";
   } else
     std::cout << "Unable to open file. You might have the file open in a "
-                 "seperate application.";
+                 "seperate application."
+              << std::endl;
 }
 
 /*
@@ -217,13 +251,13 @@ bool is_empty(std::ifstream& pFile) {
  * Parameters:
  * writeToUserStories		ofstream object of output file
  */
-void createAndSaveStory(std::ofstream& writeToUserStories) {
+void createAndSaveStory(std::ofstream& writeToUserStories, Backlog& backlog) {
   // ask for input
   // create userstory based on input
-  UserStory newStory = createUserStory();
+  UserStory newStory = createUserStory(backlog);
 
   // save to file
-  saveUserStory(newStory, writeToUserStories);
+  saveUserStory(newStory, writeToUserStories, backlog);
 }
 
 void lookUpProductBackLog(std::ifstream& readFromUserStories) {
@@ -235,7 +269,9 @@ void lookUpProductBackLog(std::ifstream& readFromUserStories) {
     }
     readFromUserStories.close();
   } else {
-    std::cout << "Unable to open file";
+    std::cout << "Unable to open file, you might have the file open \nin "
+                 "another application,or the file has not been created."
+              << std::endl;
   }
 }
 
