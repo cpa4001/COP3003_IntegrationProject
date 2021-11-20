@@ -44,7 +44,7 @@ int main() {
   KanbanBoard kanbanBoard;
 
   // if the file is open and empty populate the header for the csv
-  if (writeToUserStories.is_open() && is_empty(readFromUserStories)) {
+  if (writeToUserStories.is_open() && !is_empty(readFromUserStories)) {
     writeToUserStories << "Story ID, Story Name, Description, Story Points, "
                           "Status, Current Developers\n";
   }
@@ -80,23 +80,24 @@ int main() {
     std::cin.ignore();
     */
 
-    // Collaborator* collaborator = new Developer("");
+    // declare pointers here because initialization is not allowed within switch
     Collaborator* collaborator;
+    Iteration* iteration;
 
     // variables to hold input
     int inputInt;
     std::string inputString;
 
-    Iteration* iteration;
-
     switch (userInputKey) {
       case 0:
         break;
       case 1:
+        // collect user input and write to csv file
         createAndSaveStory(writeToUserStories, masterBacklog);
         createBorder();
         break;
       case 2:
+        // Print out all records of the userstory.csv file
         lookUpProductBackLog(readFromUserStories);
         createBorder();
         break;
@@ -110,6 +111,7 @@ int main() {
           std::cout << "What is the Scrum Master's name?";
           std::cin >> inputString;
 
+          // point to the necessary collaborator and assign the story to them
           collaborator = new ScrumMaster(inputString);
           collaborator->assignStory(inputInt);
 
@@ -122,6 +124,8 @@ int main() {
 
           std::cout << "What is this Developer's Name?";
           std::cin >> inputString;
+
+          // point to the necessary collaborator and assign the story to them
           collaborator = new Developer(inputString);
           collaborator->assignStory(inputInt);
 
@@ -132,12 +136,13 @@ int main() {
         createBorder();
         break;
       case 4:
-        std::cout << "What is the name of the iteration?";
+        std::cout << "What is the name of the iteration? ";
         std::cin >> inputString;
 
         std::cout << "Will this iteration be a:\n (1) Release\n(2) Sprint";
         std::cin >> inputInt;
 
+        // point the iteration to the correct subclass
         if (inputInt == 1) {
           iteration = new Release(inputString, 0);
         } else if (inputInt == 2) {
@@ -145,12 +150,14 @@ int main() {
         }
 
       case 5:
-        std::cout << "This feature has not been devloped yet" << std::endl;
-
+        // iterate through the product backlog and add the statuses to the
+        // hashmap in the kanbanBoard object
         for (int index = 0; index < masterBacklog.getProductBacklog().size();
              index++) {
           kanbanBoard.addStoryToMap(masterBacklog.getProductBacklog()[index]);
         }
+        // print the user story names
+        kanbanBoard.createBoard();
         break;
       default:
         std::cout
@@ -206,6 +213,7 @@ UserStory createUserStory(Backlog& backlog) {
   std::cin >> storyPoints;
   std::cout << std::endl;
   createBorder();
+  std::cout << storyName << " has been added to Userstories.csv" << std::endl;
   std::cout << "You can see your new story in the Userstories.csv file in the "
                "same directory as this project"
             << std::endl;
@@ -260,6 +268,11 @@ void createAndSaveStory(std::ofstream& writeToUserStories, Backlog& backlog) {
   saveUserStory(newStory, writeToUserStories, backlog);
 }
 
+/*
+   Iterates through csv file and prints rows to console
+   Param:
+   readFromUserStories      input stream to read file
+*/
 void lookUpProductBackLog(std::ifstream& readFromUserStories) {
   // create a buffer for each line
   std::string line;

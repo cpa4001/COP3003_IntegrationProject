@@ -1,3 +1,10 @@
+/*
+        Name: Collaborator.cpp
+        Author: Christian Apostoli
+        Purpose: implementation file for Collaborator class
+
+*/
+
 #include "Collaborator.h"
 
 int Collaborator::collaboratorID = 0;

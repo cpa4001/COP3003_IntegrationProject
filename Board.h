@@ -1,3 +1,9 @@
+/*
+        Name: Board.h
+        Author: Christian Apostoli
+        Purpose: Declaration file for Board class
+*/
+
 #pragma once
 #include "Backlog.h"
 #include "UserStory.h"

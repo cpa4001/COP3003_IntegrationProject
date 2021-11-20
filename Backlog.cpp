@@ -9,7 +9,10 @@
 #include <iostream>
 
 /**
-        default constructor - intialize empty Backlog
+        default constructor - intialize Backlog add all the stories from the
+        Userstories.csv to create a temporary backlog
+        Param:
+        readFromUserStories input stream to read file
 */
 Backlog::Backlog(std::ifstream& readFromUserStories) {
   // create a buffer for each line

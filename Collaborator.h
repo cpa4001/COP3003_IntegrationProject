@@ -1,3 +1,9 @@
+/*
+        Name: Collaborator.h
+        Author: Christian Apostoli
+        Purpose: Declaration file for Collaborator class
+*/
+
 #ifndef COLLABORATOR_H
 #define COLLABORATOR_H
 #include <string>

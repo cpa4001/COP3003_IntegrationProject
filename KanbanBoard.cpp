@@ -1,8 +1,19 @@
+/*
+        Name: KanbanBoard.cpp
+        Author: Christian Apostoli
+        Purpose: implementation file for KanbanBoard class
+                 inherits from Board Interface
+
+*/
+
 #include "KanbanBoard.h"
 
 // goals for this class:
 // - try to spit out using iterators
 
+/*
+    Prints the name of the stories under each category based on their status
+*/
 void KanbanBoard::createBoard() {
   int maxToDoSpaces = 0;
   int maxInProgressSpaces = 0;
@@ -44,6 +55,11 @@ void KanbanBoard::getDoneUserStory(Backlog& backlog) {
 void KanbanBoard::getInProgressUserStory(Backlog& backlog) {}
 void KanbanBoard::getToDoUserStory(Backlog& backlog) {}
 
+/*
+    Adds a story name and the status of that story to the statusMap hashmap
+    Param:
+    userStory   userstory object
+*/
 void KanbanBoard::addStoryToMap(UserStory& userStory) {
   statusMap.insert({userStory.getStoryName(), userStory.getStatus()});
 }

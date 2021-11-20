@@ -1,3 +1,11 @@
+/*
+        Name: Release.cpp
+        Author: Christian Apostoli
+        Purpose: implementation file for Release class
+                 inherits from Iteration class
+
+*/
+
 #include "Release.h"
 
 /*
