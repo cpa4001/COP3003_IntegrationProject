@@ -1,3 +1,3 @@
 ﻿  Source.cpp
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(158,35): warning C4018: '<': signed/unsigned mismatch
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(211,35): warning C4018: '<': signed/unsigned mismatch
   Userstoryconsole.vcxproj -> C:\Users\chris\source\repos\Userstoryconsole\Debug\Userstoryconsole.exe

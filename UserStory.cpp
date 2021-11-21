@@ -57,6 +57,20 @@ std::string UserStory::getStoryName() { return storyName; }
 std::string UserStory::getStoryBody() { return storyBody; }
 int UserStory::getStoryPoints() { return storyPoints; }
 
+/*
+    Returns the Status meaning as string
+*/
+std::string UserStory::getStatusString() {
+  switch (status) {
+    case 0:
+      return "To Do";
+    case 1:
+      return "In Progress";
+    case 2:
+      return "Done";
+  }
+}
+
 int UserStory::getStatus() { return status; }
 
 void UserStory::setStoryName(std::string value) { storyName = value; }

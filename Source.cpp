@@ -22,11 +22,12 @@ void saveUserStory(UserStory& userstory, std::ofstream& savedUserStories,
                    Backlog& backlog);
 bool is_empty(std::ifstream& pFile);
 void createAndSaveStory(std::ofstream& writeToUserStories, Backlog& backlog);
-void lookUpProductBackLog(std::ifstream& readFromUserStories);
+void lookUpProductBackLog();
 void createBorder();
+int getCurrentStoryID();
 
 int main() {
-  std::cout << "Welcome to a user story project managment tool developed by "
+  std::cout << "Welcome to a user story project management tool developed by "
                "Christian Apostoli."
             << std::endl;
   std::cout << "You can use this console application to keep track of user "
@@ -39,15 +40,58 @@ int main() {
   std::ofstream writeToUserStories("UserStories.csv", std::ios::app);
   std::ifstream readFromUserStories("UserStories.csv");
 
+  // UserStory::storyID = getCurrentStoryID(readFromUserStories);
+
   // Create the backlog that will act as temp database
   Backlog masterBacklog(readFromUserStories);
   KanbanBoard kanbanBoard;
 
+  const std::string fileHeader =
+      "Story ID, Story Name, Description, Story Points, "
+      "Status, Current Developers";
+  /*
   // if the file is open and empty populate the header for the csv
-  if (writeToUserStories.is_open() && !is_empty(readFromUserStories)) {
-    writeToUserStories << "Story ID, Story Name, Description, Story Points, "
-                          "Status, Current Developers\n";
+  if (writeToUserStories.is_open()) {
+    std::cout << "is empty is true" << std::endl;
+    writeToUserStories << fileHeader;
   }
+  */
+
+  readFromUserStories.open("UserStories.csv");
+  // used for reading from the file in case 4
+  std::string line;
+  std::getline(readFromUserStories, line);
+
+  if (line != fileHeader) {
+    writeToUserStories << fileHeader;
+    writeToUserStories << "\n";
+  }
+
+  UserStory::storyID = getCurrentStoryID();
+  // std::cout << getCurrentStoryID() << std::endl;
+
+  /*
+  // if the file is open and if the first line can be recieved
+  if (!getline(readFromUserStories, line)) {
+    // if the first line is not the header write the header
+    std::cout << " get line is false" << std::endl;
+    if (line != fileHeader) {
+      writeToUserStories << fileHeader;
+    }
+  } else {
+    writeToUserStories << fileHeader;
+    std::cout << " get line is true" << std::endl;
+
+  }
+  //readFromUserStories.close();
+
+  else if (!getline(readFromUserStories, line)) {
+    if (line != fileHeader) {
+      writeToUserStories << fileHeader;
+      readFromUserStories.close();
+    }
+  }
+  */
 
   // give the menu until the user chooses to exit
   int userInputKey = 0;
@@ -98,7 +142,7 @@ int main() {
         break;
       case 2:
         // Print out all records of the userstory.csv file
-        lookUpProductBackLog(readFromUserStories);
+        lookUpProductBackLog();
         createBorder();
         break;
       case 3:
@@ -108,7 +152,7 @@ int main() {
         if (inputInt == 1) {
           std::cout << "What Story ID is the Scrum Master woking on: ";
           std::cin >> inputInt;
-          std::cout << "What is the Scrum Master's name?";
+          std::cout << "What is the Scrum Master's name? ";
           std::cin >> inputString;
 
           // point to the necessary collaborator and assign the story to them
@@ -122,7 +166,7 @@ int main() {
           std::cin >> inputInt;
           // std::cout << std::endl;
 
-          std::cout << "What is this Developer's Name?";
+          std::cout << "What is this Developer's Name? ";
           std::cin >> inputString;
 
           // point to the necessary collaborator and assign the story to them
@@ -130,6 +174,18 @@ int main() {
           collaborator->assignStory(inputInt);
 
           std::cout << inputString << " is now working on storyID " << inputInt
+                    << std::endl;
+        }
+
+        if (readFromUserStories.is_open()) {
+          while (getline(readFromUserStories, line)) {
+            std::cout << line << std::endl;
+            // for (int )
+          }
+          // readFromUserStories.close();
+        } else {
+          std::cout << "Unable to open file, you might have the file open \nin "
+                       "another application,or the file has not been created."
                     << std::endl;
         }
 
@@ -234,7 +290,7 @@ void saveUserStory(UserStory& userstory, std::ofstream& savedUserStories,
     savedUserStories << userstory.storyID << " ," << userstory.getStoryName()
                      << ", " << userstory.getStoryBody() << ", "
                      << userstory.getStoryPoints() << ", "
-                     << userstory.getStatus() << "\n";
+                     << userstory.getStatusString() << "\n";
   } else
     std::cout << "Unable to open file. You might have the file open in a "
                  "seperate application."
@@ -270,12 +326,12 @@ void createAndSaveStory(std::ofstream& writeToUserStories, Backlog& backlog) {
 
 /*
    Iterates through csv file and prints rows to console
-   Param:
-   readFromUserStories      input stream to read file
 */
-void lookUpProductBackLog(std::ifstream& readFromUserStories) {
+void lookUpProductBackLog() {
   // create a buffer for each line
   std::string line;
+  std::ifstream readFromUserStories;
+  readFromUserStories.open("UserStories.csv");
   if (readFromUserStories.is_open()) {
     while (getline(readFromUserStories, line)) {
       std::cout << line << '\n';
@@ -293,4 +349,28 @@ void lookUpProductBackLog(std::ifstream& readFromUserStories) {
  */
 void createBorder() {
   std::cout << "---------------------------------------" << std::endl;
+}
+
+/*
+    Updates the storyID with the most recent ID from the csv file
+    Returns:
+    currentMax  The most recent storyID
+*/
+int getCurrentStoryID() {
+  std::string line;
+  int currentMax = 0;
+  std::ifstream readFromUserStories;
+  readFromUserStories.open("UserStories.csv");
+  if (readFromUserStories.is_open()) {
+    while (getline(readFromUserStories, line)) {
+      ++currentMax;
+    }
+    readFromUserStories.close();
+  } else {
+    std::cout << "Unable to open file, you might have the file open \nin "
+                 "another application,or the file has not been created."
+              << std::endl;
+  }
+
+  return currentMax - 1;
 }
