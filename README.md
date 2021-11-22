@@ -13,6 +13,13 @@ Milestone 1:
 - System shall be able to save user stories to a csv file
 - Users should be able to continuously perform the above until exiting the program
 
+Milestone 2:
+- Users shall be able to create iterations
+- Users shall be able to enter Developers or Scrum Masters
+- StoryIDs shall correctly reflect how many user story objects there are
+- Users shall be able to see a Kanban Board (stories that are To Do, In Progress,  Done)
+- Program shall have status in csv (To Do, In Progress, or Done) instead of integer
+
 
 ## Getting Started
 ``` sh
