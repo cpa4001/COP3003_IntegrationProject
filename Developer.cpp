@@ -17,6 +17,7 @@ Developer::Developer(std::string name) : Collaborator(name, "Developer") {}
 
 /*
     Assigns story to the vector of Stories that devloper is working on it
+    overrides Collaborator::assignStory
     Param:
     storyID the integer ID of the UserStory
 */

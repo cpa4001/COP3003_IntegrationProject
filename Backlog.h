@@ -30,5 +30,8 @@ class Backlog {
   void printStories();
   std::vector<std::vector<std::string>> getMatrix();
   std::vector<UserStory> getProductBacklog();
+  std::vector<std::string> getRow();
+
+  friend std::string operator-(Backlog& backlog);
 };
 #endif

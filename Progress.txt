@@ -21,3 +21,7 @@ See Kanban Board (5)
 Exit (0)
 - this has been implemented
 - files closed
+
+- have to add in the fuction passing
+- have to fix kanban board
+- maybe will put in devloper name in file

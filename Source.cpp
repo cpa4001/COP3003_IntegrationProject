@@ -25,13 +25,13 @@ void createAndSaveStory(std::ofstream& writeToUserStories, Backlog& backlog);
 void lookUpProductBackLog();
 void createBorder();
 int getCurrentStoryID();
+std::string invokeFunc(int storyID, std::string (*func)(int storyID));
 
 int main() {
-  std::cout << "Welcome to a user story project management tool developed by "
-               "Christian Apostoli."
-            << std::endl;
-  std::cout << "You can use this console application to keep track of user "
-               "stories in an Agile development team"
+  std::cout << "Welcome to a user story project management \ntool developed by "
+               "Christian Apostoli. ";
+  std::cout << "You \ncan use this console application to keep \ntrack of user "
+               "stories in an Agile development team."
             << std::endl;
   createBorder();
 
@@ -60,13 +60,16 @@ int main() {
   readFromUserStories.open("UserStories.csv");
   // used for reading from the file in case 4
   std::string line;
+  // read in the fist line
   std::getline(readFromUserStories, line);
 
+  // if the fist line is NOT the header add the header
   if (line != fileHeader) {
     writeToUserStories << fileHeader;
     writeToUserStories << "\n";
   }
 
+  // update the storyID so that the next userstory gets the correct storyID
   UserStory::storyID = getCurrentStoryID();
   // std::cout << getCurrentStoryID() << std::endl;
 
@@ -96,13 +99,14 @@ int main() {
   // give the menu until the user chooses to exit
   int userInputKey = 0;
   do {
-    std::cout << "Please Pick an option(0-5)" << std::endl;
-    std::cout << "Add a User Story                   (1)" << std::endl;
-    std::cout << "Look up Product Backlog		   (2)" << std::endl;
-    std::cout << "Assign a User Story to a developer (3)" << std::endl;
-    std::cout << "Create Iteration		   (4)" << std::endl;
-    std::cout << "See Kanban Board		   (5)" << std::endl;
-    std::cout << "Exit				   (0)" << std::endl;
+    std::cout << "Please Pick an option(0-6)" << std::endl;
+    std::cout << "Add a User Story                      (1)" << std::endl;
+    std::cout << "Look up Product Backlog		      (2)" << std::endl;
+    std::cout << "Assign a User Story to a Collaborator (3)" << std::endl;
+    std::cout << "Create Iteration		      (4)" << std::endl;
+    std::cout << "See Kanban Board		      (5)" << std::endl;
+    std::cout << "Get the most recent user story        (6)" << std::endl;
+    std::cout << "Exit				      (0)" << std::endl;
 
     std::cin >> userInputKey;
     std::cin.clear();
@@ -146,6 +150,7 @@ int main() {
         createBorder();
         break;
       case 3:
+        // prompt the user about details for the collaborator
         std::cout << "Are you a:\n(1) Scrum Master\n(2) Developer" << std::endl;
         std::cin >> inputInt;
 
@@ -157,6 +162,7 @@ int main() {
 
           // point to the necessary collaborator and assign the story to them
           collaborator = new ScrumMaster(inputString);
+          // using polymorphism through dynamic dispatch
           collaborator->assignStory(inputInt);
 
           std::cout << inputString << " is now working on storyID " << inputInt
@@ -192,18 +198,28 @@ int main() {
         createBorder();
         break;
       case 4:
+        // prompt the user for details about the iteration
         std::cout << "What is the name of the iteration? ";
         std::cin >> inputString;
 
         std::cout << "Will this iteration be a:\n (1) Release\n(2) Sprint";
         std::cin >> inputInt;
 
+        std::cout << "How long will this Iteration consist of (in days)?";
+
         // point the iteration to the correct subclass
+        // additional use of polymorphism
         if (inputInt == 1) {
           iteration = new Release(inputString, 0);
         } else if (inputInt == 2) {
           iteration = new Sprint(inputString, 0);
+        } else {
+          iteration = new Iteration(inputString, "Iteration", 0);
         }
+
+        std::cout << "How long will this Iteration consist of (in days)?";
+        std::cin >> inputInt;
+        iteration->setIterationLength(inputInt);
 
       case 5:
         // iterate through the product backlog and add the statuses to the
@@ -215,10 +231,17 @@ int main() {
         // print the user story names
         kanbanBoard.createBoard();
         break;
+      case 6:
+        // get the most recent user story details by using the overloaded -
+        // operator
+        std::cout << -masterBacklog << std::endl;
+        createBorder();
+        break;
       default:
         std::cout
-            << "You entered in an invalid number please enter an integer (0-5)"
+            << "You entered in an invalid number please enter an integer (0-6)"
             << std::endl;
+        createBorder();
     }
 
   } while (userInputKey);
@@ -231,12 +254,9 @@ int main() {
 }
 
 /**
- * Overloaded operator to print out attributes of user story object
- * Parameters:
- * out		ofstream object of output file
- * userstory	userstory object
- * Returns:
- * out		attributes of userstory
+ * Overloaded operator to print out attributes of user story object (operator on
+ * aggregate) Parameters: out		ofstream object of output file userstory
+ * userstory object Returns: out		attributes of userstory
  */
 std::ostream& operator<<(std::ostream& out, UserStory& userstory) {
   out << userstory.getStoryName() << " " << userstory.getStoryBody() << " "

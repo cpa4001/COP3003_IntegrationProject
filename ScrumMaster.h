@@ -12,7 +12,6 @@ class ScrumMaster : public Collaborator {
  public:
   ScrumMaster(std::string collaboratorName);
 
-  // might include collaborator id
   void assignStory(int storyID);
 };
 #endif

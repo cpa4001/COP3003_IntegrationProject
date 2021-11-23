@@ -1,7 +1,7 @@
 /*
         Name: Board.h
         Author: Christian Apostoli
-        Purpose: Declaration file for Board class
+        Purpose: Declaration file for Board interface
 */
 
 #pragma once

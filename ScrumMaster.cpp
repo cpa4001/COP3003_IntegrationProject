@@ -16,6 +16,7 @@ ScrumMaster::ScrumMaster(std::string collaboratorName)
 
 /**
  *  Adds story to the ScrumMaster's working stories
+ *  overrides Collaborator::assignStory
  *  Param:
  *  storyID     integer ID of the UserStory
  */

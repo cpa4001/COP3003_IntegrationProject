@@ -11,17 +11,17 @@
 /**
         default constructor - intialize Backlog add all the stories from the
         Userstories.csv to create a temporary backlog
+
         Param:
         readFromUserStories input stream to read file
 */
 Backlog::Backlog(std::ifstream& readFromUserStories) {
   // create a buffer for each line
   std::string line;
+  int i = 0;
   if (readFromUserStories.is_open()) {
     while (getline(readFromUserStories, line)) {
-      // std::cout << line << '\n';
       row.push_back(line);
-      matrix.push_back(row);
     }
     readFromUserStories.close();
   } else {
@@ -57,9 +57,15 @@ std::vector<std::vector<std::string>> Backlog::getMatrix() { return matrix; }
 
 std::vector<UserStory> Backlog::getProductBacklog() { return productBacklog; }
 
-/*
-std::ostream& operator<<(std::ostream& out, UserStory& userStory) {
-  out << userStory.getStoryName();
-  return out;
-}
+std::vector<std::string> Backlog::getRow() { return row; }
+
+/*  Gets the most recent userstory details(operator on aggregate) Param
+    backlog the master backlog
+    Param:
+    backlog     the master backlog
+
 */
+std::string operator-(Backlog& backlog) {
+  int backlogSize = backlog.row.size();
+  return backlog.row[backlogSize - 1];
+}
