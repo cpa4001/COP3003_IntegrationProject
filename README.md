@@ -19,6 +19,7 @@ Milestone 2:
 - StoryIDs shall correctly reflect how many user story objects there are
 - Users shall be able to see a Kanban Board (stories that are To Do, In Progress,  Done)
 - Program shall have status in csv (To Do, In Progress, or Done) instead of integer
+- User shall be able to get the most recent userstory
 
 
 ## Getting Started
