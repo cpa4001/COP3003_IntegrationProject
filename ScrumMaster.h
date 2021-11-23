@@ -8,6 +8,8 @@
 #ifndef SCRUMMASTER_H
 #define SCRUMMASTER_H
 #include "Collaborator.h"
+
+// Scrum Master inherits from Collaborator with public visibility
 class ScrumMaster : public Collaborator {
  public:
   ScrumMaster(std::string collaboratorName);

@@ -45,6 +45,13 @@ void Backlog::addUserStory(UserStory& userStory) {
 }
 
 /**
+ * adds row from file to the backlog(list of strings)
+ * Parameters:
+ * newRow		string from csv file
+ */
+void Backlog::addToRow(std::string newRow) { row.push_back(newRow); }
+
+/**
  * prints names of user stories in the iteration's backolog to console
  */
 void Backlog::printStories() {
@@ -67,5 +74,10 @@ std::vector<std::string> Backlog::getRow() { return row; }
 */
 std::string operator-(Backlog& backlog) {
   int backlogSize = backlog.row.size();
-  return backlog.row[backlogSize - 1];
+
+  if (backlogSize > 1) {
+    return backlog.row[backlogSize - 1];
+  } else {
+    return "There are no user stories created";
+  }
 }

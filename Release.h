@@ -7,6 +7,7 @@
 
 #pragma once
 #include "Iteration.h"
+// Release inherits from Iteration with public visibility
 class Release : public Iteration {
  private:
  public:

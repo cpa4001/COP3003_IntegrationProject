@@ -6,6 +6,7 @@
 
 #include <fstream>
 #include <iostream>
+#include <string>
 
 #include "Backlog.h"
 #include "Developer.h"
@@ -19,13 +20,14 @@
 std::ostream& operator<<(std::ostream& out, UserStory& userstory);
 UserStory createUserStory(Backlog& backlog);
 void saveUserStory(UserStory& userstory, std::ofstream& savedUserStories,
-                   Backlog& backlog);
+                   Backlog& backlog, KanbanBoard& kanbanBoard);
 bool is_empty(std::ifstream& pFile);
-void createAndSaveStory(std::ofstream& writeToUserStories, Backlog& backlog);
+void createAndSaveStory(std::ofstream& writeToUserStories, Backlog& backlog,
+                        KanbanBoard& kanbanBoard);
 void lookUpProductBackLog();
 void createBorder();
 int getCurrentStoryID();
-std::string invokeFunc(int storyID, std::string (*func)(int storyID));
+void invokeFunc(void (*func)());
 
 int main() {
   std::cout << "Welcome to a user story project management \ntool developed by "
@@ -40,22 +42,13 @@ int main() {
   std::ofstream writeToUserStories("UserStories.csv", std::ios::app);
   std::ifstream readFromUserStories("UserStories.csv");
 
-  // UserStory::storyID = getCurrentStoryID(readFromUserStories);
-
   // Create the backlog that will act as temp database
   Backlog masterBacklog(readFromUserStories);
-  KanbanBoard kanbanBoard;
+  KanbanBoard kanbanBoard(masterBacklog.getRow());
 
   const std::string fileHeader =
       "Story ID, Story Name, Description, Story Points, "
       "Status, Current Developers";
-  /*
-  // if the file is open and empty populate the header for the csv
-  if (writeToUserStories.is_open()) {
-    std::cout << "is empty is true" << std::endl;
-    writeToUserStories << fileHeader;
-  }
-  */
 
   readFromUserStories.open("UserStories.csv");
   // used for reading from the file in case 4
@@ -71,7 +64,6 @@ int main() {
 
   // update the storyID so that the next userstory gets the correct storyID
   UserStory::storyID = getCurrentStoryID();
-  // std::cout << getCurrentStoryID() << std::endl;
 
   /*
   // if the file is open and if the first line can be recieved
@@ -141,7 +133,7 @@ int main() {
         break;
       case 1:
         // collect user input and write to csv file
-        createAndSaveStory(writeToUserStories, masterBacklog);
+        createAndSaveStory(writeToUserStories, masterBacklog, kanbanBoard);
         createBorder();
         break;
       case 2:
@@ -229,13 +221,17 @@ int main() {
           kanbanBoard.addStoryToMap(masterBacklog.getProductBacklog()[index]);
         }
         // print the user story names
-        kanbanBoard.createBoard();
+        kanbanBoard.printBoard();
+        createBorder();
         break;
       case 6:
         // get the most recent user story details by using the overloaded -
         // operator
         std::cout << -masterBacklog << std::endl;
-        createBorder();
+
+        // passing in a the address of createBorder() to return that void
+        // function
+        invokeFunc(&createBorder);
         break;
       default:
         std::cout
@@ -290,11 +286,11 @@ UserStory createUserStory(Backlog& backlog) {
   std::cout << std::endl;
   createBorder();
   std::cout << storyName << " has been added to Userstories.csv" << std::endl;
-  std::cout << "You can see your new story in the Userstories.csv file in the "
-               "same directory as this project"
-            << std::endl;
+  std::cout
+      << "You can see your new story in the \nUserstories.csv file in the "
+         "same directory as this project"
+      << std::endl;
   UserStory newStory(storyName, storyBody, storyPoints);
-  backlog.addUserStory(newStory);
   return newStory;
 }
 
@@ -305,9 +301,9 @@ UserStory createUserStory(Backlog& backlog) {
  * userstory				userstory object
  */
 void saveUserStory(UserStory& userstory, std::ofstream& savedUserStories,
-                   Backlog& backlog) {
+                   Backlog& backlog, KanbanBoard& kanbanBoard) {
   if (savedUserStories.is_open()) {
-    savedUserStories << userstory.storyID << " ," << userstory.getStoryName()
+    savedUserStories << userstory.storyID << ", " << userstory.getStoryName()
                      << ", " << userstory.getStoryBody() << ", "
                      << userstory.getStoryPoints() << ", "
                      << userstory.getStatusString() << "\n";
@@ -315,6 +311,13 @@ void saveUserStory(UserStory& userstory, std::ofstream& savedUserStories,
     std::cout << "Unable to open file. You might have the file open in a "
                  "seperate application."
               << std::endl;
+
+  backlog.addToRow(userstory.storyID + ", " + userstory.getStoryName() + "," +
+                   userstory.getStoryBody() + ", " +
+                   std::to_string(userstory.getStoryPoints()) + ", " +
+                   userstory.getStatusString() + "\n");
+
+  kanbanBoard.addStoryToMap(userstory);
 }
 
 /*
@@ -335,13 +338,14 @@ bool is_empty(std::ifstream& pFile) {
  * Parameters:
  * writeToUserStories		ofstream object of output file
  */
-void createAndSaveStory(std::ofstream& writeToUserStories, Backlog& backlog) {
+void createAndSaveStory(std::ofstream& writeToUserStories, Backlog& backlog,
+                        KanbanBoard& kanbanBoard) {
   // ask for input
   // create userstory based on input
   UserStory newStory = createUserStory(backlog);
 
   // save to file
-  saveUserStory(newStory, writeToUserStories, backlog);
+  saveUserStory(newStory, writeToUserStories, backlog, kanbanBoard);
 }
 
 /*
@@ -394,3 +398,10 @@ int getCurrentStoryID() {
 
   return currentMax - 1;
 }
+
+/*  demonstration of passing functions as parameters
+    can call any void function with no parameters in main
+    Param:
+    (*func)()   the memory location of a function
+*/
+void invokeFunc(void (*func)()) { return func(); }

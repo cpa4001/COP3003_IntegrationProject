@@ -7,6 +7,7 @@
 
 #pragma once
 #include "Iteration.h"
+// Sprint inherits from Iteration with public visibility
 class Sprint : public Iteration {
  private:
  public:

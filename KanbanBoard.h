@@ -11,6 +11,7 @@
 
 #include "Board.h"
 
+// KanbanBoard inherits from Board interface with public visibility
 class KanbanBoard : public Board {
  private:
   std::vector<std::string> toDoUserStoryNames;
@@ -19,7 +20,9 @@ class KanbanBoard : public Board {
   std::map<std::string, int> statusMap;
 
  public:
-  void createBoard();
+  KanbanBoard();
+  KanbanBoard(std::vector<std::string> fileRows);
+  void printBoard();
 
   void getDoneUserStory(Backlog& backlog);
   void getInProgressUserStory(Backlog& backlog);

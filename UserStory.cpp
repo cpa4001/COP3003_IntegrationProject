@@ -6,6 +6,16 @@
 
 #include "UserStory.h"
 
+// Include a comment in which you compare and contrast the procedural/functional
+// approach and the object-oriented approach
+/*
+    The object-oriented approach utlizes classes to store the data
+    and behaviors of a UserStory and objects to implement the functionality of
+    the UserStory class. The functional/procedural approach could use structs to
+    hold data and multiple functions would need to be made to implement the
+    behaviors.
+*/
+
 int UserStory::storyID = 0;
 
 /**

@@ -24,9 +24,10 @@ class Backlog {
 
  public:
   Backlog(std::ifstream& readFromUserStories);
-  //~Backlog(); needed for an actual dynamic array
+  //~Backlog(); needed if using a dynamic array
 
   void addUserStory(UserStory& userStory);
+  void addToRow(std::string row);
   void printStories();
   std::vector<std::vector<std::string>> getMatrix();
   std::vector<UserStory> getProductBacklog();
