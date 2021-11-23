@@ -6,6 +6,9 @@ As a who      (**Who** wants to accomplish something) <br>
 I want a what (**What** I want to accomplish)         <br>
 So that       (**Why** I want to accomplish)          <br>
  
+ ## Learning Objectives
+ 
+ ## Milestones
 
 Milestone 1:
 - Users shall be able to create user stories
