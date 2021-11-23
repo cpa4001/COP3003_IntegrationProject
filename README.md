@@ -7,20 +7,28 @@ I want a what (**What** I want to accomplish)         <br>
 So that       (**Why** I want to accomplish)          <br>
  
  ## Learning Objectives
-- 1. Design and implement a class. [Usage]
+- Design and implement a class. [Usage]
   - Shown in the use of multiple classes and seperating class declaration in a header file and class implementation in a cpp file
   - Comparison of OO aproach and procedural approach on top of UserStory.cpp
    
-- 2. Use subclassing to design simple class hierarchies that allow code to be reused for distinct subclasses. [Usage]
+- Use subclassing to design simple class hierarchies that allow code to be reused for distinct subclasses. [Usage]
+  - Shown in the use of inheritance with Collaborator, ScrumMaster, Developer classes, and Iteration, Release, Sprint classes
+  - Use of derived objects shown in Source.cpp and when Program creates an Iteration or Collaborator
 
-- 3. Correctly reason about control flow in a program using dynamic dispatch. [Usage]
+- Correctly reason about control flow in a program using dynamic dispatch. [Usage]
+  - Shown in deleaying intialization of Collaborator object in Source.cpp within case 3 in switch block 
 
 
-- 4. Explain the relationship between object-oriented inheritance (code-sharing and overriding) and subtyping (the idea of a subtype being usable in a context that expects the supertype). [Familiarity]
+- Explain the relationship between object-oriented inheritance (code-sharing and overriding) and subtyping (the idea of a subtype being usable in a context that expects the supertype). [Familiarity]
+  - Shown through creating inheritance hiereachies   
 
-- 5. Use object-oriented encapsulation mechanisms such as interfaces and private members. [Usage]
+- Use object-oriented encapsulation mechanisms such as interfaces and private members. [Usage]
+  - Shown in Board class which acts as an interface meaning no attributes and all pure virtual methods
+  - Shown in the use of private members between all classes 
 
-- 6. Define and use iterators and other operations on aggregates, including operations that take functions as arguments. [Usage]
+- Define and use iterators and other operations on aggregates, including operations that take functions as arguments. [Usage]
+  - Shown in the use of overloaded operators including overloading the unary (-) operator with a Backlog object
+  - Shown in the methods of the Backlog class 
  
  ## Milestones
 
