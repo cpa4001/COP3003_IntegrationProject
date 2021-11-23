@@ -7,6 +7,20 @@ I want a what (**What** I want to accomplish)         <br>
 So that       (**Why** I want to accomplish)          <br>
  
  ## Learning Objectives
+- 1. Design and implement a class. [Usage]
+  - Shown in the use of multiple classes and seperating class declaration in a header file and class implementation in a cpp file
+  - Comparison of OO aproach and procedural approach on top of UserStory.cpp
+   
+- 2. Use subclassing to design simple class hierarchies that allow code to be reused for distinct subclasses. [Usage]
+
+- 3. Correctly reason about control flow in a program using dynamic dispatch. [Usage]
+
+
+- 4. Explain the relationship between object-oriented inheritance (code-sharing and overriding) and subtyping (the idea of a subtype being usable in a context that expects the supertype). [Familiarity]
+
+- 5. Use object-oriented encapsulation mechanisms such as interfaces and private members. [Usage]
+
+- 6. Define and use iterators and other operations on aggregates, including operations that take functions as arguments. [Usage]
  
  ## Milestones
 
