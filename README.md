@@ -34,6 +34,12 @@ Milestone 2:
 - C++
 
 ## Current Challenges 
+- Getting overloaded operators to a non-ambiguous definition
+- Creating a function that accepts a function pointer 
+- Implementing the KanbanBoard feature
+
+## Future Goals
+- Create a frontend using a GUI or website
 
 ## Acknowledgments
 
