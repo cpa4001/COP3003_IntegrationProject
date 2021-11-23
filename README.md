@@ -65,6 +65,7 @@ Milestone 2:
 
 ## Future Goals
 - Create a frontend using a GUI or website
+- Decrease stamp coupling
 
 ## Acknowledgments
 
