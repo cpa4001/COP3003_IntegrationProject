@@ -10,9 +10,10 @@
 class Board {
  public:
   virtual void printBoard() = 0;
-  virtual void getDoneUserStory(Backlog& backlog) = 0;
-  virtual void getInProgressUserStory(Backlog& backlog) = 0;
-  virtual void getToDoUserStory(Backlog& backlog) = 0;
+  virtual void getDoneUserStory() = 0;
+  virtual void getInProgressUserStory() = 0;
+  virtual void getToDoUserStory() = 0;
 
   virtual void addStoryToMap(UserStory& userStory) = 0;
+  virtual void updateStatus(int storyID, int newStatus) = 0;
 };

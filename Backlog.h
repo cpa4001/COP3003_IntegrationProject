@@ -36,7 +36,6 @@ class Backlog {
   std::vector<UserStory> getProductBacklog();
   std::vector<std::string> getRow();
 
-
   friend std::string operator-(Backlog& backlog);
 };
 #endif

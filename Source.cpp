@@ -66,7 +66,7 @@ int main() {
   }
 
   // update the storyID so that the next userstory gets the correct storyID
-  UserStory::storyID = masterBacklog.getRow().size();
+  UserStory::storyID = masterBacklog.getRow().size() - 1;
 
   /*
   // if the file is open and if the first line can be recieved
@@ -181,6 +181,7 @@ int main() {
 
           // point to the necessary collaborator and assign the story to them
           collaborator = new Developer(inputString);
+          // using polymorphism through dynamic dispatch
           collaborator->assignStory(inputInt);
 
           std::cout << inputString << " is now working on storyID " << inputInt
@@ -212,7 +213,6 @@ int main() {
         }
 
         std::cout << "How long will this Iteration consist of (in days)? ";
-        // To Do | In Progress | Done
         std::cin >> inputInt;
         iteration->setIterationLength(inputInt);
 
@@ -240,7 +240,7 @@ int main() {
       case 7:
         std::cout << "This feature is still in development" << std::endl;
         std::cout
-            << "What is the ID of the story that you would like to change?"
+            << "What is the ID of the story that you would like to change? "
             << std::endl;
         std::cin >> inputInt;
 
@@ -251,9 +251,10 @@ int main() {
         // find row with story ID
         // update to new status
         // masterBacklog.updateStoryStatus(inputInt, status);
-        // kanbanBoard.updateStatus(inputInt, status);
+        kanbanBoard.updateStatus(inputInt - 1, status);
         std::cout << "Story ID, " << inputInt << ", has been changed to status "
                   << status << std::endl;
+        createBorder();
         break;
       default:
         std::cout

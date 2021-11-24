@@ -22,8 +22,6 @@ Backlog::Backlog(std::ifstream& readFromUserStories) {
   if (readFromUserStories.is_open()) {
     while (getline(readFromUserStories, line)) {
       row.push_back(line);
-      std::cout << i << " " << line << std::endl;
-      i++;
     }
     readFromUserStories.close();
   } else {

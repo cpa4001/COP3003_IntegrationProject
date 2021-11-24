@@ -44,43 +44,38 @@ KanbanBoard::KanbanBoard(std::vector<std::string> fileRows) {
 void KanbanBoard::printBoard() {
   int maxToDoSpaces = 0;
   int maxInProgressSpaces = 0;
-  std::cout << "To Do | In Progress | Done" << std::endl;
   std::string kanbanBoardLine = "";
 
-  std::map<std::string, int>::iterator map_iterator;
-
-  for (map_iterator = statusMap.begin(); map_iterator != statusMap.end();
-       map_iterator++) {
-    if (map_iterator->second == 0) {
-      std::cout << map_iterator->first << "     |";
-
-    } else if (map_iterator->second == 1) {
-      std::cout << map_iterator->first << "     |";
-
-    } else if (map_iterator->second == 2) {
-      std::cout << map_iterator->first << std::endl;
-    } else {
-      std::cout << std::endl;
-    }
-  }
+  getToDoUserStory();
+  getInProgressUserStory();
+  getDoneUserStory();
   std::cout << std::endl;
 }
 
-void KanbanBoard::getDoneUserStory(Backlog& backlog) {
-  /*
-  std::vector<std::vector<std::string>> matrix = backlog.getMatrix();
-  */
-  std::map<std::string, int>::iterator map_iterator;
-
+void KanbanBoard::getDoneUserStory() {
   for (map_iterator = statusMap.begin(); map_iterator != statusMap.end();
        map_iterator++) {
-    std::cout << map_iterator->first          // string (key)
-              << ':' << map_iterator->second  // string's value
-              << std::endl;
+    if (map_iterator->second == 2) {
+      std::cout << " DONE : " << map_iterator->first << std::endl;
+    }
   }
 }
-void KanbanBoard::getInProgressUserStory(Backlog& backlog) {}
-void KanbanBoard::getToDoUserStory(Backlog& backlog) {}
+void KanbanBoard::getInProgressUserStory() {
+  for (map_iterator = statusMap.begin(); map_iterator != statusMap.end();
+       map_iterator++) {
+    if (map_iterator->second == 1) {
+      std::cout << " IN PROGRESS : " << map_iterator->first << std::endl;
+    }
+  }
+}
+void KanbanBoard::getToDoUserStory() {
+  for (map_iterator = statusMap.begin(); map_iterator != statusMap.end();
+       map_iterator++) {
+    if (map_iterator->second == 0) {
+      std::cout << " TO DO : " << map_iterator->first << std::endl;
+    }
+  }
+}
 
 /*
     Adds a story name and the status of that story to the statusMap hashmap

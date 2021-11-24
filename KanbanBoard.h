@@ -18,15 +18,16 @@ class KanbanBoard : public Board {
   std::vector<std::string> inProgressUserStoryNames;
   std::vector<std::string> doneUserStoryNames;
   std::map<std::string, int> statusMap;
+  std::map<std::string, int>::iterator map_iterator;
 
  public:
   KanbanBoard();
   KanbanBoard(std::vector<std::string> fileRows);
   void printBoard();
 
-  void getDoneUserStory(Backlog& backlog);
-  void getInProgressUserStory(Backlog& backlog);
-  void getToDoUserStory(Backlog& backlog);
+  void getDoneUserStory();
+  void getInProgressUserStory();
+  void getToDoUserStory();
   void addStoryToMap(UserStory& userStory);
 
   void updateStatus(int storyID, int newStatus);
