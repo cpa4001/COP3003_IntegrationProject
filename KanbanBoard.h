@@ -28,4 +28,6 @@ class KanbanBoard : public Board {
   void getInProgressUserStory(Backlog& backlog);
   void getToDoUserStory(Backlog& backlog);
   void addStoryToMap(UserStory& userStory);
+
+  void updateStatus(int storyID, int newStatus);
 };

@@ -24,16 +24,19 @@ void saveUserStory(UserStory& userstory, std::ofstream& savedUserStories,
 bool is_empty(std::ifstream& pFile);
 void createAndSaveStory(std::ofstream& writeToUserStories, Backlog& backlog,
                         KanbanBoard& kanbanBoard);
-void lookUpProductBackLog();
 void createBorder();
-int getCurrentStoryID();
 void invokeFunc(void (*func)());
 
 int main() {
   std::cout << "Welcome to a user story project management \ntool developed by "
                "Christian Apostoli. ";
   std::cout << "You \ncan use this console application to keep \ntrack of user "
-               "stories in an Agile development team."
+               "stories in an Agile development team.\n"
+            << std::endl;
+
+  std::cout << "The program will create a csv file (in the same \ndirectory as "
+               "this project) for your user stories \nand "
+               "give you a series of options to interact \nwith the file"
             << std::endl;
   createBorder();
 
@@ -52,7 +55,7 @@ int main() {
 
   readFromUserStories.open("UserStories.csv");
   // used for reading from the file in case 4
-  std::string line;
+  std::string line = "";
   // read in the fist line
   std::getline(readFromUserStories, line);
 
@@ -63,7 +66,7 @@ int main() {
   }
 
   // update the storyID so that the next userstory gets the correct storyID
-  UserStory::storyID = getCurrentStoryID();
+  UserStory::storyID = masterBacklog.getRow().size();
 
   /*
   // if the file is open and if the first line can be recieved
@@ -89,16 +92,18 @@ int main() {
   */
 
   // give the menu until the user chooses to exit
+  // standard length for menu options is 42 character
   int userInputKey = 0;
   do {
-    std::cout << "Please Pick an option(0-6)" << std::endl;
+    std::cout << "Please Pick an option(0-7)" << std::endl;
     std::cout << "Add a User Story                      (1)" << std::endl;
-    std::cout << "Look up Product Backlog		      (2)" << std::endl;
+    std::cout << "Look up Product Backlog               (2)" << std::endl;
     std::cout << "Assign a User Story to a Collaborator (3)" << std::endl;
-    std::cout << "Create Iteration		      (4)" << std::endl;
-    std::cout << "See Kanban Board		      (5)" << std::endl;
-    std::cout << "Get the most recent user story        (6)" << std::endl;
-    std::cout << "Exit				      (0)" << std::endl;
+    std::cout << "Create Iteration                      (4)" << std::endl;
+    std::cout << "See Kanban Board                      (5)" << std::endl;
+    std::cout << "Get the most recent User Story        (6)" << std::endl;
+    std::cout << "Set User Story Status                 (7)" << std::endl;
+    std::cout << "Exit                                  (0)" << std::endl;
 
     std::cin >> userInputKey;
     std::cin.clear();
@@ -125,8 +130,10 @@ int main() {
     Iteration* iteration;
 
     // variables to hold input
-    int inputInt;
-    std::string inputString;
+    int inputInt = 0;
+    std::string inputString = "";
+
+    int status = 0;
 
     switch (userInputKey) {
       case 0:
@@ -138,7 +145,8 @@ int main() {
         break;
       case 2:
         // Print out all records of the userstory.csv file
-        lookUpProductBackLog();
+        // lookUpProductBackLog();
+        masterBacklog.printStories();
         createBorder();
         break;
       case 3:
@@ -147,8 +155,10 @@ int main() {
         std::cin >> inputInt;
 
         if (inputInt == 1) {
-          std::cout << "What Story ID is the Scrum Master woking on: ";
-          std::cin >> inputInt;
+          do {
+            std::cout << "What Story ID is the Scrum Master woking on: ";
+            std::cin >> inputInt;
+          } while (inputInt >= UserStory::storyID);
           std::cout << "What is the Scrum Master's name? ";
           std::cin >> inputString;
 
@@ -160,8 +170,10 @@ int main() {
           std::cout << inputString << " is now working on storyID " << inputInt
                     << std::endl;
         } else if (inputInt == 2) {
-          std::cout << "What Story ID is the developer woking on: ";
-          std::cin >> inputInt;
+          do {
+            std::cout << "What Story ID is the developer woking on: ";
+            std::cin >> inputInt;
+          } while (inputInt >= UserStory::storyID);
           // std::cout << std::endl;
 
           std::cout << "What is this Developer's Name? ";
@@ -175,17 +187,8 @@ int main() {
                     << std::endl;
         }
 
-        if (readFromUserStories.is_open()) {
-          while (getline(readFromUserStories, line)) {
-            std::cout << line << std::endl;
-            // for (int )
-          }
-          // readFromUserStories.close();
-        } else {
-          std::cout << "Unable to open file, you might have the file open \nin "
-                       "another application,or the file has not been created."
-                    << std::endl;
-        }
+        // update the backlog and the file
+        // masterBacklog.updateStoryWithCollaborator(inputInt, inputString);
 
         createBorder();
         break;
@@ -194,10 +197,9 @@ int main() {
         std::cout << "What is the name of the iteration? ";
         std::cin >> inputString;
 
-        std::cout << "Will this iteration be a:\n (1) Release\n(2) Sprint";
+        std::cout << "Will this iteration be a:\n(1) Release\n(2) Sprint"
+                  << std::endl;
         std::cin >> inputInt;
-
-        std::cout << "How long will this Iteration consist of (in days)?";
 
         // point the iteration to the correct subclass
         // additional use of polymorphism
@@ -209,18 +211,20 @@ int main() {
           iteration = new Iteration(inputString, "Iteration", 0);
         }
 
-        std::cout << "How long will this Iteration consist of (in days)?";
+        std::cout << "How long will this Iteration consist of (in days)? ";
+        // To Do | In Progress | Done
         std::cin >> inputInt;
         iteration->setIterationLength(inputInt);
 
+        createBorder();
+        break;
+
       case 5:
         // iterate through the product backlog and add the statuses to the
-        // hashmap in the kanbanBoard object
-        for (int index = 0; index < masterBacklog.getProductBacklog().size();
-             index++) {
-          kanbanBoard.addStoryToMap(masterBacklog.getProductBacklog()[index]);
-        }
-        // print the user story names
+        // hashmap in the kanbanBoard object this is done when Kanbanboard
+        // object is created
+
+        // print the user story ids
         kanbanBoard.printBoard();
         createBorder();
         break;
@@ -233,14 +237,34 @@ int main() {
         // function
         invokeFunc(&createBorder);
         break;
+      case 7:
+        std::cout << "This feature is still in development" << std::endl;
+        std::cout
+            << "What is the ID of the story that you would like to change?"
+            << std::endl;
+        std::cin >> inputInt;
+
+        std::cout << "What is its new status?" << std::endl;
+        std::cout << "(1) To Do \n(2) In Progress \n(3) Done" << std::endl;
+        std::cin >> status;
+        // iterate through backlog
+        // find row with story ID
+        // update to new status
+        // masterBacklog.updateStoryStatus(inputInt, status);
+        // kanbanBoard.updateStatus(inputInt, status);
+        std::cout << "Story ID, " << inputInt << ", has been changed to status "
+                  << status << std::endl;
+        break;
       default:
         std::cout
-            << "You entered in an invalid number please enter an integer (0-6)"
+            << "You entered in an invalid number please enter an integer (0-7)"
             << std::endl;
         createBorder();
     }
 
   } while (userInputKey);
+
+  std::cout << "Program Exited. Have a nice day." << std::endl;
 
   // close the csv to clear memmory
   // readFromUserStories.close();
@@ -266,9 +290,10 @@ std::ostream& operator<<(std::ostream& out, UserStory& userstory) {
  * newStory	new UserStory object created
  */
 UserStory createUserStory(Backlog& backlog) {
-  std::string storyName;
-  std::string storyBody;
-  int storyPoints;
+  std::cout << "Enter User Story details (Please do not use commas)\n";
+  std::string storyName = "";
+  std::string storyBody = "";
+  int storyPoints = 0;
 
   std::cout << "Story Name: ";
   // std::cin >> storyName;
@@ -312,9 +337,9 @@ void saveUserStory(UserStory& userstory, std::ofstream& savedUserStories,
                  "seperate application."
               << std::endl;
 
-  backlog.addToRow(userstory.storyID + ", " + userstory.getStoryName() + "," +
-                   userstory.getStoryBody() + ", " +
-                   std::to_string(userstory.getStoryPoints()) + ", " +
+  backlog.addToRow(std::to_string(userstory.storyID) + ", " +
+                   userstory.getStoryName() + "," + userstory.getStoryBody() +
+                   ", " + std::to_string(userstory.getStoryPoints()) + ", " +
                    userstory.getStatusString() + "\n");
 
   kanbanBoard.addStoryToMap(userstory);
@@ -348,55 +373,11 @@ void createAndSaveStory(std::ofstream& writeToUserStories, Backlog& backlog,
   saveUserStory(newStory, writeToUserStories, backlog, kanbanBoard);
 }
 
-/*
-   Iterates through csv file and prints rows to console
-*/
-void lookUpProductBackLog() {
-  // create a buffer for each line
-  std::string line;
-  std::ifstream readFromUserStories;
-  readFromUserStories.open("UserStories.csv");
-  if (readFromUserStories.is_open()) {
-    while (getline(readFromUserStories, line)) {
-      std::cout << line << '\n';
-    }
-    readFromUserStories.close();
-  } else {
-    std::cout << "Unable to open file, you might have the file open \nin "
-                 "another application,or the file has not been created."
-              << std::endl;
-  }
-}
-
 /**
  * Prints border to screen
  */
 void createBorder() {
   std::cout << "---------------------------------------" << std::endl;
-}
-
-/*
-    Updates the storyID with the most recent ID from the csv file
-    Returns:
-    currentMax  The most recent storyID
-*/
-int getCurrentStoryID() {
-  std::string line;
-  int currentMax = 0;
-  std::ifstream readFromUserStories;
-  readFromUserStories.open("UserStories.csv");
-  if (readFromUserStories.is_open()) {
-    while (getline(readFromUserStories, line)) {
-      ++currentMax;
-    }
-    readFromUserStories.close();
-  } else {
-    std::cout << "Unable to open file, you might have the file open \nin "
-                 "another application,or the file has not been created."
-              << std::endl;
-  }
-
-  return currentMax - 1;
 }
 
 /*  demonstration of passing functions as parameters

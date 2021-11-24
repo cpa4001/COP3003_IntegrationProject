@@ -1,10 +1,6 @@
 ﻿  Backlog.cpp
-C:\Users\chris\source\repos\Userstoryconsole\Backlog.cpp(58,29): warning C4018: '<': signed/unsigned mismatch
-  KanbanBoard.cpp
-C:\Users\chris\source\repos\Userstoryconsole\KanbanBoard.cpp(20,25): warning C4018: '<': signed/unsigned mismatch
+C:\Users\chris\source\repos\Userstoryconsole\Backlog.cpp(60,29): warning C4018: '<': signed/unsigned mismatch
+C:\Users\chris\source\repos\Userstoryconsole\Backlog.cpp(69,27): warning C4018: '<': signed/unsigned mismatch
   Source.cpp
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(219,35): warning C4018: '<': signed/unsigned mismatch
-  UserStory.cpp
   Generating Code...
-C:\Users\chris\source\repos\Userstoryconsole\UserStory.cpp(82): warning C4715: 'UserStory::getStatusString': not all control paths return a value
   Userstoryconsole.vcxproj -> C:\Users\chris\source\repos\Userstoryconsole\Debug\Userstoryconsole.exe

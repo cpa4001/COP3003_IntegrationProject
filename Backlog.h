@@ -29,9 +29,13 @@ class Backlog {
   void addUserStory(UserStory& userStory);
   void addToRow(std::string row);
   void printStories();
+  void updateStoryStatus(int storyID, int newStatus);
+  void updateStoryWithCollaborator(int storyID, std::string CollaboratorName);
+
   std::vector<std::vector<std::string>> getMatrix();
   std::vector<UserStory> getProductBacklog();
   std::vector<std::string> getRow();
+
 
   friend std::string operator-(Backlog& backlog);
 };

@@ -52,10 +52,10 @@ void KanbanBoard::printBoard() {
   for (map_iterator = statusMap.begin(); map_iterator != statusMap.end();
        map_iterator++) {
     if (map_iterator->second == 0) {
-      std::cout << map_iterator->first << " |";
+      std::cout << map_iterator->first << "     |";
 
     } else if (map_iterator->second == 1) {
-      std::cout << map_iterator->first << " |";
+      std::cout << map_iterator->first << "     |";
 
     } else if (map_iterator->second == 2) {
       std::cout << map_iterator->first << std::endl;
@@ -63,6 +63,7 @@ void KanbanBoard::printBoard() {
       std::cout << std::endl;
     }
   }
+  std::cout << std::endl;
 }
 
 void KanbanBoard::getDoneUserStory(Backlog& backlog) {
@@ -89,4 +90,15 @@ void KanbanBoard::getToDoUserStory(Backlog& backlog) {}
 void KanbanBoard::addStoryToMap(UserStory& userStory) {
   statusMap.insert(std::pair<std::string, int>(
       std::to_string(userStory.storyID), userStory.getStatus()));
+}
+
+/*
+    used to update status in the statusMap
+*/
+void KanbanBoard::updateStatus(int storyID, int newStatus) {
+  if (statusMap.find(std::to_string(storyID)) != statusMap.end()) {
+    statusMap[std::to_string(storyID)] = newStatus;
+  } else {
+    std::cout << "This story does not exist";
+  }
 }
