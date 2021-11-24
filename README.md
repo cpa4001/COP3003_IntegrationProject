@@ -44,7 +44,7 @@ Milestone 2:
 - StoryIDs shall correctly reflect how many user story objects there are
 - Users shall be able to see a Kanban Board (stories that are To Do, In Progress,  Done)
 - Program shall have status in csv (To Do, In Progress, or Done) instead of integer
-- User shall be able to get the most recent user story
+- Users shall be able to get the most recent user story
 
 
 ## Getting Started
@@ -59,9 +59,9 @@ Milestone 2:
 - C++
 
 ## Current Challenges 
-- Getting overloaded operators to a non-ambiguous definition
-- Creating a function that accepts a function pointer 
-- Implementing the KanbanBoard feature
+- storyID jumping by two occasionally
+- changing the status of a story and having the csv reflect the change
+- writing developers into the csv
 
 ## Future Goals
 - Create a frontend using a GUI or website
