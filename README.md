@@ -41,7 +41,6 @@ Milestone 1:
 Milestone 2:
 - Users shall be able to create iterations
 - Users shall be able to enter Developers or Scrum Masters
-- StoryIDs shall correctly reflect how many user story objects there are
 - Users shall be able to see a Kanban Board (stories that are To Do, In Progress,  Done)
 - Program shall have status in csv (To Do, In Progress, or Done) instead of integer
 - Users shall be able to get the most recent user story
