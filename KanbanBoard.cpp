@@ -8,8 +8,7 @@
 
 #include "KanbanBoard.h"
 
-// goals for this class:
-// - try to spit out using iterators
+// LO2
 
 KanbanBoard::KanbanBoard() {}
 
@@ -17,7 +16,7 @@ KanbanBoard::KanbanBoard() {}
     Creates the KanbanBoard and intializes the statusMap
 */
 KanbanBoard::KanbanBoard(std::vector<std::string> fileRows) {
-  for (int row = 1; row < fileRows.size(); row++) {
+  for (size_t row = 1; row < fileRows.size(); row++) {
     std::string storyID = fileRows[row].substr(0, fileRows[row].find(","));
 
     /*

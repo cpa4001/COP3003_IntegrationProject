@@ -11,6 +11,7 @@
 
 #include "Board.h"
 
+// LO2
 // KanbanBoard inherits from Board interface with public visibility
 class KanbanBoard : public Board {
  private:

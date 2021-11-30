@@ -6,9 +6,10 @@
 
 */
 
+// LO2
 #include "ScrumMaster.h"
 
-/*
+/* LO1c
     Constructor for ScrumMaster - calls Collaborator Constructor
 */
 ScrumMaster::ScrumMaster(std::string collaboratorName)

@@ -1,7 +1,11 @@
-/*
-        Name: UserStory.h
-        Author: Christian Apostoli
-        Purpose: Declaration file for UserStory class
+/** @file UserStory.h
+*   @brief: Declaration file for UserStory class
+*	
+*	Declaration of Userstory Class and blueprint for
+*	user stories in file
+* 
+*	@author Christian Apostoli
+*	@bug No known bugs
 */
 
 #ifndef USERSTORY_H
@@ -14,7 +18,7 @@ class UserStory {
   std::string storyBody;
   int storyPoints;
 
-  enum Status { TO_DO, IN_PROGRESS, DONE };
+  enum Status { to_do, in_progress, done };
 
   Status status;
 

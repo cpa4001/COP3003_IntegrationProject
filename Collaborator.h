@@ -8,6 +8,8 @@
 #define COLLABORATOR_H
 #include <string>
 #include <vector>
+
+
 class Collaborator {
  private:
   std::string collaboratorName;

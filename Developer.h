@@ -7,7 +7,7 @@
 
 #pragma once
 #include "Collaborator.h"
-
+// LO2
 // Developer inherits from Collaborator with public visibility
 class Developer : public Collaborator {
  public:

@@ -164,6 +164,7 @@ int main() {
 
           // point to the necessary collaborator and assign the story to them
           collaborator = new ScrumMaster(inputString);
+          // LO3
           // using polymorphism through dynamic dispatch
           collaborator->assignStory(inputInt);
 
@@ -179,8 +180,10 @@ int main() {
           std::cout << "What is this Developer's Name? ";
           std::cin >> inputString;
 
+          // LO5
           // point to the necessary collaborator and assign the story to them
           collaborator = new Developer(inputString);
+          // LO3
           // using polymorphism through dynamic dispatch
           collaborator->assignStory(inputInt);
 
@@ -202,6 +205,7 @@ int main() {
                   << std::endl;
         std::cin >> inputInt;
 
+        //LO5
         // point the iteration to the correct subclass
         // additional use of polymorphism
         if (inputInt == 1) {
@@ -214,6 +218,7 @@ int main() {
 
         std::cout << "How long will this Iteration consist of (in days)? ";
         std::cin >> inputInt;
+        // LO3
         iteration->setIterationLength(inputInt);
 
         createBorder();
@@ -381,7 +386,8 @@ void createBorder() {
   std::cout << "---------------------------------------" << std::endl;
 }
 
-/*  demonstration of passing functions as parameters
+/*  LO7
+    demonstration of passing functions as parameters
     can call any void function with no parameters in main
     Param:
     (*func)()   the memory location of a function

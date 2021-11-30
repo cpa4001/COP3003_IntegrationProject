@@ -55,7 +55,7 @@ void Backlog::addToRow(std::string newRow) { row.push_back(newRow); }
  * prints names of user stories in the iteration's backolog to console
  */
 void Backlog::printStories() {
-  for (int index = 0; index < row.size(); index++) {
+  for (size_t index = 0; index < row.size(); index++) {
     std::cout << row[index] << std::endl;
   }
 }
@@ -64,7 +64,7 @@ void Backlog::printStories() {
     Finds a story based on their ID and then updates their status
 */
 void Backlog::updateStoryStatus(int storyID, int newStatus) {
-  for (int line = 0; line < row.size(); line++) {
+  for (size_t line = 0; line < row.size(); line++) {
     std::string tempStoryID = row[line].substr(0, row[line].find(","));
     int lineStoryID = std::stoi(tempStoryID);
 

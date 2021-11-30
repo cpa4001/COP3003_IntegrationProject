@@ -1,12 +1,16 @@
-/*
-        Name: UserStory.cpp
-        Author: Christian Apostoli
-        Purpose: Main implementation file for UserStory class
-*/
+/** @file UserStory.cpp
+ *   @brief: Implementation file for UserStory class
+ *
+ *	Implementation of Userstory Class and blueprint for
+ *	user stories in file, all method definitions 
+ * 
+ *	@author Christian Apostoli
+ *	@bug No known bugs
+ */
 
 #include "UserStory.h"
 
-// Include a comment in which you compare and contrast the procedural/functional
+// LO4: Include a comment in which you compare and contrast the procedural/functional
 // approach and the object-oriented approach
 /*
     The object-oriented approach utlizes classes to store the data
@@ -25,11 +29,12 @@ UserStory::UserStory() {
   storyName = "";
   storyBody = "";
   storyPoints = 0;
-  status = TO_DO;
+  status = to_do;
 
   storyID++;
 }
 
+//LO1b
 /**
         default constructor - intialize empty UserStory
         Parameters:
@@ -48,7 +53,7 @@ UserStory::UserStory(std::string storyName, std::string storyBody,
   } else {
     this->storyPoints = storyPoints;
   }
-  status = TO_DO;
+  status = to_do;
 
   storyID++;
 }
@@ -90,4 +95,4 @@ void UserStory::setStoryPoints(int value) { storyPoints = value; }
 /**
  * sets the Userstory to complete
  */
-void UserStory::completeUserStory() { status = DONE; }
+void UserStory::completeUserStory() { status = done; }
