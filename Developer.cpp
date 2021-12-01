@@ -1,10 +1,8 @@
-/*
-        Name: Developer.cpp
-        Author: Christian Apostoli
-        Purpose: implementation file for Developer class
-                 inherits from Collaborator class
-
-*/
+/** @file Developer.cpp
+ *  @brief Implementation file for Developer class inherits from                 Collaborator  class
+ *  @author Christian Apostoli
+ *  @bug No known bugs.
+ */
 
 #include "Developer.h"
 // LO2

@@ -1,13 +1,16 @@
-/*
-        Name: Board.h
-        Author: Christian Apostoli
-        Purpose: Declaration file for Board interface
-*/
+/** @file Board.h
+ *  @brief Declaration file for Board interface
+ *
+ *	Pure virtual method prototypes for Board Interface
+ *
+ *	@author Christian Apostoli
+ *	@bug No known bugs
+ */
 
 #pragma once
 #include "Backlog.h"
 #include "UserStory.h"
-//LO5
+// LO5
 class Board {
  public:
   virtual void printBoard() = 0;

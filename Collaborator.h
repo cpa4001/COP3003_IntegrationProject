@@ -1,8 +1,8 @@
-/*
-        Name: Collaborator.h
-        Author: Christian Apostoli
-        Purpose: Declaration file for Collaborator class
-*/
+/** @file Collaborator.h
+ *  @brief Declaration file for Collaborator class
+ *  @author Christian Apostoli
+ *  @bug No known bugs.
+ */
 
 #ifndef COLLABORATOR_H
 #define COLLABORATOR_H

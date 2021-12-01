@@ -1,9 +1,9 @@
-/*
-        Name: Sprint.h
-        Author: Christian Apostoli
-        Purpose: Declaration file for Sprint class
-                         inherits from Iteration class
-*/
+/** @file Sprint.h
+ *  @brief Declaration file for Sprint class
+           inherits from Iteration class
+ *  @author Christian Apostoli
+ *  @bug No known bugs.
+ */
 
 #pragma once
 #include "Iteration.h"

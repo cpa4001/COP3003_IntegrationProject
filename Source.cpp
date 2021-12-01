@@ -1,8 +1,10 @@
-/*
-        Name: Source.cpp
-        Author: Christian Apostoli
-        Purpose: Main implementation file for program
-*/
+/** @file Source.cpp
+ *  @brief Main implementation file for program
+ *  @author Christian Apostoli
+ *  @bug userstory::storyID will increase by two at times
+ *  @bug little input validation
+ */
+
 
 #include <fstream>
 #include <iostream>

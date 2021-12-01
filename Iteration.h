@@ -1,8 +1,8 @@
-/*
-        Name: Iteration.h
-        Author: Christian Apostoli
-        Purpose: Declaration file for Iteration class
-*/
+/** @file Iteration.h
+ *  @brief Declaration file for Iteration class
+ *  @author Christian Apostoli
+ *  @bug No known bugs.
+ */
 
 #ifndef ITERATION_H
 #define ITERATION_H

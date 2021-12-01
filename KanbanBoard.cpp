@@ -1,10 +1,13 @@
-/*
-        Name: KanbanBoard.cpp
-        Author: Christian Apostoli
-        Purpose: implementation file for KanbanBoard class
-                 inherits from Board Interface
-
-*/
+/** @file KanbanBoard.cpp
+ *  @brief Implementation file for KanbanBoard class
+ *
+ *	Implementation file for KanbanBoard class
+    inherits from Board Interface
+ *
+ *	@author Christian Apostoli
+ *	@bug kanban board only prints all columns in 1 vertical line
+ *       instead of three columns side by side
+ */
 
 #include "KanbanBoard.h"
 

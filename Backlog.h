@@ -1,8 +1,11 @@
-/*
-        Name: Backlog.h
-        Author: Christian Apostoli
-        Purpose: Declaration file for Backlog class
-*/
+/** @file Backlog.h
+ *  @brief Declaration file for Backlog class
+ *
+ *	attributes and method prototypes for Backlog class
+ *
+ *	@author Christian Apostoli
+ *	@bug No known bugs
+ */
 
 #ifndef BACKLOG_H
 #define BACKLOG_H

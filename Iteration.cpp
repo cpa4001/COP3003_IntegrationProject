@@ -1,8 +1,8 @@
-/*
-        Name: Iteration.cpp
-        Author: Christian Apostoli
-        Purpose: Main implementation file for Iteration class
-*/
+/** @file Iteration.cpp
+ *  @brief Implementation file for Iteration class
+ *  @author Christian Apostoli
+ *  @bug No known bugs.
+ */
 
 #include "Iteration.h"
 

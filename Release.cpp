@@ -1,10 +1,9 @@
-/*
-        Name: Release.cpp
-        Author: Christian Apostoli
-        Purpose: implementation file for Release class
-                 inherits from Iteration class
-
-*/
+/** @file Release.cpp
+ *  @brief implementation file for Release class
+           inherits from Iteration class
+ *  @author Christian Apostoli
+ *  @bug No known bugs.
+ */
 
 #include "Release.h"
 // LO2

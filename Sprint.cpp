@@ -1,10 +1,9 @@
-/*
-        Name: Sprint.cpp
-        Author: Christian Apostoli
-        Purpose: implementation file for Sprint class
-                 inherits from Iteration class
-
-*/
+/** @file Sprint.cpp
+ *  @brief Implementation file for Sprint class
+           inherits from Iteration class
+ *  @author Christian Apostoli
+ *  @bug No known bugs.
+ */
 
 #include "Sprint.h"
 // LO2

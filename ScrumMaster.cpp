@@ -1,10 +1,9 @@
-/*
-        Name: ScrumMaster.cpp
-        Author: Christian Apostoli
-        Purpose: implementation file for ScrumMaster class
+/** @file ScrumMaster.cpp
+ *  @brief Implementation file for ScrumMaster class
                  inherits from Collaborator class
-
-*/
+ *  @author Christian Apostoli
+ *  @bug No known bugs.
+ */
 
 // LO2
 #include "ScrumMaster.h"

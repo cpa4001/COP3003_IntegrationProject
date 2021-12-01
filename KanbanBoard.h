@@ -1,9 +1,12 @@
-/*
-        Name: KanbanBoard.h
-        Author: Christian Apostoli
-        Purpose: Declaration file for KanbanBoard class
-                         inherits from Board Interface
-*/
+/** @file KanbanBoard.h
+ *  @brief Declaration file for KanbanBoard class
+ *
+ *	Declaration for KanbanBoard class and blueprint for
+ *	kanban board objects in main. Inherits from Board interface
+ *
+ *	@author Christian Apostoli
+ *	@bug No known bugs
+ */
 
 #pragma once
 #include <string>

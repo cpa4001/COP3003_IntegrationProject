@@ -1,9 +1,9 @@
-/*
-        Name: Collaborator.cpp
-        Author: Christian Apostoli
-        Purpose: implementation file for Collaborator class
+/** @file Collaborator.cpp
+ *  @brief Implementation file for Collaborator class
+ *  @author Christian Apostoli
+ *  @bug No known bugs.
+ */
 
-*/
 
 #include "Collaborator.h"
 

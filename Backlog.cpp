@@ -1,8 +1,12 @@
-/*
-        Name: Backlog.cpp
-        Author: Christian Apostoli
-        Purpose: Main implementation file for Backlog class
-*/
+/** @file Backlog.cpp
+ *  @brief Implementation file for Backlog class
+ *
+ *	Method definitions for Backlog class
+ *
+ *	@author Christian Apostoli
+ *	@bug No way found to update file with updated status
+ *  @bug No way found to update file with collaborators
+ */
 
 #include "Backlog.h"
 

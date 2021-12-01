@@ -1,9 +1,9 @@
-/*
-        Name: Developer.h
-        Author: Christian Apostoli
-        Purpose: Declaration file for Developer class
-                 inherits from Collaborator class
-*/
+/** @file Developer.h
+ *  @brief Declaration file for Developer class
+           inherits from Collaborator class
+ *  @author Christian Apostoli
+ *  @bug No known bugs.
+ */
 
 #pragma once
 #include "Collaborator.h"
