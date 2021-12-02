@@ -65,7 +65,7 @@ Milestone 2:
 - changing the status of a story and having the csv reflect the change
 - writing developers into the csv
 
-## Future Goals
+## Future Goals or Contributions
 - Create a frontend using a GUI or website
 - Decrease stamp coupling
 
