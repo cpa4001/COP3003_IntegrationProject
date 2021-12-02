@@ -69,6 +69,9 @@ Milestone 2:
 - Create a frontend using a GUI or website
 - Decrease stamp coupling
 
+## License
+MIT License
+
 ## Acknowledgments
 
 * https://github.com/jfg357
