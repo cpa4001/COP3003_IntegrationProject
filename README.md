@@ -30,7 +30,7 @@ So that       (**Why** I want to accomplish)          <br>
   - Shown in the use of overloaded operators including overloading the unary (-) operator with a Backlog object
   - Shown in the methods of the Backlog class 
  
- ## Milestones
+ ## History
 
 Milestone 1:
 - Users shall be able to create user stories
@@ -52,10 +52,13 @@ Milestone 2:
 ```
 
 
-## Software
+## Built With
 
 - Visual Studio
 - C++
+
+## Author
+- Christian Apostoli
 
 ## Current Challenges 
 - storyID jumping by two occasionally
@@ -71,3 +74,5 @@ Milestone 2:
 * https://github.com/jfg357
 * https://github.com/jehna/readme-best-practices/edit/master/README-default.md
 * https://gist.github.com/PurpleBooth/109311bb0361f32d87a2
+* Professor Vanselow
+* Jairo Garciga
