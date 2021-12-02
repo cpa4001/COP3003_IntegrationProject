@@ -5,7 +5,6 @@
  *  @bug little input validation
  */
 
-
 #include <fstream>
 #include <iostream>
 #include <string>
@@ -207,7 +206,7 @@ int main() {
                   << std::endl;
         std::cin >> inputInt;
 
-        //LO5
+        // LO5
         // point the iteration to the correct subclass
         // additional use of polymorphism
         if (inputInt == 1) {
@@ -281,10 +280,12 @@ int main() {
   return 0;
 }
 
-/**
- * Overloaded operator to print out attributes of user story object (operator on
- * aggregate) Parameters: out		ofstream object of output file userstory
- * userstory object Returns: out		attributes of userstory
+/** LO7
+ * @brief Overloaded operator to print out user story atributes
+ *  @param out		    ofstream object of output file userstory
+ *  @param              userstory object
+ *
+ *  @returns out		output stream
  */
 std::ostream& operator<<(std::ostream& out, UserStory& userstory) {
   out << userstory.getStoryName() << " " << userstory.getStoryBody() << " "
@@ -293,9 +294,13 @@ std::ostream& operator<<(std::ostream& out, UserStory& userstory) {
 }
 
 /**
- * Prompts user for input and creates userstory object
- * Returns:
- * newStory	new UserStory object created
+ * @brief prompts user for input and creates userstory object
+ *
+ * Had to create a function since the switch does not allow intialization
+ *
+ * @param backlog       backlog object that holds user stories
+ *
+ * @return newStory	    new UserStory object created
  */
 UserStory createUserStory(Backlog& backlog) {
   std::cout << "Enter User Story details (Please do not use commas)\n";
@@ -328,10 +333,14 @@ UserStory createUserStory(Backlog& backlog) {
 }
 
 /**
- * Writes UserStory object to csv file
- * Parameters:
- * savedUserStories		ofstream object of output file
- * userstory				userstory object
+ * @brief writes UserStory object to csv
+ *
+ * adds string to backlogs vector and adds story to kanbanboard's hashmap
+ * 
+ * @param userstory				userstory object
+ * @param savedUserStories		ofstream object of output file
+ * @param backlog               backlog object that holds use stories
+ * @param kanbanBoard           kanbanboard object  
  */
 void saveUserStory(UserStory& userstory, std::ofstream& savedUserStories,
                    Backlog& backlog, KanbanBoard& kanbanBoard) {
@@ -353,23 +362,26 @@ void saveUserStory(UserStory& userstory, std::ofstream& savedUserStories,
   kanbanBoard.addStoryToMap(userstory);
 }
 
-/*
-Code was taken from
+/**
+* @brief sees if a file is empty
+* 
+* Code was taken from
 * https://newbedev.com/checking-for-an-empty-file-in-c
-* sees if a file is empty
-* Parameters:
-* pFile		ifstream object or input file
-* Returns:
-* bool
+* 
+* @param pFile		ifstream object or input file
+*   
+* @return bool      
 */
 bool is_empty(std::ifstream& pFile) {
   return pFile.peek() == std::ifstream::traits_type::eof();
 }
 
 /**
- * calls the saveUserStory function
- * Parameters:
- * writeToUserStories		ofstream object of output file
+ * @brief creates UserStory object and calls the saveUserStory function
+ * 
+ * @param writeToUserStories		ofstream object of output file
+ * @param backlog                   backlog object that holds user stories
+ * @param kanbanBoard               kanbanBoard object
  */
 void createAndSaveStory(std::ofstream& writeToUserStories, Backlog& backlog,
                         KanbanBoard& kanbanBoard) {
@@ -382,16 +394,17 @@ void createAndSaveStory(std::ofstream& writeToUserStories, Backlog& backlog,
 }
 
 /**
- * Prints border to screen
+ * @brief Prints border to screen
  */
 void createBorder() {
   std::cout << "---------------------------------------" << std::endl;
 }
 
-/*  LO7
-    demonstration of passing functions as parameters
-    can call any void function with no parameters in main
-    Param:
-    (*func)()   the memory location of a function
+/**  LO7
+*   @brief demonstration of passing functions as parameters
+*
+*   can call any void function with no parameters in main
+* 
+*   @param (*func)()   the memory location of a function
 */
 void invokeFunc(void (*func)()) { return func(); }

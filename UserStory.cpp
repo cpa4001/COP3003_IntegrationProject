@@ -23,7 +23,7 @@
 int UserStory::storyID = 0;
 
 /**
-        default constructor - intialize empty UserStory
+    @brief default constructor - intialize empty UserStory
 */
 UserStory::UserStory() {
   storyName = "";
@@ -36,12 +36,11 @@ UserStory::UserStory() {
 
 //LO1b
 /**
-        default constructor - intialize empty UserStory
-        Parameters:
-        storyName	Name of user story
-        storyBody	Description of user story
-        storyPoints	integer value of points assigned to story
-
+*  @brief default constructor - intialize empty UserStory
+*  @param storyName	Name of user story
+*  @param storyBody	Description of user story
+*  @param storyPoints	integer value of points assigned to story
+*
 */
 UserStory::UserStory(std::string storyName, std::string storyBody,
                      int storyPoints) {
@@ -58,23 +57,41 @@ UserStory::UserStory(std::string storyName, std::string storyBody,
   storyID++;
 }
 
-/*
-UserStory::UserStory(UserStory& userstory) {
-        this->storyName = userstory.storyName;
-        this->storyBody = userstory.storyBody;
-        this->storyPoints = userstory.storyPoints;
 
-        storyID++;
-}
+/**
+*   @brief getter for storyName attribute
+*   
+*   @return storyName name of the story as a string
 */
-
 std::string UserStory::getStoryName() { return storyName; }
+
+/**
+ *   @brief getter for storyBody attribute
+ *
+ *   @return storyBody the description of the story as a string
+ */
 std::string UserStory::getStoryBody() { return storyBody; }
+
+/**
+ *   @brief getter for storyPoints attribute
+ *
+ *   @return storyPoints the amount of points the story holds as an int
+ */
 int UserStory::getStoryPoints() { return storyPoints; }
 
-/*
-    Returns the Status meaning as string
-*/
+/**
+ *   @brief getter for status attribute
+ *
+ *   @return status the status of the user story
+ */
+int UserStory::getStatus() { return status; }
+
+
+/**
+ *   @brief returns the meaning of the status enum
+ *
+ *   @return the meaning of the status enum value: To Do, Inprogress, or Done
+ */
 std::string UserStory::getStatusString() {
   switch (status) {
     case 0:
@@ -86,13 +103,29 @@ std::string UserStory::getStatusString() {
   }
 }
 
-int UserStory::getStatus() { return status; }
 
+/**
+ *   @brief setter for storyName attribute
+ *
+ *   @param value the name of the user story
+ */
 void UserStory::setStoryName(std::string value) { storyName = value; }
+
+/**
+ *   @brief setter for storyBody attribute
+ *
+ *   @param value the body of the user story
+ */
 void UserStory::setStoryBody(std::string value) { storyBody = value; }
+
+/**
+ *   @brief setter for storyPoints attribute
+ *
+ *   @param value the body of the user story
+ */
 void UserStory::setStoryPoints(int value) { storyPoints = value; }
 
 /**
- * sets the Userstory to complete
+ *   @brief sets the user story status to done
  */
 void UserStory::completeUserStory() { status = done; }

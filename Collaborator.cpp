@@ -8,9 +8,9 @@
 #include "Collaborator.h"
 
 int Collaborator::collaboratorID = 0;
-/**
-        default constructor - intialize empty Collaborator
-*/
+
+/** @brief default Collaborator constructor given no parameters
+ */
 Collaborator::Collaborator() {
   collaboratorName = "";
 
@@ -18,10 +18,10 @@ Collaborator::Collaborator() {
 }
 
 /**
- * Constructor for Collaborator
- * Parameters:
- * collaboratorName	name of the collaborator
- * role				role of collaborator within the project
+ * @brief Constructor for Collaborator given parameters
+ * 
+ * @param collaboratorName	name of the collaborator
+ * @param role				role of collaborator within the project
  */
 Collaborator::Collaborator(std::string collaboratorName, std::string role) {
   this->collaboratorName = collaboratorName;
@@ -30,4 +30,9 @@ Collaborator::Collaborator(std::string collaboratorName, std::string role) {
   collaboratorID++;
 }
 
+/**
+*  @brief getter for collaboratorName
+*  
+*  @return	collaboratorName the name of the collaborator
+*/
 std::string Collaborator::getcollaboratorName() { return collaboratorName; }

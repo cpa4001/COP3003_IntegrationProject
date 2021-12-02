@@ -9,10 +9,10 @@
 // LO2
 
 /**
- * Constructor for Sprint - Calls Iteration constructor
- * Parameters:
- * sprintName				Name of sprint
- * iterationLengthInDays	lenght of the iteration in days
+ * @brief Constructor for Sprint - Calls Iteration constructor
+ * 
+ * @param sprintName				Name of sprint
+ * @param iterationLengthInDays	    lenght of the iteration in days
  */
 Sprint::Sprint(std::string sprintName, int iterationLengthInDays)
     : Iteration(sprintName, "Sprint", iterationLengthInDays) {}

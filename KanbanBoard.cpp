@@ -15,9 +15,14 @@
 
 KanbanBoard::KanbanBoard() {}
 
-/*
-    Creates the KanbanBoard and intializes the statusMap
-*/
+/**
+ *   @brief Creates the KanbanBoard and intializes the statusMap
+ *
+ *   Iterates through vector and finds the status meaning and inserts
+ *   into statusMap besed on meaning
+ *
+ *   @param fileRows vector of strings from the file
+ */
 KanbanBoard::KanbanBoard(std::vector<std::string> fileRows) {
   for (size_t row = 1; row < fileRows.size(); row++) {
     std::string storyID = fileRows[row].substr(0, fileRows[row].find(","));
@@ -40,8 +45,8 @@ KanbanBoard::KanbanBoard(std::vector<std::string> fileRows) {
 }
 
 /*
-    Prints the name of the stories under each category based on their status.
-   Prints story Ids for now
+    @brief Prints the name of the stories under each category based on their
+    status.
 */
 void KanbanBoard::printBoard() {
   int maxToDoSpaces = 0;
@@ -54,6 +59,9 @@ void KanbanBoard::printBoard() {
   std::cout << std::endl;
 }
 
+/**
+ * @brief iterates through statusMap and prints all storyids with done status
+ */
 void KanbanBoard::getDoneUserStory() {
   for (map_iterator = statusMap.begin(); map_iterator != statusMap.end();
        map_iterator++) {
@@ -62,6 +70,11 @@ void KanbanBoard::getDoneUserStory() {
     }
   }
 }
+
+/**
+ * @brief iterates through statusMap and prints all storyids with in progress
+ *  status
+ */
 void KanbanBoard::getInProgressUserStory() {
   for (map_iterator = statusMap.begin(); map_iterator != statusMap.end();
        map_iterator++) {
@@ -70,6 +83,10 @@ void KanbanBoard::getInProgressUserStory() {
     }
   }
 }
+
+/**
+ * @brief iterates through statusMap and prints all storyids with to do status
+ */
 void KanbanBoard::getToDoUserStory() {
   for (map_iterator = statusMap.begin(); map_iterator != statusMap.end();
        map_iterator++) {
@@ -79,19 +96,24 @@ void KanbanBoard::getToDoUserStory() {
   }
 }
 
-/*
-    Adds a story name and the status of that story to the statusMap hashmap
-    Param:
-    userStory   userstory object
+/**
+*   @brief Adds a story name and the status of that story to the statusMap 
+*    hashmap
+*   
+*   @param userStory   userstory object
 */
 void KanbanBoard::addStoryToMap(UserStory& userStory) {
   statusMap.insert(std::pair<std::string, int>(
       std::to_string(userStory.storyID), userStory.getStatus()));
 }
 
-/*
-    used to update status in the statusMap
-*/
+
+/**
+ *   @brief used to update status in the statusMap
+ *
+ *   @param storyID     the id of the story that needs to be changed
+ *   @param newStatus   the new status of the story
+ */
 void KanbanBoard::updateStatus(int storyID, int newStatus) {
   if (statusMap.find(std::to_string(storyID)) != statusMap.end()) {
     statusMap[std::to_string(storyID)] = newStatus;

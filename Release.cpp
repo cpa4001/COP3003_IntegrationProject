@@ -8,11 +8,10 @@
 #include "Release.h"
 // LO2
 
-/*
- * Constructor for Sprint - Calls Iteration constructor
- * Parameters:
- * sprintName				Name of sprint
- * iterationLengthInDays		lenght of the iteration in days
+/* @brief Constructor for Sprint - Calls Iteration constructor
+ * 
+ * @param sprintName		Name of sprint
+ * @param iterationLengthInDays	lenght of the iteration in days
  */
 Release::Release(std::string releaseName, int iterationLengthInDays)
     : Iteration(releaseName, "Release", iterationLengthInDays) {}
