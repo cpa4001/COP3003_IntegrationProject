@@ -22,7 +22,7 @@
  */
 Backlog::Backlog(std::ifstream& readFromUserStories) {
   // create a buffer for each line
-  std::string line = "";
+  std::string line;
   if (readFromUserStories.is_open()) {
     while (getline(readFromUserStories, line)) {
       row.push_back(line);
@@ -53,8 +53,8 @@ void Backlog::addToRow(std::string newRow) { row.push_back(newRow); }
            lines
  */
 void Backlog::printStories() {
-  for (size_t index = 0; index < row.size(); index++) {
-    std::cout << row[index] << std::endl;
+  for (auto& fileLine : row) {
+    std::cout << fileLine << std::endl;
   }
 }
 
@@ -69,25 +69,26 @@ void Backlog::printStories() {
 */
 void Backlog::updateStoryStatus(int storyID, int newStatus) {
   for (size_t line = 0; line < row.size(); line++) {
-    std::string tempStoryID = row[line].substr(0, row[line].find(","));
-    int lineStoryID = std::stoi(tempStoryID);
+    std::string tempStoryID = row.at(line).substr(0, row.at(line).find(","));
+    const int lineStoryID = std::stoi(tempStoryID);
 
-    std::string previousStatus = "";
-    std::string newStatusString = "";
+    std::string previousStatus;
+    std::string newStatusString;
 
     if (lineStoryID == storyID) {
       // row[line].replace(row[line].find("To Do"), row[line].find(","),
       // newStatus);
 
-      if (row[line].find("To Do") != std::string::npos) {
+      if (row.at(line).find("To Do") != std::string::npos) {
         previousStatus = "To Do";
-      } else if (row[line].find("In Progress") != std::string::npos) {
+      } else if (row.at(line).find("In Progress") != std::string::npos) {
         previousStatus = "In Progress";
 
-      } else if (row[line].find("Done") != std::string::npos) {
+      } else if (row.at(line).find("Done") != std::string::npos) {
         previousStatus = "Done";
       }
-      row[line].replace(row[line].find(previousStatus), row[line].find(","),
+      row.at(line).replace(row.at(line).find(previousStatus),
+                           row.at(line).find(","),
                         newStatusString);
     }
   }
@@ -110,7 +111,7 @@ void Backlog::updateStoryWithCollaborator(int storyID,
 
   readFromUserStories.open("UserStories.csv");
 
-  std::string line = "";
+  std::string line;
   if (readFromUserStories.is_open()) {
     while (getline(readFromUserStories, line)) {
       if (line.find(storyID) != std::string::npos) {
@@ -122,26 +123,30 @@ void Backlog::updateStoryWithCollaborator(int storyID,
     std::cout << "Unable to open file";
   }
 
-  row[storyID] += (", " + CollaboratorName);
+  row.at(storyID) += (", " + CollaboratorName);
 }
 
 /** @brief getter for matrix attribute
  * 
  *  @return matrix      2D vector of strings
  */
-std::vector<std::vector<std::string>> Backlog::getMatrix() { return matrix; }
+auto Backlog::getMatrix() -> std::vector<std::vector<std::string>> {
+  return matrix;
+}
 
 /** @brief getter for productBacklog attribute
  *
  *  @return productBacklog      vector of UserStory objects
  */
-std::vector<UserStory> Backlog::getProductBacklog() { return productBacklog; }
+auto Backlog::getProductBacklog() -> std::vector<UserStory> {
+  return productBacklog;
+}
 
 /** @brief getter for row attribute
  *
  *  @return row      vector of strings
  */
-std::vector<std::string> Backlog::getRow() { return row; }
+auto Backlog::getRow() -> std::vector<std::string> { return row; }
 
 /** LO7
  *  @brief overloaded unary minus operator
@@ -153,12 +158,15 @@ std::vector<std::string> Backlog::getRow() { return row; }
  * 
  *  @return the most recently created User Story 
  */
-std::string operator-(Backlog& backlog) {
-  int backlogSize = backlog.row.size();
+auto operator-(Backlog& backlog) -> std::string {
+  const int backlogSize = backlog.row.size();
+
+  std::string returnString;
 
   if (backlogSize > 1) {
-    return backlog.row[backlogSize - 1];
+    returnString = backlog.row.at(backlogSize - 1);
   } else {
-    return "There are no user stories created";
+    returnString = "There are no user stories created";
   }
+  return returnString;
 }

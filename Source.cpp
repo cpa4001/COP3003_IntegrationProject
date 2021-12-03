@@ -19,14 +19,14 @@
 
 // could have some of these functions in a file class
 std::ostream& operator<<(std::ostream& out, UserStory& userstory);
-UserStory createUserStory(Backlog& backlog);
+auto createUserStory(Backlog& backlog) -> UserStory;
 void saveUserStory(UserStory& userstory, std::ofstream& savedUserStories,
                    Backlog& backlog, KanbanBoard& kanbanBoard);
-bool is_empty(std::ifstream& pFile);
+auto is_empty(std::ifstream& pFile) -> bool;
 void createAndSaveStory(std::ofstream& writeToUserStories, Backlog& backlog,
                         KanbanBoard& kanbanBoard);
 void createBorder();
-void invokeFunc(void (*func)());
+void invokeFunc(void (*func)()) noexcept;
 
 int main() {
   std::cout << "Welcome to a user story project management \ntool developed by "
@@ -57,7 +57,7 @@ int main() {
 
   readFromUserStories.open("UserStories.csv");
   // used for reading from the file in case 4
-  std::string line = "";
+  std::string line;
   // read in the fist line
   std::getline(readFromUserStories, line);
 
@@ -96,6 +96,7 @@ int main() {
   // give the menu until the user chooses to exit
   // standard length for menu options is 42 character
   int userInputKey = 0;
+  bool continueProgramFlag = false;
   do {
     std::cout << "Please Pick an option(0-7)" << std::endl;
     std::cout << "Add a User Story                      (1)" << std::endl;
@@ -134,7 +135,7 @@ int main() {
 
     // variables to hold input
     int inputInt = 0;
-    std::string inputString = "";
+    std::string inputString;
 
     int status = 0;
 
@@ -272,7 +273,8 @@ int main() {
         createBorder();
     }
 
-  } while (userInputKey);
+    continueProgramFlag = bool(userInputKey);
+  } while (continueProgramFlag);
 
   std::cout << "Program Exited. Have a nice day." << std::endl;
 
@@ -305,10 +307,10 @@ std::ostream& operator<<(std::ostream& out, UserStory& userstory) {
  *
  * @return newStory	    new UserStory object created
  */
-UserStory createUserStory(Backlog& backlog) {
+auto createUserStory(Backlog& backlog) -> UserStory {
   std::cout << "Enter User Story details (Please do not use commas)\n";
-  std::string storyName = "";
-  std::string storyBody = "";
+  std::string storyName;
+  std::string storyBody;
   int storyPoints = 0;
 
   std::cout << "Story Name: ";
@@ -353,10 +355,11 @@ void saveUserStory(UserStory& userstory, std::ofstream& savedUserStories,
                      << ", " << userstory.getStoryBody() << ", "
                      << userstory.getStoryPoints() << ", "
                      << userstory.getStatusString() << "\n";
-  } else
+  } else {
     std::cout << "Unable to open file. You might have the file open in a "
                  "seperate application."
               << std::endl;
+  }
 
   backlog.addToRow(std::to_string(userstory.storyID) + ", " +
                    userstory.getStoryName() + "," + userstory.getStoryBody() +
@@ -376,7 +379,7 @@ void saveUserStory(UserStory& userstory, std::ofstream& savedUserStories,
 *   
 * @return bool      
 */
-bool is_empty(std::ifstream& pFile) {
+auto is_empty(std::ifstream& pFile) -> bool {
   return pFile.peek() == std::ifstream::traits_type::eof();
 }
 
@@ -411,4 +414,4 @@ void createBorder() {
 * 
 *   @param (*func)()   the memory location of a function
 */
-void invokeFunc(void (*func)()) { return func(); }
+void invokeFunc(void (*func)()) noexcept { return func(); }

@@ -11,7 +11,7 @@ int Collaborator::collaboratorID = 0;
 
 /** @brief default Collaborator constructor given no parameters
  */
-Collaborator::Collaborator() {
+Collaborator::Collaborator() noexcept{
   collaboratorName = "";
 
   collaboratorID++;
@@ -35,4 +35,4 @@ Collaborator::Collaborator(std::string collaboratorName, std::string role) {
 *  
 *  @return	collaboratorName the name of the collaborator
 */
-std::string Collaborator::getcollaboratorName() { return collaboratorName; }
+auto Collaborator::getcollaboratorName() -> std::string { return collaboratorName; }

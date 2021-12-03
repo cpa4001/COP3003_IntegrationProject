@@ -14,5 +14,5 @@ class Developer : public Collaborator {
  public:
   Developer(std::string name);
 
-  void assignStory(int storyID);
+  void assignStory(int storyID) override;
 };

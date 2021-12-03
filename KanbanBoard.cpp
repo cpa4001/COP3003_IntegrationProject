@@ -13,7 +13,7 @@
 
 // LO2
 
-KanbanBoard::KanbanBoard() {}
+KanbanBoard::KanbanBoard() noexcept {}
 
 /**
  *   @brief Creates the KanbanBoard and intializes the statusMap
@@ -25,20 +25,20 @@ KanbanBoard::KanbanBoard() {}
  */
 KanbanBoard::KanbanBoard(std::vector<std::string> fileRows) {
   for (size_t row = 1; row < fileRows.size(); row++) {
-    std::string storyID = fileRows[row].substr(0, fileRows[row].find(","));
+    std::string storyID = fileRows.at(row).substr(0, fileRows.at(row).find(","));
 
     /*
     code for the condition in if statement was pulled from
     https://stackoverflow.com/questions/2340281/
     check-if-a-string-contains-a-string-in-c
     */
-    if (fileRows[row].find("To Do") != std::string::npos) {
+    if (fileRows.at(row).find("To Do") != std::string::npos) {
       statusMap.insert(std::pair<std::string, int>(storyID, 0));
 
-    } else if (fileRows[row].find("In Progress") != std::string::npos) {
+    } else if (fileRows.at(row).find("In Progress") != std::string::npos) {
       statusMap.insert(std::pair<std::string, int>(storyID, 1));
 
-    } else if (fileRows[row].find("Done") != std::string::npos) {
+    } else if (fileRows.at(row).find("Done") != std::string::npos) {
       statusMap.insert(std::pair<std::string, int>(storyID, 2));
     }
   }
@@ -52,7 +52,7 @@ void KanbanBoard::printBoard() {
   // Variables could be used in formatting text
   // int maxToDoSpaces = 0;
   // int maxInProgressSpaces = 0;
-  std::string kanbanBoardLine = "";
+  std::string kanbanBoardLine;
 
   getToDoUserStory();
   getInProgressUserStory();

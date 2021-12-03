@@ -27,7 +27,7 @@ int UserStory::storyID = 0;
 /**
     @brief default constructor - intialize empty UserStory
 */
-UserStory::UserStory() {
+UserStory::UserStory() noexcept {
   storyName = "";
   storyBody = "";
   storyPoints = 0;
@@ -65,7 +65,7 @@ UserStory::UserStory(std::string storyName, std::string storyBody,
 *   
 *   @return storyName name of the story as a string
 */
-std::string UserStory::getStoryName() { return storyName; }
+auto UserStory::getStoryName() -> std::string { return storyName; }
 
 /**
  *   @brief getter for storyBody attribute
@@ -79,14 +79,14 @@ std::string UserStory::getStoryBody() { return storyBody; }
  *
  *   @return storyPoints the amount of points the story holds as an int
  */
-int UserStory::getStoryPoints() { return storyPoints; }
+int UserStory::getStoryPoints() const { return storyPoints; }
 
 /**
  *   @brief getter for status attribute
  *
  *   @return status the status of the user story
  */
-int UserStory::getStatus() { return status; }
+int UserStory::getStatus() noexcept { return status; }
 
 
 /**
@@ -132,4 +132,4 @@ void UserStory::setStoryPoints(int value) { storyPoints = value; }
 /**
  *   @brief sets the user story status to done
  */
-void UserStory::completeUserStory() { status = done; }
+void UserStory::completeUserStory() noexcept { status = done; }

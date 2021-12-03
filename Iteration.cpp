@@ -19,28 +19,34 @@ Iteration::Iteration(std::string iterationName, std::string iterationType,
   this->iterationType = iterationType;
   estimatedVelocity = 0;
   productBacklog = {};
+  storyPointsComplete = 0;
+  storyPointsLeftToComplete = 0;
 }
+
+// getters are made const to not modify object
 
 /**
  * @brief getter for iterationName attribute
  * 
  * @return iterationName the name of the iteration as a string
  */
-std::string Iteration::getIterationName() { return iterationName; }
+auto Iteration::getIterationName() const -> std::string{ return iterationName; }
 
 /**
  * @brief getter for iterationLength attribute
  *
  * @return iterationLength the length of the iteration in days as an int
  */
-int Iteration::getIterationLength() { return iterationLength; }
+auto Iteration::getIterationLength() const noexcept -> int {
+  return iterationLength;
+}
 
 /**
  * @brief getter for iterationType attribute
  *
  * @return iterationType the type of iteration as a string
  */
-std::string Iteration::getIterationType() { return iterationType; }
+auto Iteration::getIterationType() const -> std::string{ return iterationType; }
 
 /**
  * @brief getter for estimatedVelocity attribute
@@ -48,7 +54,9 @@ std::string Iteration::getIterationType() { return iterationType; }
  * @return estimatedVelocity the estimated velocity for an iteration
  * (story points completed / total points for an iteration)
  */
-int Iteration::getEstimatedVelocity() { return estimatedVelocity; }
+auto Iteration::getEstimatedVelocity() const noexcept -> int {
+  return estimatedVelocity;
+}
 
 /**
  * @brief setter for iterationName attribute
@@ -69,14 +77,14 @@ void Iteration::setIterationType(std::string value) { iterationType = value; }
  *
  * @param value the length of the iteration as an int
  */
-void Iteration::setIterationLength(int value) { iterationLength = value; }
+void Iteration::setIterationLength(int value) noexcept{ iterationLength = value; }
 
 /**
  * @brief setter for estimatedVelocity attribute
  *
  * @param value the estimated velocity of the iteration
  */
-void Iteration::setEstimatedVelocity(int value) { estimatedVelocity = value; }
+void Iteration::setEstimatedVelocity(int value) noexcept{ estimatedVelocity = value; }
 
 /**
  * @brief adds UserStory to the backlog(list of userstories)
@@ -94,6 +102,6 @@ void Iteration::addUserStory(UserStory& userstory) {
  */
 void Iteration::printStories() {
   for (size_t index = 0; index < productBacklog.size(); index++) {
-    std::cout << productBacklog[index].getStoryName() << std::endl;
+    std::cout << productBacklog.at(index).getStoryName() << std::endl;
   }
 }

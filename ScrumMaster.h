@@ -16,6 +16,6 @@ class ScrumMaster : public Collaborator {
  public:
   ScrumMaster(std::string collaboratorName);
 
-  void assignStory(int storyID);
+  void assignStory(int storyID) override;
 };
 #endif

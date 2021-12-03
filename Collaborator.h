@@ -22,11 +22,11 @@ class Collaborator {
 
  public:
   static int collaboratorID;
-  Collaborator();
+  Collaborator() noexcept;
   Collaborator(std::string collaboratorName, std::string role);
 
   virtual void assignStory(int storyID) = 0;
 
-  std::string getcollaboratorName();
+  auto getcollaboratorName() -> std::string;
 };
 #endif

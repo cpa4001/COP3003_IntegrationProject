@@ -5,195 +5,6 @@
     {
       "results": [
         {
-          "ruleId": "C26455",
-          "message": {
-            "text": "Default constructor may not throw. Declare it 'noexcept' (f.6)."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/chris/source/repos/Userstoryconsole/KanbanBoard.cpp"
-                },
-                "region": {
-                  "startLine": 16,
-                  "startColumn": 14,
-                  "endLine": 16,
-                  "endColumn": 14
-                }
-              },
-              "logicalLocations": [
-                {
-                  "decoratedName": "??0KanbanBoard@@QAE@XZ",
-                  "kind": "function"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "ruleId": "C26446",
-          "message": {
-            "text": "Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4)."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/chris/source/repos/Userstoryconsole/KanbanBoard.cpp"
-                },
-                "region": {
-                  "startLine": 28,
-                  "startColumn": 51,
-                  "endLine": 28,
-                  "endColumn": 63
-                }
-              },
-              "logicalLocations": [
-                {
-                  "decoratedName": "??0KanbanBoard@@QAE@V?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@@Z",
-                  "kind": "function"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "ruleId": "C26446",
-          "message": {
-            "text": "Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4)."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/chris/source/repos/Userstoryconsole/KanbanBoard.cpp"
-                },
-                "region": {
-                  "startLine": 28,
-                  "startColumn": 27,
-                  "endLine": 28,
-                  "endColumn": 39
-                }
-              },
-              "logicalLocations": [
-                {
-                  "decoratedName": "??0KanbanBoard@@QAE@V?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@@Z",
-                  "kind": "function"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "ruleId": "C26446",
-          "message": {
-            "text": "Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4)."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/chris/source/repos/Userstoryconsole/KanbanBoard.cpp"
-                },
-                "region": {
-                  "startLine": 35,
-                  "startColumn": 9,
-                  "endLine": 35,
-                  "endColumn": 21
-                }
-              },
-              "logicalLocations": [
-                {
-                  "decoratedName": "??0KanbanBoard@@QAE@V?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@@Z",
-                  "kind": "function"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "ruleId": "C26446",
-          "message": {
-            "text": "Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4)."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/chris/source/repos/Userstoryconsole/KanbanBoard.cpp"
-                },
-                "region": {
-                  "startLine": 38,
-                  "startColumn": 16,
-                  "endLine": 38,
-                  "endColumn": 28
-                }
-              },
-              "logicalLocations": [
-                {
-                  "decoratedName": "??0KanbanBoard@@QAE@V?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@@Z",
-                  "kind": "function"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "ruleId": "C26446",
-          "message": {
-            "text": "Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4)."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/chris/source/repos/Userstoryconsole/KanbanBoard.cpp"
-                },
-                "region": {
-                  "startLine": 41,
-                  "startColumn": 16,
-                  "endLine": 41,
-                  "endColumn": 28
-                }
-              },
-              "logicalLocations": [
-                {
-                  "decoratedName": "??0KanbanBoard@@QAE@V?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@@Z",
-                  "kind": "function"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "ruleId": "C26433",
-          "message": {
-            "text": "Function 'KanbanBoard::printBoard' should be marked with 'override' (c.128)."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/chris/source/repos/Userstoryconsole/KanbanBoard.cpp"
-                },
-                "region": {
-                  "startLine": 51,
-                  "startColumn": 19,
-                  "endLine": 51,
-                  "endColumn": 19
-                }
-              },
-              "logicalLocations": [
-                {
-                  "decoratedName": "?printBoard@KanbanBoard@@UAEXXZ",
-                  "kind": "function"
-                }
-              ]
-            }
-          ]
-        },
-        {
           "ruleId": "C26436",
           "message": {
             "text": "The type 'class KanbanBoard' with a virtual function needs either public virtual or protected non-virtual destructor (c.35)."
@@ -219,141 +30,6 @@
               ]
             }
           ]
-        },
-        {
-          "ruleId": "C26433",
-          "message": {
-            "text": "Function 'KanbanBoard::getDoneUserStory' should be marked with 'override' (c.128)."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/chris/source/repos/Userstoryconsole/KanbanBoard.cpp"
-                },
-                "region": {
-                  "startLine": 66,
-                  "startColumn": 19,
-                  "endLine": 66,
-                  "endColumn": 19
-                }
-              },
-              "logicalLocations": [
-                {
-                  "decoratedName": "?getDoneUserStory@KanbanBoard@@UAEXXZ",
-                  "kind": "function"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "ruleId": "C26433",
-          "message": {
-            "text": "Function 'KanbanBoard::getInProgressUserStory' should be marked with 'override' (c.128)."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/chris/source/repos/Userstoryconsole/KanbanBoard.cpp"
-                },
-                "region": {
-                  "startLine": 79,
-                  "startColumn": 19,
-                  "endLine": 79,
-                  "endColumn": 19
-                }
-              },
-              "logicalLocations": [
-                {
-                  "decoratedName": "?getInProgressUserStory@KanbanBoard@@UAEXXZ",
-                  "kind": "function"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "ruleId": "C26433",
-          "message": {
-            "text": "Function 'KanbanBoard::getToDoUserStory' should be marked with 'override' (c.128)."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/chris/source/repos/Userstoryconsole/KanbanBoard.cpp"
-                },
-                "region": {
-                  "startLine": 91,
-                  "startColumn": 19,
-                  "endLine": 91,
-                  "endColumn": 19
-                }
-              },
-              "logicalLocations": [
-                {
-                  "decoratedName": "?getToDoUserStory@KanbanBoard@@UAEXXZ",
-                  "kind": "function"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "ruleId": "C26433",
-          "message": {
-            "text": "Function 'KanbanBoard::addStoryToMap' should be marked with 'override' (c.128)."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/chris/source/repos/Userstoryconsole/KanbanBoard.cpp"
-                },
-                "region": {
-                  "startLine": 106,
-                  "startColumn": 19,
-                  "endLine": 106,
-                  "endColumn": 19
-                }
-              },
-              "logicalLocations": [
-                {
-                  "decoratedName": "?addStoryToMap@KanbanBoard@@UAEXAAVUserStory@@@Z",
-                  "kind": "function"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "ruleId": "C26433",
-          "message": {
-            "text": "Function 'KanbanBoard::updateStatus' should be marked with 'override' (c.128)."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/chris/source/repos/Userstoryconsole/KanbanBoard.cpp"
-                },
-                "region": {
-                  "startLine": 118,
-                  "startColumn": 19,
-                  "endLine": 118,
-                  "endColumn": 19
-                }
-              },
-              "logicalLocations": [
-                {
-                  "decoratedName": "?updateStatus@KanbanBoard@@UAEXHH@Z",
-                  "kind": "function"
-                }
-              ]
-            }
-          ]
         }
       ],
       "tool": {
@@ -366,7 +42,7 @@
       },
       "invocations": [
         {
-          "commandLine": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\c1xx.dll\" -ACf{1F7B090C-16DB-4822-966A-A93D26ED4681} -ACpmspft140.dll -Alint -D_PREFAST_ -D_AST_FE_ -Analyze -zm0x00B3D1C0 -il C:\\Users\\chris\\AppData\\Local\\Temp\\_CL_4fe5ef1cast -typedil -f KanbanBoard.cpp -Ze -D_MSC_EXTENSIONS -Zp8 -Gs -pc \\:/ -D_MSC_VER=1929 -D_MSC_FULL_VER=192930133 -D_MSC_BUILD=0 -D_WIN32 -D_M_IX86=600 -D_M_IX86_FP=2 -GR -D_CPPRTTI -nologo -W 3 -diagnostics:column -D_GUARDOVERFLOW_CRT_ALLOCATORS=1 -Ot -DCODE_ANALYSIS -DWIN32 -D_DEBUG -D_CONSOLE -D_UNICODE -DUNICODE -EHs -D_CPPUNWIND -EHc -D__MSVC_RUNTIME_CHECKS -RTCs -RTCu -MDd -D_DEBUG -D_MT -D_DLL -GS -D_M_FP_PRECISE -permissive- -Zc:wchar_t -Zc:forScope -FoDebug\\KanbanBoard.obj -FdDebug\\vc142.pdb -external:W 3 -Gd -analyze:projectdirectory C:\\Users\\chris\\source\\repos\\Userstoryconsole -analyze:rulesetdirectory ;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Team Tools\\Static Analysis Tools\\\\Rule Sets; -analyze:ruleset CorePlusReccomended.ruleset -analyze:quiet -analyze:plugin C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\EspXEngine.dll -FC -errorreport:prompt -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\include -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -external:I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um -I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um",
+          "commandLine": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\c1xx.dll\" -ACf{1F7B090C-16DB-4822-966A-A93D26ED4681} -ACpmspft140.dll -Alint -D_PREFAST_ -D_AST_FE_ -Analyze -zm0x002CD1C0 -il C:\\Users\\chris\\AppData\\Local\\Temp\\_CL_140a9facast -typedil -f KanbanBoard.cpp -Ze -D_MSC_EXTENSIONS -Zp8 -Gs -pc \\:/ -D_MSC_VER=1929 -D_MSC_FULL_VER=192930133 -D_MSC_BUILD=0 -D_WIN32 -D_M_IX86=600 -D_M_IX86_FP=2 -GR -D_CPPRTTI -nologo -W 3 -diagnostics:column -D_GUARDOVERFLOW_CRT_ALLOCATORS=1 -Ot -DCODE_ANALYSIS -DWIN32 -D_DEBUG -D_CONSOLE -D_UNICODE -DUNICODE -EHs -D_CPPUNWIND -EHc -D__MSVC_RUNTIME_CHECKS -RTCs -RTCu -MDd -D_DEBUG -D_MT -D_DLL -GS -D_M_FP_PRECISE -permissive- -Zc:wchar_t -Zc:forScope -FoDebug\\KanbanBoard.obj -FdDebug\\vc142.pdb -external:W 3 -Gd -analyze:projectdirectory C:\\Users\\chris\\source\\repos\\Userstoryconsole -analyze:rulesetdirectory ;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Team Tools\\Static Analysis Tools\\\\Rule Sets; -analyze:ruleset CorePlusReccomended.ruleset -analyze:quiet -analyze:plugin C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\EspXEngine.dll -FC -errorreport:prompt -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\include -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -external:I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um -I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um",
           "executionSuccessful": true
         }
       ],
@@ -380,7 +56,7 @@
             "resultFile"
           ],
           "hashes": {
-            "md5": "b917302221f57ffc498f7ae5b6c52fec"
+            "md5": "21ee33d1155abb164f82f9b1bdf478db"
           }
         },
         {
@@ -391,7 +67,7 @@
             "resultFile"
           ],
           "hashes": {
-            "md5": "58aeb31a7e79bf080c0c77a7787fa423"
+            "md5": "7e220d74c9cc057c34f76e5c1f3fe29d"
           }
         },
         {
@@ -418,7 +94,7 @@
             "uri": "file:///c:/users/chris/source/repos/userstoryconsole/iteration.h"
           },
           "hashes": {
-            "md5": "c503b03cb477c63a9da8a82eac751523"
+            "md5": "2452076acf7eb1edffeadf707de1712d"
           }
         },
         {
@@ -426,7 +102,7 @@
             "uri": "file:///c:/users/chris/source/repos/userstoryconsole/backlog.h"
           },
           "hashes": {
-            "md5": "be8fc565d7faa02b4251bb049a54de15"
+            "md5": "e641260cb1a0dfca3ab9bcc03ac2977c"
           }
         },
         {
@@ -434,7 +110,7 @@
             "uri": "file:///c:/users/chris/source/repos/userstoryconsole/collaborator.h"
           },
           "hashes": {
-            "md5": "8d0b2272689b1924eeada713e9751625"
+            "md5": "91407fcde9e4e95ed7fa574396f42599"
           }
         },
         {
@@ -446,7 +122,7 @@
             "resultFile"
           ],
           "hashes": {
-            "md5": "cd7a8b9067410f47146918b34e9faa73"
+            "md5": "d87dc2edfaddea663d50ab00808685a7"
           }
         },
         {
@@ -454,7 +130,7 @@
             "uri": "file:///c:/users/chris/source/repos/userstoryconsole/developer.h"
           },
           "hashes": {
-            "md5": "928537a13de3a5bbc0e99e55682e739d"
+            "md5": "db459df8e95b56ced7bd3871e6095a55"
           }
         },
         {
@@ -462,7 +138,7 @@
             "uri": "file:///c:/users/chris/source/repos/userstoryconsole/kanbanboard.h"
           },
           "hashes": {
-            "md5": "4b1312bc42892993305c3397a78bde96"
+            "md5": "9deb63df167b1269eed702b84c76e62b"
           }
         },
         {
@@ -486,7 +162,7 @@
             "uri": "file:///c:/users/chris/source/repos/userstoryconsole/scrummaster.h"
           },
           "hashes": {
-            "md5": "587265e480dfe77661ede46e859404dd"
+            "md5": "fca87c67a59cf33952ceb77fe12231fc"
           }
         },
         {
@@ -521,7 +197,7 @@
             "resultFile"
           ],
           "hashes": {
-            "md5": "d499525e7981060bf91089d29c06aae1"
+            "md5": "4857dc2285600ebed4b83de9ab74b9f7"
           }
         }
       ]

@@ -1,3 +1,0 @@
-C:\Users\chris\source\repos\Userstoryconsole\Debug\Userstoryconsole.exe
-C:\Users\chris\source\repos\Userstoryconsole\Debug\Userstoryconsole.exe.lastcodeanalysissucceeded
-C:\Users\chris\source\repos\Userstoryconsole\Debug\NativeCodeAnalysis.read.1.tlog

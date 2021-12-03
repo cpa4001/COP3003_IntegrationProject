@@ -27,16 +27,16 @@ class UserStory {
   static int storyID;
 
   // constructors
-  UserStory();
+  UserStory() noexcept;
   UserStory(std::string storyName, std::string storyBody, int storyPoints);
   // UserStory(UserStory& userstory);
 
   // accessors
   // getters
-  std::string getStoryName();
+  auto getStoryName() -> std::string;
   std::string getStoryBody();
-  int getStoryPoints();
-  int getStatus();
+  int getStoryPoints() const;
+  int getStatus() noexcept;
   std::string getStatusString();
 
   // setters
@@ -44,6 +44,6 @@ class UserStory {
   void setStoryBody(std::string value);
   void setStoryPoints(int value);
 
-  void completeUserStory();
+  void completeUserStory() noexcept;
 };
 #endif

@@ -7,20 +7,6 @@
       <LINE>26</LINE>
       <COLUMN>18</COLUMN>
     </SFA>
-    <DEFECTCODE>26433</DEFECTCODE>
-    <DESCRIPTION>Function 'ScrumMaster::assignStory' should be marked with 'override' (c.128).</DESCRIPTION>
-    <FUNCTION>ScrumMaster::assignStory</FUNCTION>
-    <DECORATED>?assignStory@ScrumMaster@@UAEXH@Z</DECORATED>
-    <FUNCLINE>26</FUNCLINE>
-    <PATH></PATH>
-  </DEFECT>
-  <DEFECT>
-    <SFA>
-      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
-      <FILENAME>ScrumMaster.cpp</FILENAME>
-      <LINE>26</LINE>
-      <COLUMN>18</COLUMN>
-    </SFA>
     <DEFECTCODE>26436</DEFECTCODE>
     <DESCRIPTION>The type 'class ScrumMaster' with a virtual function needs either public virtual or protected non-virtual destructor (c.35).</DESCRIPTION>
     <FUNCTION>ScrumMaster::assignStory</FUNCTION>

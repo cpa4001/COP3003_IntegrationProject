@@ -1,3 +1,5 @@
+Error while processing C:\Users\chris\source\repos\Userstoryconsole\Sprint.cpp.
+Error while processing C:\Users\chris\source\repos\Userstoryconsole\UserStory.cpp.
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory:723:9: warning: destructor called on 'Collaborator' that is abstract but has non-virtual destructor [clang-diagnostic-delete-abstract-non-virtual-dtor]
         _Ptr->~_Uty();
         ^
@@ -19,101 +21,37 @@ Iteration::Iteration(std::string iterationName, std::string iterationType,
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory:723:16: note: qualify call to silence this warning
         _Ptr->~_Uty();
                ^
-C:\Users\chris\source\repos\Userstoryconsole\Backlog.cpp:25:15: warning: redundant string initialization [readability-redundant-string-init]
-  std::string line = "";
-              ^~~~~~~~~
-              line
-C:\Users\chris\source\repos\Userstoryconsole\Backlog.cpp:56:3: warning: use range-based for loop instead [modernize-loop-convert]
-  for (size_t index = 0; index < row.size(); index++) {
-  ^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      (auto & index : row)
+C:\Users\chris\source\repos\Userstoryconsole/Iteration.h:7:2: error: unterminated conditional directive [clang-diagnostic-error]
+#ifndef ITERATION_H
+ ^
+C:\Users\chris\source\repos\Userstoryconsole/Iteration.h:51:2: error: expected ';' after class [clang-diagnostic-error]
+};
+ ^
+ ;
 C:\Users\chris\source\repos\Userstoryconsole\Backlog.cpp:71:3: warning: use range-based for loop instead [modernize-loop-convert]
   for (size_t line = 0; line < row.size(); line++) {
   ^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       (auto & line : row)
-C:\Users\chris\source\repos\Userstoryconsole\Backlog.cpp:75:17: warning: redundant string initialization [readability-redundant-string-init]
-    std::string previousStatus = "";
-                ^~~~~~~~~~~~~~~~~~~
-                previousStatus
-C:\Users\chris\source\repos\Userstoryconsole\Backlog.cpp:76:17: warning: redundant string initialization [readability-redundant-string-init]
-    std::string newStatusString = "";
-                ^~~~~~~~~~~~~~~~~~~~
-                newStatusString
-C:\Users\chris\source\repos\Userstoryconsole\Backlog.cpp:113:15: warning: redundant string initialization [readability-redundant-string-init]
-  std::string line = "";
-              ^~~~~~~~~
-              line
-C:\Users\chris\source\repos\Userstoryconsole\Backlog.cpp:116:21: warning: narrowing conversion from 'int' to signed type 'char' is implementation-defined [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+C:\Users\chris\source\repos\Userstoryconsole\Backlog.cpp:117:21: warning: narrowing conversion from 'int' to signed type 'char' is implementation-defined [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
       if (line.find(storyID) != std::string::npos) {
                     ^
-C:\Users\chris\source\repos\Userstoryconsole\Backlog.cpp:132:48: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
-std::vector<std::vector<std::string>> Backlog::getMatrix() { return matrix; }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~          ^
-auto                                                       -> std::vector<std::vector<std::string>>
-C:\Users\chris\source\repos\Userstoryconsole\Backlog.cpp:138:33: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
-std::vector<UserStory> Backlog::getProductBacklog() { return productBacklog; }
-~~~~~~~~~~~~~~~~~~~~~~          ^
-auto                                                -> std::vector<UserStory>
-C:\Users\chris\source\repos\Userstoryconsole\Backlog.cpp:144:35: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
-std::vector<std::string> Backlog::getRow() { return row; }
-~~~~~~~~~~~~~~~~~~~~~~~~          ^
-auto                                       -> std::vector<std::string>
-C:\Users\chris\source\repos\Userstoryconsole\Backlog.cpp:156:13: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
-std::string operator-(Backlog& backlog) {
-~~~~~~~~~~~ ^
-auto                                    -> std::string
-C:\Users\chris\source\repos\Userstoryconsole\Backlog.cpp:157:21: warning: narrowing conversion from 'std::vector<std::basic_string<char>>::size_type' (aka 'unsigned int') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+C:\Users\chris\source\repos\Userstoryconsole\Backlog.cpp:162:21: warning: narrowing conversion from 'std::vector<std::basic_string<char>>::size_type' (aka 'unsigned int') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
   int backlogSize = backlog.row.size();
                     ^
-C:\Users\chris\source\repos\Userstoryconsole\Backlog.cpp:161:5: warning: do not use 'else' after 'return' [readability-else-after-return]
-  } else {
-    ^~~~~~
 C:\Users\chris\source\repos\Userstoryconsole\Collaborator.cpp:10:19: warning: variable 'collaboratorID' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
 int Collaborator::collaboratorID = 0;
                   ^
-C:\Users\chris\source\repos\Userstoryconsole\Collaborator.cpp:38:27: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
-std::string Collaborator::getcollaboratorName() { return collaboratorName; }
-~~~~~~~~~~~               ^
-auto                                            -> std::string
-C:\Users\chris\source\repos\Userstoryconsole\Iteration.cpp:15:1: warning: constructor does not initialize these fields: storyPointsComplete, storyPointsLeftToComplete [cppcoreguidelines-pro-type-member-init]
-Iteration::Iteration(std::string iterationName, std::string iterationType,
-^
-C:\Users\chris\source\repos\Userstoryconsole\Iteration.cpp:29:24: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
-std::string Iteration::getIterationName() { return iterationName; }
-~~~~~~~~~~~            ^
-auto                                      -> std::string
-C:\Users\chris\source\repos\Userstoryconsole\Iteration.cpp:36:16: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
-int Iteration::getIterationLength() { return iterationLength; }
-~~~            ^
-auto                                -> int
-C:\Users\chris\source\repos\Userstoryconsole\Iteration.cpp:36:16: warning: method 'getIterationLength' can be made const [readability-make-member-function-const]
-int Iteration::getIterationLength() { return iterationLength; }
-               ^
-                                    const
-C:\Users\chris\source\repos\Userstoryconsole\Iteration.cpp:43:24: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
-std::string Iteration::getIterationType() { return iterationType; }
-~~~~~~~~~~~            ^
-auto                                      -> std::string
-C:\Users\chris\source\repos\Userstoryconsole\Iteration.cpp:51:16: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
-int Iteration::getEstimatedVelocity() { return estimatedVelocity; }
-~~~            ^
-auto                                  -> int
-C:\Users\chris\source\repos\Userstoryconsole\Iteration.cpp:51:16: warning: method 'getEstimatedVelocity' can be made const [readability-make-member-function-const]
-int Iteration::getEstimatedVelocity() { return estimatedVelocity; }
-               ^
-                                      const
-C:\Users\chris\source\repos\Userstoryconsole\Iteration.cpp:96:3: warning: use range-based for loop instead [modernize-loop-convert]
+C:\Users\chris\source\repos\Userstoryconsole\Collaborator.cpp:14:15: warning: an exception may be thrown in function 'Collaborator' which should not throw exceptions [bugprone-exception-escape]
+Collaborator::Collaborator() noexcept{
+              ^
+C:\Users\chris\source\repos\Userstoryconsole\Iteration.cpp:104:3: warning: use range-based for loop instead [modernize-loop-convert]
   for (size_t index = 0; index < productBacklog.size(); index++) {
   ^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       (auto & index : productBacklog)
 C:\Users\chris\source\repos\Userstoryconsole\KanbanBoard.cpp:16:14: warning: use '= default' to define a trivial default constructor [modernize-use-equals-default]
-KanbanBoard::KanbanBoard() {}
-             ^             ~~
-                           = default;
-C:\Users\chris\source\repos\Userstoryconsole\KanbanBoard.cpp:55:15: warning: redundant string initialization [readability-redundant-string-init]
-  std::string kanbanBoardLine = "";
-              ^~~~~~~~~~~~~~~~~~~~
-              kanbanBoardLine
+KanbanBoard::KanbanBoard() noexcept {}
+             ^                      ~~
+                                    = default;
 C:\Users\chris\source\repos\Userstoryconsole\KanbanBoard.cpp:108:22: warning: static member accessed through instance [readability-static-accessed-through-instance]
       std::to_string(userStory.storyID), userStory.getStatus()));
                      ^~~~~~~~~~
@@ -121,15 +59,10 @@ C:\Users\chris\source\repos\Userstoryconsole\KanbanBoard.cpp:108:22: warning: st
 C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:21:15: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
 std::ostream& operator<<(std::ostream& out, UserStory& userstory);
 ~~~~~~~~~~~~~ ^
+Suppressed 249130 warnings (249130 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+Found compiler error(s).
 auto                                                              -> std::ostream&
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:22:11: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
-UserStory createUserStory(Backlog& backlog);
-~~~~~~~~~ ^
-auto                                        -> UserStory
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:25:6: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
-bool is_empty(std::ifstream& pFile);
-~~~~ ^
-auto                                -> bool
 C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:31:5: warning: an exception may be thrown in function 'main' which should not throw exceptions [bugprone-exception-escape]
 int main() {
     ^
@@ -137,94 +70,55 @@ C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:31:5: warning: use a tra
 int main() {
 ~~~ ^
 auto       -> int
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:60:15: warning: redundant string initialization [readability-redundant-string-init]
-  std::string line = "";
-              ^~~~~~~~~
-              line
 C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:71:24: warning: narrowing conversion from 'unsigned int' to signed type 'int' is implementation-defined [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
   UserStory::storyID = masterBacklog.getRow().size() - 1;
                        ^
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:132:19: warning: variable 'collaborator' is not initialized [cppcoreguidelines-init-variables]
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:133:19: warning: variable 'collaborator' is not initialized [cppcoreguidelines-init-variables]
     Collaborator* collaborator;
                   ^
                                = nullptr
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:133:16: warning: variable 'iteration' is not initialized [cppcoreguidelines-init-variables]
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:134:16: warning: variable 'iteration' is not initialized [cppcoreguidelines-init-variables]
     Iteration* iteration;
                ^
                          = nullptr
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:137:17: warning: redundant string initialization [readability-redundant-string-init]
-    std::string inputString = "";
-                ^~~~~~~~~~~~~~~~
-                inputString
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:220:11: warning: assigning newly created 'gsl::owner<>' to non-owner 'Iteration *' [cppcoreguidelines-owning-memory]
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:221:11: warning: assigning newly created 'gsl::owner<>' to non-owner 'Iteration *' [cppcoreguidelines-owning-memory]
           iteration = new Iteration(inputString, "Iteration", 0);
           ^
-Suppressed 249197 warnings (249197 in non-user code).
-Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:231:12: warning: 5 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:232:12: warning: 5 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
       case 5:
            ^
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:240:12: warning: 6 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:241:12: warning: 6 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
       case 6:
            ^
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:249:12: warning: 7 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:250:12: warning: 7 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
       case 7:
            ^
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:275:12: warning: implicit conversion 'int' -> bool [readability-implicit-bool-conversion]
-  } while (userInputKey);
-           ^
-                        != 0
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:293:15: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:295:15: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
 std::ostream& operator<<(std::ostream& out, UserStory& userstory) {
 ~~~~~~~~~~~~~ ^
 auto                                                              -> std::ostream&
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:308:11: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
-UserStory createUserStory(Backlog& backlog) {
-~~~~~~~~~ ^
-auto                                        -> UserStory
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:310:15: warning: redundant string initialization [readability-redundant-string-init]
-  std::string storyName = "";
-              ^~~~~~~~~~~~~~
-              storyName
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:311:15: warning: redundant string initialization [readability-redundant-string-init]
-  std::string storyBody = "";
-              ^~~~~~~~~~~~~~
-              storyBody
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:352:25: warning: static member accessed through instance [readability-static-accessed-through-instance]
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:354:25: warning: static member accessed through instance [readability-static-accessed-through-instance]
     savedUserStories << userstory.storyID << ", " << userstory.getStoryName()
                         ^~~~~~~~~~
                         UserStory::
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:356:9: warning: statement should be inside braces [google-readability-braces-around-statements,readability-braces-around-statements]
-  } else
-        ^
-         {
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:361:35: warning: static member accessed through instance [readability-static-accessed-through-instance]
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:364:35: warning: static member accessed through instance [readability-static-accessed-through-instance]
   backlog.addToRow(std::to_string(userstory.storyID) + ", " +
                                   ^~~~~~~~~~
                                   UserStory::
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:379:6: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
-bool is_empty(std::ifstream& pFile) {
-~~~~ ^
-auto                                -> bool
 C:\Users\chris\source\repos\Userstoryconsole\UserStory.cpp:25:16: warning: variable 'storyID' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
 int UserStory::storyID = 0;
                ^
-C:\Users\chris\source\repos\Userstoryconsole\UserStory.cpp:68:24: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
-std::string UserStory::getStoryName() { return storyName; }
-~~~~~~~~~~~            ^
-auto                                  -> std::string
+C:\Users\chris\source\repos\Userstoryconsole\UserStory.cpp:30:12: warning: an exception may be thrown in function 'UserStory' which should not throw exceptions [bugprone-exception-escape]
+UserStory::UserStory() noexcept {
+           ^
 C:\Users\chris\source\repos\Userstoryconsole\UserStory.cpp:75:24: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
 std::string UserStory::getStoryBody() { return storyBody; }
 ~~~~~~~~~~~            ^
 auto                                  -> std::string
 C:\Users\chris\source\repos\Userstoryconsole\UserStory.cpp:82:16: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
-int UserStory::getStoryPoints() { return storyPoints; }
+int UserStory::getStoryPoints() const { return storyPoints; }
 ~~~            ^
-auto                            -> int
-C:\Users\chris\source\repos\Userstoryconsole\UserStory.cpp:82:16: warning: method 'getStoryPoints' can be made const [readability-make-member-function-const]
-int UserStory::getStoryPoints() { return storyPoints; }
-               ^
-                                const
+auto                                  -> int
 C:\Users\chris\source\repos\Userstoryconsole\UserStory.cpp:89:16: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
 int UserStory::getStatus() { return status; }
 ~~~            ^

@@ -28,15 +28,15 @@ class KanbanBoard : public Board {
   std::map<std::string, int>::iterator map_iterator;
 
  public:
-  KanbanBoard();
+  KanbanBoard() noexcept;
   KanbanBoard(std::vector<std::string> fileRows);
-  void printBoard();
+  void printBoard() override;
 
-  void getDoneUserStory();
-  void getInProgressUserStory();
-  void getToDoUserStory();
-  void addStoryToMap(UserStory& userStory);
+  void getDoneUserStory() override;
+  void getInProgressUserStory() override;
+  void getToDoUserStory() override;
+  void addStoryToMap(UserStory& userStory) override;
 
-  void updateStatus(int storyID, int newStatus);
+  void updateStatus(int storyID, int newStatus) override;
 };
 #endif

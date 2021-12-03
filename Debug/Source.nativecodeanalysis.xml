@@ -4,7 +4,7 @@
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Source.cpp</FILENAME>
-      <LINE>216</LINE>
+      <LINE>217</LINE>
       <COLUMN>33</COLUMN>
     </SFA>
     <DEFECTCODE>26409</DEFECTCODE>
@@ -18,7 +18,7 @@
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Source.cpp</FILENAME>
-      <LINE>220</LINE>
+      <LINE>221</LINE>
       <COLUMN>35</COLUMN>
     </SFA>
     <DEFECTCODE>26409</DEFECTCODE>
@@ -32,7 +32,7 @@
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Source.cpp</FILENAME>
-      <LINE>218</LINE>
+      <LINE>219</LINE>
       <COLUMN>32</COLUMN>
     </SFA>
     <DEFECTCODE>26409</DEFECTCODE>
@@ -46,7 +46,7 @@
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Source.cpp</FILENAME>
-      <LINE>170</LINE>
+      <LINE>171</LINE>
       <COLUMN>40</COLUMN>
     </SFA>
     <DEFECTCODE>26409</DEFECTCODE>
@@ -60,7 +60,7 @@
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Source.cpp</FILENAME>
-      <LINE>132</LINE>
+      <LINE>133</LINE>
       <COLUMN>18</COLUMN>
     </SFA>
     <DEFECTCODE>26494</DEFECTCODE>
@@ -77,7 +77,7 @@
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Source.cpp</FILENAME>
-      <LINE>133</LINE>
+      <LINE>134</LINE>
       <COLUMN>15</COLUMN>
     </SFA>
     <DEFECTCODE>26494</DEFECTCODE>
@@ -108,28 +108,14 @@
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Source.cpp</FILENAME>
-      <LINE>414</LINE>
+      <LINE>417</LINE>
       <COLUMN>5</COLUMN>
     </SFA>
     <DEFECTCODE>26429</DEFECTCODE>
     <DESCRIPTION>Symbol 'func' is never tested for nullness, it can be marked as not_null (f.23).</DESCRIPTION>
     <FUNCTION>invokeFunc</FUNCTION>
     <DECORATED>?invokeFunc@@YAXP6AXXZ@Z</DECORATED>
-    <FUNCLINE>414</FUNCLINE>
-    <PATH></PATH>
-  </DEFECT>
-  <DEFECT>
-    <SFA>
-      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
-      <FILENAME>Source.cpp</FILENAME>
-      <LINE>414</LINE>
-      <COLUMN>5</COLUMN>
-    </SFA>
-    <DEFECTCODE>26440</DEFECTCODE>
-    <DESCRIPTION>Function 'invokeFunc' can be declared 'noexcept' (f.6).</DESCRIPTION>
-    <FUNCTION>invokeFunc</FUNCTION>
-    <DECORATED>?invokeFunc@@YAXP6AXXZ@Z</DECORATED>
-    <FUNCLINE>414</FUNCLINE>
+    <FUNCLINE>417</FUNCLINE>
     <PATH></PATH>
   </DEFECT>
 </DEFECTS>

@@ -4,11 +4,25 @@
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>UserStory.cpp</FILENAME>
-      <LINE>30</LINE>
-      <COLUMN>11</COLUMN>
+      <LINE>31</LINE>
+      <COLUMN>12</COLUMN>
     </SFA>
-    <DEFECTCODE>26455</DEFECTCODE>
-    <DESCRIPTION>Default constructor may not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <DEFECTCODE>26447</DEFECTCODE>
+    <DESCRIPTION>The function is declared 'noexcept' but calls function 'operator=()' which may throw exceptions (f.6).</DESCRIPTION>
+    <FUNCTION>UserStory::{ctor}</FUNCTION>
+    <DECORATED>??0UserStory@@QAE@XZ</DECORATED>
+    <FUNCLINE>30</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
+      <FILENAME>UserStory.cpp</FILENAME>
+      <LINE>32</LINE>
+      <COLUMN>12</COLUMN>
+    </SFA>
+    <DEFECTCODE>26447</DEFECTCODE>
+    <DESCRIPTION>The function is declared 'noexcept' but calls function 'operator=()' which may throw exceptions (f.6).</DESCRIPTION>
     <FUNCTION>UserStory::{ctor}</FUNCTION>
     <DECORATED>??0UserStory@@QAE@XZ</DECORATED>
     <FUNCLINE>30</FUNCLINE>
@@ -38,7 +52,7 @@
     <DEFECTCODE>26440</DEFECTCODE>
     <DESCRIPTION>Function 'UserStory::getStoryPoints' can be declared 'noexcept' (f.6).</DESCRIPTION>
     <FUNCTION>UserStory::getStoryPoints</FUNCTION>
-    <DECORATED>?getStoryPoints@UserStory@@QAEHXZ</DECORATED>
+    <DECORATED>?getStoryPoints@UserStory@@QBEHXZ</DECORATED>
     <FUNCLINE>82</FUNCLINE>
     <PATH></PATH>
   </DEFECT>

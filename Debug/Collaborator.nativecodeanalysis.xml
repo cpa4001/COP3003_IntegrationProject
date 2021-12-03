@@ -4,11 +4,11 @@
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Collaborator.cpp</FILENAME>
-      <LINE>14</LINE>
-      <COLUMN>14</COLUMN>
+      <LINE>15</LINE>
+      <COLUMN>19</COLUMN>
     </SFA>
-    <DEFECTCODE>26455</DEFECTCODE>
-    <DESCRIPTION>Default constructor may not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <DEFECTCODE>26447</DEFECTCODE>
+    <DESCRIPTION>The function is declared 'noexcept' but calls function 'operator=()' which may throw exceptions (f.6).</DESCRIPTION>
     <FUNCTION>Collaborator::{ctor}</FUNCTION>
     <DECORATED>??0Collaborator@@QAE@XZ</DECORATED>
     <FUNCLINE>14</FUNCLINE>

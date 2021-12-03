@@ -35,18 +35,19 @@ class Iteration {
             int iterationLength);
 
   // getters
-  std::string getIterationName();
-  std::string getIterationType();
-  int getIterationLength();
-  int getEstimatedVelocity();
+  auto getIterationName() const -> std::string;
+  auto getIterationType() const -> std::string;
+  auto getIterationLength() const noexcept -> int;
+  auto getEstimatedVelocity() const noexcept -> int;
 
   // setters
   void setIterationName(std::string value);
   void setIterationType(std::string value);
-  void setIterationLength(int value);
-  void setEstimatedVelocity(int value);
+  void setIterationLength(int value) noexcept;
+  void setEstimatedVelocity(int value) noexcept;
 
   void addUserStory(UserStory& userstory);
   void printStories();
 };
+
 #endif
