@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
+      <FILENAME>Iteration.cpp</FILENAME>
+      <LINE>36</LINE>
+      <COLUMN>15</COLUMN>
+    </SFA>
+    <DEFECTCODE>26440</DEFECTCODE>
+    <DESCRIPTION>Function 'Iteration::getIterationLength' can be declared 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>Iteration::getIterationLength</FUNCTION>
+    <DECORATED>?getIterationLength@Iteration@@QAEHXZ</DECORATED>
+    <FUNCLINE>36</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
+      <FILENAME>Iteration.cpp</FILENAME>
+      <LINE>51</LINE>
+      <COLUMN>15</COLUMN>
+    </SFA>
+    <DEFECTCODE>26440</DEFECTCODE>
+    <DESCRIPTION>Function 'Iteration::getEstimatedVelocity' can be declared 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>Iteration::getEstimatedVelocity</FUNCTION>
+    <DECORATED>?getEstimatedVelocity@Iteration@@QAEHXZ</DECORATED>
+    <FUNCLINE>51</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
+      <FILENAME>Iteration.cpp</FILENAME>
+      <LINE>72</LINE>
+      <COLUMN>16</COLUMN>
+    </SFA>
+    <DEFECTCODE>26440</DEFECTCODE>
+    <DESCRIPTION>Function 'Iteration::setIterationLength' can be declared 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>Iteration::setIterationLength</FUNCTION>
+    <DECORATED>?setIterationLength@Iteration@@QAEXH@Z</DECORATED>
+    <FUNCLINE>72</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
+      <FILENAME>Iteration.cpp</FILENAME>
+      <LINE>79</LINE>
+      <COLUMN>16</COLUMN>
+    </SFA>
+    <DEFECTCODE>26440</DEFECTCODE>
+    <DESCRIPTION>Function 'Iteration::setEstimatedVelocity' can be declared 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>Iteration::setEstimatedVelocity</FUNCTION>
+    <DECORATED>?setEstimatedVelocity@Iteration@@QAEXH@Z</DECORATED>
+    <FUNCLINE>79</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
+      <FILENAME>Iteration.cpp</FILENAME>
+      <LINE>86</LINE>
+      <COLUMN>16</COLUMN>
+    </SFA>
+    <DEFECTCODE>26460</DEFECTCODE>
+    <DESCRIPTION>The reference argument 'userstory' for function 'Iteration::addUserStory' can be marked as const (con.3).</DESCRIPTION>
+    <FUNCTION>Iteration::addUserStory</FUNCTION>
+    <DECORATED>?addUserStory@Iteration@@QAEXAAVUserStory@@@Z</DECORATED>
+    <FUNCLINE>86</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
+      <FILENAME>Iteration.cpp</FILENAME>
+      <LINE>97</LINE>
+      <COLUMN>37</COLUMN>
+    </SFA>
+    <DEFECTCODE>26446</DEFECTCODE>
+    <DESCRIPTION>Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).</DESCRIPTION>
+    <FUNCTION>Iteration::printStories</FUNCTION>
+    <DECORATED>?printStories@Iteration@@QAEXXZ</DECORATED>
+    <FUNCLINE>95</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
+      <FILENAME>UserStory.h</FILENAME>
+      <LINE>48</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26812</DEFECTCODE>
+    <DESCRIPTION>The enum type 'UserStory::Status' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
+    <FUNCTION>UserStory::{ctor}</FUNCTION>
+    <DECORATED>??0UserStory@@QAE@ABV0@@Z</DECORATED>
+    <FUNCLINE>48</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

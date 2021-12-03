@@ -1,0 +1,380 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C26440",
+          "message": {
+            "text": "Function 'Iteration::getIterationLength' can be declared 'noexcept' (f.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/chris/source/repos/Userstoryconsole/Iteration.cpp"
+                },
+                "region": {
+                  "startLine": 36,
+                  "startColumn": 16,
+                  "endLine": 36,
+                  "endColumn": 16
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?getIterationLength@Iteration@@QAEHXZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26440",
+          "message": {
+            "text": "Function 'Iteration::getEstimatedVelocity' can be declared 'noexcept' (f.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/chris/source/repos/Userstoryconsole/Iteration.cpp"
+                },
+                "region": {
+                  "startLine": 51,
+                  "startColumn": 16,
+                  "endLine": 51,
+                  "endColumn": 16
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?getEstimatedVelocity@Iteration@@QAEHXZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26440",
+          "message": {
+            "text": "Function 'Iteration::setIterationLength' can be declared 'noexcept' (f.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/chris/source/repos/Userstoryconsole/Iteration.cpp"
+                },
+                "region": {
+                  "startLine": 72,
+                  "startColumn": 17,
+                  "endLine": 72,
+                  "endColumn": 17
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?setIterationLength@Iteration@@QAEXH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26440",
+          "message": {
+            "text": "Function 'Iteration::setEstimatedVelocity' can be declared 'noexcept' (f.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/chris/source/repos/Userstoryconsole/Iteration.cpp"
+                },
+                "region": {
+                  "startLine": 79,
+                  "startColumn": 17,
+                  "endLine": 79,
+                  "endColumn": 17
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?setEstimatedVelocity@Iteration@@QAEXH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26460",
+          "message": {
+            "text": "The reference argument 'userstory' for function 'Iteration::addUserStory' can be marked as const (con.3)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/chris/source/repos/Userstoryconsole/Iteration.cpp"
+                },
+                "region": {
+                  "startLine": 86,
+                  "startColumn": 17,
+                  "endLine": 86,
+                  "endColumn": 17
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?addUserStory@Iteration@@QAEXAAVUserStory@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26446",
+          "message": {
+            "text": "Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/chris/source/repos/Userstoryconsole/Iteration.cpp"
+                },
+                "region": {
+                  "startLine": 97,
+                  "startColumn": 18,
+                  "endLine": 97,
+                  "endColumn": 38
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?printStories@Iteration@@QAEXXZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26812",
+          "message": {
+            "text": "The enum type 'UserStory::Status' is unscoped. Prefer 'enum class' over 'enum' (Enum.3)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/chris/source/repos/Userstoryconsole/UserStory.h"
+                },
+                "region": {
+                  "startLine": 48,
+                  "startColumn": 1,
+                  "endLine": 48,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "??0UserStory@@QAE@ABV0@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.29.30133.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "commandLine": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\c1xx.dll\" -ACf{1F7B090C-16DB-4822-966A-A93D26ED4681} -ACpmspft140.dll -Alint -D_PREFAST_ -D_AST_FE_ -Analyze -zm0x00B3D1C0 -il C:\\Users\\chris\\AppData\\Local\\Temp\\_CL_47af00c4ast -typedil -f Iteration.cpp -Ze -D_MSC_EXTENSIONS -Zp8 -Gs -pc \\:/ -D_MSC_VER=1929 -D_MSC_FULL_VER=192930133 -D_MSC_BUILD=0 -D_WIN32 -D_M_IX86=600 -D_M_IX86_FP=2 -GR -D_CPPRTTI -nologo -W 3 -diagnostics:column -D_GUARDOVERFLOW_CRT_ALLOCATORS=1 -Ot -DCODE_ANALYSIS -DWIN32 -D_DEBUG -D_CONSOLE -D_UNICODE -DUNICODE -EHs -D_CPPUNWIND -EHc -D__MSVC_RUNTIME_CHECKS -RTCs -RTCu -MDd -D_DEBUG -D_MT -D_DLL -GS -D_M_FP_PRECISE -permissive- -Zc:wchar_t -Zc:forScope -FoDebug\\Iteration.obj -FdDebug\\vc142.pdb -external:W 3 -Gd -analyze:projectdirectory C:\\Users\\chris\\source\\repos\\Userstoryconsole -analyze:rulesetdirectory ;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Team Tools\\Static Analysis Tools\\\\Rule Sets; -analyze:ruleset CorePlusReccomended.ruleset -analyze:quiet -analyze:plugin C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\EspXEngine.dll -FC -errorreport:prompt -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\include -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -external:I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um -I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um",
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/Users/chris/source/repos/Userstoryconsole/UserStory.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "b917302221f57ffc498f7ae5b6c52fec"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/chris/source/repos/userstoryconsole/userstory.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "58aeb31a7e79bf080c0c77a7787fa423"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/chris/source/repos/userstoryconsole/sprint.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "md5": "1cbb38e901d7aaa6521287c88e7d2e44"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/chris/source/repos/userstoryconsole/sprint.h"
+          },
+          "hashes": {
+            "md5": "afbc2e138288537dfa159009e8fd7f4f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/chris/source/repos/userstoryconsole/iteration.h"
+          },
+          "hashes": {
+            "md5": "c503b03cb477c63a9da8a82eac751523"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/chris/source/repos/userstoryconsole/backlog.h"
+          },
+          "hashes": {
+            "md5": "be8fc565d7faa02b4251bb049a54de15"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/chris/source/repos/userstoryconsole/collaborator.h"
+          },
+          "hashes": {
+            "md5": "8d0b2272689b1924eeada713e9751625"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/chris/source/repos/Userstoryconsole/Source.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "cd7a8b9067410f47146918b34e9faa73"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/chris/source/repos/userstoryconsole/developer.h"
+          },
+          "hashes": {
+            "md5": "928537a13de3a5bbc0e99e55682e739d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/chris/source/repos/userstoryconsole/kanbanboard.h"
+          },
+          "hashes": {
+            "md5": "4b1312bc42892993305c3397a78bde96"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/chris/source/repos/userstoryconsole/board.h"
+          },
+          "hashes": {
+            "md5": "fa73f2a60c54b79f8168dc797092fdb0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/chris/source/repos/userstoryconsole/release.h"
+          },
+          "hashes": {
+            "md5": "a060f7922546b30dae9e795a51ffcb0e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/chris/source/repos/userstoryconsole/scrummaster.h"
+          },
+          "hashes": {
+            "md5": "587265e480dfe77661ede46e859404dd"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/chris/source/repos/Userstoryconsole/ScrumMaster.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "1c1a55945ae5b076fa7f289b0553937d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/chris/source/repos/userstoryconsole/release.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "md5": "73fc8cefb0836a2b9993212d6ae3a5e6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/chris/source/repos/Userstoryconsole/KanbanBoard.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "d499525e7981060bf91089d29c06aae1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/chris/source/repos/Userstoryconsole/Iteration.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "32faf629db163e15f12f4c2888157273"
+          }
+        }
+      ]
+    }
+  ]
+}

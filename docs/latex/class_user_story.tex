@@ -1,0 +1,176 @@
+\hypertarget{class_user_story}{}\doxysection{User\+Story Class Reference}
+\label{class_user_story}\index{UserStory@{UserStory}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_user_story_ab07c55dc8728e879f02f12e8737b5b64}\label{class_user_story_ab07c55dc8728e879f02f12e8737b5b64}} 
+{\bfseries User\+Story} ()
+\begin{DoxyCompactList}\small\item\em default constructor -\/ intialize empty \mbox{\hyperlink{class_user_story}{User\+Story}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_user_story_ac8ed81910a43db66dcde6721a1825da7}{User\+Story}} (std\+::string story\+Name, std\+::string story\+Body, int story\+Points)
+\begin{DoxyCompactList}\small\item\em default constructor -\/ intialize empty \mbox{\hyperlink{class_user_story}{User\+Story}} \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_user_story_a740c040269d7c79899e24e3316e66d62}{get\+Story\+Name}} ()
+\begin{DoxyCompactList}\small\item\em getter for story\+Name attribute \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_user_story_a0e1efad474824fb07d84ac1e62ebb21e}{get\+Story\+Body}} ()
+\begin{DoxyCompactList}\small\item\em getter for story\+Body attribute \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_user_story_a96074e003c95cacdfbae84c277a5e11c}{get\+Story\+Points}} ()
+\begin{DoxyCompactList}\small\item\em getter for story\+Points attribute \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_user_story_a2943b485380ef7e45a407c4531ec5baf}{get\+Status}} ()
+\begin{DoxyCompactList}\small\item\em getter for status attribute \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_user_story_abfb0b3f4187c5c981cd4538c4eac9e08}{get\+Status\+String}} ()
+\begin{DoxyCompactList}\small\item\em returns the meaning of the status enum \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_story_abc6179433baa6f904c21b3e5f5a4bf9a}{set\+Story\+Name}} (std\+::string value)
+\begin{DoxyCompactList}\small\item\em setter for story\+Name attribute \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_story_ad8e7bf253c8be84f98c9624c199d24ef}{set\+Story\+Body}} (std\+::string value)
+\begin{DoxyCompactList}\small\item\em setter for story\+Body attribute \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_story_a18a2689d1ddacd17168723e5d246e3dd}{set\+Story\+Points}} (int value)
+\begin{DoxyCompactList}\small\item\em setter for story\+Points attribute \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_user_story_abe91142a769f425c467ea06285c2f9ae}\label{class_user_story_abe91142a769f425c467ea06285c2f9ae}} 
+void {\bfseries complete\+User\+Story} ()
+\begin{DoxyCompactList}\small\item\em sets the user story status to done \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_user_story_ac7e5e729d2089242859d1f921b2d43e9}\label{class_user_story_ac7e5e729d2089242859d1f921b2d43e9}} 
+static int {\bfseries story\+ID} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_user_story_ac8ed81910a43db66dcde6721a1825da7}\label{class_user_story_ac8ed81910a43db66dcde6721a1825da7}} 
+\index{UserStory@{UserStory}!UserStory@{UserStory}}
+\index{UserStory@{UserStory}!UserStory@{UserStory}}
+\doxysubsubsection{\texorpdfstring{UserStory()}{UserStory()}}
+{\footnotesize\ttfamily User\+Story\+::\+User\+Story (\begin{DoxyParamCaption}\item[{std\+::string}]{story\+Name,  }\item[{std\+::string}]{story\+Body,  }\item[{int}]{story\+Points }\end{DoxyParamCaption})}
+
+
+
+default constructor -\/ intialize empty \mbox{\hyperlink{class_user_story}{User\+Story}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em story\+Name} & Name of user story \\
+\hline
+{\em story\+Body} & Description of user story \\
+\hline
+{\em story\+Points} & integer value of points assigned to story \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_user_story_a2943b485380ef7e45a407c4531ec5baf}\label{class_user_story_a2943b485380ef7e45a407c4531ec5baf}} 
+\index{UserStory@{UserStory}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!UserStory@{UserStory}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily int User\+Story\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter for status attribute 
+
+\begin{DoxyReturn}{Returns}
+status the status of the user story 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_user_story_abfb0b3f4187c5c981cd4538c4eac9e08}\label{class_user_story_abfb0b3f4187c5c981cd4538c4eac9e08}} 
+\index{UserStory@{UserStory}!getStatusString@{getStatusString}}
+\index{getStatusString@{getStatusString}!UserStory@{UserStory}}
+\doxysubsubsection{\texorpdfstring{getStatusString()}{getStatusString()}}
+{\footnotesize\ttfamily std\+::string User\+Story\+::get\+Status\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns the meaning of the status enum 
+
+\begin{DoxyReturn}{Returns}
+the meaning of the status enum value\+: To Do, Inprogress, or Done 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_user_story_a0e1efad474824fb07d84ac1e62ebb21e}\label{class_user_story_a0e1efad474824fb07d84ac1e62ebb21e}} 
+\index{UserStory@{UserStory}!getStoryBody@{getStoryBody}}
+\index{getStoryBody@{getStoryBody}!UserStory@{UserStory}}
+\doxysubsubsection{\texorpdfstring{getStoryBody()}{getStoryBody()}}
+{\footnotesize\ttfamily std\+::string User\+Story\+::get\+Story\+Body (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter for story\+Body attribute 
+
+\begin{DoxyReturn}{Returns}
+story\+Body the description of the story as a string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_user_story_a740c040269d7c79899e24e3316e66d62}\label{class_user_story_a740c040269d7c79899e24e3316e66d62}} 
+\index{UserStory@{UserStory}!getStoryName@{getStoryName}}
+\index{getStoryName@{getStoryName}!UserStory@{UserStory}}
+\doxysubsubsection{\texorpdfstring{getStoryName()}{getStoryName()}}
+{\footnotesize\ttfamily std\+::string User\+Story\+::get\+Story\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter for story\+Name attribute 
+
+\begin{DoxyReturn}{Returns}
+story\+Name name of the story as a string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_user_story_a96074e003c95cacdfbae84c277a5e11c}\label{class_user_story_a96074e003c95cacdfbae84c277a5e11c}} 
+\index{UserStory@{UserStory}!getStoryPoints@{getStoryPoints}}
+\index{getStoryPoints@{getStoryPoints}!UserStory@{UserStory}}
+\doxysubsubsection{\texorpdfstring{getStoryPoints()}{getStoryPoints()}}
+{\footnotesize\ttfamily int User\+Story\+::get\+Story\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter for story\+Points attribute 
+
+\begin{DoxyReturn}{Returns}
+story\+Points the amount of points the story holds as an int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_user_story_ad8e7bf253c8be84f98c9624c199d24ef}\label{class_user_story_ad8e7bf253c8be84f98c9624c199d24ef}} 
+\index{UserStory@{UserStory}!setStoryBody@{setStoryBody}}
+\index{setStoryBody@{setStoryBody}!UserStory@{UserStory}}
+\doxysubsubsection{\texorpdfstring{setStoryBody()}{setStoryBody()}}
+{\footnotesize\ttfamily void User\+Story\+::set\+Story\+Body (\begin{DoxyParamCaption}\item[{std\+::string}]{value }\end{DoxyParamCaption})}
+
+
+
+setter for story\+Body attribute 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & the body of the user story \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_user_story_abc6179433baa6f904c21b3e5f5a4bf9a}\label{class_user_story_abc6179433baa6f904c21b3e5f5a4bf9a}} 
+\index{UserStory@{UserStory}!setStoryName@{setStoryName}}
+\index{setStoryName@{setStoryName}!UserStory@{UserStory}}
+\doxysubsubsection{\texorpdfstring{setStoryName()}{setStoryName()}}
+{\footnotesize\ttfamily void User\+Story\+::set\+Story\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{value }\end{DoxyParamCaption})}
+
+
+
+setter for story\+Name attribute 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & the name of the user story \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_user_story_a18a2689d1ddacd17168723e5d246e3dd}\label{class_user_story_a18a2689d1ddacd17168723e5d246e3dd}} 
+\index{UserStory@{UserStory}!setStoryPoints@{setStoryPoints}}
+\index{setStoryPoints@{setStoryPoints}!UserStory@{UserStory}}
+\doxysubsubsection{\texorpdfstring{setStoryPoints()}{setStoryPoints()}}
+{\footnotesize\ttfamily void User\+Story\+::set\+Story\+Points (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+setter for story\+Points attribute 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & the body of the user story \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/chris/source/repos/\+Userstoryconsole/\mbox{\hyperlink{_user_story_8h}{User\+Story.\+h}}\item 
+C\+:/\+Users/chris/source/repos/\+Userstoryconsole/\mbox{\hyperlink{_user_story_8cpp}{User\+Story.\+cpp}}\end{DoxyCompactItemize}

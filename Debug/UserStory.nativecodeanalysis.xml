@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
+      <FILENAME>UserStory.cpp</FILENAME>
+      <LINE>30</LINE>
+      <COLUMN>11</COLUMN>
+    </SFA>
+    <DEFECTCODE>26455</DEFECTCODE>
+    <DESCRIPTION>Default constructor may not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>UserStory::{ctor}</FUNCTION>
+    <DECORATED>??0UserStory@@QAE@XZ</DECORATED>
+    <FUNCLINE>30</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
+      <FILENAME>UserStory.cpp</FILENAME>
+      <LINE>34</LINE>
+      <COLUMN>9</COLUMN>
+    </SFA>
+    <DEFECTCODE>26812</DEFECTCODE>
+    <DESCRIPTION>The enum type 'UserStory::Status' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
+    <FUNCTION>UserStory::{ctor}</FUNCTION>
+    <DECORATED>??0UserStory@@QAE@XZ</DECORATED>
+    <FUNCLINE>30</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
+      <FILENAME>UserStory.cpp</FILENAME>
+      <LINE>82</LINE>
+      <COLUMN>15</COLUMN>
+    </SFA>
+    <DEFECTCODE>26440</DEFECTCODE>
+    <DESCRIPTION>Function 'UserStory::getStoryPoints' can be declared 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>UserStory::getStoryPoints</FUNCTION>
+    <DECORATED>?getStoryPoints@UserStory@@QAEHXZ</DECORATED>
+    <FUNCLINE>82</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
+      <FILENAME>UserStory.cpp</FILENAME>
+      <LINE>89</LINE>
+      <COLUMN>15</COLUMN>
+    </SFA>
+    <DEFECTCODE>26440</DEFECTCODE>
+    <DESCRIPTION>Function 'UserStory::getStatus' can be declared 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>UserStory::getStatus</FUNCTION>
+    <DECORATED>?getStatus@UserStory@@QAEHXZ</DECORATED>
+    <FUNCLINE>89</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
+      <FILENAME>UserStory.cpp</FILENAME>
+      <LINE>130</LINE>
+      <COLUMN>16</COLUMN>
+    </SFA>
+    <DEFECTCODE>26440</DEFECTCODE>
+    <DESCRIPTION>Function 'UserStory::setStoryPoints' can be declared 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>UserStory::setStoryPoints</FUNCTION>
+    <DECORATED>?setStoryPoints@UserStory@@QAEXH@Z</DECORATED>
+    <FUNCLINE>130</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
+      <FILENAME>UserStory.cpp</FILENAME>
+      <LINE>135</LINE>
+      <COLUMN>16</COLUMN>
+    </SFA>
+    <DEFECTCODE>26440</DEFECTCODE>
+    <DESCRIPTION>Function 'UserStory::completeUserStory' can be declared 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>UserStory::completeUserStory</FUNCTION>
+    <DECORATED>?completeUserStory@UserStory@@QAEXXZ</DECORATED>
+    <FUNCLINE>135</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

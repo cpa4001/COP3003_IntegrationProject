@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
+      <FILENAME>Source.cpp</FILENAME>
+      <LINE>216</LINE>
+      <COLUMN>33</COLUMN>
+    </SFA>
+    <DEFECTCODE>26409</DEFECTCODE>
+    <DESCRIPTION>Avoid calling new and delete explicitly, use std::make_unique&lt;T&gt; instead (r.11).</DESCRIPTION>
+    <FUNCTION>main</FUNCTION>
+    <DECORATED>main</DECORATED>
+    <FUNCLINE>31</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
+      <FILENAME>Source.cpp</FILENAME>
+      <LINE>220</LINE>
+      <COLUMN>35</COLUMN>
+    </SFA>
+    <DEFECTCODE>26409</DEFECTCODE>
+    <DESCRIPTION>Avoid calling new and delete explicitly, use std::make_unique&lt;T&gt; instead (r.11).</DESCRIPTION>
+    <FUNCTION>main</FUNCTION>
+    <DECORATED>main</DECORATED>
+    <FUNCLINE>31</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
+      <FILENAME>Source.cpp</FILENAME>
+      <LINE>218</LINE>
+      <COLUMN>32</COLUMN>
+    </SFA>
+    <DEFECTCODE>26409</DEFECTCODE>
+    <DESCRIPTION>Avoid calling new and delete explicitly, use std::make_unique&lt;T&gt; instead (r.11).</DESCRIPTION>
+    <FUNCTION>main</FUNCTION>
+    <DECORATED>main</DECORATED>
+    <FUNCLINE>31</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
+      <FILENAME>Source.cpp</FILENAME>
+      <LINE>170</LINE>
+      <COLUMN>40</COLUMN>
+    </SFA>
+    <DEFECTCODE>26409</DEFECTCODE>
+    <DESCRIPTION>Avoid calling new and delete explicitly, use std::make_unique&lt;T&gt; instead (r.11).</DESCRIPTION>
+    <FUNCTION>main</FUNCTION>
+    <DECORATED>main</DECORATED>
+    <FUNCLINE>31</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
+      <FILENAME>Source.cpp</FILENAME>
+      <LINE>132</LINE>
+      <COLUMN>18</COLUMN>
+    </SFA>
+    <DEFECTCODE>26494</DEFECTCODE>
+    <DESCRIPTION>Variable 'collaborator' is uninitialized. Always initialize an object (type.5).</DESCRIPTION>
+    <FUNCTION>main</FUNCTION>
+    <DECORATED>main</DECORATED>
+    <FUNCLINE>31</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>collaborator</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
+      <FILENAME>Source.cpp</FILENAME>
+      <LINE>133</LINE>
+      <COLUMN>15</COLUMN>
+    </SFA>
+    <DEFECTCODE>26494</DEFECTCODE>
+    <DESCRIPTION>Variable 'iteration' is uninitialized. Always initialize an object (type.5).</DESCRIPTION>
+    <FUNCTION>main</FUNCTION>
+    <DECORATED>main</DECORATED>
+    <FUNCLINE>31</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>iteration</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
+      <FILENAME>UserStory.h</FILENAME>
+      <LINE>48</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26812</DEFECTCODE>
+    <DESCRIPTION>The enum type 'UserStory::Status' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
+    <FUNCTION>UserStory::{ctor}</FUNCTION>
+    <DECORATED>??0UserStory@@QAE@$$QAV0@@Z</DECORATED>
+    <FUNCLINE>48</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
+      <FILENAME>Source.cpp</FILENAME>
+      <LINE>414</LINE>
+      <COLUMN>5</COLUMN>
+    </SFA>
+    <DEFECTCODE>26429</DEFECTCODE>
+    <DESCRIPTION>Symbol 'func' is never tested for nullness, it can be marked as not_null (f.23).</DESCRIPTION>
+    <FUNCTION>invokeFunc</FUNCTION>
+    <DECORATED>?invokeFunc@@YAXP6AXXZ@Z</DECORATED>
+    <FUNCLINE>414</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
+      <FILENAME>Source.cpp</FILENAME>
+      <LINE>414</LINE>
+      <COLUMN>5</COLUMN>
+    </SFA>
+    <DEFECTCODE>26440</DEFECTCODE>
+    <DESCRIPTION>Function 'invokeFunc' can be declared 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>invokeFunc</FUNCTION>
+    <DECORATED>?invokeFunc@@YAXP6AXXZ@Z</DECORATED>
+    <FUNCLINE>414</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

@@ -1,0 +1,208 @@
+\hypertarget{class_iteration}{}\doxysection{Iteration Class Reference}
+\label{class_iteration}\index{Iteration@{Iteration}}
+Inheritance diagram for Iteration\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_iteration}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_iteration_aa5ff9650324cbb6997f5d4e5c49f3020}{Iteration}} (std\+::string iteration\+Name, std\+::string iteration\+Type, int iteration\+Length)
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{class_iteration}{Iteration}}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_iteration_a2f6897e4ebfa00642c0589ac51f61e03}{get\+Iteration\+Name}} ()
+\begin{DoxyCompactList}\small\item\em getter for iteration\+Name attribute \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_iteration_afe0e80d9516bc453882dd20c328cf56d}{get\+Iteration\+Type}} ()
+\begin{DoxyCompactList}\small\item\em getter for iteration\+Type attribute \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_iteration_a3d07689002f7ffc9f4409aaa9462c8ed}{get\+Iteration\+Length}} ()
+\begin{DoxyCompactList}\small\item\em getter for iteration\+Length attribute \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_iteration_a7a08fa920c5e3d02cbbd6df0aa1fecd1}{get\+Estimated\+Velocity}} ()
+\begin{DoxyCompactList}\small\item\em getter for estimated\+Velocity attribute \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_iteration_a8a3cc9528d7b599a6712d8c6b6448f77}{set\+Iteration\+Name}} (std\+::string value)
+\begin{DoxyCompactList}\small\item\em setter for iteration\+Name attribute \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_iteration_a40b42bcc95e99857c0566b7d70e53d5a}{set\+Iteration\+Type}} (std\+::string value)
+\begin{DoxyCompactList}\small\item\em setter for iteration\+Type attribute \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_iteration_adb2bbf5e29ee0a3bd525675f30f619c4}{set\+Iteration\+Length}} (int value)
+\begin{DoxyCompactList}\small\item\em setter for iteration\+Length attribute \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_iteration_a7237c2600c779b7ccbd98526b72080b0}{set\+Estimated\+Velocity}} (int value)
+\begin{DoxyCompactList}\small\item\em setter for estimated\+Velocity attribute \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_iteration_aea3f9b4aefddcd7452254d0e425fa6ca}{add\+User\+Story}} (\mbox{\hyperlink{class_user_story}{User\+Story}} \&userstory)
+\begin{DoxyCompactList}\small\item\em adds \mbox{\hyperlink{class_user_story}{User\+Story}} to the backlog(list of userstories) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_iteration_a89a8401c2c7b47c6bddd6449164f0d64}{print\+Stories}} ()
+\begin{DoxyCompactList}\small\item\em prints the stories that are in the iteration ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_iteration_aa5ff9650324cbb6997f5d4e5c49f3020}\label{class_iteration_aa5ff9650324cbb6997f5d4e5c49f3020}} 
+\index{Iteration@{Iteration}!Iteration@{Iteration}}
+\index{Iteration@{Iteration}!Iteration@{Iteration}}
+\doxysubsubsection{\texorpdfstring{Iteration()}{Iteration()}}
+{\footnotesize\ttfamily Iteration\+::\+Iteration (\begin{DoxyParamCaption}\item[{std\+::string}]{iteration\+Name,  }\item[{std\+::string}]{iteration\+Type,  }\item[{int}]{iteration\+Length }\end{DoxyParamCaption})}
+
+
+
+Constructor for \mbox{\hyperlink{class_iteration}{Iteration}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em iteration\+Name} & Name of the iteration \\
+\hline
+{\em iteration\+Type} & Type of iteration\+: sprint, release, iteration, \\
+\hline
+{\em iteration\+Length} & Lenght of iteration in days \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_iteration_aea3f9b4aefddcd7452254d0e425fa6ca}\label{class_iteration_aea3f9b4aefddcd7452254d0e425fa6ca}} 
+\index{Iteration@{Iteration}!addUserStory@{addUserStory}}
+\index{addUserStory@{addUserStory}!Iteration@{Iteration}}
+\doxysubsubsection{\texorpdfstring{addUserStory()}{addUserStory()}}
+{\footnotesize\ttfamily void Iteration\+::add\+User\+Story (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_user_story}{User\+Story}} \&}]{userstory }\end{DoxyParamCaption})}
+
+
+
+adds \mbox{\hyperlink{class_user_story}{User\+Story}} to the backlog(list of userstories) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em userstory} & userstory object to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_iteration_a7a08fa920c5e3d02cbbd6df0aa1fecd1}\label{class_iteration_a7a08fa920c5e3d02cbbd6df0aa1fecd1}} 
+\index{Iteration@{Iteration}!getEstimatedVelocity@{getEstimatedVelocity}}
+\index{getEstimatedVelocity@{getEstimatedVelocity}!Iteration@{Iteration}}
+\doxysubsubsection{\texorpdfstring{getEstimatedVelocity()}{getEstimatedVelocity()}}
+{\footnotesize\ttfamily int Iteration\+::get\+Estimated\+Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter for estimated\+Velocity attribute 
+
+\begin{DoxyReturn}{Returns}
+estimated\+Velocity the estimated velocity for an iteration (story points completed / total points for an iteration) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_iteration_a3d07689002f7ffc9f4409aaa9462c8ed}\label{class_iteration_a3d07689002f7ffc9f4409aaa9462c8ed}} 
+\index{Iteration@{Iteration}!getIterationLength@{getIterationLength}}
+\index{getIterationLength@{getIterationLength}!Iteration@{Iteration}}
+\doxysubsubsection{\texorpdfstring{getIterationLength()}{getIterationLength()}}
+{\footnotesize\ttfamily int Iteration\+::get\+Iteration\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter for iteration\+Length attribute 
+
+\begin{DoxyReturn}{Returns}
+iteration\+Length the length of the iteration in days as an int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_iteration_a2f6897e4ebfa00642c0589ac51f61e03}\label{class_iteration_a2f6897e4ebfa00642c0589ac51f61e03}} 
+\index{Iteration@{Iteration}!getIterationName@{getIterationName}}
+\index{getIterationName@{getIterationName}!Iteration@{Iteration}}
+\doxysubsubsection{\texorpdfstring{getIterationName()}{getIterationName()}}
+{\footnotesize\ttfamily std\+::string Iteration\+::get\+Iteration\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter for iteration\+Name attribute 
+
+\begin{DoxyReturn}{Returns}
+iteration\+Name the name of the iteration as a string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_iteration_afe0e80d9516bc453882dd20c328cf56d}\label{class_iteration_afe0e80d9516bc453882dd20c328cf56d}} 
+\index{Iteration@{Iteration}!getIterationType@{getIterationType}}
+\index{getIterationType@{getIterationType}!Iteration@{Iteration}}
+\doxysubsubsection{\texorpdfstring{getIterationType()}{getIterationType()}}
+{\footnotesize\ttfamily std\+::string Iteration\+::get\+Iteration\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter for iteration\+Type attribute 
+
+\begin{DoxyReturn}{Returns}
+iteration\+Type the type of iteration as a string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_iteration_a89a8401c2c7b47c6bddd6449164f0d64}\label{class_iteration_a89a8401c2c7b47c6bddd6449164f0d64}} 
+\index{Iteration@{Iteration}!printStories@{printStories}}
+\index{printStories@{printStories}!Iteration@{Iteration}}
+\doxysubsubsection{\texorpdfstring{printStories()}{printStories()}}
+{\footnotesize\ttfamily void Iteration\+::print\+Stories (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+prints the stories that are in the iteration ~\newline
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prints} & names of user stories in the iteration\textquotesingle{}s backolog to console \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_iteration_a7237c2600c779b7ccbd98526b72080b0}\label{class_iteration_a7237c2600c779b7ccbd98526b72080b0}} 
+\index{Iteration@{Iteration}!setEstimatedVelocity@{setEstimatedVelocity}}
+\index{setEstimatedVelocity@{setEstimatedVelocity}!Iteration@{Iteration}}
+\doxysubsubsection{\texorpdfstring{setEstimatedVelocity()}{setEstimatedVelocity()}}
+{\footnotesize\ttfamily void Iteration\+::set\+Estimated\+Velocity (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+setter for estimated\+Velocity attribute 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & the estimated velocity of the iteration \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_iteration_adb2bbf5e29ee0a3bd525675f30f619c4}\label{class_iteration_adb2bbf5e29ee0a3bd525675f30f619c4}} 
+\index{Iteration@{Iteration}!setIterationLength@{setIterationLength}}
+\index{setIterationLength@{setIterationLength}!Iteration@{Iteration}}
+\doxysubsubsection{\texorpdfstring{setIterationLength()}{setIterationLength()}}
+{\footnotesize\ttfamily void Iteration\+::set\+Iteration\+Length (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+setter for iteration\+Length attribute 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & the length of the iteration as an int \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_iteration_a8a3cc9528d7b599a6712d8c6b6448f77}\label{class_iteration_a8a3cc9528d7b599a6712d8c6b6448f77}} 
+\index{Iteration@{Iteration}!setIterationName@{setIterationName}}
+\index{setIterationName@{setIterationName}!Iteration@{Iteration}}
+\doxysubsubsection{\texorpdfstring{setIterationName()}{setIterationName()}}
+{\footnotesize\ttfamily void Iteration\+::set\+Iteration\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{value }\end{DoxyParamCaption})}
+
+
+
+setter for iteration\+Name attribute 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & the name of the iteration as a string \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_iteration_a40b42bcc95e99857c0566b7d70e53d5a}\label{class_iteration_a40b42bcc95e99857c0566b7d70e53d5a}} 
+\index{Iteration@{Iteration}!setIterationType@{setIterationType}}
+\index{setIterationType@{setIterationType}!Iteration@{Iteration}}
+\doxysubsubsection{\texorpdfstring{setIterationType()}{setIterationType()}}
+{\footnotesize\ttfamily void Iteration\+::set\+Iteration\+Type (\begin{DoxyParamCaption}\item[{std\+::string}]{value }\end{DoxyParamCaption})}
+
+
+
+setter for iteration\+Type attribute 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & the type of the iteration as a string \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/chris/source/repos/\+Userstoryconsole/\mbox{\hyperlink{_iteration_8h}{Iteration.\+h}}\item 
+C\+:/\+Users/chris/source/repos/\+Userstoryconsole/\mbox{\hyperlink{_iteration_8cpp}{Iteration.\+cpp}}\end{DoxyCompactItemize}

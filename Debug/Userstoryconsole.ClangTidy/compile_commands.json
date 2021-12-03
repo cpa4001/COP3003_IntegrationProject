@@ -1,0 +1,57 @@
+[
+  {
+    "directory": "C:\\Users\\chris\\source\\repos\\Userstoryconsole",
+    "command": "\"C:\\WINDOWS\\system32\\CL.exe\" \/c \/ZI \/JMC \/nologo \/W3 \/WX- \/diagnostics:column \/Od \/Oy- \/D CODE_ANALYSIS \/D WIN32 \/D _DEBUG \/D _CONSOLE \/D _UNICODE \/D UNICODE \/EHsc \/RTC1 \/MDd \/GS \/fp:precise \/permissive- \/Fo\"Debug\\\\\" \/Gd \/TP   \"C:\\Users\\chris\\source\\repos\\Userstoryconsole\\Backlog.cpp\"",
+    "file": "C:\\Users\\chris\\source\\repos\\Userstoryconsole\\Backlog.cpp"
+  },
+  {
+    "directory": "C:\\Users\\chris\\source\\repos\\Userstoryconsole",
+    "command": "\"C:\\WINDOWS\\system32\\CL.exe\" \/c \/ZI \/JMC \/nologo \/W3 \/WX- \/diagnostics:column \/Od \/Oy- \/D CODE_ANALYSIS \/D WIN32 \/D _DEBUG \/D _CONSOLE \/D _UNICODE \/D UNICODE \/EHsc \/RTC1 \/MDd \/GS \/fp:precise \/permissive- \/Fo\"Debug\\\\\" \/Gd \/TP   \"C:\\Users\\chris\\source\\repos\\Userstoryconsole\\Board.cpp\"",
+    "file": "C:\\Users\\chris\\source\\repos\\Userstoryconsole\\Board.cpp"
+  },
+  {
+    "directory": "C:\\Users\\chris\\source\\repos\\Userstoryconsole",
+    "command": "\"C:\\WINDOWS\\system32\\CL.exe\" \/c \/ZI \/JMC \/nologo \/W3 \/WX- \/diagnostics:column \/Od \/Oy- \/D CODE_ANALYSIS \/D WIN32 \/D _DEBUG \/D _CONSOLE \/D _UNICODE \/D UNICODE \/EHsc \/RTC1 \/MDd \/GS \/fp:precise \/permissive- \/Fo\"Debug\\\\\" \/Gd \/TP   \"C:\\Users\\chris\\source\\repos\\Userstoryconsole\\Collaborator.cpp\"",
+    "file": "C:\\Users\\chris\\source\\repos\\Userstoryconsole\\Collaborator.cpp"
+  },
+  {
+    "directory": "C:\\Users\\chris\\source\\repos\\Userstoryconsole",
+    "command": "\"C:\\WINDOWS\\system32\\CL.exe\" \/c \/ZI \/JMC \/nologo \/W3 \/WX- \/diagnostics:column \/Od \/Oy- \/D CODE_ANALYSIS \/D WIN32 \/D _DEBUG \/D _CONSOLE \/D _UNICODE \/D UNICODE \/EHsc \/RTC1 \/MDd \/GS \/fp:precise \/permissive- \/Fo\"Debug\\\\\" \/Gd \/TP   \"C:\\Users\\chris\\source\\repos\\Userstoryconsole\\Developer.cpp\"",
+    "file": "C:\\Users\\chris\\source\\repos\\Userstoryconsole\\Developer.cpp"
+  },
+  {
+    "directory": "C:\\Users\\chris\\source\\repos\\Userstoryconsole",
+    "command": "\"C:\\WINDOWS\\system32\\CL.exe\" \/c \/ZI \/JMC \/nologo \/W3 \/WX- \/diagnostics:column \/Od \/Oy- \/D CODE_ANALYSIS \/D WIN32 \/D _DEBUG \/D _CONSOLE \/D _UNICODE \/D UNICODE \/EHsc \/RTC1 \/MDd \/GS \/fp:precise \/permissive- \/Fo\"Debug\\\\\" \/Gd \/TP   \"C:\\Users\\chris\\source\\repos\\Userstoryconsole\\Iteration.cpp\"",
+    "file": "C:\\Users\\chris\\source\\repos\\Userstoryconsole\\Iteration.cpp"
+  },
+  {
+    "directory": "C:\\Users\\chris\\source\\repos\\Userstoryconsole",
+    "command": "\"C:\\WINDOWS\\system32\\CL.exe\" \/c \/ZI \/JMC \/nologo \/W3 \/WX- \/diagnostics:column \/Od \/Oy- \/D CODE_ANALYSIS \/D WIN32 \/D _DEBUG \/D _CONSOLE \/D _UNICODE \/D UNICODE \/EHsc \/RTC1 \/MDd \/GS \/fp:precise \/permissive- \/Fo\"Debug\\\\\" \/Gd \/TP   \"C:\\Users\\chris\\source\\repos\\Userstoryconsole\\KanbanBoard.cpp\"",
+    "file": "C:\\Users\\chris\\source\\repos\\Userstoryconsole\\KanbanBoard.cpp"
+  },
+  {
+    "directory": "C:\\Users\\chris\\source\\repos\\Userstoryconsole",
+    "command": "\"C:\\WINDOWS\\system32\\CL.exe\" \/c \/ZI \/JMC \/nologo \/W3 \/WX- \/diagnostics:column \/Od \/Oy- \/D CODE_ANALYSIS \/D WIN32 \/D _DEBUG \/D _CONSOLE \/D _UNICODE \/D UNICODE \/EHsc \/RTC1 \/MDd \/GS \/fp:precise \/permissive- \/Fo\"Debug\\\\\" \/Gd \/TP   \"C:\\Users\\chris\\source\\repos\\Userstoryconsole\\Release.cpp\"",
+    "file": "C:\\Users\\chris\\source\\repos\\Userstoryconsole\\Release.cpp"
+  },
+  {
+    "directory": "C:\\Users\\chris\\source\\repos\\Userstoryconsole",
+    "command": "\"C:\\WINDOWS\\system32\\CL.exe\" \/c \/ZI \/JMC \/nologo \/W3 \/WX- \/diagnostics:column \/Od \/Oy- \/D CODE_ANALYSIS \/D WIN32 \/D _DEBUG \/D _CONSOLE \/D _UNICODE \/D UNICODE \/EHsc \/RTC1 \/MDd \/GS \/fp:precise \/permissive- \/Fo\"Debug\\\\\" \/Gd \/TP   \"C:\\Users\\chris\\source\\repos\\Userstoryconsole\\ScrumMaster.cpp\"",
+    "file": "C:\\Users\\chris\\source\\repos\\Userstoryconsole\\ScrumMaster.cpp"
+  },
+  {
+    "directory": "C:\\Users\\chris\\source\\repos\\Userstoryconsole",
+    "command": "\"C:\\WINDOWS\\system32\\CL.exe\" \/c \/ZI \/JMC \/nologo \/W3 \/WX- \/diagnostics:column \/Od \/Oy- \/D CODE_ANALYSIS \/D WIN32 \/D _DEBUG \/D _CONSOLE \/D _UNICODE \/D UNICODE \/EHsc \/RTC1 \/MDd \/GS \/fp:precise \/permissive- \/Fo\"Debug\\\\\" \/Gd \/TP   \"C:\\Users\\chris\\source\\repos\\Userstoryconsole\\Source.cpp\"",
+    "file": "C:\\Users\\chris\\source\\repos\\Userstoryconsole\\Source.cpp"
+  },
+  {
+    "directory": "C:\\Users\\chris\\source\\repos\\Userstoryconsole",
+    "command": "\"C:\\WINDOWS\\system32\\CL.exe\" \/c \/ZI \/JMC \/nologo \/W3 \/WX- \/diagnostics:column \/Od \/Oy- \/D CODE_ANALYSIS \/D WIN32 \/D _DEBUG \/D _CONSOLE \/D _UNICODE \/D UNICODE \/EHsc \/RTC1 \/MDd \/GS \/fp:precise \/permissive- \/Fo\"Debug\\\\\" \/Gd \/TP   \"C:\\Users\\chris\\source\\repos\\Userstoryconsole\\Sprint.cpp\"",
+    "file": "C:\\Users\\chris\\source\\repos\\Userstoryconsole\\Sprint.cpp"
+  },
+  {
+    "directory": "C:\\Users\\chris\\source\\repos\\Userstoryconsole",
+    "command": "\"C:\\WINDOWS\\system32\\CL.exe\" \/c \/ZI \/JMC \/nologo \/W3 \/WX- \/diagnostics:column \/Od \/Oy- \/D CODE_ANALYSIS \/D WIN32 \/D _DEBUG \/D _CONSOLE \/D _UNICODE \/D UNICODE \/EHsc \/RTC1 \/MDd \/GS \/fp:precise \/permissive- \/Fo\"Debug\\\\\" \/Gd \/TP   \"C:\\Users\\chris\\source\\repos\\Userstoryconsole\\UserStory.cpp\"",
+    "file": "C:\\Users\\chris\\source\\repos\\Userstoryconsole\\UserStory.cpp"
+  }
+]
