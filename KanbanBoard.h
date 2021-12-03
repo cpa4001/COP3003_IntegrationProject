@@ -8,13 +8,16 @@
  *	@bug No known bugs
  */
 
-#pragma once
+#ifndef KANBANBOARD_H
+#define KANBANBOARD_H
 #include <string>
 #include <vector>
 
 #include "Board.h"
 
+// LO1a
 // LO2
+// LO2a
 // KanbanBoard inherits from Board interface with public visibility
 class KanbanBoard : public Board {
  private:
@@ -36,3 +39,4 @@ class KanbanBoard : public Board {
 
   void updateStatus(int storyID, int newStatus);
 };
+#endif

@@ -10,6 +10,8 @@
 
 #include "UserStory.h"
 
+// LO1a
+
 // LO4: Include a comment in which you compare and contrast the procedural/functional
 // approach and the object-oriented approach
 /*
@@ -100,6 +102,8 @@ std::string UserStory::getStatusString() {
       return "In Progress";
     case 2:
       return "Done";
+    default:
+      return "Status Unknown";
   }
 }
 

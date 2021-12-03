@@ -46,6 +46,7 @@ int main() {
   std::ofstream writeToUserStories("UserStories.csv", std::ios::app);
   std::ifstream readFromUserStories("UserStories.csv");
 
+  // LO1
   // Create the backlog that will act as temp database
   Backlog masterBacklog(readFromUserStories);
   KanbanBoard kanbanBoard(masterBacklog.getRow());
@@ -126,6 +127,7 @@ int main() {
     std::cin.ignore();
     */
 
+    // LO1
     // declare pointers here because initialization is not allowed within switch
     Collaborator* collaborator;
     Iteration* iteration;
@@ -162,7 +164,8 @@ int main() {
           } while (inputInt >= UserStory::storyID);
           std::cout << "What is the Scrum Master's name? ";
           std::cin >> inputString;
-
+ 
+          // LO5
           // point to the necessary collaborator and assign the story to them
           collaborator = new ScrumMaster(inputString);
           // LO3
@@ -206,7 +209,7 @@ int main() {
                   << std::endl;
         std::cin >> inputInt;
 
-        // LO5
+        // LO1, LO5
         // point the iteration to the correct subclass
         // additional use of polymorphism
         if (inputInt == 1) {
@@ -328,6 +331,7 @@ UserStory createUserStory(Backlog& backlog) {
       << "You can see your new story in the \nUserstories.csv file in the "
          "same directory as this project"
       << std::endl;
+  //LO1
   UserStory newStory(storyName, storyBody, storyPoints);
   return newStory;
 }
@@ -383,8 +387,8 @@ bool is_empty(std::ifstream& pFile) {
  * @param backlog                   backlog object that holds user stories
  * @param kanbanBoard               kanbanBoard object
  */
-void createAndSaveStory(std::ofstream& writeToUserStories, Backlog& backlog,
-                        KanbanBoard& kanbanBoard) {
+void createAndSaveStory(std::ofstream& writeToUserStories, Backlog& backlog, KanbanBoard& kanbanBoard) {
+  // LO1
   // ask for input
   // create userstory based on input
   UserStory newStory = createUserStory(backlog);

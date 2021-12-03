@@ -44,13 +44,14 @@ KanbanBoard::KanbanBoard(std::vector<std::string> fileRows) {
   }
 }
 
-/*
+/* LO5
     @brief Prints the name of the stories under each category based on their
     status.
 */
 void KanbanBoard::printBoard() {
-  int maxToDoSpaces = 0;
-  int maxInProgressSpaces = 0;
+  // Variables could be used in formatting text
+  // int maxToDoSpaces = 0;
+  // int maxInProgressSpaces = 0;
   std::string kanbanBoardLine = "";
 
   getToDoUserStory();
@@ -59,7 +60,7 @@ void KanbanBoard::printBoard() {
   std::cout << std::endl;
 }
 
-/**
+/** LO5
  * @brief iterates through statusMap and prints all storyids with done status
  */
 void KanbanBoard::getDoneUserStory() {
@@ -71,7 +72,7 @@ void KanbanBoard::getDoneUserStory() {
   }
 }
 
-/**
+/** LO5
  * @brief iterates through statusMap and prints all storyids with in progress
  *  status
  */
@@ -84,7 +85,7 @@ void KanbanBoard::getInProgressUserStory() {
   }
 }
 
-/**
+/** LO5
  * @brief iterates through statusMap and prints all storyids with to do status
  */
 void KanbanBoard::getToDoUserStory() {
@@ -96,7 +97,7 @@ void KanbanBoard::getToDoUserStory() {
   }
 }
 
-/**
+/** LO5
 *   @brief Adds a story name and the status of that story to the statusMap 
 *    hashmap
 *   
@@ -108,7 +109,7 @@ void KanbanBoard::addStoryToMap(UserStory& userStory) {
 }
 
 
-/**
+/** LO5
  *   @brief used to update status in the statusMap
  *
  *   @param storyID     the id of the story that needs to be changed

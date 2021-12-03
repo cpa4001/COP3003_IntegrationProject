@@ -22,8 +22,7 @@
  */
 Backlog::Backlog(std::ifstream& readFromUserStories) {
   // create a buffer for each line
-  std::string line;
-  int i = 0;
+  std::string line = "";
   if (readFromUserStories.is_open()) {
     while (getline(readFromUserStories, line)) {
       row.push_back(line);
@@ -144,7 +143,8 @@ std::vector<UserStory> Backlog::getProductBacklog() { return productBacklog; }
  */
 std::vector<std::string> Backlog::getRow() { return row; }
 
-/** @brief overloaded unary minus operator
+/** LO7
+ *  @brief overloaded unary minus operator
  *
  *  returns the most recent created user story if backlog has been created
  *  otherwise returns error message

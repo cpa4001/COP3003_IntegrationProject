@@ -5,5 +5,5 @@
  *	@bug No known bugs
  */
 
-// LO5
+// LO6
 #include "Board.h"

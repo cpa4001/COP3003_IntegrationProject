@@ -11,7 +11,7 @@
 #ifndef USERSTORY_H
 #define USERSTORY_H
 #include <string>
-// friend class Collaborator;
+// LO1a
 class UserStory {
  private:
   std::string storyName;

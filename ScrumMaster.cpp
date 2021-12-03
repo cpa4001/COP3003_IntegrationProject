@@ -5,6 +5,7 @@
  *  @bug No known bugs.
  */
 
+// LO1a
 // LO2
 #include "ScrumMaster.h"
 
@@ -17,7 +18,7 @@
 ScrumMaster::ScrumMaster(std::string collaboratorName)
     : Collaborator(collaboratorName, "Scrum Master") {}
 
-/**
+/** LO5
  *  @brief Adds story to the ScrumMaster's list of stories working on
  *  
  *  @param storyID     integer ID of the UserStory

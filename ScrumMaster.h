@@ -10,6 +10,7 @@
 #include "Collaborator.h"
 
 // LO2
+// LO2a
 // Scrum Master inherits from Collaborator with public visibility
 class ScrumMaster : public Collaborator {
  public:
