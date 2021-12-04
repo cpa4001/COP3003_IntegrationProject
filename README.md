@@ -67,7 +67,7 @@ Final Milestone:
   - Shown in the methods of the Backlog class 
 
 ## Diagrams
-<br>
+ClassDiagram.cd has all class diagrams in a file that is compatible with Visual Studio </br>
 ![Sample Image](userstoryconsole_classdiagrams.PNG)
 
 ## Current Challenges 
