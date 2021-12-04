@@ -1,5 +1,5 @@
 # COP3003_IntegrationProject
-An application that offers a project management tool to create and track user stories for teams that use AGILE methodologies. A user story is a description of a feature for an application that is usually less than three sentences long. The collection of user stories for a product is called the product backlog and this can be broken down into releases, and releases can be broken down into short iterations called sprints. This project is designed to make creating, tracking, and allocating user stories to sprints simple and easy.
+An application that offers a project management tool to create and track user stories for teams that use AGILE methodologies. A user story is a description of a feature for an application that is usually less than three sentences long. The collection of user stories for a product is called the product backlog and this can be broken down into releases, and releases can be broken down into short iterations called sprints. This project is designed to make creating, tracking, and allocating user stories to sprints simple and easy by housing the stories in a csv and giving options to the user to interact with the backlog.
 
 A basic layout for a user story looks like this: <br>
 As a who      (**Who** wants to accomplish something) <br>
@@ -67,6 +67,7 @@ Final Milestone:
   - Shown in the methods of the Backlog class 
 
 ## Diagrams
+<br>
 ![Sample Image](userstoryconsole_classdiagrams.PNG)
 
 ## Current Challenges 
