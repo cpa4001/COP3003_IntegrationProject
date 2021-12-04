@@ -36,17 +36,7 @@ class Backlog {
   void printStories();
   void updateStoryStatus(int storyID, int newStatus);
   void updateStoryWithCollaborator(int storyID, std::string CollaboratorName);
-  /*
-  int f1();
-  inline int f2(int arg) noexcept;
-  virtual float f3() const&& = delete;
-  transforms to :
-
-      auto
-      f1() -> int;
-  inline auto f2(int arg) -> int noexcept;
-  virtual auto f3() const&& -> float = delete;
-  */
+ 
   auto getMatrix() -> std::vector<std::vector<std::string>>;
   auto getProductBacklog() -> std::vector<UserStory>;
   auto getRow() -> std::vector<std::string>;

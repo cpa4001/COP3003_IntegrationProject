@@ -46,34 +46,6 @@
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>UserStory.cpp</FILENAME>
-      <LINE>82</LINE>
-      <COLUMN>15</COLUMN>
-    </SFA>
-    <DEFECTCODE>26440</DEFECTCODE>
-    <DESCRIPTION>Function 'UserStory::getStoryPoints' can be declared 'noexcept' (f.6).</DESCRIPTION>
-    <FUNCTION>UserStory::getStoryPoints</FUNCTION>
-    <DECORATED>?getStoryPoints@UserStory@@QBEHXZ</DECORATED>
-    <FUNCLINE>82</FUNCLINE>
-    <PATH></PATH>
-  </DEFECT>
-  <DEFECT>
-    <SFA>
-      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
-      <FILENAME>UserStory.cpp</FILENAME>
-      <LINE>89</LINE>
-      <COLUMN>15</COLUMN>
-    </SFA>
-    <DEFECTCODE>26440</DEFECTCODE>
-    <DESCRIPTION>Function 'UserStory::getStatus' can be declared 'noexcept' (f.6).</DESCRIPTION>
-    <FUNCTION>UserStory::getStatus</FUNCTION>
-    <DECORATED>?getStatus@UserStory@@QAEHXZ</DECORATED>
-    <FUNCLINE>89</FUNCLINE>
-    <PATH></PATH>
-  </DEFECT>
-  <DEFECT>
-    <SFA>
-      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
-      <FILENAME>UserStory.cpp</FILENAME>
       <LINE>130</LINE>
       <COLUMN>16</COLUMN>
     </SFA>
@@ -82,20 +54,6 @@
     <FUNCTION>UserStory::setStoryPoints</FUNCTION>
     <DECORATED>?setStoryPoints@UserStory@@QAEXH@Z</DECORATED>
     <FUNCLINE>130</FUNCLINE>
-    <PATH></PATH>
-  </DEFECT>
-  <DEFECT>
-    <SFA>
-      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
-      <FILENAME>UserStory.cpp</FILENAME>
-      <LINE>135</LINE>
-      <COLUMN>16</COLUMN>
-    </SFA>
-    <DEFECTCODE>26440</DEFECTCODE>
-    <DESCRIPTION>Function 'UserStory::completeUserStory' can be declared 'noexcept' (f.6).</DESCRIPTION>
-    <FUNCTION>UserStory::completeUserStory</FUNCTION>
-    <DECORATED>?completeUserStory@UserStory@@QAEXXZ</DECORATED>
-    <FUNCLINE>135</FUNCLINE>
     <PATH></PATH>
   </DEFECT>
 </DEFECTS>

@@ -18,7 +18,7 @@
 #include "UserStory.h"
 
 // could have some of these functions in a file class
-std::ostream& operator<<(std::ostream& out, UserStory& userstory);
+auto operator<<(std::ostream& out, UserStory& userstory) -> std::ostream&;
 auto createUserStory(Backlog& backlog) -> UserStory;
 void saveUserStory(UserStory& userstory, std::ofstream& savedUserStories,
                    Backlog& backlog, KanbanBoard& kanbanBoard);
@@ -27,6 +27,15 @@ void createAndSaveStory(std::ofstream& writeToUserStories, Backlog& backlog,
                         KanbanBoard& kanbanBoard);
 void createBorder();
 void invokeFunc(void (*func)()) noexcept;
+
+constexpr int EXIT = 0;
+constexpr int CREATE_USER_STORY = 1;
+constexpr int LOOK_UP_BACKLOG = 2;
+constexpr int ADD_COLLABORATOR = 3;
+constexpr int ADD_ITERATION = 4;
+constexpr int KANBAN_BOARD = 5;
+constexpr int MOST_RECENT_USER_STORY = 6;
+constexpr int UPDATE_STATUS = 7;
 
 int main() {
   std::cout << "Welcome to a user story project management \ntool developed by "
@@ -68,7 +77,7 @@ int main() {
   }
 
   // update the storyID so that the next userstory gets the correct storyID
-  UserStory::storyID = masterBacklog.getRow().size() - 1;
+  UserStory::storyID = (int)(masterBacklog.getRow().size() - 1);
 
   /*
   // if the file is open and if the first line can be recieved
@@ -140,20 +149,20 @@ int main() {
     int status = 0;
 
     switch (userInputKey) {
-      case 0:
+      case EXIT:
         break;
-      case 1:
+      case CREATE_USER_STORY:
         // collect user input and write to csv file
         createAndSaveStory(writeToUserStories, masterBacklog, kanbanBoard);
         createBorder();
         break;
-      case 2:
+      case LOOK_UP_BACKLOG:
         // Print out all records of the userstory.csv file
         // lookUpProductBackLog();
         masterBacklog.printStories();
         createBorder();
         break;
-      case 3:
+      case ADD_COLLABORATOR:
         // prompt the user about details for the collaborator
         std::cout << "Are you a:\n(1) Scrum Master\n(2) Developer" << std::endl;
         std::cin >> inputInt;
@@ -201,7 +210,7 @@ int main() {
 
         createBorder();
         break;
-      case 4:
+      case ADD_ITERATION:
         // prompt the user for details about the iteration
         std::cout << "What is the name of the iteration? ";
         std::cin >> inputString;
@@ -229,7 +238,7 @@ int main() {
         createBorder();
         break;
 
-      case 5:
+      case KANBAN_BOARD:
         // iterate through the product backlog and add the statuses to the
         // hashmap in the kanbanBoard object this is done when Kanbanboard
         // object is created
@@ -238,7 +247,7 @@ int main() {
         kanbanBoard.printBoard();
         createBorder();
         break;
-      case 6:
+      case MOST_RECENT_USER_STORY:
         // get the most recent user story details by using the overloaded -
         // operator
         std::cout << -masterBacklog << std::endl;
@@ -247,7 +256,7 @@ int main() {
         // function
         invokeFunc(&createBorder);
         break;
-      case 7:
+      case UPDATE_STATUS:
         std::cout << "This feature is still in development" << std::endl;
         std::cout
             << "What is the ID of the story that you would like to change? "
@@ -292,7 +301,7 @@ int main() {
  *
  *  @returns out		output stream
  */
-std::ostream& operator<<(std::ostream& out, UserStory& userstory) {
+auto operator<<(std::ostream& out, UserStory& userstory) -> std::ostream& {
   out << userstory.getStoryName() << " " << userstory.getStoryBody() << " "
       << userstory.getStoryPoints();
   return out;
@@ -351,7 +360,7 @@ auto createUserStory(Backlog& backlog) -> UserStory {
 void saveUserStory(UserStory& userstory, std::ofstream& savedUserStories,
                    Backlog& backlog, KanbanBoard& kanbanBoard) {
   if (savedUserStories.is_open()) {
-    savedUserStories << userstory.storyID << ", " << userstory.getStoryName()
+    savedUserStories << UserStory::storyID << ", " << userstory.getStoryName()
                      << ", " << userstory.getStoryBody() << ", "
                      << userstory.getStoryPoints() << ", "
                      << userstory.getStatusString() << "\n";
@@ -361,7 +370,7 @@ void saveUserStory(UserStory& userstory, std::ofstream& savedUserStories,
               << std::endl;
   }
 
-  backlog.addToRow(std::to_string(userstory.storyID) + ", " +
+  backlog.addToRow(std::to_string(UserStory::storyID) + ", " +
                    userstory.getStoryName() + "," + userstory.getStoryBody() +
                    ", " + std::to_string(userstory.getStoryPoints()) + ", " +
                    userstory.getStatusString() + "\n");

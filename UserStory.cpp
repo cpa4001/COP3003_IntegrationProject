@@ -72,21 +72,21 @@ auto UserStory::getStoryName() -> std::string { return storyName; }
  *
  *   @return storyBody the description of the story as a string
  */
-std::string UserStory::getStoryBody() { return storyBody; }
+auto UserStory::getStoryBody() -> std::string { return storyBody; }
 
 /**
  *   @brief getter for storyPoints attribute
  *
  *   @return storyPoints the amount of points the story holds as an int
  */
-int UserStory::getStoryPoints() const { return storyPoints; }
+auto UserStory::getStoryPoints() const noexcept -> int { return storyPoints; }
 
 /**
  *   @brief getter for status attribute
  *
  *   @return status the status of the user story
  */
-int UserStory::getStatus() noexcept { return status; }
+auto UserStory::getStatus() noexcept -> int { return status; }
 
 
 /**
@@ -94,7 +94,7 @@ int UserStory::getStatus() noexcept { return status; }
  *
  *   @return the meaning of the status enum value: To Do, Inprogress, or Done
  */
-std::string UserStory::getStatusString() {
+auto UserStory::getStatusString() -> std::string {
   switch (status) {
     case 0:
       return "To Do";

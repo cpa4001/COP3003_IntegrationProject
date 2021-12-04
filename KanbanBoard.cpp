@@ -13,7 +13,6 @@
 
 // LO2
 
-KanbanBoard::KanbanBoard() noexcept {}
 
 /**
  *   @brief Creates the KanbanBoard and intializes the statusMap
@@ -105,7 +104,7 @@ void KanbanBoard::getToDoUserStory() {
 */
 void KanbanBoard::addStoryToMap(UserStory& userStory) {
   statusMap.insert(std::pair<std::string, int>(
-      std::to_string(userStory.storyID), userStory.getStatus()));
+      std::to_string(UserStory::storyID), userStory.getStatus()));
 }
 
 

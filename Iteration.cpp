@@ -101,7 +101,7 @@ void Iteration::addUserStory(UserStory& userstory) {
  * @param prints names of user stories in the iteration's backolog to console
  */
 void Iteration::printStories() {
-  for (size_t index = 0; index < productBacklog.size(); index++) {
-    std::cout << productBacklog.at(index).getStoryName() << std::endl;
+  for (auto& userStory : productBacklog) {
+    std::cout << userStory.getStoryName() << std::endl;
   }
 }

@@ -28,8 +28,8 @@ class KanbanBoard : public Board {
   std::map<std::string, int>::iterator map_iterator;
 
  public:
-  KanbanBoard() noexcept;
-  KanbanBoard(std::vector<std::string> fileRows);
+  KanbanBoard() noexcept = default;
+  explicit KanbanBoard(std::vector<std::string> fileRows);
   void printBoard() override;
 
   void getDoneUserStory() override;

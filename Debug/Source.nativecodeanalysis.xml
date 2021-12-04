@@ -4,70 +4,84 @@
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Source.cpp</FILENAME>
-      <LINE>217</LINE>
+      <LINE>226</LINE>
       <COLUMN>33</COLUMN>
     </SFA>
     <DEFECTCODE>26409</DEFECTCODE>
     <DESCRIPTION>Avoid calling new and delete explicitly, use std::make_unique&lt;T&gt; instead (r.11).</DESCRIPTION>
     <FUNCTION>main</FUNCTION>
     <DECORATED>main</DECORATED>
-    <FUNCLINE>31</FUNCLINE>
+    <FUNCLINE>40</FUNCLINE>
     <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Source.cpp</FILENAME>
-      <LINE>221</LINE>
+      <LINE>230</LINE>
       <COLUMN>35</COLUMN>
     </SFA>
     <DEFECTCODE>26409</DEFECTCODE>
     <DESCRIPTION>Avoid calling new and delete explicitly, use std::make_unique&lt;T&gt; instead (r.11).</DESCRIPTION>
     <FUNCTION>main</FUNCTION>
     <DECORATED>main</DECORATED>
-    <FUNCLINE>31</FUNCLINE>
+    <FUNCLINE>40</FUNCLINE>
     <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Source.cpp</FILENAME>
-      <LINE>219</LINE>
+      <LINE>228</LINE>
       <COLUMN>32</COLUMN>
     </SFA>
     <DEFECTCODE>26409</DEFECTCODE>
     <DESCRIPTION>Avoid calling new and delete explicitly, use std::make_unique&lt;T&gt; instead (r.11).</DESCRIPTION>
     <FUNCTION>main</FUNCTION>
     <DECORATED>main</DECORATED>
-    <FUNCLINE>31</FUNCLINE>
+    <FUNCLINE>40</FUNCLINE>
     <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Source.cpp</FILENAME>
-      <LINE>171</LINE>
+      <LINE>180</LINE>
       <COLUMN>40</COLUMN>
     </SFA>
     <DEFECTCODE>26409</DEFECTCODE>
     <DESCRIPTION>Avoid calling new and delete explicitly, use std::make_unique&lt;T&gt; instead (r.11).</DESCRIPTION>
     <FUNCTION>main</FUNCTION>
     <DECORATED>main</DECORATED>
-    <FUNCLINE>31</FUNCLINE>
+    <FUNCLINE>40</FUNCLINE>
     <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Source.cpp</FILENAME>
-      <LINE>133</LINE>
+      <LINE>80</LINE>
+      <COLUMN>26</COLUMN>
+    </SFA>
+    <DEFECTCODE>26493</DEFECTCODE>
+    <DESCRIPTION>Don't use C-style casts (type.4).</DESCRIPTION>
+    <FUNCTION>main</FUNCTION>
+    <DECORATED>main</DECORATED>
+    <FUNCLINE>40</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
+      <FILENAME>Source.cpp</FILENAME>
+      <LINE>142</LINE>
       <COLUMN>18</COLUMN>
     </SFA>
     <DEFECTCODE>26494</DEFECTCODE>
     <DESCRIPTION>Variable 'collaborator' is uninitialized. Always initialize an object (type.5).</DESCRIPTION>
     <FUNCTION>main</FUNCTION>
     <DECORATED>main</DECORATED>
-    <FUNCLINE>31</FUNCLINE>
+    <FUNCLINE>40</FUNCLINE>
     <ADDITIONALINFO>
       <targetSymbol>collaborator</targetSymbol>
     </ADDITIONALINFO>
@@ -77,14 +91,14 @@
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Source.cpp</FILENAME>
-      <LINE>134</LINE>
+      <LINE>143</LINE>
       <COLUMN>15</COLUMN>
     </SFA>
     <DEFECTCODE>26494</DEFECTCODE>
     <DESCRIPTION>Variable 'iteration' is uninitialized. Always initialize an object (type.5).</DESCRIPTION>
     <FUNCTION>main</FUNCTION>
     <DECORATED>main</DECORATED>
-    <FUNCLINE>31</FUNCLINE>
+    <FUNCLINE>40</FUNCLINE>
     <ADDITIONALINFO>
       <targetSymbol>iteration</targetSymbol>
     </ADDITIONALINFO>
@@ -108,14 +122,14 @@
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Source.cpp</FILENAME>
-      <LINE>417</LINE>
+      <LINE>426</LINE>
       <COLUMN>5</COLUMN>
     </SFA>
     <DEFECTCODE>26429</DEFECTCODE>
     <DESCRIPTION>Symbol 'func' is never tested for nullness, it can be marked as not_null (f.23).</DESCRIPTION>
     <FUNCTION>invokeFunc</FUNCTION>
     <DECORATED>?invokeFunc@@YAXP6AXXZ@Z</DECORATED>
-    <FUNCLINE>417</FUNCLINE>
+    <FUNCLINE>426</FUNCLINE>
     <PATH></PATH>
   </DEFECT>
 </DEFECTS>

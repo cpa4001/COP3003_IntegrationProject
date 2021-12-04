@@ -18,14 +18,14 @@
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Backlog.cpp</FILENAME>
-      <LINE>73</LINE>
-      <COLUMN>8</COLUMN>
+      <LINE>117</LINE>
+      <COLUMN>20</COLUMN>
     </SFA>
-    <DEFECTCODE>26496</DEFECTCODE>
-    <DESCRIPTION>The variable 'lineStoryID' does not change after construction, mark it as const (con.4).</DESCRIPTION>
-    <FUNCTION>Backlog::updateStoryStatus</FUNCTION>
-    <DECORATED>?updateStoryStatus@Backlog@@QAEXHH@Z</DECORATED>
-    <FUNCLINE>70</FUNCLINE>
+    <DEFECTCODE>26472</DEFECTCODE>
+    <DESCRIPTION>Don't use a static_cast for arithmetic conversions. Use brace initialization, gsl::narrow_cast or gsl::narrow (type.1).</DESCRIPTION>
+    <FUNCTION>Backlog::updateStoryWithCollaborator</FUNCTION>
+    <DECORATED>?updateStoryWithCollaborator@Backlog@@QAEXHV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z</DECORATED>
+    <FUNCLINE>107</FUNCLINE>
     <PATH></PATH>
   </DEFECT>
   <DEFECT>
@@ -33,10 +33,10 @@
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Backlog.cpp</FILENAME>
       <LINE>162</LINE>
-      <COLUMN>6</COLUMN>
+      <COLUMN>26</COLUMN>
     </SFA>
-    <DEFECTCODE>26496</DEFECTCODE>
-    <DESCRIPTION>The variable 'backlogSize' does not change after construction, mark it as const (con.4).</DESCRIPTION>
+    <DEFECTCODE>26472</DEFECTCODE>
+    <DESCRIPTION>Don't use a static_cast for arithmetic conversions. Use brace initialization, gsl::narrow_cast or gsl::narrow (type.1).</DESCRIPTION>
     <FUNCTION>-</FUNCTION>
     <DECORATED>??G@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAVBacklog@@@Z</DECORATED>
     <FUNCLINE>161</FUNCLINE>

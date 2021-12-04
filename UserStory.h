@@ -34,10 +34,10 @@ class UserStory {
   // accessors
   // getters
   auto getStoryName() -> std::string;
-  std::string getStoryBody();
-  int getStoryPoints() const;
-  int getStatus() noexcept;
-  std::string getStatusString();
+  auto getStoryBody() -> std::string;
+  auto getStoryPoints() const noexcept -> int;
+  auto getStatus() noexcept -> int;
+  auto getStatusString() -> std::string;
 
   // setters
   void setStoryName(std::string value);

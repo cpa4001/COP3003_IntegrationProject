@@ -11,14 +11,14 @@
   UserStory.cpp
   Running Code Analysis for C/C++...
   Generating Code...
-  Error while processing C:\Users\chris\source\repos\Userstoryconsole\Sprint.cpp.
-  Error while processing C:\Users\chris\source\repos\Userstoryconsole\UserStory.cpp.
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory(723,9): warning G240FCA22: destructor called on 'Collaborator' that is abstract but has non-virtual destructor [clang-diagnostic-delete-abstract-non-virtual-dtor]
           _Ptr->~_Uty();
           ^
   C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory:950:39: note: in instantiation of function template specialization 'std::_Default_allocator_traits<std::allocator<Collaborator>>::destroy<Collaborator>' requested here
               allocator_traits<_Alloc>::destroy(_Al, _Unfancy(_First));
                                         ^
+  Suppressed 249128 warnings (249128 in non-user code).
+  Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
   C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector:1680:9: note: in instantiation of function template specialization 'std::_Destroy_range<std::allocator<Collaborator>>' requested here
           _Destroy_range(_First, _Last, _Getal());
           ^
@@ -34,109 +34,59 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
   C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory:723:16: note: qualify call to silence this warning
           _Ptr->~_Uty();
                  ^
-C:\Users\chris\source\repos\Userstoryconsole/Iteration.h(7,2): error GB9A00453: unterminated conditional directive [clang-diagnostic-error]
-  #ifndef ITERATION_H
-   ^
-C:\Users\chris\source\repos\Userstoryconsole/Iteration.h(51,2): error GC66A3811: expected ';' after class [clang-diagnostic-error]
-  };
-   ^
-   ;
 C:\Users\chris\source\repos\Userstoryconsole\Backlog.cpp(71,3): warning G4F9AAA59: use range-based for loop instead [modernize-loop-convert]
     for (size_t line = 0; line < row.size(); line++) {
     ^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         (auto & line : row)
-C:\Users\chris\source\repos\Userstoryconsole\Backlog.cpp(117,21): warning G611155E6: narrowing conversion from 'int' to signed type 'char' is implementation-defined [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
-        if (line.find(storyID) != std::string::npos) {
-                      ^
-C:\Users\chris\source\repos\Userstoryconsole\Backlog.cpp(162,21): warning G611155E6: narrowing conversion from 'std::vector<std::basic_string<char>>::size_type' (aka 'unsigned int') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
-    int backlogSize = backlog.row.size();
-                      ^
 C:\Users\chris\source\repos\Userstoryconsole\Collaborator.cpp(10,19): warning GF0156036: variable 'collaboratorID' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
   int Collaborator::collaboratorID = 0;
                     ^
 C:\Users\chris\source\repos\Userstoryconsole\Collaborator.cpp(14,15): warning G46707FB5: an exception may be thrown in function 'Collaborator' which should not throw exceptions [bugprone-exception-escape]
   Collaborator::Collaborator() noexcept{
                 ^
-C:\Users\chris\source\repos\Userstoryconsole\Iteration.cpp(104,3): warning G4F9AAA59: use range-based for loop instead [modernize-loop-convert]
-    for (size_t index = 0; index < productBacklog.size(); index++) {
-    ^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        (auto & index : productBacklog)
-C:\Users\chris\source\repos\Userstoryconsole\KanbanBoard.cpp(16,14): warning GF8BFC15C: use '= default' to define a trivial default constructor [modernize-use-equals-default]
-  KanbanBoard::KanbanBoard() noexcept {}
-               ^                      ~~
-                                      = default;
-C:\Users\chris\source\repos\Userstoryconsole\KanbanBoard.cpp(108,22): warning G05FB182C: static member accessed through instance [readability-static-accessed-through-instance]
-        std::to_string(userStory.storyID), userStory.getStatus()));
-                       ^~~~~~~~~~
-                       UserStory::
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(21,15): warning GB5504D48: use a trailing return type for this function [modernize-use-trailing-return-type]
-  std::ostream& operator<<(std::ostream& out, UserStory& userstory);
-  ~~~~~~~~~~~~~ ^
-  Suppressed 249130 warnings (249130 in non-user code).
-  Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
-  Found compiler error(s).
-  auto                                                              -> std::ostream&
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(31,5): warning G46707FB5: an exception may be thrown in function 'main' which should not throw exceptions [bugprone-exception-escape]
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(40,5): warning G46707FB5: an exception may be thrown in function 'main' which should not throw exceptions [bugprone-exception-escape]
   int main() {
       ^
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(31,5): warning GB5504D48: use a trailing return type for this function [modernize-use-trailing-return-type]
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(40,5): warning GB5504D48: use a trailing return type for this function [modernize-use-trailing-return-type]
   int main() {
   ~~~ ^
   auto       -> int
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(71,24): warning G611155E6: narrowing conversion from 'unsigned int' to signed type 'int' is implementation-defined [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
-    UserStory::storyID = masterBacklog.getRow().size() - 1;
-                         ^
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(133,19): warning GF0156036: variable 'collaborator' is not initialized [cppcoreguidelines-init-variables]
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(142,19): warning GF0156036: variable 'collaborator' is not initialized [cppcoreguidelines-init-variables]
       Collaborator* collaborator;
                     ^
                                  = nullptr
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(134,16): warning GF0156036: variable 'iteration' is not initialized [cppcoreguidelines-init-variables]
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(143,16): warning GF0156036: variable 'iteration' is not initialized [cppcoreguidelines-init-variables]
       Iteration* iteration;
                  ^
                            = nullptr
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(221,11): warning G3A9ADC90: assigning newly created 'gsl::owner<>' to non-owner 'Iteration *' [cppcoreguidelines-owning-memory]
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(230,11): warning G3A9ADC90: assigning newly created 'gsl::owner<>' to non-owner 'Iteration *' [cppcoreguidelines-owning-memory]
             iteration = new Iteration(inputString, "Iteration", 0);
             ^
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(232,12): warning G99EE5DD7: 5 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
-        case 5:
-             ^
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(241,12): warning GA916C317: 6 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
-        case 6:
-             ^
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(250,12): warning G0D254987: 7 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
-        case 7:
-             ^
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(295,15): warning GB5504D48: use a trailing return type for this function [modernize-use-trailing-return-type]
-  std::ostream& operator<<(std::ostream& out, UserStory& userstory) {
-  ~~~~~~~~~~~~~ ^
-  auto                                                              -> std::ostream&
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(354,25): warning G05FB182C: static member accessed through instance [readability-static-accessed-through-instance]
-      savedUserStories << userstory.storyID << ", " << userstory.getStoryName()
-                          ^~~~~~~~~~
-                          UserStory::
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(364,35): warning G05FB182C: static member accessed through instance [readability-static-accessed-through-instance]
-    backlog.addToRow(std::to_string(userstory.storyID) + ", " +
-                                    ^~~~~~~~~~
-                                    UserStory::
 C:\Users\chris\source\repos\Userstoryconsole\UserStory.cpp(25,16): warning GF0156036: variable 'storyID' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
   int UserStory::storyID = 0;
                  ^
 C:\Users\chris\source\repos\Userstoryconsole\UserStory.cpp(30,12): warning G46707FB5: an exception may be thrown in function 'UserStory' which should not throw exceptions [bugprone-exception-escape]
   UserStory::UserStory() noexcept {
              ^
-C:\Users\chris\source\repos\Userstoryconsole\UserStory.cpp(75,24): warning GB5504D48: use a trailing return type for this function [modernize-use-trailing-return-type]
-  std::string UserStory::getStoryBody() { return storyBody; }
-  ~~~~~~~~~~~            ^
-  auto                                  -> std::string
-C:\Users\chris\source\repos\Userstoryconsole\UserStory.cpp(82,16): warning GB5504D48: use a trailing return type for this function [modernize-use-trailing-return-type]
-  int UserStory::getStoryPoints() const { return storyPoints; }
-  ~~~            ^
-  auto                                  -> int
-C:\Users\chris\source\repos\Userstoryconsole\UserStory.cpp(89,16): warning GB5504D48: use a trailing return type for this function [modernize-use-trailing-return-type]
-  int UserStory::getStatus() { return status; }
-  ~~~            ^
-  auto                       -> int
-C:\Users\chris\source\repos\Userstoryconsole\UserStory.cpp(97,24): warning GB5504D48: use a trailing return type for this function [modernize-use-trailing-return-type]
-  std::string UserStory::getStatusString() {
-  ~~~~~~~~~~~            ^
-  auto                                     -> std::string
+  Userstoryconsole.vcxproj -> C:\Users\chris\source\repos\Userstoryconsole\Debug\Userstoryconsole.exe
+C:\Users\chris\source\repos\Userstoryconsole\Backlog.cpp(42): warning C26460: The reference argument 'userStory' for function 'Backlog::addUserStory' can be marked as const (con.3).
+C:\Users\chris\source\repos\Userstoryconsole\Backlog.cpp(117): warning C26472: Don't use a static_cast for arithmetic conversions. Use brace initialization, gsl::narrow_cast or gsl::narrow (type.1).
+C:\Users\chris\source\repos\Userstoryconsole\Backlog.cpp(162): warning C26472: Don't use a static_cast for arithmetic conversions. Use brace initialization, gsl::narrow_cast or gsl::narrow (type.1).
+C:\Users\chris\source\repos\Userstoryconsole\UserStory.h(48): warning C26812: The enum type 'UserStory::Status' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).
+C:\Users\chris\source\repos\Userstoryconsole\Collaborator.cpp(15): warning C26447: The function is declared 'noexcept' but calls function 'operator=()' which may throw exceptions (f.6).
+C:\Users\chris\source\repos\Userstoryconsole\Developer.cpp(25): warning C26436: The type 'class Developer' with a virtual function needs either public virtual or protected non-virtual destructor (c.35).
+C:\Users\chris\source\repos\Userstoryconsole\Iteration.cpp(94): warning C26460: The reference argument 'userstory' for function 'Iteration::addUserStory' can be marked as const (con.3).
+C:\Users\chris\source\repos\Userstoryconsole\KanbanBoard.cpp(50): warning C26436: The type 'class KanbanBoard' with a virtual function needs either public virtual or protected non-virtual destructor (c.35).
+C:\Users\chris\source\repos\Userstoryconsole\ScrumMaster.cpp(26): warning C26436: The type 'class ScrumMaster' with a virtual function needs either public virtual or protected non-virtual destructor (c.35).
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(226): warning C26409: Avoid calling new and delete explicitly, use std::make_unique<T> instead (r.11).
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(230): warning C26409: Avoid calling new and delete explicitly, use std::make_unique<T> instead (r.11).
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(228): warning C26409: Avoid calling new and delete explicitly, use std::make_unique<T> instead (r.11).
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(180): warning C26409: Avoid calling new and delete explicitly, use std::make_unique<T> instead (r.11).
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(80): warning C26493: Don't use C-style casts (type.4).
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(142): warning C26494: Variable 'collaborator' is uninitialized. Always initialize an object (type.5).
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(143): warning C26494: Variable 'iteration' is uninitialized. Always initialize an object (type.5).
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(426): warning C26429: Symbol 'func' is never tested for nullness, it can be marked as not_null (f.23).
+C:\Users\chris\source\repos\Userstoryconsole\UserStory.cpp(31): warning C26447: The function is declared 'noexcept' but calls function 'operator=()' which may throw exceptions (f.6).
+C:\Users\chris\source\repos\Userstoryconsole\UserStory.cpp(32): warning C26447: The function is declared 'noexcept' but calls function 'operator=()' which may throw exceptions (f.6).
+C:\Users\chris\source\repos\Userstoryconsole\UserStory.cpp(34): warning C26812: The enum type 'UserStory::Status' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).
+C:\Users\chris\source\repos\Userstoryconsole\UserStory.cpp(130): warning C26440: Function 'UserStory::setStoryPoints' can be declared 'noexcept' (f.6).

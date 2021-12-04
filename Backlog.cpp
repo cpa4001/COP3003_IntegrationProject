@@ -114,7 +114,7 @@ void Backlog::updateStoryWithCollaborator(int storyID,
   std::string line;
   if (readFromUserStories.is_open()) {
     while (getline(readFromUserStories, line)) {
-      if (line.find(storyID) != std::string::npos) {
+      if (line.find(static_cast<char>(storyID)) != std::string::npos) {
         writeToUserStories << line << ", " << CollaboratorName;
       }
     }
@@ -159,7 +159,7 @@ auto Backlog::getRow() -> std::vector<std::string> { return row; }
  *  @return the most recently created User Story 
  */
 auto operator-(Backlog& backlog) -> std::string {
-  const int backlogSize = backlog.row.size();
+  const int backlogSize = static_cast<int>(backlog.row.size());
 
   std::string returnString;
 
