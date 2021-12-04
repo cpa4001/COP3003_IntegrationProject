@@ -51,14 +51,41 @@ Milestone 2:
 > git clone https://github.com/cpa4001/COP3003_IntegrationProject UserStoryApp
 ```
 
-
 ## Built With
 
 - Visual Studio
 - C++
+- Doxygen
 
 ## Author
 - Christian Apostoli
+
+## Learning Objectives
+- Design and implement a class. [Usage]
+  - Shown in the use of multiple classes and separating class declaration in a header file and class implementation in a cpp file
+  - Comparison of OO approach and procedural approach on top of UserStory.cpp
+   
+- Use subclassing to design simple class hierarchies that allow code to be reused for distinct subclasses. [Usage]
+  - Shown in the use of inheritance with Collaborator, ScrumMaster, Developer classes, and Iteration, Release, Sprint classes
+  - Use of derived objects shown in Source.cpp and when Program creates an Iteration or Collaborator
+
+- Correctly reason about control flow in a program using dynamic dispatch. [Usage]
+  - Shown in delaying initialization of Collaborator object in Source.cpp within case 3 in switch block 
+
+
+- Explain the relationship between object-oriented inheritance (code-sharing and overriding) and subtyping (the idea of a subtype being usable in a context that expects the supertype). [Familiarity]
+  - Shown through creating inheritance hierarchies   
+
+- Use object-oriented encapsulation mechanisms such as interfaces and private members. [Usage]
+  - Shown in Board class which acts as an interface meaning no attributes and all pure virtual methods
+  - Shown in the use of private members between all classes 
+
+- Define and use iterators and other operations on aggregates, including operations that take functions as arguments. [Usage]
+  - Shown in the use of overloaded operators including overloading the unary (-) operator with a Backlog object
+  - Shown in the methods of the Backlog class 
+
+## Diagrams
+![Sample Image](userstoryconsole_classdiagrams.PNG)
 
 ## Current Challenges 
 - storyID jumping by two occasionally
