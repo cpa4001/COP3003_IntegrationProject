@@ -6,30 +6,6 @@ As a who      (**Who** wants to accomplish something) <br>
 I want a what (**What** I want to accomplish)         <br>
 So that       (**Why** I want to accomplish)          <br>
  
- ## Learning Objectives
-- Design and implement a class. [Usage]
-  - Shown in the use of multiple classes and separating class declaration in a header file and class implementation in a cpp file
-  - Comparison of OO approach and procedural approach on top of UserStory.cpp
-   
-- Use subclassing to design simple class hierarchies that allow code to be reused for distinct subclasses. [Usage]
-  - Shown in the use of inheritance with Collaborator, ScrumMaster, Developer classes, and Iteration, Release, Sprint classes
-  - Use of derived objects shown in Source.cpp and when Program creates an Iteration or Collaborator
-
-- Correctly reason about control flow in a program using dynamic dispatch. [Usage]
-  - Shown in delaying initialization of Collaborator object in Source.cpp within case 3 in switch block 
-
-
-- Explain the relationship between object-oriented inheritance (code-sharing and overriding) and subtyping (the idea of a subtype being usable in a context that expects the supertype). [Familiarity]
-  - Shown through creating inheritance hierarchies   
-
-- Use object-oriented encapsulation mechanisms such as interfaces and private members. [Usage]
-  - Shown in Board class which acts as an interface meaning no attributes and all pure virtual methods
-  - Shown in the use of private members between all classes 
-
-- Define and use iterators and other operations on aggregates, including operations that take functions as arguments. [Usage]
-  - Shown in the use of overloaded operators including overloading the unary (-) operator with a Backlog object
-  - Shown in the methods of the Backlog class 
- 
  ## History
 
 Milestone 1:
@@ -44,6 +20,12 @@ Milestone 2:
 - Users shall be able to see a Kanban Board (stories that are To Do, In Progress,  Done)
 - Program shall have status in csv (To Do, In Progress, or Done) instead of integer
 - Users shall be able to get the most recent user story
+
+Final Milestone:
+- File Header comments for every file
+- Function header comments for function
+- Class Diagram
+- Reduced compiler warnings
 
 
 ## Getting Started
