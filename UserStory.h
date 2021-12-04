@@ -23,6 +23,9 @@ class UserStory {
   std::string storyBody;
   int storyPoints;
 
+  /**
+   * @brief The status of the 
+  */
   enum Status { to_do, in_progress, done };
 
   Status status;

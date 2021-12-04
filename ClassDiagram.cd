@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Backlog">
+    <Position X="0.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAgAAAAAQAAAIAAAACCACAAAgAAAIACAAAAAAIBA=</HashCode>
+      <FileName>Backlog.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Board">
+    <Position X="4.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAEAAAAAAAABAAAAAAAAAAAAAAAAQAgABAAAA=</HashCode>
+      <FileName>Board.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Collaborator">
+    <Position X="9.25" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAQhAAABAAABAAAAAAAAAAAiAAAAAAAAA=</HashCode>
+      <FileName>Collaborator.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Developer">
+    <Position X="8" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Developer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iteration">
+    <Position X="14.25" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>BEgAAAAAQAAACAQAQAABAAAAARAAAAAIBGAAAKAAoBA=</HashCode>
+      <FileName>Iteration.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KanbanBoard">
+    <Position X="4" Y="4.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAEAAAAAAQAFAAAQAAAAAAAAABBARAgABAAAA=</HashCode>
+      <FileName>KanbanBoard.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Release">
+    <Position X="12.75" Y="6.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Release.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScrumMaster">
+    <Position X="11.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ScrumMaster.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sprint">
+    <Position X="17" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sprint.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserStory">
+    <Position X="0.5" Y="4.75" Width="2.5" />
+    <NestedTypes>
+      <Enum Name="UserStory::Status" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>UserStory.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AARAAoAAAAABAAAAAAAAAAQAAAAkBAAEAAEAgIAIAAI=</HashCode>
+      <FileName>UserStory.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
