@@ -4,56 +4,14 @@
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>UserStory.cpp</FILENAME>
-      <LINE>31</LINE>
-      <COLUMN>12</COLUMN>
-    </SFA>
-    <DEFECTCODE>26447</DEFECTCODE>
-    <DESCRIPTION>The function is declared 'noexcept' but calls function 'operator=()' which may throw exceptions (f.6).</DESCRIPTION>
-    <FUNCTION>UserStory::{ctor}</FUNCTION>
-    <DECORATED>??0UserStory@@QAE@XZ</DECORATED>
-    <FUNCLINE>30</FUNCLINE>
-    <PATH></PATH>
-  </DEFECT>
-  <DEFECT>
-    <SFA>
-      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
-      <FILENAME>UserStory.cpp</FILENAME>
-      <LINE>32</LINE>
-      <COLUMN>12</COLUMN>
-    </SFA>
-    <DEFECTCODE>26447</DEFECTCODE>
-    <DESCRIPTION>The function is declared 'noexcept' but calls function 'operator=()' which may throw exceptions (f.6).</DESCRIPTION>
-    <FUNCTION>UserStory::{ctor}</FUNCTION>
-    <DECORATED>??0UserStory@@QAE@XZ</DECORATED>
-    <FUNCLINE>30</FUNCLINE>
-    <PATH></PATH>
-  </DEFECT>
-  <DEFECT>
-    <SFA>
-      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
-      <FILENAME>UserStory.cpp</FILENAME>
-      <LINE>34</LINE>
+      <LINE>60</LINE>
       <COLUMN>9</COLUMN>
     </SFA>
     <DEFECTCODE>26812</DEFECTCODE>
     <DESCRIPTION>The enum type 'UserStory::Status' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
     <FUNCTION>UserStory::{ctor}</FUNCTION>
-    <DECORATED>??0UserStory@@QAE@XZ</DECORATED>
-    <FUNCLINE>30</FUNCLINE>
-    <PATH></PATH>
-  </DEFECT>
-  <DEFECT>
-    <SFA>
-      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
-      <FILENAME>UserStory.cpp</FILENAME>
-      <LINE>130</LINE>
-      <COLUMN>16</COLUMN>
-    </SFA>
-    <DEFECTCODE>26440</DEFECTCODE>
-    <DESCRIPTION>Function 'UserStory::setStoryPoints' can be declared 'noexcept' (f.6).</DESCRIPTION>
-    <FUNCTION>UserStory::setStoryPoints</FUNCTION>
-    <DECORATED>?setStoryPoints@UserStory@@QAEXH@Z</DECORATED>
-    <FUNCLINE>130</FUNCLINE>
+    <DECORATED>??0UserStory@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0H@Z</DECORATED>
+    <FUNCLINE>50</FUNCLINE>
     <PATH></PATH>
   </DEFECT>
 </DEFECTS>

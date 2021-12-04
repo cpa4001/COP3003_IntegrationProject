@@ -1,11 +1,11 @@
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory:723:9: warning: destructor called on 'Collaborator' that is abstract but has non-virtual destructor [clang-diagnostic-delete-abstract-non-virtual-dtor]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory:723:9: warning: destructor called on non-final 'Collaborator' that has virtual functions but non-virtual destructor [clang-diagnostic-delete-non-abstract-non-virtual-dtor]
         _Ptr->~_Uty();
         ^
+Suppressed 250777 warnings (250777 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory:950:39: note: in instantiation of function template specialization 'std::_Default_allocator_traits<std::allocator<Collaborator>>::destroy<Collaborator>' requested here
             allocator_traits<_Alloc>::destroy(_Al, _Unfancy(_First));
                                       ^
-Suppressed 249128 warnings (249128 in non-user code).
-Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector:1680:9: note: in instantiation of function template specialization 'std::_Destroy_range<std::allocator<Collaborator>>' requested here
         _Destroy_range(_First, _Last, _Getal());
         ^
@@ -21,8 +21,8 @@ Iteration::Iteration(std::string iterationName, std::string iterationType,
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory:723:16: note: qualify call to silence this warning
         _Ptr->~_Uty();
                ^
-C:\Users\chris\source\repos\Userstoryconsole\Backlog.cpp:71:3: warning: use range-based for loop instead [modernize-loop-convert]
-  for (size_t line = 0; line < row.size(); line++) {
+C:\Users\chris\source\repos\Userstoryconsole\Backlog.cpp:72:3: warning: use range-based for loop instead [modernize-loop-convert]
+  for (size_t line = 0; line < row.size(); ++line) {
   ^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       (auto & line : row)
 C:\Users\chris\source\repos\Userstoryconsole\Collaborator.cpp:10:19: warning: variable 'collaboratorID' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
@@ -52,6 +52,3 @@ C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:230:11: warning: assigni
 C:\Users\chris\source\repos\Userstoryconsole\UserStory.cpp:25:16: warning: variable 'storyID' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
 int UserStory::storyID = 0;
                ^
-C:\Users\chris\source\repos\Userstoryconsole\UserStory.cpp:30:12: warning: an exception may be thrown in function 'UserStory' which should not throw exceptions [bugprone-exception-escape]
-UserStory::UserStory() noexcept {
-           ^

@@ -10,7 +10,12 @@
 
 #ifndef USERSTORY_H
 #define USERSTORY_H
+
 #include <string>
+
+
+
+
 // LO1a
 class UserStory {
  private:
@@ -27,7 +32,7 @@ class UserStory {
   static int storyID;
 
   // constructors
-  UserStory() noexcept;
+  // UserStory() noexcept;
   UserStory(std::string storyName, std::string storyBody, int storyPoints);
   // UserStory(UserStory& userstory);
 
@@ -42,7 +47,7 @@ class UserStory {
   // setters
   void setStoryName(std::string value);
   void setStoryBody(std::string value);
-  void setStoryPoints(int value);
+  void setStoryPoints(int value) noexcept;
 
   void completeUserStory() noexcept;
 };

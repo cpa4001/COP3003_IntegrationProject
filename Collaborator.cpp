@@ -36,3 +36,5 @@ Collaborator::Collaborator(std::string collaboratorName, std::string role) {
 *  @return	collaboratorName the name of the collaborator
 */
 auto Collaborator::getcollaboratorName() -> std::string { return collaboratorName; }
+
+void Collaborator::assignStory(int storyID) {}

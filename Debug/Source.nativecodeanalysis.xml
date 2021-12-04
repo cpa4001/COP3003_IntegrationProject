@@ -46,25 +46,11 @@
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Source.cpp</FILENAME>
-      <LINE>180</LINE>
-      <COLUMN>40</COLUMN>
-    </SFA>
-    <DEFECTCODE>26409</DEFECTCODE>
-    <DESCRIPTION>Avoid calling new and delete explicitly, use std::make_unique&lt;T&gt; instead (r.11).</DESCRIPTION>
-    <FUNCTION>main</FUNCTION>
-    <DECORATED>main</DECORATED>
-    <FUNCLINE>40</FUNCLINE>
-    <PATH></PATH>
-  </DEFECT>
-  <DEFECT>
-    <SFA>
-      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
-      <FILENAME>Source.cpp</FILENAME>
       <LINE>80</LINE>
-      <COLUMN>26</COLUMN>
+      <COLUMN>23</COLUMN>
     </SFA>
-    <DEFECTCODE>26493</DEFECTCODE>
-    <DESCRIPTION>Don't use C-style casts (type.4).</DESCRIPTION>
+    <DEFECTCODE>26472</DEFECTCODE>
+    <DESCRIPTION>Don't use a static_cast for arithmetic conversions. Use brace initialization, gsl::narrow_cast or gsl::narrow (type.1).</DESCRIPTION>
     <FUNCTION>main</FUNCTION>
     <DECORATED>main</DECORATED>
     <FUNCLINE>40</FUNCLINE>
@@ -108,14 +94,14 @@
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>UserStory.h</FILENAME>
-      <LINE>48</LINE>
+      <LINE>53</LINE>
       <COLUMN>0</COLUMN>
     </SFA>
     <DEFECTCODE>26812</DEFECTCODE>
     <DESCRIPTION>The enum type 'UserStory::Status' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
     <FUNCTION>UserStory::{ctor}</FUNCTION>
     <DECORATED>??0UserStory@@QAE@$$QAV0@@Z</DECORATED>
-    <FUNCLINE>48</FUNCLINE>
+    <FUNCLINE>53</FUNCLINE>
     <PATH></PATH>
   </DEFECT>
   <DEFECT>

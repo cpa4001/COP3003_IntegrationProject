@@ -28,10 +28,10 @@ class Backlog {
   std::vector<std::string> row;
 
  public:
-  Backlog(std::ifstream& readFromUserStories);
+  explicit Backlog(std::ifstream& readFromUserStories);
   //~Backlog(); needed if using a dynamic array
 
-  void addUserStory(UserStory& userStory);
+  void addUserStory(const UserStory& userStory);
   void addToRow(std::string row);
   void printStories();
   void updateStoryStatus(int storyID, int newStatus);

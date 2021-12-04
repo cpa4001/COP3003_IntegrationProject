@@ -11,14 +11,14 @@
   UserStory.cpp
   Running Code Analysis for C/C++...
   Generating Code...
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory(723,9): warning G240FCA22: destructor called on 'Collaborator' that is abstract but has non-virtual destructor [clang-diagnostic-delete-abstract-non-virtual-dtor]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory(723,9): warning G61A85D37: destructor called on non-final 'Collaborator' that has virtual functions but non-virtual destructor [clang-diagnostic-delete-non-abstract-non-virtual-dtor]
           _Ptr->~_Uty();
           ^
+  Suppressed 250777 warnings (250777 in non-user code).
+  Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
   C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory:950:39: note: in instantiation of function template specialization 'std::_Default_allocator_traits<std::allocator<Collaborator>>::destroy<Collaborator>' requested here
               allocator_traits<_Alloc>::destroy(_Al, _Unfancy(_First));
                                         ^
-  Suppressed 249128 warnings (249128 in non-user code).
-  Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
   C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector:1680:9: note: in instantiation of function template specialization 'std::_Destroy_range<std::allocator<Collaborator>>' requested here
           _Destroy_range(_First, _Last, _Getal());
           ^
@@ -34,8 +34,8 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
   C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory:723:16: note: qualify call to silence this warning
           _Ptr->~_Uty();
                  ^
-C:\Users\chris\source\repos\Userstoryconsole\Backlog.cpp(71,3): warning G4F9AAA59: use range-based for loop instead [modernize-loop-convert]
-    for (size_t line = 0; line < row.size(); line++) {
+C:\Users\chris\source\repos\Userstoryconsole\Backlog.cpp(72,3): warning G4F9AAA59: use range-based for loop instead [modernize-loop-convert]
+    for (size_t line = 0; line < row.size(); ++line) {
     ^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         (auto & line : row)
 C:\Users\chris\source\repos\Userstoryconsole\Collaborator.cpp(10,19): warning GF0156036: variable 'collaboratorID' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
@@ -65,15 +65,11 @@ C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(230,11): warning G3A9ADC
 C:\Users\chris\source\repos\Userstoryconsole\UserStory.cpp(25,16): warning GF0156036: variable 'storyID' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
   int UserStory::storyID = 0;
                  ^
-C:\Users\chris\source\repos\Userstoryconsole\UserStory.cpp(30,12): warning G46707FB5: an exception may be thrown in function 'UserStory' which should not throw exceptions [bugprone-exception-escape]
-  UserStory::UserStory() noexcept {
-             ^
   Userstoryconsole.vcxproj -> C:\Users\chris\source\repos\Userstoryconsole\Debug\Userstoryconsole.exe
-C:\Users\chris\source\repos\Userstoryconsole\Backlog.cpp(42): warning C26460: The reference argument 'userStory' for function 'Backlog::addUserStory' can be marked as const (con.3).
-C:\Users\chris\source\repos\Userstoryconsole\Backlog.cpp(117): warning C26472: Don't use a static_cast for arithmetic conversions. Use brace initialization, gsl::narrow_cast or gsl::narrow (type.1).
-C:\Users\chris\source\repos\Userstoryconsole\Backlog.cpp(162): warning C26472: Don't use a static_cast for arithmetic conversions. Use brace initialization, gsl::narrow_cast or gsl::narrow (type.1).
-C:\Users\chris\source\repos\Userstoryconsole\UserStory.h(48): warning C26812: The enum type 'UserStory::Status' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).
+C:\Users\chris\source\repos\Userstoryconsole\UserStory.h(53): warning C26812: The enum type 'UserStory::Status' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).
 C:\Users\chris\source\repos\Userstoryconsole\Collaborator.cpp(15): warning C26447: The function is declared 'noexcept' but calls function 'operator=()' which may throw exceptions (f.6).
+C:\Users\chris\source\repos\Userstoryconsole\Collaborator.cpp(40): warning C26436: The type 'class Collaborator' with a virtual function needs either public virtual or protected non-virtual destructor (c.35).
+C:\Users\chris\source\repos\Userstoryconsole\Collaborator.cpp(40): warning C26440: Function 'Collaborator::assignStory' can be declared 'noexcept' (f.6).
 C:\Users\chris\source\repos\Userstoryconsole\Developer.cpp(25): warning C26436: The type 'class Developer' with a virtual function needs either public virtual or protected non-virtual destructor (c.35).
 C:\Users\chris\source\repos\Userstoryconsole\Iteration.cpp(94): warning C26460: The reference argument 'userstory' for function 'Iteration::addUserStory' can be marked as const (con.3).
 C:\Users\chris\source\repos\Userstoryconsole\KanbanBoard.cpp(50): warning C26436: The type 'class KanbanBoard' with a virtual function needs either public virtual or protected non-virtual destructor (c.35).
@@ -81,12 +77,8 @@ C:\Users\chris\source\repos\Userstoryconsole\ScrumMaster.cpp(26): warning C26436
 C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(226): warning C26409: Avoid calling new and delete explicitly, use std::make_unique<T> instead (r.11).
 C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(230): warning C26409: Avoid calling new and delete explicitly, use std::make_unique<T> instead (r.11).
 C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(228): warning C26409: Avoid calling new and delete explicitly, use std::make_unique<T> instead (r.11).
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(180): warning C26409: Avoid calling new and delete explicitly, use std::make_unique<T> instead (r.11).
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(80): warning C26493: Don't use C-style casts (type.4).
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(80): warning C26472: Don't use a static_cast for arithmetic conversions. Use brace initialization, gsl::narrow_cast or gsl::narrow (type.1).
 C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(142): warning C26494: Variable 'collaborator' is uninitialized. Always initialize an object (type.5).
 C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(143): warning C26494: Variable 'iteration' is uninitialized. Always initialize an object (type.5).
 C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(426): warning C26429: Symbol 'func' is never tested for nullness, it can be marked as not_null (f.23).
-C:\Users\chris\source\repos\Userstoryconsole\UserStory.cpp(31): warning C26447: The function is declared 'noexcept' but calls function 'operator=()' which may throw exceptions (f.6).
-C:\Users\chris\source\repos\Userstoryconsole\UserStory.cpp(32): warning C26447: The function is declared 'noexcept' but calls function 'operator=()' which may throw exceptions (f.6).
-C:\Users\chris\source\repos\Userstoryconsole\UserStory.cpp(34): warning C26812: The enum type 'UserStory::Status' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).
-C:\Users\chris\source\repos\Userstoryconsole\UserStory.cpp(130): warning C26440: Function 'UserStory::setStoryPoints' can be declared 'noexcept' (f.6).
+C:\Users\chris\source\repos\Userstoryconsole\UserStory.cpp(60): warning C26812: The enum type 'UserStory::Status' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).

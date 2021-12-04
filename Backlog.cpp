@@ -11,6 +11,7 @@
 #include "Backlog.h"
 
 #include <iostream>
+#include <gsl/gsl>
 
 /** @brief default Backlog constructor
  *
@@ -39,7 +40,7 @@ Backlog::Backlog(std::ifstream& readFromUserStories) {
  *
  *  @param userstory		userstory object
  */
-void Backlog::addUserStory(UserStory& userStory) {
+void Backlog::addUserStory(const UserStory& userStory) {
   productBacklog.push_back(userStory);
 }
 
@@ -68,7 +69,7 @@ void Backlog::printStories() {
 *   @param newStatus  the new status of the selected story
 */
 void Backlog::updateStoryStatus(int storyID, int newStatus) {
-  for (size_t line = 0; line < row.size(); line++) {
+  for (size_t line = 0; line < row.size(); ++line) {
     std::string tempStoryID = row.at(line).substr(0, row.at(line).find(","));
     const int lineStoryID = std::stoi(tempStoryID);
 
@@ -114,7 +115,7 @@ void Backlog::updateStoryWithCollaborator(int storyID,
   std::string line;
   if (readFromUserStories.is_open()) {
     while (getline(readFromUserStories, line)) {
-      if (line.find(static_cast<char>(storyID)) != std::string::npos) {
+      if (line.find(gsl::narrow_cast<char>(storyID)) != std::string::npos) {
         writeToUserStories << line << ", " << CollaboratorName;
       }
     }
@@ -159,7 +160,7 @@ auto Backlog::getRow() -> std::vector<std::string> { return row; }
  *  @return the most recently created User Story 
  */
 auto operator-(Backlog& backlog) -> std::string {
-  const int backlogSize = static_cast<int>(backlog.row.size());
+  const int backlogSize = gsl::narrow_cast<int>(backlog.row.size());
 
   std::string returnString;
 

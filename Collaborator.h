@@ -25,7 +25,7 @@ class Collaborator {
   Collaborator() noexcept;
   Collaborator(std::string collaboratorName, std::string role);
 
-  virtual void assignStory(int storyID) = 0;
+  virtual void assignStory(int storyID);
 
   auto getcollaboratorName() -> std::string;
 };

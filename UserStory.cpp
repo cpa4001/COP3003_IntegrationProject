@@ -24,9 +24,11 @@
 
 int UserStory::storyID = 0;
 
+
 /**
     @brief default constructor - intialize empty UserStory
 */
+/*
 UserStory::UserStory() noexcept {
   storyName = "";
   storyBody = "";
@@ -35,6 +37,7 @@ UserStory::UserStory() noexcept {
 
   storyID++;
 }
+*/
 
 //LO1b
 /**
@@ -127,7 +130,7 @@ void UserStory::setStoryBody(std::string value) { storyBody = value; }
  *
  *   @param value the body of the user story
  */
-void UserStory::setStoryPoints(int value) { storyPoints = value; }
+void UserStory::setStoryPoints(int value) noexcept { storyPoints = value; }
 
 /**
  *   @brief sets the user story status to done

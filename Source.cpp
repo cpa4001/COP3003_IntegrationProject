@@ -77,7 +77,7 @@ int main() {
   }
 
   // update the storyID so that the next userstory gets the correct storyID
-  UserStory::storyID = (int)(masterBacklog.getRow().size() - 1);
+  UserStory::storyID = static_cast<int>(masterBacklog.getRow().size() - 1);
 
   /*
   // if the file is open and if the first line can be recieved

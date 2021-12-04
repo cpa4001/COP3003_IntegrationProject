@@ -1,54 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><DEFECTS><DEFECT>
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
-      <FILENAME>Backlog.cpp</FILENAME>
-      <LINE>42</LINE>
-      <COLUMN>14</COLUMN>
-    </SFA>
-    <DEFECTCODE>26460</DEFECTCODE>
-    <DESCRIPTION>The reference argument 'userStory' for function 'Backlog::addUserStory' can be marked as const (con.3).</DESCRIPTION>
-    <FUNCTION>Backlog::addUserStory</FUNCTION>
-    <DECORATED>?addUserStory@Backlog@@QAEXAAVUserStory@@@Z</DECORATED>
-    <FUNCLINE>42</FUNCLINE>
-    <PATH></PATH>
-  </DEFECT><DEFECT>
-    <SFA>
-      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
-      <FILENAME>Backlog.cpp</FILENAME>
-      <LINE>117</LINE>
-      <COLUMN>20</COLUMN>
-    </SFA>
-    <DEFECTCODE>26472</DEFECTCODE>
-    <DESCRIPTION>Don't use a static_cast for arithmetic conversions. Use brace initialization, gsl::narrow_cast or gsl::narrow (type.1).</DESCRIPTION>
-    <FUNCTION>Backlog::updateStoryWithCollaborator</FUNCTION>
-    <DECORATED>?updateStoryWithCollaborator@Backlog@@QAEXHV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z</DECORATED>
-    <FUNCLINE>107</FUNCLINE>
-    <PATH></PATH>
-  </DEFECT><DEFECT>
-    <SFA>
-      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
-      <FILENAME>Backlog.cpp</FILENAME>
-      <LINE>162</LINE>
-      <COLUMN>26</COLUMN>
-    </SFA>
-    <DEFECTCODE>26472</DEFECTCODE>
-    <DESCRIPTION>Don't use a static_cast for arithmetic conversions. Use brace initialization, gsl::narrow_cast or gsl::narrow (type.1).</DESCRIPTION>
-    <FUNCTION>-</FUNCTION>
-    <DECORATED>??G@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAVBacklog@@@Z</DECORATED>
-    <FUNCLINE>161</FUNCLINE>
-    <PATH></PATH>
-  </DEFECT><DEFECT>
-    <SFA>
-      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>UserStory.h</FILENAME>
-      <LINE>48</LINE>
+      <LINE>53</LINE>
       <COLUMN>0</COLUMN>
     </SFA>
     <DEFECTCODE>26812</DEFECTCODE>
     <DESCRIPTION>The enum type 'UserStory::Status' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
     <FUNCTION>UserStory::{ctor}</FUNCTION>
     <DECORATED>??0UserStory@@QAE@ABV0@@Z</DECORATED>
-    <FUNCLINE>48</FUNCLINE>
+    <FUNCLINE>53</FUNCLINE>
     <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
@@ -62,6 +23,32 @@
     <FUNCTION>Collaborator::{ctor}</FUNCTION>
     <DECORATED>??0Collaborator@@QAE@XZ</DECORATED>
     <FUNCLINE>14</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
+      <FILENAME>Collaborator.cpp</FILENAME>
+      <LINE>40</LINE>
+      <COLUMN>19</COLUMN>
+    </SFA>
+    <DEFECTCODE>26436</DEFECTCODE>
+    <DESCRIPTION>The type 'class Collaborator' with a virtual function needs either public virtual or protected non-virtual destructor (c.35).</DESCRIPTION>
+    <FUNCTION>Collaborator::assignStory</FUNCTION>
+    <DECORATED>?assignStory@Collaborator@@UAEXH@Z</DECORATED>
+    <FUNCLINE>40</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
+      <FILENAME>Collaborator.cpp</FILENAME>
+      <LINE>40</LINE>
+      <COLUMN>19</COLUMN>
+    </SFA>
+    <DEFECTCODE>26440</DEFECTCODE>
+    <DESCRIPTION>Function 'Collaborator::assignStory' can be declared 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>Collaborator::assignStory</FUNCTION>
+    <DECORATED>?assignStory@Collaborator@@UAEXH@Z</DECORATED>
+    <FUNCLINE>40</FUNCLINE>
     <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
@@ -158,24 +145,11 @@
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Source.cpp</FILENAME>
-      <LINE>180</LINE>
-      <COLUMN>40</COLUMN>
-    </SFA>
-    <DEFECTCODE>26409</DEFECTCODE>
-    <DESCRIPTION>Avoid calling new and delete explicitly, use std::make_unique&lt;T&gt; instead (r.11).</DESCRIPTION>
-    <FUNCTION>main</FUNCTION>
-    <DECORATED>main</DECORATED>
-    <FUNCLINE>40</FUNCLINE>
-    <PATH></PATH>
-  </DEFECT><DEFECT>
-    <SFA>
-      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
-      <FILENAME>Source.cpp</FILENAME>
       <LINE>80</LINE>
-      <COLUMN>26</COLUMN>
+      <COLUMN>23</COLUMN>
     </SFA>
-    <DEFECTCODE>26493</DEFECTCODE>
-    <DESCRIPTION>Don't use C-style casts (type.4).</DESCRIPTION>
+    <DEFECTCODE>26472</DEFECTCODE>
+    <DESCRIPTION>Don't use a static_cast for arithmetic conversions. Use brace initialization, gsl::narrow_cast or gsl::narrow (type.1).</DESCRIPTION>
     <FUNCTION>main</FUNCTION>
     <DECORATED>main</DECORATED>
     <FUNCLINE>40</FUNCLINE>
@@ -229,52 +203,13 @@
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>UserStory.cpp</FILENAME>
-      <LINE>31</LINE>
-      <COLUMN>12</COLUMN>
-    </SFA>
-    <DEFECTCODE>26447</DEFECTCODE>
-    <DESCRIPTION>The function is declared 'noexcept' but calls function 'operator=()' which may throw exceptions (f.6).</DESCRIPTION>
-    <FUNCTION>UserStory::{ctor}</FUNCTION>
-    <DECORATED>??0UserStory@@QAE@XZ</DECORATED>
-    <FUNCLINE>30</FUNCLINE>
-    <PATH></PATH>
-  </DEFECT><DEFECT>
-    <SFA>
-      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
-      <FILENAME>UserStory.cpp</FILENAME>
-      <LINE>32</LINE>
-      <COLUMN>12</COLUMN>
-    </SFA>
-    <DEFECTCODE>26447</DEFECTCODE>
-    <DESCRIPTION>The function is declared 'noexcept' but calls function 'operator=()' which may throw exceptions (f.6).</DESCRIPTION>
-    <FUNCTION>UserStory::{ctor}</FUNCTION>
-    <DECORATED>??0UserStory@@QAE@XZ</DECORATED>
-    <FUNCLINE>30</FUNCLINE>
-    <PATH></PATH>
-  </DEFECT><DEFECT>
-    <SFA>
-      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
-      <FILENAME>UserStory.cpp</FILENAME>
-      <LINE>34</LINE>
+      <LINE>60</LINE>
       <COLUMN>9</COLUMN>
     </SFA>
     <DEFECTCODE>26812</DEFECTCODE>
     <DESCRIPTION>The enum type 'UserStory::Status' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
     <FUNCTION>UserStory::{ctor}</FUNCTION>
-    <DECORATED>??0UserStory@@QAE@XZ</DECORATED>
-    <FUNCLINE>30</FUNCLINE>
-    <PATH></PATH>
-  </DEFECT><DEFECT>
-    <SFA>
-      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
-      <FILENAME>UserStory.cpp</FILENAME>
-      <LINE>130</LINE>
-      <COLUMN>16</COLUMN>
-    </SFA>
-    <DEFECTCODE>26440</DEFECTCODE>
-    <DESCRIPTION>Function 'UserStory::setStoryPoints' can be declared 'noexcept' (f.6).</DESCRIPTION>
-    <FUNCTION>UserStory::setStoryPoints</FUNCTION>
-    <DECORATED>?setStoryPoints@UserStory@@QAEXH@Z</DECORATED>
-    <FUNCLINE>130</FUNCLINE>
+    <DECORATED>??0UserStory@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0H@Z</DECORATED>
+    <FUNCLINE>50</FUNCLINE>
     <PATH></PATH>
   </DEFECT></DEFECTS>

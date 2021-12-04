@@ -5,87 +5,6 @@
     {
       "results": [
         {
-          "ruleId": "C26460",
-          "message": {
-            "text": "The reference argument 'userStory' for function 'Backlog::addUserStory' can be marked as const (con.3)."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/chris/source/repos/Userstoryconsole/Backlog.cpp"
-                },
-                "region": {
-                  "startLine": 42,
-                  "startColumn": 15,
-                  "endLine": 42,
-                  "endColumn": 15
-                }
-              },
-              "logicalLocations": [
-                {
-                  "decoratedName": "?addUserStory@Backlog@@QAEXAAVUserStory@@@Z",
-                  "kind": "function"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "ruleId": "C26472",
-          "message": {
-            "text": "Don't use a static_cast for arithmetic conversions. Use brace initialization, gsl::narrow_cast or gsl::narrow (type.1)."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/chris/source/repos/Userstoryconsole/Backlog.cpp"
-                },
-                "region": {
-                  "startLine": 117,
-                  "startColumn": 21,
-                  "endLine": 117,
-                  "endColumn": 39
-                }
-              },
-              "logicalLocations": [
-                {
-                  "decoratedName": "?updateStoryWithCollaborator@Backlog@@QAEXHV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z",
-                  "kind": "function"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "ruleId": "C26472",
-          "message": {
-            "text": "Don't use a static_cast for arithmetic conversions. Use brace initialization, gsl::narrow_cast or gsl::narrow (type.1)."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/chris/source/repos/Userstoryconsole/Backlog.cpp"
-                },
-                "region": {
-                  "startLine": 162,
-                  "startColumn": 27,
-                  "endLine": 162,
-                  "endColumn": 60
-                }
-              },
-              "logicalLocations": [
-                {
-                  "decoratedName": "??G@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAVBacklog@@@Z",
-                  "kind": "function"
-                }
-              ]
-            }
-          ]
-        },
-        {
           "ruleId": "C26812",
           "message": {
             "text": "The enum type 'UserStory::Status' is unscoped. Prefer 'enum class' over 'enum' (Enum.3)."
@@ -97,9 +16,9 @@
                   "uri": "file:///C:/Users/chris/source/repos/Userstoryconsole/UserStory.h"
                 },
                 "region": {
-                  "startLine": 48,
+                  "startLine": 53,
                   "startColumn": 1,
-                  "endLine": 48,
+                  "endLine": 53,
                   "endColumn": 1
                 }
               },
@@ -123,7 +42,7 @@
       },
       "invocations": [
         {
-          "commandLine": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\c1xx.dll\" -ACf{1F7B090C-16DB-4822-966A-A93D26ED4681} -ACpmspft140.dll -Alint -D_PREFAST_ -D_AST_FE_ -Analyze -zm0x0042D1C0 -il C:\\Users\\chris\\AppData\\Local\\Temp\\_CL_20c5cbeaast -typedil -f Backlog.cpp -Ze -D_MSC_EXTENSIONS -Zp8 -Gs -pc \\:/ -D_MSC_VER=1929 -D_MSC_FULL_VER=192930133 -D_MSC_BUILD=0 -D_WIN32 -D_M_IX86=600 -D_M_IX86_FP=2 -GR -D_CPPRTTI -nologo -W 3 -diagnostics:column -D_GUARDOVERFLOW_CRT_ALLOCATORS=1 -Ot -DCODE_ANALYSIS -DWIN32 -D_DEBUG -D_CONSOLE -D_UNICODE -DUNICODE -EHs -D_CPPUNWIND -EHc -D__MSVC_RUNTIME_CHECKS -RTCs -RTCu -MDd -D_DEBUG -D_MT -D_DLL -GS -D_M_FP_PRECISE -permissive- -Zc:wchar_t -Zc:forScope -FoDebug\\Backlog.obj -FdDebug\\vc142.pdb -external:W 3 -Gd -analyze:projectdirectory C:\\Users\\chris\\source\\repos\\Userstoryconsole -analyze:rulesetdirectory ;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Team Tools\\Static Analysis Tools\\\\Rule Sets; -analyze:ruleset CorePlusReccomended.ruleset -analyze:quiet -analyze:plugin C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\EspXEngine.dll -FC -errorreport:prompt -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\include -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -external:I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um -I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um",
+          "commandLine": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\c1xx.dll\" -ACf{1F7B090C-16DB-4822-966A-A93D26ED4681} -ACpmspft140.dll -Alint -D_PREFAST_ -D_AST_FE_ -Analyze -zm0x003CD1C0 -il C:\\Users\\chris\\AppData\\Local\\Temp\\_CL_3e120d1aast -typedil -f Backlog.cpp -Ze -D_MSC_EXTENSIONS -Zp8 -Gs -pc \\:/ -D_MSC_VER=1929 -D_MSC_FULL_VER=192930133 -D_MSC_BUILD=0 -D_WIN32 -D_M_IX86=600 -D_M_IX86_FP=2 -GR -D_CPPRTTI -I C:\\Program Files\\gsl_lib\\GSL-main\\include -nologo -W 3 -diagnostics:column -D_GUARDOVERFLOW_CRT_ALLOCATORS=1 -Ot -DCODE_ANALYSIS -DWIN32 -D_DEBUG -D_CONSOLE -D_UNICODE -DUNICODE -EHs -D_CPPUNWIND -EHc -D__MSVC_RUNTIME_CHECKS -RTCs -RTCu -MDd -D_DEBUG -D_MT -D_DLL -GS -D_M_FP_PRECISE -permissive- -Zc:wchar_t -Zc:forScope -FoDebug\\Backlog.obj -FdDebug\\vc142.pdb -external:W 3 -Gd -analyze:projectdirectory C:\\Users\\chris\\source\\repos\\Userstoryconsole -analyze:rulesetdirectory ;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Team Tools\\Static Analysis Tools\\\\Rule Sets; -analyze:ruleset CorePlusReccomended.ruleset -analyze:quiet -analyze:plugin C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\EspXEngine.dll -FC -errorreport:prompt -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\include -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -external:I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um -I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um",
           "executionSuccessful": true
         }
       ],
@@ -137,7 +56,7 @@
             "resultFile"
           ],
           "hashes": {
-            "md5": "276adc064cd3e6fd872ede01cae63cb5"
+            "md5": "009d9b6b1c4e1772cc0222a28925e31b"
           }
         },
         {
@@ -148,7 +67,7 @@
             "resultFile"
           ],
           "hashes": {
-            "md5": "b90d472c016c5d9e994b12f3d2c7ed86"
+            "md5": "a8f6a436faad79d506a890a8240c862f"
           }
         },
         {
@@ -183,7 +102,7 @@
             "uri": "file:///c:/users/chris/source/repos/userstoryconsole/backlog.h"
           },
           "hashes": {
-            "md5": "72345866efc65fc380b1acb015d743f1"
+            "md5": "e62224099265e7ff3adccf3bda9842e8"
           }
         },
         {
@@ -191,7 +110,7 @@
             "uri": "file:///c:/users/chris/source/repos/userstoryconsole/collaborator.h"
           },
           "hashes": {
-            "md5": "91407fcde9e4e95ed7fa574396f42599"
+            "md5": "f990f924d4b78c04bd684bccd2b598cc"
           }
         },
         {
@@ -203,7 +122,7 @@
             "resultFile"
           ],
           "hashes": {
-            "md5": "31f916454e97a8b4031a17cce5021218"
+            "md5": "082c8be5f6a687ad87eced5f5bce7ca5"
           }
         },
         {
@@ -314,7 +233,7 @@
             "resultFile"
           ],
           "hashes": {
-            "md5": "8aef0e7e9b408848dc20b61d4f1ed9d8"
+            "md5": "5c5679a559ed070d748e0f0e02ac89c2"
           }
         },
         {
@@ -330,14 +249,93 @@
         },
         {
           "location": {
-            "uri": "file:///C:/Users/chris/source/repos/Userstoryconsole/Backlog.cpp"
+            "uri": "file:///c:/users/chris/source/repos/userstoryconsole/backlog.cpp"
           },
           "roles": [
-            "analysisTarget",
-            "resultFile"
+            "analysisTarget"
           ],
           "hashes": {
-            "md5": "4c74186ffc7a51e55999b263a5f8ad4c"
+            "md5": "0787119968c87e922b7281aac625fab9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/gsl_lib/gsl-main/include/gsl/gsl"
+          },
+          "hashes": {
+            "md5": "1ce2c448f190e86bfd4e749633b495e9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/gsl_lib/gsl-main/include/gsl/algorithm"
+          },
+          "hashes": {
+            "md5": "562b5e10ac448f8df2e3fa7047755ed9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/gsl_lib/gsl-main/include/gsl/assert"
+          },
+          "hashes": {
+            "md5": "3561e4c0ba3c541f40d53110fe60260b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/gsl_lib/gsl-main/include/gsl/span"
+          },
+          "hashes": {
+            "md5": "d96d43efb81c659574746487ea77944c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/gsl_lib/gsl-main/include/gsl/byte"
+          },
+          "hashes": {
+            "md5": "4f62b762675df0d53cbc2b053ab00fea"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/gsl_lib/gsl-main/include/gsl/util"
+          },
+          "hashes": {
+            "md5": "2c37cecc11801c6c0cf9571f5ddaa16b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/gsl_lib/gsl-main/include/gsl/span_ext"
+          },
+          "hashes": {
+            "md5": "7a4ef026790affbfac0c95ffcab6d9fc"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/gsl_lib/gsl-main/include/gsl/pointers"
+          },
+          "hashes": {
+            "md5": "bbb00cef5ed667271fcda5d67df766f9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/gsl_lib/gsl-main/include/gsl/string_span"
+          },
+          "hashes": {
+            "md5": "bff47883e17699e00c318ae5e33dee7f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/gsl_lib/gsl-main/include/gsl/narrow"
+          },
+          "hashes": {
+            "md5": "06f2df0f60a0c947c6ba47c8351a3112"
           }
         }
       ]
