@@ -67,6 +67,7 @@ Final Milestone:
   - Shown in the methods of the Backlog class 
 
 ## Diagrams
+You can see external documentation at https://cpa4001.github.io/COP3003_IntegrationProject/html/ </br>
 ClassDiagram.cd has all class diagrams in a file that is compatible with Visual Studio </br>
 ![Sample Image](userstoryconsole_classdiagrams.PNG)
 
