@@ -82,7 +82,7 @@ History</h1>
 <p >Milestone 2:</p><ul>
 <li>Users shall be able to create iterations</li>
 <li>Users shall be able to enter Developers or Scrum Masters</li>
-<li>Users shall be able to see a Kanban <a class="el" href="class_board.html">Board</a> (stories that are To Do, In Progress, Done)</li>
+<li>Users shall be able to see a Kanban <a class="el" href="class_board.html" title="any type of diagram that can aid in development">Board</a> (stories that are To Do, In Progress, Done)</li>
 <li>Program shall have status in csv (To Do, In Progress, or Done) instead of integer</li>
 <li>Users shall be able to get the most recent user story</li>
 </ul>
@@ -116,12 +116,12 @@ Learning Objectives</h1>
 </ul>
 </li>
 <li>Use subclassing to design simple class hierarchies that allow code to be reused for distinct subclasses. [Usage]<ul>
-<li>Shown in the use of inheritance with <a class="el" href="class_collaborator.html">Collaborator</a>, <a class="el" href="class_scrum_master.html">ScrumMaster</a>, <a class="el" href="class_developer.html">Developer</a> classes, and <a class="el" href="class_iteration.html">Iteration</a>, <a class="el" href="class_release.html">Release</a>, <a class="el" href="class_sprint.html">Sprint</a> classes</li>
-<li>Use of derived objects shown in <a class="el" href="_source_8cpp.html" title="Main implementation file for program.">Source.cpp</a> and when Program creates an <a class="el" href="class_iteration.html">Iteration</a> or <a class="el" href="class_collaborator.html">Collaborator</a></li>
+<li>Shown in the use of inheritance with <a class="el" href="class_collaborator.html" title="any person that makes changes toward implementing a user story">Collaborator</a>, <a class="el" href="class_scrum_master.html" title="a collaborator whose role is a Scrum Master (team lead) Scrum Master inherits from Collaborator">ScrumMaster</a>, <a class="el" href="class_developer.html" title="A collaborator whose role is a developer Developer inherits from Collaborator with public visibility.">Developer</a> classes, and <a class="el" href="class_iteration.html" title="a period of time in the development process where a team works on a set amount of user stories">Iteration</a>, <a class="el" href="class_release.html" title="Release inherits from Iteration with public visibility.">Release</a>, <a class="el" href="class_sprint.html" title="Sprint inherits from Iteration with public visibility.">Sprint</a> classes</li>
+<li>Use of derived objects shown in <a class="el" href="_source_8cpp.html" title="Main implementation file for program.">Source.cpp</a> and when Program creates an <a class="el" href="class_iteration.html" title="a period of time in the development process where a team works on a set amount of user stories">Iteration</a> or <a class="el" href="class_collaborator.html" title="any person that makes changes toward implementing a user story">Collaborator</a></li>
 </ul>
 </li>
 <li>Correctly reason about control flow in a program using dynamic dispatch. [Usage]<ul>
-<li>Shown in delaying initialization of <a class="el" href="class_collaborator.html">Collaborator</a> object in <a class="el" href="_source_8cpp.html" title="Main implementation file for program.">Source.cpp</a> within case 3 in switch block</li>
+<li>Shown in delaying initialization of <a class="el" href="class_collaborator.html" title="any person that makes changes toward implementing a user story">Collaborator</a> object in <a class="el" href="_source_8cpp.html" title="Main implementation file for program.">Source.cpp</a> within case 3 in switch block</li>
 </ul>
 </li>
 <li>Explain the relationship between object-oriented inheritance (code-sharing and overriding) and subtyping (the idea of a subtype being usable in a context that expects the supertype). [Familiarity]<ul>
@@ -130,19 +130,19 @@ Learning Objectives</h1>
 </ul>
 </li>
 <li>Use object-oriented encapsulation mechanisms such as interfaces and private members. [Usage]<ul>
-<li>Shown in <a class="el" href="class_board.html">Board</a> class which acts as an interface meaning no attributes and all pure virtual methods</li>
+<li>Shown in <a class="el" href="class_board.html" title="any type of diagram that can aid in development">Board</a> class which acts as an interface meaning no attributes and all pure virtual methods</li>
 <li>Shown in the use of private members between all classes</li>
 </ul>
 </li>
 <li>Define and use iterators and other operations on aggregates, including operations that take functions as arguments. [Usage]<ul>
-<li>Shown in the use of overloaded operators including overloading the unary (-) operator with a <a class="el" href="class_backlog.html">Backlog</a> object</li>
-<li>Shown in the methods of the <a class="el" href="class_backlog.html">Backlog</a> class</li>
+<li>Shown in the use of overloaded operators including overloading the unary (-) operator with a <a class="el" href="class_backlog.html" title="a list of user stories">Backlog</a> object</li>
+<li>Shown in the methods of the <a class="el" href="class_backlog.html" title="a list of user stories">Backlog</a> class</li>
 </ul>
 </li>
 </ul>
 <h1><a class="anchor" id="autotoc_md6"></a>
 Diagrams</h1>
-<p >ClassDiagram.cd has all class diagrams in a file that is compatible with Visual Studio  <img src="userstoryconsole_classdiagrams.PNG" alt="Sample Image" class="inline"/></p>
+<p >You can see external documentation at <a href="https://cpa4001.github.io/COP3003_IntegrationProject/html/">https://cpa4001.github.io/COP3003_IntegrationProject/html/</a>  ClassDiagram.cd has all class diagrams in a file that is compatible with Visual Studio  <img src="userstoryconsole_classdiagrams.PNG" alt="Sample Image" class="inline"/></p>
 <h1><a class="anchor" id="autotoc_md7"></a>
 Current Challenges</h1>
 <ul>

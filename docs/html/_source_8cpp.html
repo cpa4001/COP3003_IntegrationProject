@@ -91,13 +91,13 @@ Functions</h2></td></tr>
 <tr class="memdesc:abcca18145103e0e8dcc36aa931cc9cbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">prompts user for input and creates userstory object  <a href="_source_8cpp.html#abcca18145103e0e8dcc36aa931cc9cbc">More...</a><br /></td></tr>
 <tr class="separator:abcca18145103e0e8dcc36aa931cc9cbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a332e074f88da45a65e79eaaaab93e542"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_source_8cpp.html#a332e074f88da45a65e79eaaaab93e542">saveUserStory</a> (<a class="el" href="class_user_story.html">UserStory</a> &amp;userstory, std::ofstream &amp;savedUserStories, <a class="el" href="class_backlog.html">Backlog</a> &amp;backlog, <a class="el" href="class_kanban_board.html">KanbanBoard</a> &amp;kanbanBoard)</td></tr>
-<tr class="memdesc:a332e074f88da45a65e79eaaaab93e542"><td class="mdescLeft">&#160;</td><td class="mdescRight">writes <a class="el" href="class_user_story.html">UserStory</a> object to csv  <a href="_source_8cpp.html#a332e074f88da45a65e79eaaaab93e542">More...</a><br /></td></tr>
+<tr class="memdesc:a332e074f88da45a65e79eaaaab93e542"><td class="mdescLeft">&#160;</td><td class="mdescRight">writes <a class="el" href="class_user_story.html" title="a feature that is desired to be implemented by team">UserStory</a> object to csv  <a href="_source_8cpp.html#a332e074f88da45a65e79eaaaab93e542">More...</a><br /></td></tr>
 <tr class="separator:a332e074f88da45a65e79eaaaab93e542"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12604afa57c958b175867d03e6746686"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_source_8cpp.html#a12604afa57c958b175867d03e6746686">is_empty</a> (std::ifstream &amp;pFile) -&gt; bool</td></tr>
 <tr class="memdesc:a12604afa57c958b175867d03e6746686"><td class="mdescLeft">&#160;</td><td class="mdescRight">sees if a file is empty  <a href="_source_8cpp.html#a12604afa57c958b175867d03e6746686">More...</a><br /></td></tr>
 <tr class="separator:a12604afa57c958b175867d03e6746686"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06d32acc3cd2f871a91504b3c9095bcc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_source_8cpp.html#a06d32acc3cd2f871a91504b3c9095bcc">createAndSaveStory</a> (std::ofstream &amp;writeToUserStories, <a class="el" href="class_backlog.html">Backlog</a> &amp;backlog, <a class="el" href="class_kanban_board.html">KanbanBoard</a> &amp;kanbanBoard)</td></tr>
-<tr class="memdesc:a06d32acc3cd2f871a91504b3c9095bcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates <a class="el" href="class_user_story.html">UserStory</a> object and calls the saveUserStory function  <a href="_source_8cpp.html#a06d32acc3cd2f871a91504b3c9095bcc">More...</a><br /></td></tr>
+<tr class="memdesc:a06d32acc3cd2f871a91504b3c9095bcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates <a class="el" href="class_user_story.html" title="a feature that is desired to be implemented by team">UserStory</a> object and calls the saveUserStory function  <a href="_source_8cpp.html#a06d32acc3cd2f871a91504b3c9095bcc">More...</a><br /></td></tr>
 <tr class="separator:a06d32acc3cd2f871a91504b3c9095bcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3c5b39bc7062ef7ec32ad2c875c526e"><td class="memItemLeft" align="right" valign="top"><a id="ae3c5b39bc7062ef7ec32ad2c875c526e" name="ae3c5b39bc7062ef7ec32ad2c875c526e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>createBorder</b> ()</td></tr>
@@ -176,7 +176,7 @@ constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>UPDATE_STATU
       </table>
 </div><div class="memdoc">
 
-<p>creates <a class="el" href="class_user_story.html">UserStory</a> object and calls the saveUserStory function </p>
+<p>creates <a class="el" href="class_user_story.html" title="a feature that is desired to be implemented by team">UserStory</a> object and calls the saveUserStory function </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">writeToUserStories</td><td>ofstream object of output file </td></tr>
@@ -212,7 +212,7 @@ constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>UPDATE_STATU
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>newStory new <a class="el" href="class_user_story.html">UserStory</a> object created </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>newStory new <a class="el" href="class_user_story.html" title="a feature that is desired to be implemented by team">UserStory</a> object created </dd></dl>
 
 </div>
 </div>
@@ -276,8 +276,7 @@ constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>UPDATE_STATU
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>bool <br  />
- </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
 </div>
 </div>
@@ -357,15 +356,14 @@ constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>UPDATE_STATU
       </table>
 </div><div class="memdoc">
 
-<p>writes <a class="el" href="class_user_story.html">UserStory</a> object to csv </p>
+<p>writes <a class="el" href="class_user_story.html" title="a feature that is desired to be implemented by team">UserStory</a> object to csv </p>
 <p >adds string to backlogs vector and adds story to kanbanboard's hashmap</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">userstory</td><td>userstory object </td></tr>
     <tr><td class="paramname">savedUserStories</td><td>ofstream object of output file </td></tr>
     <tr><td class="paramname">backlog</td><td>backlog object that holds use stories </td></tr>
-    <tr><td class="paramname">kanbanBoard</td><td>kanbanboard object <br  />
- </td></tr>
+    <tr><td class="paramname">kanbanBoard</td><td>kanbanboard object </td></tr>
   </table>
   </dd>
 </dl>

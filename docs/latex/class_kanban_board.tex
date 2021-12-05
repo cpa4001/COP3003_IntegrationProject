@@ -1,5 +1,14 @@
 \hypertarget{class_kanban_board}{}\doxysection{Kanban\+Board Class Reference}
 \label{class_kanban_board}\index{KanbanBoard@{KanbanBoard}}
+
+
+a board that shows user stories in all three statuses \mbox{\hyperlink{class_kanban_board}{Kanban\+Board}} inherits from \mbox{\hyperlink{class_board}{Board}} interface with public visibility  
+
+
+
+
+{\ttfamily \#include $<$Kanban\+Board.\+h$>$}
+
 Inheritance diagram for Kanban\+Board\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,7 +21,7 @@ Inheritance diagram for Kanban\+Board\+:\begin{figure}[H]
 \mbox{\hyperlink{class_kanban_board_a5e43649e73de8462c4c482a8774bac2b}{Kanban\+Board}} (std\+::vector$<$ std\+::string $>$ file\+Rows)
 \begin{DoxyCompactList}\small\item\em Creates the \mbox{\hyperlink{class_kanban_board}{Kanban\+Board}} and intializes the status\+Map. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_kanban_board_ae862d3ac0fd4bb4bbe48ba0dc8b3c33e}{print\+Board}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em Prints the name of the stories under each category based on their status. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_kanban_board_a77d87420f460a20dde026a45134b2f18}{get\+Done\+User\+Story}} () override
 \begin{DoxyCompactList}\small\item\em iterates through status\+Map and prints all storyids with done status \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_kanban_board_aad7b6a997a005416eb46ef3d43f24083}{get\+In\+Progress\+User\+Story}} () override
@@ -24,6 +33,9 @@ void \mbox{\hyperlink{class_kanban_board_ae2425470983e0bfd39eabac56e280053}{add\
 void \mbox{\hyperlink{class_kanban_board_a1b12fa0b85cb3c26baadd06ab1ff56b2}{update\+Status}} (int story\+ID, int new\+Status) override
 \begin{DoxyCompactList}\small\item\em used to update status in the status\+Map \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+a board that shows user stories in all three statuses \mbox{\hyperlink{class_kanban_board}{Kanban\+Board}} inherits from \mbox{\hyperlink{class_board}{Board}} interface with public visibility 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_kanban_board_a5e43649e73de8462c4c482a8774bac2b}\label{class_kanban_board_a5e43649e73de8462c4c482a8774bac2b}} 
@@ -116,6 +128,10 @@ Implements \mbox{\hyperlink{class_board}{Board}}.
 {\footnotesize\ttfamily void Kanban\+Board\+::print\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
+
+Prints the name of the stories under each category based on their status. 
+
+LO5 
 
 Implements \mbox{\hyperlink{class_board}{Board}}.
 

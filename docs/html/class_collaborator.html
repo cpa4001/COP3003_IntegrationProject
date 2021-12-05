@@ -70,14 +70,19 @@ $(function() {
   <div class="headertitle"><div class="title">Collaborator Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>any person that makes changes toward implementing a user story  
+ <a href="class_collaborator.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_collaborator_8h_source.html">Collaborator.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Collaborator:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_collaborator.png" usemap="#Collaborator_map" alt=""/>
   <map id="Collaborator_map" name="Collaborator_map">
-<area href="class_developer.html" alt="Developer" shape="rect" coords="0,56,87,80"/>
-<area href="class_scrum_master.html" alt="ScrumMaster" shape="rect" coords="97,56,184,80"/>
+<area href="class_developer.html" title="A collaborator whose role is a developer Developer inherits from Collaborator with public visibility." alt="Developer" shape="rect" coords="0,56,87,80"/>
+<area href="class_scrum_master.html" title="a collaborator whose role is a Scrum Master (team lead) Scrum Master inherits from Collaborator" alt="ScrumMaster" shape="rect" coords="97,56,184,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -85,12 +90,13 @@ Inheritance diagram for Collaborator:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1d6e4ca8fc6c4c2466b2896b30c25f0b"><td class="memItemLeft" align="right" valign="top"><a id="a1d6e4ca8fc6c4c2466b2896b30c25f0b" name="a1d6e4ca8fc6c4c2466b2896b30c25f0b"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Collaborator</b> () noexcept</td></tr>
-<tr class="memdesc:a1d6e4ca8fc6c4c2466b2896b30c25f0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">default <a class="el" href="class_collaborator.html">Collaborator</a> constructor given no parameters <br /></td></tr>
+<tr class="memdesc:a1d6e4ca8fc6c4c2466b2896b30c25f0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">default <a class="el" href="class_collaborator.html" title="any person that makes changes toward implementing a user story">Collaborator</a> constructor given no parameters <br /></td></tr>
 <tr class="separator:a1d6e4ca8fc6c4c2466b2896b30c25f0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77e204d8e71b14006e9f32b489b7e36d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collaborator.html#a77e204d8e71b14006e9f32b489b7e36d">Collaborator</a> (std::string collaboratorName, std::string role)</td></tr>
-<tr class="memdesc:a77e204d8e71b14006e9f32b489b7e36d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for <a class="el" href="class_collaborator.html">Collaborator</a> given parameters.  <a href="class_collaborator.html#a77e204d8e71b14006e9f32b489b7e36d">More...</a><br /></td></tr>
+<tr class="memdesc:a77e204d8e71b14006e9f32b489b7e36d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for <a class="el" href="class_collaborator.html" title="any person that makes changes toward implementing a user story">Collaborator</a> given parameters.  <a href="class_collaborator.html#a77e204d8e71b14006e9f32b489b7e36d">More...</a><br /></td></tr>
 <tr class="separator:a77e204d8e71b14006e9f32b489b7e36d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a627d26aa6874394f1cd87a220f7aa21e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collaborator.html#a627d26aa6874394f1cd87a220f7aa21e">assignStory</a> (int storyID)</td></tr>
+<tr class="memdesc:a627d26aa6874394f1cd87a220f7aa21e"><td class="mdescLeft">&#160;</td><td class="mdescRight">assigns a user story to a collaborator  <a href="class_collaborator.html#a627d26aa6874394f1cd87a220f7aa21e">More...</a><br /></td></tr>
 <tr class="separator:a627d26aa6874394f1cd87a220f7aa21e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ed8dc67233fd7b840e147289fd9f671"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collaborator.html#a4ed8dc67233fd7b840e147289fd9f671">getcollaboratorName</a> () -&gt; std::string</td></tr>
 <tr class="memdesc:a4ed8dc67233fd7b840e147289fd9f671"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter for collaboratorName  <a href="class_collaborator.html#a4ed8dc67233fd7b840e147289fd9f671">More...</a><br /></td></tr>
@@ -100,18 +106,19 @@ Public Member Functions</h2></td></tr>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:ad98d61ad77b479631a68d5cbfa9f9297"><td class="memItemLeft" align="right" valign="top"><a id="ad98d61ad77b479631a68d5cbfa9f9297" name="ad98d61ad77b479631a68d5cbfa9f9297"></a>
 static int&#160;</td><td class="memItemRight" valign="bottom"><b>collaboratorID</b> = 0</td></tr>
+<tr class="memdesc:ad98d61ad77b479631a68d5cbfa9f9297"><td class="mdescLeft">&#160;</td><td class="mdescRight">unique ID to track developers <br /></td></tr>
 <tr class="separator:ad98d61ad77b479631a68d5cbfa9f9297"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a33aaaf1bdd31d355e959aa798d937ca2"><td class="memItemLeft" align="right" valign="top"><a id="a33aaaf1bdd31d355e959aa798d937ca2" name="a33aaaf1bdd31d355e959aa798d937ca2"></a>
 std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>storiesWorkingOn</b></td></tr>
+<tr class="memdesc:a33aaaf1bdd31d355e959aa798d937ca2"><td class="mdescLeft">&#160;</td><td class="mdescRight">the story IDs that the collaborator is working on <br /></td></tr>
 <tr class="separator:a33aaaf1bdd31d355e959aa798d937ca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6301cc4ac7b08549950845a62599fdf5"><td class="memItemLeft" align="right" valign="top"><a id="a6301cc4ac7b08549950845a62599fdf5" name="a6301cc4ac7b08549950845a62599fdf5"></a>
-std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>developers</b></td></tr>
-<tr class="separator:a6301cc4ac7b08549950845a62599fdf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >any person that makes changes toward implementing a user story </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a77e204d8e71b14006e9f32b489b7e36d" name="a77e204d8e71b14006e9f32b489b7e36d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a77e204d8e71b14006e9f32b489b7e36d">&#9670;&nbsp;</a></span>Collaborator()</h2>
 
@@ -138,7 +145,7 @@ std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>d
       </table>
 </div><div class="memdoc">
 
-<p>Constructor for <a class="el" href="class_collaborator.html">Collaborator</a> given parameters. </p>
+<p>Constructor for <a class="el" href="class_collaborator.html" title="any person that makes changes toward implementing a user story">Collaborator</a> given parameters. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">collaboratorName</td><td>name of the collaborator </td></tr>
@@ -173,6 +180,14 @@ std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>d
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>assigns a user story to a collaborator </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">storyID</td><td>the id of the story the collaborator is working on </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Reimplemented in <a class="el" href="class_developer.html#a4898cd09d0ecafd4dc03d88218b9941f">Developer</a>, and <a class="el" href="class_scrum_master.html#a7d03cf0cbfc1eba28e359fca4ca29b31">ScrumMaster</a>.</p>
 

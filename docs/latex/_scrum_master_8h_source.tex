@@ -8,13 +8,15 @@
 \DoxyCodeLine{11 }
 \DoxyCodeLine{12 \textcolor{comment}{// LO2}}
 \DoxyCodeLine{13 \textcolor{comment}{// LO2a}}
-\DoxyCodeLine{14 \textcolor{comment}{// Scrum Master inherits from Collaborator with public visibility}}
-\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{class_scrum_master}{ScrumMaster}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_collaborator}{Collaborator}} \{}
-\DoxyCodeLine{16  \textcolor{keyword}{public}:}
-\DoxyCodeLine{17   \mbox{\hyperlink{class_scrum_master_a32e6f190aeba9512308bcbaeecaec82c}{ScrumMaster}}(std::string collaboratorName);}
-\DoxyCodeLine{18 }
-\DoxyCodeLine{19   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_scrum_master_a7d03cf0cbfc1eba28e359fca4ca29b31}{assignStory}}(\textcolor{keywordtype}{int} storyID) \textcolor{keyword}{override};}
-\DoxyCodeLine{20 \};}
-\DoxyCodeLine{21 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{18 \textcolor{comment}{}\textcolor{keyword}{class }\mbox{\hyperlink{class_scrum_master}{ScrumMaster}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_collaborator}{Collaborator}} \{}
+\DoxyCodeLine{19  \textcolor{keyword}{private}:}
+\DoxyCodeLine{23   std::vector<int> developers;}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25  \textcolor{keyword}{public}:}
+\DoxyCodeLine{26   \mbox{\hyperlink{class_scrum_master_a32e6f190aeba9512308bcbaeecaec82c}{ScrumMaster}}(std::string collaboratorName);}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_scrum_master_a7d03cf0cbfc1eba28e359fca4ca29b31}{assignStory}}(\textcolor{keywordtype}{int} storyID) \textcolor{keyword}{override};}
+\DoxyCodeLine{29 \};}
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

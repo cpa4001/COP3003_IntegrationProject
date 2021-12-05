@@ -14,5 +14,7 @@ var searchData=
   ['source_2ecpp_11',['Source.cpp',['../_source_8cpp.html',1,'']]],
   ['sprint_12',['Sprint',['../class_sprint.html',1,'Sprint'],['../class_sprint.html#a369f99a4c2f61c3e13f4e71a25612c16',1,'Sprint::Sprint()']]],
   ['sprint_2ecpp_13',['Sprint.cpp',['../_sprint_8cpp.html',1,'']]],
-  ['sprint_2eh_14',['Sprint.h',['../_sprint_8h.html',1,'']]]
+  ['sprint_2eh_14',['Sprint.h',['../_sprint_8h.html',1,'']]],
+  ['storiesworkingon_15',['storiesWorkingOn',['../class_collaborator.html#a33aaaf1bdd31d355e959aa798d937ca2',1,'Collaborator']]],
+  ['storyid_16',['storyID',['../class_user_story.html#ac7e5e729d2089242859d1f921b2d43e9',1,'UserStory']]]
 ];

@@ -2,19 +2,22 @@
 \mbox{\hyperlink{_board_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 }
-\DoxyCodeLine{10 \textcolor{preprocessor}{\#pragma once}}
-\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_backlog_8h}{Backlog.h}}"{}}}
-\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_user_story_8h}{UserStory.h}}"{}}}
-\DoxyCodeLine{13 \textcolor{comment}{// LO6}}
-\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{class_board}{Board}} \{}
-\DoxyCodeLine{15  \textcolor{keyword}{public}:}
-\DoxyCodeLine{16   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} printBoard() = 0;}
-\DoxyCodeLine{17   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} getDoneUserStory() = 0;}
-\DoxyCodeLine{18   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} getInProgressUserStory() = 0;}
-\DoxyCodeLine{19   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} getToDoUserStory() = 0;}
-\DoxyCodeLine{20 }
-\DoxyCodeLine{21   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} addStoryToMap(\mbox{\hyperlink{class_user_story}{UserStory}}\& userStory) = 0;}
-\DoxyCodeLine{22   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} updateStatus(\textcolor{keywordtype}{int} storyID, \textcolor{keywordtype}{int} newStatus) = 0;}
-\DoxyCodeLine{23 \};}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#ifndef BOARD\_H}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#define BOARD\_H}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_backlog_8h}{Backlog.h}}"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_user_story_8h}{UserStory.h}}"{}}}
+\DoxyCodeLine{14 \textcolor{comment}{// LO6}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{19 \textcolor{keyword}{class }\mbox{\hyperlink{class_board}{Board}} \{}
+\DoxyCodeLine{20  \textcolor{keyword}{public}:}
+\DoxyCodeLine{21   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} printBoard() = 0;}
+\DoxyCodeLine{22   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} getDoneUserStory() = 0;}
+\DoxyCodeLine{23   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} getInProgressUserStory() = 0;}
+\DoxyCodeLine{24   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} getToDoUserStory() = 0;}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} addStoryToMap(\mbox{\hyperlink{class_user_story}{UserStory}}\& userStory) = 0;}
+\DoxyCodeLine{27   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} updateStatus(\textcolor{keywordtype}{int} storyID, \textcolor{keywordtype}{int} newStatus) = 0;}
+\DoxyCodeLine{28 \};}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#endif BOARD\_H}}
 
 \end{DoxyCode}

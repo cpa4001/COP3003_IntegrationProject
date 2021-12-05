@@ -1,5 +1,14 @@
 \hypertarget{class_backlog}{}\doxysection{Backlog Class Reference}
 \label{class_backlog}\index{Backlog@{Backlog}}
+
+
+a list of user stories  
+
+
+
+
+{\ttfamily \#include $<$Backlog.\+h$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -11,8 +20,7 @@ void \mbox{\hyperlink{class_backlog_acef9543b121bea1b1c4e12a7fe94b870}{add\+To\+
 \begin{DoxyCompactList}\small\item\em appends to row attribute (vector of rows) \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_backlog_aa271fa097de41d7ad3d215d9e5ee95d1}\label{class_backlog_aa271fa097de41d7ad3d215d9e5ee95d1}} 
 void {\bfseries print\+Stories} ()
-\begin{DoxyCompactList}\small\item\em Iterates through row vector and prints each element on seperate ~\newline
- lines. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Iterates through row vector and prints each element on seperate lines. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_backlog_ac977279ca9ec1110ec35eed9aa779c52}{update\+Story\+Status}} (int story\+ID, int new\+Status)
 \begin{DoxyCompactList}\small\item\em updates the status of a user sotry in User\+Stories.\+csv \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_backlog_ae3898e36dda6ffc5813c3dd680e45b6f}{update\+Story\+With\+Collaborator}} (int story\+ID, std\+::string Collaborator\+Name)
@@ -29,6 +37,9 @@ auto \mbox{\hyperlink{class_backlog_a0551ffd9da379949fb618edaf86e083b}{get\+Row}
 auto \mbox{\hyperlink{class_backlog_ae926108ea5e9bb4dbab7248f5af71664}{operator-\/}} (\mbox{\hyperlink{class_backlog}{Backlog}} \&backlog) -\/$>$ std\+::string
 \begin{DoxyCompactList}\small\item\em overloaded unary minus operator \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+a list of user stories 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_backlog_a6948242ff064795dd51330b82435b120}\label{class_backlog_a6948242ff064795dd51330b82435b120}} 
@@ -80,7 +91,7 @@ Appends to a vector of \mbox{\hyperlink{class_user_story}{User\+Story}} objects
 
 
 \begin{DoxyParams}{Parameters}
-{\em userstory} & userstory object \\
+{\em user\+Story} & userstory object \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{class_backlog_aa0a295da40fb006e79eba374aa6c1e75}\label{class_backlog_aa0a295da40fb006e79eba374aa6c1e75}} 
@@ -155,8 +166,7 @@ Iterates through the csv file and finds the line with the story\+ID and writes c
 
 
 \begin{DoxyParams}{Parameters}
-{\em story\+ID} & the id of the story that needs to be changed ~\newline
- \\
+{\em story\+ID} & the id of the story that needs to be changed \\
 \hline
 {\em Collaborator\+Name} & the name of the \\
 \hline

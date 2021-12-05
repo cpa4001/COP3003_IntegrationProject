@@ -10,44 +10,45 @@
 \DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_backlog_8h}{Backlog.h}}"{}}}
 \DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_collaborator_8h}{Collaborator.h}}"{}}}
 \DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_user_story_8h}{UserStory.h}}"{}}}
-\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{class_iteration}{Iteration}} \{}
-\DoxyCodeLine{16  \textcolor{keyword}{private}:}
-\DoxyCodeLine{17   \textcolor{comment}{// Backlog backlog;}}
-\DoxyCodeLine{18   std::string iterationName;}
-\DoxyCodeLine{19 }
-\DoxyCodeLine{20   \textcolor{comment}{// we could have type and length left blank}}
-\DoxyCodeLine{21   \textcolor{comment}{// and subclasses itnitalize}}
-\DoxyCodeLine{22   std::string iterationType;}
-\DoxyCodeLine{23   \textcolor{keywordtype}{int} iterationLength;}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{20 \textcolor{keyword}{class }\mbox{\hyperlink{class_iteration}{Iteration}} \{}
+\DoxyCodeLine{21  \textcolor{keyword}{private}:}
+\DoxyCodeLine{22   \textcolor{comment}{// Backlog backlog;}}
+\DoxyCodeLine{23   std::string iterationName;}
 \DoxyCodeLine{24 }
-\DoxyCodeLine{25   \textcolor{keywordtype}{int} storyPointsComplete;}
-\DoxyCodeLine{26   \textcolor{keywordtype}{int} storyPointsLeftToComplete;}
-\DoxyCodeLine{27   \textcolor{keywordtype}{int} estimatedVelocity;}
-\DoxyCodeLine{28 }
-\DoxyCodeLine{29   std::vector<UserStory> productBacklog;}
-\DoxyCodeLine{30   std::vector<Collaborator> collaborators;}
-\DoxyCodeLine{31 }
-\DoxyCodeLine{32  \textcolor{keyword}{public}:}
-\DoxyCodeLine{33   \textcolor{comment}{// Constructors}}
-\DoxyCodeLine{34   \mbox{\hyperlink{class_iteration_aa5ff9650324cbb6997f5d4e5c49f3020}{Iteration}}(std::string iterationName, std::string iterationType,}
-\DoxyCodeLine{35             \textcolor{keywordtype}{int} iterationLength);}
+\DoxyCodeLine{25   \textcolor{comment}{// we could have type and length left blank}}
+\DoxyCodeLine{26   \textcolor{comment}{// and subclasses itnitalize}}
+\DoxyCodeLine{27   std::string iterationType;}
+\DoxyCodeLine{28   \textcolor{keywordtype}{int} iterationLength;}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30   \textcolor{keywordtype}{int} storyPointsComplete;}
+\DoxyCodeLine{31   \textcolor{keywordtype}{int} storyPointsLeftToComplete;}
+\DoxyCodeLine{32   \textcolor{keywordtype}{int} estimatedVelocity;}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34   std::vector<UserStory> productBacklog;}
+\DoxyCodeLine{35   std::vector<Collaborator> collaborators;}
 \DoxyCodeLine{36 }
-\DoxyCodeLine{37   \textcolor{comment}{// getters}}
-\DoxyCodeLine{38   \textcolor{keyword}{auto} \mbox{\hyperlink{class_iteration_ae2cfe59147235b43fb29eb959d856a36}{getIterationName}}() \textcolor{keyword}{const} -\/> std::string;}
-\DoxyCodeLine{39   \textcolor{keyword}{auto} \mbox{\hyperlink{class_iteration_aa54c195b9d2f69eaa456eb40b5afb517}{getIterationType}}() \textcolor{keyword}{const} -\/> std::string;}
-\DoxyCodeLine{40   \textcolor{keyword}{auto} \mbox{\hyperlink{class_iteration_a3916caddbf3506d71452ddad246b4545}{getIterationLength}}() \textcolor{keyword}{const} \textcolor{keyword}{noexcept} -\/> int;}
-\DoxyCodeLine{41   \textcolor{keyword}{auto} \mbox{\hyperlink{class_iteration_a3fcfb84f7820a109613225aa8260ccd4}{getEstimatedVelocity}}() \textcolor{keyword}{const} \textcolor{keyword}{noexcept} -\/> int;}
-\DoxyCodeLine{42 }
-\DoxyCodeLine{43   \textcolor{comment}{// setters}}
-\DoxyCodeLine{44   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_iteration_a8a3cc9528d7b599a6712d8c6b6448f77}{setIterationName}}(std::string value);}
-\DoxyCodeLine{45   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_iteration_a40b42bcc95e99857c0566b7d70e53d5a}{setIterationType}}(std::string value);}
-\DoxyCodeLine{46   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_iteration_ae3e89a2ecb12fbff0be0086b58d2e5b6}{setIterationLength}}(\textcolor{keywordtype}{int} value) \textcolor{keyword}{noexcept};}
-\DoxyCodeLine{47   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_iteration_a19779b9a3d50b50c2e5d218e5246d627}{setEstimatedVelocity}}(\textcolor{keywordtype}{int} value) \textcolor{keyword}{noexcept};}
-\DoxyCodeLine{48 }
-\DoxyCodeLine{49   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_iteration_aea3f9b4aefddcd7452254d0e425fa6ca}{addUserStory}}(\mbox{\hyperlink{class_user_story}{UserStory}}\& userstory);}
-\DoxyCodeLine{50   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_iteration_a89a8401c2c7b47c6bddd6449164f0d64}{printStories}}();}
-\DoxyCodeLine{51 \};}
-\DoxyCodeLine{52 }
-\DoxyCodeLine{53 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{37  \textcolor{keyword}{public}:}
+\DoxyCodeLine{38   \textcolor{comment}{// Constructors}}
+\DoxyCodeLine{39   \mbox{\hyperlink{class_iteration_aa5ff9650324cbb6997f5d4e5c49f3020}{Iteration}}(std::string iterationName, std::string iterationType,}
+\DoxyCodeLine{40             \textcolor{keywordtype}{int} iterationLength);}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42   \textcolor{comment}{// getters}}
+\DoxyCodeLine{43   \textcolor{keyword}{auto} \mbox{\hyperlink{class_iteration_ae2cfe59147235b43fb29eb959d856a36}{getIterationName}}() \textcolor{keyword}{const} -\/> std::string;}
+\DoxyCodeLine{44   \textcolor{keyword}{auto} \mbox{\hyperlink{class_iteration_aa54c195b9d2f69eaa456eb40b5afb517}{getIterationType}}() \textcolor{keyword}{const} -\/> std::string;}
+\DoxyCodeLine{45   \textcolor{keyword}{auto} \mbox{\hyperlink{class_iteration_a3916caddbf3506d71452ddad246b4545}{getIterationLength}}() \textcolor{keyword}{const} \textcolor{keyword}{noexcept} -\/> int;}
+\DoxyCodeLine{46   \textcolor{keyword}{auto} \mbox{\hyperlink{class_iteration_a3fcfb84f7820a109613225aa8260ccd4}{getEstimatedVelocity}}() \textcolor{keyword}{const} \textcolor{keyword}{noexcept} -\/> int;}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48   \textcolor{comment}{// setters}}
+\DoxyCodeLine{49   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_iteration_a8a3cc9528d7b599a6712d8c6b6448f77}{setIterationName}}(std::string value);}
+\DoxyCodeLine{50   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_iteration_a40b42bcc95e99857c0566b7d70e53d5a}{setIterationType}}(std::string value);}
+\DoxyCodeLine{51   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_iteration_ae3e89a2ecb12fbff0be0086b58d2e5b6}{setIterationLength}}(\textcolor{keywordtype}{int} value) \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{52   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_iteration_a19779b9a3d50b50c2e5d218e5246d627}{setEstimatedVelocity}}(\textcolor{keywordtype}{int} value) \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_iteration_aea3f9b4aefddcd7452254d0e425fa6ca}{addUserStory}}(\mbox{\hyperlink{class_user_story}{UserStory}}\& userstory);}
+\DoxyCodeLine{55   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_iteration_a89a8401c2c7b47c6bddd6449164f0d64}{printStories}}();}
+\DoxyCodeLine{56 \};}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

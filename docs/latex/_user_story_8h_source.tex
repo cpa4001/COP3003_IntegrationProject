@@ -7,44 +7,40 @@
 \DoxyCodeLine{13 }
 \DoxyCodeLine{14 \textcolor{preprocessor}{\#include <string>}}
 \DoxyCodeLine{15 }
-\DoxyCodeLine{16 }
+\DoxyCodeLine{16 \textcolor{comment}{// LO1a}}
 \DoxyCodeLine{17 }
-\DoxyCodeLine{18 }
-\DoxyCodeLine{19 \textcolor{comment}{// LO1a}}
-\DoxyCodeLine{20 \textcolor{keyword}{class }\mbox{\hyperlink{class_user_story}{UserStory}} \{}
-\DoxyCodeLine{21  \textcolor{keyword}{private}:}
-\DoxyCodeLine{22   std::string storyName;}
-\DoxyCodeLine{23   std::string storyBody;}
-\DoxyCodeLine{24   \textcolor{keywordtype}{int} storyPoints;}
-\DoxyCodeLine{25 }
-\DoxyCodeLine{29   \textcolor{keyword}{enum} Status \{ to\_do, in\_progress, done \};}
-\DoxyCodeLine{30 }
-\DoxyCodeLine{31   Status status;}
-\DoxyCodeLine{32 }
-\DoxyCodeLine{33  \textcolor{keyword}{public}:}
-\DoxyCodeLine{34   \textcolor{comment}{// Id used to track stories}}
-\DoxyCodeLine{35   \textcolor{keyword}{static} \textcolor{keywordtype}{int} storyID;}
-\DoxyCodeLine{36 }
-\DoxyCodeLine{37   \textcolor{comment}{// constructors}}
-\DoxyCodeLine{38   \textcolor{comment}{// UserStory() noexcept;}}
-\DoxyCodeLine{39   \mbox{\hyperlink{class_user_story_ac8ed81910a43db66dcde6721a1825da7}{UserStory}}(std::string storyName, std::string storyBody, \textcolor{keywordtype}{int} storyPoints);}
-\DoxyCodeLine{40   \textcolor{comment}{// UserStory(UserStory\& userstory);}}
-\DoxyCodeLine{41 }
-\DoxyCodeLine{42   \textcolor{comment}{// accessors}}
-\DoxyCodeLine{43   \textcolor{comment}{// getters}}
-\DoxyCodeLine{44   \textcolor{keyword}{auto} \mbox{\hyperlink{class_user_story_ad51bf32aa623a0a8226fd37b1400ff5d}{getStoryName}}() -\/> std::string;}
-\DoxyCodeLine{45   \textcolor{keyword}{auto} \mbox{\hyperlink{class_user_story_a51530e3bc2c8f26c7bf0b5be4e6ea356}{getStoryBody}}() -\/> std::string;}
-\DoxyCodeLine{46   \textcolor{keyword}{auto} \mbox{\hyperlink{class_user_story_a6018ae9e3f7b518554bd7f7d49dc55e7}{getStoryPoints}}() \textcolor{keyword}{const} \textcolor{keyword}{noexcept} -\/> int;}
-\DoxyCodeLine{47   \textcolor{keyword}{auto} \mbox{\hyperlink{class_user_story_a153978cfc2646a7af20037d6535ab836}{getStatus}}() \textcolor{keyword}{noexcept} -\/> int;}
-\DoxyCodeLine{48   \textcolor{keyword}{auto} \mbox{\hyperlink{class_user_story_a90e3f6788f5382d6a64e18bc129c35e3}{getStatusString}}() -\/> std::string;}
-\DoxyCodeLine{49 }
-\DoxyCodeLine{50   \textcolor{comment}{// setters}}
-\DoxyCodeLine{51   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_user_story_abc6179433baa6f904c21b3e5f5a4bf9a}{setStoryName}}(std::string value);}
-\DoxyCodeLine{52   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_user_story_ad8e7bf253c8be84f98c9624c199d24ef}{setStoryBody}}(std::string value);}
-\DoxyCodeLine{53   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_user_story_ab3181673594c3f54b88d86a2807c5784}{setStoryPoints}}(\textcolor{keywordtype}{int} value) \textcolor{keyword}{noexcept};}
-\DoxyCodeLine{54 }
-\DoxyCodeLine{55   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_user_story_a223eada51b0e9a816e89885ffb19897b}{completeUserStory}}() \textcolor{keyword}{noexcept};}
-\DoxyCodeLine{56 \};}
-\DoxyCodeLine{57 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{21 \textcolor{keyword}{class }\mbox{\hyperlink{class_user_story}{UserStory}} \{}
+\DoxyCodeLine{22  \textcolor{keyword}{private}:}
+\DoxyCodeLine{23   std::string storyName;}
+\DoxyCodeLine{24   std::string storyBody;}
+\DoxyCodeLine{25   \textcolor{keywordtype}{int} storyPoints;}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{30   \textcolor{keyword}{enum} Status \{ to\_do, in\_progress, done \};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32   Status status;}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34  \textcolor{keyword}{public}:}
+\DoxyCodeLine{38   \textcolor{keyword}{static} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_user_story_ac7e5e729d2089242859d1f921b2d43e9}{storyID}};}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40   \textcolor{comment}{// constructors}}
+\DoxyCodeLine{41   \mbox{\hyperlink{class_user_story_ac8ed81910a43db66dcde6721a1825da7}{UserStory}}(std::string storyName, std::string storyBody, \textcolor{keywordtype}{int} storyPoints);}
+\DoxyCodeLine{42   \textcolor{comment}{// UserStory(UserStory\& userstory);}}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44   \textcolor{comment}{// accessors}}
+\DoxyCodeLine{45   \textcolor{comment}{// getters}}
+\DoxyCodeLine{46   \textcolor{keyword}{auto} \mbox{\hyperlink{class_user_story_ad51bf32aa623a0a8226fd37b1400ff5d}{getStoryName}}() -\/> std::string;}
+\DoxyCodeLine{47   \textcolor{keyword}{auto} \mbox{\hyperlink{class_user_story_a51530e3bc2c8f26c7bf0b5be4e6ea356}{getStoryBody}}() -\/> std::string;}
+\DoxyCodeLine{48   \textcolor{keyword}{auto} \mbox{\hyperlink{class_user_story_a6018ae9e3f7b518554bd7f7d49dc55e7}{getStoryPoints}}() const noexcept -\/> \textcolor{keywordtype}{int};}
+\DoxyCodeLine{49   auto \mbox{\hyperlink{class_user_story_a153978cfc2646a7af20037d6535ab836}{getStatus}}() noexcept -\/> \textcolor{keywordtype}{int};}
+\DoxyCodeLine{50   auto \mbox{\hyperlink{class_user_story_a90e3f6788f5382d6a64e18bc129c35e3}{getStatusString}}() -\/> std::\textcolor{keywordtype}{string};}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52   \textcolor{comment}{// setters}}
+\DoxyCodeLine{53   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_user_story_abc6179433baa6f904c21b3e5f5a4bf9a}{setStoryName}}(std::\textcolor{keywordtype}{string} value);}
+\DoxyCodeLine{54   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_user_story_ad8e7bf253c8be84f98c9624c199d24ef}{setStoryBody}}(std::\textcolor{keywordtype}{string} value);}
+\DoxyCodeLine{55   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_user_story_ab3181673594c3f54b88d86a2807c5784}{setStoryPoints}}(\textcolor{keywordtype}{int} value) noexcept;}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_user_story_a223eada51b0e9a816e89885ffb19897b}{completeUserStory}}() noexcept;}
+\DoxyCodeLine{58 \};}
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}
