@@ -47,6 +47,7 @@ This project is licensed under the MIT License.
 * https://github.com/jfg357
 * https://github.com/jehna/readme-best-practices/edit/master/README-default.md
 * https://gist.github.com/PurpleBooth/109311bb0361f32d87a2
+* 
 * Professor Vanselow
 * Jairo Garciga
  
@@ -96,3 +97,7 @@ Final Milestone:
 - Define and use iterators and other operations on aggregates, including operations that take functions as arguments. [Usage]
   - Shown in the use of overloaded operators including overloading the unary (-) operator with a Backlog object
   - Shown in the methods of the Backlog class 
+
+- Follow best practices for style and readability
+
+- Follow best practices for documentation
