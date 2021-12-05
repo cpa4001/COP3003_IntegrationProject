@@ -8,11 +8,11 @@ So that       (**Why** I want to accomplish)          <br>
 
 ## Documentation
 External documentation for this project can be found at https://cpa4001.github.io/COP3003_IntegrationProject/html/ </br>
-Make sure to click on the classes or files button and select the class/file that you would like to read more about </br>
+Make sure to click on the classes or files button and select the class/file that you would like to read more about. </br>
 
 
 ## Diagrams
-ClassDiagram.cd has all class diagrams in a file that is compatible with Visual Studio </br>
+ClassDiagram.cd has all class diagrams in a file that is compatible with Visual Studio. </br>
 ![Sample Image](userstoryconsole_classdiagrams.PNG)
 
 ## Getting Started
