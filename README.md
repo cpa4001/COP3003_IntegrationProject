@@ -5,6 +5,36 @@ A basic layout for a user story looks like this: <br>
 As a who      (**Who** wants to accomplish something) <br>
 I want a what (**What** I want to accomplish)         <br>
 So that       (**Why** I want to accomplish)          <br>
+
+## Documentation
+External documentation for this project can be found at https://cpa4001.github.io/COP3003_IntegrationProject/html/ </br>
+Make sure to click on the classes or files button and select the class/file that you would like to read more about </br>
+
+
+## Diagrams
+ClassDiagram.cd has all class diagrams in a file that is compatible with Visual Studio </br>
+![Sample Image](userstoryconsole_classdiagrams.PNG)
+
+## Getting Started
+``` sh
+> git clone https://github.com/cpa4001/COP3003_IntegrationProject UserStoryApp
+```
+
+## Built With
+
+- Visual Studio
+- C++
+- Doxygen
+
+## Contributing
+- Curent Challenges
+   - storyID jumping by two occasionally
+   - changing the status of a story and having the csv reflect the change
+   - writing developers into the csv
+
+- Future Goals or Contributions
+  - Create a frontend using a GUI or website
+  - Decrease stamp coupling
  
  ## History
 
@@ -26,18 +56,6 @@ Final Milestone:
 - Function header comments for function
 - Class Diagram
 - Reduced compiler warnings
-
-
-## Getting Started
-``` sh
-> git clone https://github.com/cpa4001/COP3003_IntegrationProject UserStoryApp
-```
-
-## Built With
-
-- Visual Studio
-- C++
-- Doxygen
 
 ## Author
 - Christian Apostoli
@@ -66,19 +84,6 @@ Final Milestone:
   - Shown in the use of overloaded operators including overloading the unary (-) operator with a Backlog object
   - Shown in the methods of the Backlog class 
 
-## Diagrams
-You can see external documentation at https://cpa4001.github.io/COP3003_IntegrationProject/html/ </br>
-ClassDiagram.cd has all class diagrams in a file that is compatible with Visual Studio </br>
-![Sample Image](userstoryconsole_classdiagrams.PNG)
-
-## Current Challenges 
-- storyID jumping by two occasionally
-- changing the status of a story and having the csv reflect the change
-- writing developers into the csv
-
-## Future Goals or Contributions
-- Create a frontend using a GUI or website
-- Decrease stamp coupling
 
 ## License
 This project is licensed under the MIT License.
