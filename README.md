@@ -81,7 +81,7 @@ ClassDiagram.cd has all class diagrams in a file that is compatible with Visual 
 - Decrease stamp coupling
 
 ## License
-MIT License
+This project is licensed under the MIT License.
 
 ## Acknowledgments
 
