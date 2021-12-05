@@ -1,8 +1,11 @@
 ﻿  Backlog.cpp
   Board.cpp
+  Collaborator.cpp
+  Developer.cpp
   Iteration.cpp
   KanbanBoard.cpp
   Release.cpp
+  ScrumMaster.cpp
   Source.cpp
   Sprint.cpp
   UserStory.cpp
