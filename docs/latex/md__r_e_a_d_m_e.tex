@@ -1,0 +1,100 @@
+An application that offers a project management tool to create and track user stories for teams that use AGILE methodologies. A user story is a description of a feature for an application that is usually less than three sentences long. The collection of user stories for a product is called the product backlog and this can be broken down into releases, and releases can be broken down into short iterations called sprints. This project is designed to make creating, tracking, and allocating user stories to sprints simple and easy by housing the stories in a csv and giving options to the user to interact with the backlog.
+
+A basic layout for a user story looks like this\+: ~\newline
+ As a who ({\bfseries{Who}} wants to accomplish something) ~\newline
+ I want a what ({\bfseries{What}} I want to accomplish) ~\newline
+ So that ({\bfseries{Why}} I want to accomplish) ~\newline
+\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{History}\label{md__r_e_a_d_m_e_autotoc_md1}
+Milestone 1\+:
+\begin{DoxyItemize}
+\item Users shall be able to create user stories
+\item Users shall be able to look up user stories created
+\item System shall be able to save user stories to a csv file
+\item Users should be able to continuously perform the above until exiting the program
+\end{DoxyItemize}
+
+Milestone 2\+:
+\begin{DoxyItemize}
+\item Users shall be able to create iterations
+\item Users shall be able to enter Developers or Scrum Masters
+\item Users shall be able to see a Kanban \mbox{\hyperlink{class_board}{Board}} (stories that are To Do, In Progress, Done)
+\item Program shall have status in csv (To Do, In Progress, or Done) instead of integer
+\item Users shall be able to get the most recent user story
+\end{DoxyItemize}
+
+Final Milestone\+:
+\begin{DoxyItemize}
+\item File Header comments for every file
+\item Function header comments for function
+\item Class Diagram
+\item Reduced compiler warnings
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysection{Getting Started}\label{md__r_e_a_d_m_e_autotoc_md2}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{> git clone https://github.com/cpa4001/COP3003\_IntegrationProject UserStoryApp}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{Built With}\label{md__r_e_a_d_m_e_autotoc_md3}
+
+\begin{DoxyItemize}
+\item Visual Studio
+\item C++
+\item Doxygen
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysection{Author}\label{md__r_e_a_d_m_e_autotoc_md4}
+
+\begin{DoxyItemize}
+\item Christian Apostoli
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysection{Learning Objectives}\label{md__r_e_a_d_m_e_autotoc_md5}
+
+\begin{DoxyItemize}
+\item Design and implement a class. \mbox{[}Usage\mbox{]}
+\begin{DoxyItemize}
+\item Shown in the use of multiple classes and separating class declaration in a header file and class implementation in a cpp file
+\item Comparison of OO approach and procedural approach on top of \mbox{\hyperlink{_user_story_8cpp}{User\+Story.\+cpp}}
+\end{DoxyItemize}
+\item Use subclassing to design simple class hierarchies that allow code to be reused for distinct subclasses. \mbox{[}Usage\mbox{]}
+\begin{DoxyItemize}
+\item Shown in the use of inheritance with \mbox{\hyperlink{class_collaborator}{Collaborator}}, \mbox{\hyperlink{class_scrum_master}{Scrum\+Master}}, \mbox{\hyperlink{class_developer}{Developer}} classes, and \mbox{\hyperlink{class_iteration}{Iteration}}, \mbox{\hyperlink{class_release}{Release}}, \mbox{\hyperlink{class_sprint}{Sprint}} classes
+\item Use of derived objects shown in \mbox{\hyperlink{_source_8cpp}{Source.\+cpp}} and when Program creates an \mbox{\hyperlink{class_iteration}{Iteration}} or \mbox{\hyperlink{class_collaborator}{Collaborator}}
+\end{DoxyItemize}
+\item Correctly reason about control flow in a program using dynamic dispatch. \mbox{[}Usage\mbox{]}
+\begin{DoxyItemize}
+\item Shown in delaying initialization of \mbox{\hyperlink{class_collaborator}{Collaborator}} object in \mbox{\hyperlink{_source_8cpp}{Source.\+cpp}} within case 3 in switch block
+\end{DoxyItemize}
+\item Explain the relationship between object-\/oriented inheritance (code-\/sharing and overriding) and subtyping (the idea of a subtype being usable in a context that expects the supertype). \mbox{[}Familiarity\mbox{]}
+\begin{DoxyItemize}
+\item Shown through creating inheritance hierarchies ~\newline
+
+\end{DoxyItemize}
+\item Use object-\/oriented encapsulation mechanisms such as interfaces and private members. \mbox{[}Usage\mbox{]}
+\begin{DoxyItemize}
+\item Shown in \mbox{\hyperlink{class_board}{Board}} class which acts as an interface meaning no attributes and all pure virtual methods
+\item Shown in the use of private members between all classes
+\end{DoxyItemize}
+\item Define and use iterators and other operations on aggregates, including operations that take functions as arguments. \mbox{[}Usage\mbox{]}
+\begin{DoxyItemize}
+\item Shown in the use of overloaded operators including overloading the unary (-\/) operator with a \mbox{\hyperlink{class_backlog}{Backlog}} object
+\item Shown in the methods of the \mbox{\hyperlink{class_backlog}{Backlog}} class
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysection{Diagrams}\label{md__r_e_a_d_m_e_autotoc_md6}
+Class\+Diagram.\+cd has all class diagrams in a file that is compatible with Visual Studio  \hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysection{Current Challenges}\label{md__r_e_a_d_m_e_autotoc_md7}
+
+\begin{DoxyItemize}
+\item story\+ID jumping by two occasionally
+\item changing the status of a story and having the csv reflect the change
+\item writing developers into the csv
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysection{Future Goals or Contributions}\label{md__r_e_a_d_m_e_autotoc_md8}
+
+\begin{DoxyItemize}
+\item Create a frontend using a GUI or website
+\item Decrease stamp coupling
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md9}{}\doxysection{License}\label{md__r_e_a_d_m_e_autotoc_md9}
+MIT License\hypertarget{md__r_e_a_d_m_e_autotoc_md10}{}\doxysection{Acknowledgments}\label{md__r_e_a_d_m_e_autotoc_md10}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/jfg357}{\texttt{ https\+://github.\+com/jfg357}}
+\item \href{https://github.com/jehna/readme-best-practices/edit/master/README-default.md}{\texttt{ https\+://github.\+com/jehna/readme-\/best-\/practices/edit/master/\+README-\/default.\+md}}
+\item \href{https://gist.github.com/PurpleBooth/109311bb0361f32d87a2}{\texttt{ https\+://gist.\+github.\+com/\+Purple\+Booth/109311bb0361f32d87a2}}
+\item Professor Vanselow
+\item Jairo Garciga 
+\end{DoxyItemize}

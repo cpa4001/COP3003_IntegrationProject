@@ -1,0 +1,87 @@
+\hypertarget{class_collaborator}{}\doxysection{Collaborator Class Reference}
+\label{class_collaborator}\index{Collaborator@{Collaborator}}
+Inheritance diagram for Collaborator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_collaborator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_collaborator_a1d6e4ca8fc6c4c2466b2896b30c25f0b}\label{class_collaborator_a1d6e4ca8fc6c4c2466b2896b30c25f0b}} 
+{\bfseries Collaborator} () noexcept
+\begin{DoxyCompactList}\small\item\em default \mbox{\hyperlink{class_collaborator}{Collaborator}} constructor given no parameters \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_collaborator_a77e204d8e71b14006e9f32b489b7e36d}{Collaborator}} (std\+::string collaborator\+Name, std\+::string role)
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{class_collaborator}{Collaborator}} given parameters. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_collaborator_a627d26aa6874394f1cd87a220f7aa21e}{assign\+Story}} (int story\+ID)
+\item 
+auto \mbox{\hyperlink{class_collaborator_a4ed8dc67233fd7b840e147289fd9f671}{getcollaborator\+Name}} () -\/$>$ std\+::string
+\begin{DoxyCompactList}\small\item\em getter for collaborator\+Name \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_collaborator_ad98d61ad77b479631a68d5cbfa9f9297}\label{class_collaborator_ad98d61ad77b479631a68d5cbfa9f9297}} 
+static int {\bfseries collaborator\+ID} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_collaborator_a33aaaf1bdd31d355e959aa798d937ca2}\label{class_collaborator_a33aaaf1bdd31d355e959aa798d937ca2}} 
+std\+::vector$<$ int $>$ {\bfseries stories\+Working\+On}
+\item 
+\mbox{\Hypertarget{class_collaborator_a6301cc4ac7b08549950845a62599fdf5}\label{class_collaborator_a6301cc4ac7b08549950845a62599fdf5}} 
+std\+::vector$<$ int $>$ {\bfseries developers}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_collaborator_a77e204d8e71b14006e9f32b489b7e36d}\label{class_collaborator_a77e204d8e71b14006e9f32b489b7e36d}} 
+\index{Collaborator@{Collaborator}!Collaborator@{Collaborator}}
+\index{Collaborator@{Collaborator}!Collaborator@{Collaborator}}
+\doxysubsubsection{\texorpdfstring{Collaborator()}{Collaborator()}}
+{\footnotesize\ttfamily Collaborator\+::\+Collaborator (\begin{DoxyParamCaption}\item[{std\+::string}]{collaborator\+Name,  }\item[{std\+::string}]{role }\end{DoxyParamCaption})}
+
+
+
+Constructor for \mbox{\hyperlink{class_collaborator}{Collaborator}} given parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collaborator\+Name} & name of the collaborator \\
+\hline
+{\em role} & role of collaborator within the project \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_collaborator_a627d26aa6874394f1cd87a220f7aa21e}\label{class_collaborator_a627d26aa6874394f1cd87a220f7aa21e}} 
+\index{Collaborator@{Collaborator}!assignStory@{assignStory}}
+\index{assignStory@{assignStory}!Collaborator@{Collaborator}}
+\doxysubsubsection{\texorpdfstring{assignStory()}{assignStory()}}
+{\footnotesize\ttfamily void Collaborator\+::assign\+Story (\begin{DoxyParamCaption}\item[{int}]{story\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_developer_a4898cd09d0ecafd4dc03d88218b9941f}{Developer}}, and \mbox{\hyperlink{class_scrum_master_a7d03cf0cbfc1eba28e359fca4ca29b31}{Scrum\+Master}}.
+
+\mbox{\Hypertarget{class_collaborator_a4ed8dc67233fd7b840e147289fd9f671}\label{class_collaborator_a4ed8dc67233fd7b840e147289fd9f671}} 
+\index{Collaborator@{Collaborator}!getcollaboratorName@{getcollaboratorName}}
+\index{getcollaboratorName@{getcollaboratorName}!Collaborator@{Collaborator}}
+\doxysubsubsection{\texorpdfstring{getcollaboratorName()}{getcollaboratorName()}}
+{\footnotesize\ttfamily auto Collaborator\+::getcollaborator\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ std\+::string}
+
+
+
+getter for collaborator\+Name 
+
+\begin{DoxyReturn}{Returns}
+collaborator\+Name the name of the collaborator 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_collaborator_8h}{Collaborator.\+h}}\item 
+\mbox{\hyperlink{_collaborator_8cpp}{Collaborator.\+cpp}}\end{DoxyCompactItemize}

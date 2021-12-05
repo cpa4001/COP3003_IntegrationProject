@@ -1,0 +1,150 @@
+\hypertarget{class_kanban_board}{}\doxysection{Kanban\+Board Class Reference}
+\label{class_kanban_board}\index{KanbanBoard@{KanbanBoard}}
+Inheritance diagram for Kanban\+Board\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_kanban_board}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_kanban_board_a5e43649e73de8462c4c482a8774bac2b}{Kanban\+Board}} (std\+::vector$<$ std\+::string $>$ file\+Rows)
+\begin{DoxyCompactList}\small\item\em Creates the \mbox{\hyperlink{class_kanban_board}{Kanban\+Board}} and intializes the status\+Map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_kanban_board_ae862d3ac0fd4bb4bbe48ba0dc8b3c33e}{print\+Board}} () override
+\item 
+void \mbox{\hyperlink{class_kanban_board_a77d87420f460a20dde026a45134b2f18}{get\+Done\+User\+Story}} () override
+\begin{DoxyCompactList}\small\item\em iterates through status\+Map and prints all storyids with done status \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_kanban_board_aad7b6a997a005416eb46ef3d43f24083}{get\+In\+Progress\+User\+Story}} () override
+\begin{DoxyCompactList}\small\item\em iterates through status\+Map and prints all storyids with in progress status \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_kanban_board_a1798e0bf4d418e104c857cfc109774a1}{get\+To\+Do\+User\+Story}} () override
+\begin{DoxyCompactList}\small\item\em iterates through status\+Map and prints all storyids with to do status \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_kanban_board_ae2425470983e0bfd39eabac56e280053}{add\+Story\+To\+Map}} (\mbox{\hyperlink{class_user_story}{User\+Story}} \&user\+Story) override
+\begin{DoxyCompactList}\small\item\em Adds a story name and the status of that story to the status\+Map hashmap. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_kanban_board_a1b12fa0b85cb3c26baadd06ab1ff56b2}{update\+Status}} (int story\+ID, int new\+Status) override
+\begin{DoxyCompactList}\small\item\em used to update status in the status\+Map \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_kanban_board_a5e43649e73de8462c4c482a8774bac2b}\label{class_kanban_board_a5e43649e73de8462c4c482a8774bac2b}} 
+\index{KanbanBoard@{KanbanBoard}!KanbanBoard@{KanbanBoard}}
+\index{KanbanBoard@{KanbanBoard}!KanbanBoard@{KanbanBoard}}
+\doxysubsubsection{\texorpdfstring{KanbanBoard()}{KanbanBoard()}}
+{\footnotesize\ttfamily Kanban\+Board\+::\+Kanban\+Board (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{file\+Rows }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Creates the \mbox{\hyperlink{class_kanban_board}{Kanban\+Board}} and intializes the status\+Map. 
+
+Iterates through vector and finds the status meaning and inserts into status\+Map besed on meaning
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Rows} & vector of strings from the file \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_kanban_board_ae2425470983e0bfd39eabac56e280053}\label{class_kanban_board_ae2425470983e0bfd39eabac56e280053}} 
+\index{KanbanBoard@{KanbanBoard}!addStoryToMap@{addStoryToMap}}
+\index{addStoryToMap@{addStoryToMap}!KanbanBoard@{KanbanBoard}}
+\doxysubsubsection{\texorpdfstring{addStoryToMap()}{addStoryToMap()}}
+{\footnotesize\ttfamily void Kanban\+Board\+::add\+Story\+To\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_user_story}{User\+Story}} \&}]{user\+Story }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Adds a story name and the status of that story to the status\+Map hashmap. 
+
+LO5
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Story} & userstory object \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_board}{Board}}.
+
+\mbox{\Hypertarget{class_kanban_board_a77d87420f460a20dde026a45134b2f18}\label{class_kanban_board_a77d87420f460a20dde026a45134b2f18}} 
+\index{KanbanBoard@{KanbanBoard}!getDoneUserStory@{getDoneUserStory}}
+\index{getDoneUserStory@{getDoneUserStory}!KanbanBoard@{KanbanBoard}}
+\doxysubsubsection{\texorpdfstring{getDoneUserStory()}{getDoneUserStory()}}
+{\footnotesize\ttfamily void Kanban\+Board\+::get\+Done\+User\+Story (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+iterates through status\+Map and prints all storyids with done status 
+
+LO5 
+
+Implements \mbox{\hyperlink{class_board}{Board}}.
+
+\mbox{\Hypertarget{class_kanban_board_aad7b6a997a005416eb46ef3d43f24083}\label{class_kanban_board_aad7b6a997a005416eb46ef3d43f24083}} 
+\index{KanbanBoard@{KanbanBoard}!getInProgressUserStory@{getInProgressUserStory}}
+\index{getInProgressUserStory@{getInProgressUserStory}!KanbanBoard@{KanbanBoard}}
+\doxysubsubsection{\texorpdfstring{getInProgressUserStory()}{getInProgressUserStory()}}
+{\footnotesize\ttfamily void Kanban\+Board\+::get\+In\+Progress\+User\+Story (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+iterates through status\+Map and prints all storyids with in progress status 
+
+LO5 
+
+Implements \mbox{\hyperlink{class_board}{Board}}.
+
+\mbox{\Hypertarget{class_kanban_board_a1798e0bf4d418e104c857cfc109774a1}\label{class_kanban_board_a1798e0bf4d418e104c857cfc109774a1}} 
+\index{KanbanBoard@{KanbanBoard}!getToDoUserStory@{getToDoUserStory}}
+\index{getToDoUserStory@{getToDoUserStory}!KanbanBoard@{KanbanBoard}}
+\doxysubsubsection{\texorpdfstring{getToDoUserStory()}{getToDoUserStory()}}
+{\footnotesize\ttfamily void Kanban\+Board\+::get\+To\+Do\+User\+Story (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+iterates through status\+Map and prints all storyids with to do status 
+
+LO5 
+
+Implements \mbox{\hyperlink{class_board}{Board}}.
+
+\mbox{\Hypertarget{class_kanban_board_ae862d3ac0fd4bb4bbe48ba0dc8b3c33e}\label{class_kanban_board_ae862d3ac0fd4bb4bbe48ba0dc8b3c33e}} 
+\index{KanbanBoard@{KanbanBoard}!printBoard@{printBoard}}
+\index{printBoard@{printBoard}!KanbanBoard@{KanbanBoard}}
+\doxysubsubsection{\texorpdfstring{printBoard()}{printBoard()}}
+{\footnotesize\ttfamily void Kanban\+Board\+::print\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_board}{Board}}.
+
+\mbox{\Hypertarget{class_kanban_board_a1b12fa0b85cb3c26baadd06ab1ff56b2}\label{class_kanban_board_a1b12fa0b85cb3c26baadd06ab1ff56b2}} 
+\index{KanbanBoard@{KanbanBoard}!updateStatus@{updateStatus}}
+\index{updateStatus@{updateStatus}!KanbanBoard@{KanbanBoard}}
+\doxysubsubsection{\texorpdfstring{updateStatus()}{updateStatus()}}
+{\footnotesize\ttfamily void Kanban\+Board\+::update\+Status (\begin{DoxyParamCaption}\item[{int}]{story\+ID,  }\item[{int}]{new\+Status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+used to update status in the status\+Map 
+
+LO5
+
+
+\begin{DoxyParams}{Parameters}
+{\em story\+ID} & the id of the story that needs to be changed \\
+\hline
+{\em new\+Status} & the new status of the story \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_board}{Board}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_kanban_board_8h}{Kanban\+Board.\+h}}\item 
+\mbox{\hyperlink{_kanban_board_8cpp}{Kanban\+Board.\+cpp}}\end{DoxyCompactItemize}

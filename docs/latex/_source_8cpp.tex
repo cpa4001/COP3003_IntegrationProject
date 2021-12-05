@@ -1,0 +1,203 @@
+\hypertarget{_source_8cpp}{}\doxysection{Source.\+cpp File Reference}
+\label{_source_8cpp}\index{Source.cpp@{Source.cpp}}
+
+
+Main implementation file for program.  
+
+
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \char`\"{}Backlog.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Developer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Kanban\+Board.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Release.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Scrum\+Master.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Sprint.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}User\+Story.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{_source_8cpp_a7bb3d9a385b5de452a5ca927a0c90568}{operator$<$$<$}} (std\+::ostream \&out, \mbox{\hyperlink{class_user_story}{User\+Story}} \&userstory) -\/$>$ std\+::ostream \&
+\begin{DoxyCompactList}\small\item\em Overloaded operator to print out user story atributes. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{_source_8cpp_abcca18145103e0e8dcc36aa931cc9cbc}{create\+User\+Story}} (\mbox{\hyperlink{class_backlog}{Backlog}} \&backlog) -\/$>$ \mbox{\hyperlink{class_user_story}{User\+Story}}
+\begin{DoxyCompactList}\small\item\em prompts user for input and creates userstory object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_source_8cpp_a332e074f88da45a65e79eaaaab93e542}{save\+User\+Story}} (\mbox{\hyperlink{class_user_story}{User\+Story}} \&userstory, std\+::ofstream \&saved\+User\+Stories, \mbox{\hyperlink{class_backlog}{Backlog}} \&backlog, \mbox{\hyperlink{class_kanban_board}{Kanban\+Board}} \&kanban\+Board)
+\begin{DoxyCompactList}\small\item\em writes \mbox{\hyperlink{class_user_story}{User\+Story}} object to csv \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{_source_8cpp_a12604afa57c958b175867d03e6746686}{is\+\_\+empty}} (std\+::ifstream \&p\+File) -\/$>$ bool
+\begin{DoxyCompactList}\small\item\em sees if a file is empty \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_source_8cpp_a06d32acc3cd2f871a91504b3c9095bcc}{create\+And\+Save\+Story}} (std\+::ofstream \&write\+To\+User\+Stories, \mbox{\hyperlink{class_backlog}{Backlog}} \&backlog, \mbox{\hyperlink{class_kanban_board}{Kanban\+Board}} \&kanban\+Board)
+\begin{DoxyCompactList}\small\item\em creates \mbox{\hyperlink{class_user_story}{User\+Story}} object and calls the save\+User\+Story function \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_source_8cpp_ae3c5b39bc7062ef7ec32ad2c875c526e}\label{_source_8cpp_ae3c5b39bc7062ef7ec32ad2c875c526e}} 
+void {\bfseries create\+Border} ()
+\begin{DoxyCompactList}\small\item\em Prints border to screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_source_8cpp_aff0010d8635d56411bcda9716614438d}{invoke\+Func}} (void($\ast$func)()) noexcept
+\begin{DoxyCompactList}\small\item\em demonstration of passing functions as parameters \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_source_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{_source_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+int {\bfseries main} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_source_8cpp_a7d7fdced907483186b950e307257dcf5}\label{_source_8cpp_a7d7fdced907483186b950e307257dcf5}} 
+constexpr int {\bfseries EXIT} = 0
+\item 
+\mbox{\Hypertarget{_source_8cpp_a1526469428eca3d840a766dc945b4e25}\label{_source_8cpp_a1526469428eca3d840a766dc945b4e25}} 
+constexpr int {\bfseries CREATE\+\_\+\+USER\+\_\+\+STORY} = 1
+\item 
+\mbox{\Hypertarget{_source_8cpp_a78035ef33ce4953075c727a32c8f61b8}\label{_source_8cpp_a78035ef33ce4953075c727a32c8f61b8}} 
+constexpr int {\bfseries LOOK\+\_\+\+UP\+\_\+\+BACKLOG} = 2
+\item 
+\mbox{\Hypertarget{_source_8cpp_aab617cb17258fd60ad9cfeec2887d887}\label{_source_8cpp_aab617cb17258fd60ad9cfeec2887d887}} 
+constexpr int {\bfseries ADD\+\_\+\+COLLABORATOR} = 3
+\item 
+\mbox{\Hypertarget{_source_8cpp_a5c5e308c49d8e9e2293ee0a796e3a289}\label{_source_8cpp_a5c5e308c49d8e9e2293ee0a796e3a289}} 
+constexpr int {\bfseries ADD\+\_\+\+ITERATION} = 4
+\item 
+\mbox{\Hypertarget{_source_8cpp_aed27392c57e355189ca2f11031e326ea}\label{_source_8cpp_aed27392c57e355189ca2f11031e326ea}} 
+constexpr int {\bfseries KANBAN\+\_\+\+BOARD} = 5
+\item 
+\mbox{\Hypertarget{_source_8cpp_a723c21c6df79e91f31d6c0d4298308a2}\label{_source_8cpp_a723c21c6df79e91f31d6c0d4298308a2}} 
+constexpr int {\bfseries MOST\+\_\+\+RECENT\+\_\+\+USER\+\_\+\+STORY} = 6
+\item 
+\mbox{\Hypertarget{_source_8cpp_a1700a2a7830073e736370f0495f76ebf}\label{_source_8cpp_a1700a2a7830073e736370f0495f76ebf}} 
+constexpr int {\bfseries UPDATE\+\_\+\+STATUS} = 7
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main implementation file for program. 
+
+\begin{DoxyAuthor}{Author}
+Christian Apostoli 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000017}{Bug}}]userstory\+::story\+ID will increase by two at times 
+
+little input validation \end{DoxyRefDesc}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_source_8cpp_a06d32acc3cd2f871a91504b3c9095bcc}\label{_source_8cpp_a06d32acc3cd2f871a91504b3c9095bcc}} 
+\index{Source.cpp@{Source.cpp}!createAndSaveStory@{createAndSaveStory}}
+\index{createAndSaveStory@{createAndSaveStory}!Source.cpp@{Source.cpp}}
+\doxysubsubsection{\texorpdfstring{createAndSaveStory()}{createAndSaveStory()}}
+{\footnotesize\ttfamily void create\+And\+Save\+Story (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{write\+To\+User\+Stories,  }\item[{\mbox{\hyperlink{class_backlog}{Backlog}} \&}]{backlog,  }\item[{\mbox{\hyperlink{class_kanban_board}{Kanban\+Board}} \&}]{kanban\+Board }\end{DoxyParamCaption})}
+
+
+
+creates \mbox{\hyperlink{class_user_story}{User\+Story}} object and calls the save\+User\+Story function 
+
+
+\begin{DoxyParams}{Parameters}
+{\em write\+To\+User\+Stories} & ofstream object of output file \\
+\hline
+{\em backlog} & backlog object that holds user stories \\
+\hline
+{\em kanban\+Board} & kanban\+Board object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_source_8cpp_abcca18145103e0e8dcc36aa931cc9cbc}\label{_source_8cpp_abcca18145103e0e8dcc36aa931cc9cbc}} 
+\index{Source.cpp@{Source.cpp}!createUserStory@{createUserStory}}
+\index{createUserStory@{createUserStory}!Source.cpp@{Source.cpp}}
+\doxysubsubsection{\texorpdfstring{createUserStory()}{createUserStory()}}
+{\footnotesize\ttfamily auto create\+User\+Story (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_backlog}{Backlog}} \&}]{backlog }\end{DoxyParamCaption}) -\/$>$  \mbox{\hyperlink{class_user_story}{User\+Story}}}
+
+
+
+prompts user for input and creates userstory object 
+
+Had to create a function since the switch does not allow intialization
+
+
+\begin{DoxyParams}{Parameters}
+{\em backlog} & backlog object that holds user stories\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+new\+Story new \mbox{\hyperlink{class_user_story}{User\+Story}} object created 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_source_8cpp_aff0010d8635d56411bcda9716614438d}\label{_source_8cpp_aff0010d8635d56411bcda9716614438d}} 
+\index{Source.cpp@{Source.cpp}!invokeFunc@{invokeFunc}}
+\index{invokeFunc@{invokeFunc}!Source.cpp@{Source.cpp}}
+\doxysubsubsection{\texorpdfstring{invokeFunc()}{invokeFunc()}}
+{\footnotesize\ttfamily void invoke\+Func (\begin{DoxyParamCaption}\item[{void($\ast$)()}]{func }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+demonstration of passing functions as parameters 
+
+LO7
+
+can call any void function with no parameters in main
+
+
+\begin{DoxyParams}{Parameters}
+{\em ($\ast$func)()} & the memory location of a function \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_source_8cpp_a12604afa57c958b175867d03e6746686}\label{_source_8cpp_a12604afa57c958b175867d03e6746686}} 
+\index{Source.cpp@{Source.cpp}!is\_empty@{is\_empty}}
+\index{is\_empty@{is\_empty}!Source.cpp@{Source.cpp}}
+\doxysubsubsection{\texorpdfstring{is\_empty()}{is\_empty()}}
+{\footnotesize\ttfamily auto is\+\_\+empty (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{p\+File }\end{DoxyParamCaption}) -\/$>$  bool}
+
+
+
+sees if a file is empty 
+
+Code was taken from \href{https://newbedev.com/checking-for-an-empty-file-in-c}{\texttt{ https\+://newbedev.\+com/checking-\/for-\/an-\/empty-\/file-\/in-\/c}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+File} & ifstream object or input file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_source_8cpp_a7bb3d9a385b5de452a5ca927a0c90568}\label{_source_8cpp_a7bb3d9a385b5de452a5ca927a0c90568}} 
+\index{Source.cpp@{Source.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Source.cpp@{Source.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily auto operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{\mbox{\hyperlink{class_user_story}{User\+Story}} \&}]{userstory }\end{DoxyParamCaption}) -\/$>$  std\+::ostream \&}
+
+
+
+Overloaded operator to print out user story atributes. 
+
+LO7 
+\begin{DoxyParams}{Parameters}
+{\em out} & ofstream object of output file userstory \\
+\hline
+{\em userstory} & object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+out output stream 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_source_8cpp_a332e074f88da45a65e79eaaaab93e542}\label{_source_8cpp_a332e074f88da45a65e79eaaaab93e542}} 
+\index{Source.cpp@{Source.cpp}!saveUserStory@{saveUserStory}}
+\index{saveUserStory@{saveUserStory}!Source.cpp@{Source.cpp}}
+\doxysubsubsection{\texorpdfstring{saveUserStory()}{saveUserStory()}}
+{\footnotesize\ttfamily void save\+User\+Story (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_user_story}{User\+Story}} \&}]{userstory,  }\item[{std\+::ofstream \&}]{saved\+User\+Stories,  }\item[{\mbox{\hyperlink{class_backlog}{Backlog}} \&}]{backlog,  }\item[{\mbox{\hyperlink{class_kanban_board}{Kanban\+Board}} \&}]{kanban\+Board }\end{DoxyParamCaption})}
+
+
+
+writes \mbox{\hyperlink{class_user_story}{User\+Story}} object to csv 
+
+adds string to backlogs vector and adds story to kanbanboard\textquotesingle{}s hashmap
+
+
+\begin{DoxyParams}{Parameters}
+{\em userstory} & userstory object \\
+\hline
+{\em saved\+User\+Stories} & ofstream object of output file \\
+\hline
+{\em backlog} & backlog object that holds use stories \\
+\hline
+{\em kanban\+Board} & kanbanboard object ~\newline
+ \\
+\hline
+\end{DoxyParams}

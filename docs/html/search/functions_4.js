@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['getcollaboratorname_0',['getcollaboratorName',['../class_collaborator.html#a4ed8dc67233fd7b840e147289fd9f671',1,'Collaborator']]],
+  ['getdoneuserstory_1',['getDoneUserStory',['../class_kanban_board.html#a77d87420f460a20dde026a45134b2f18',1,'KanbanBoard']]],
+  ['getestimatedvelocity_2',['getEstimatedVelocity',['../class_iteration.html#a3fcfb84f7820a109613225aa8260ccd4',1,'Iteration']]],
+  ['getinprogressuserstory_3',['getInProgressUserStory',['../class_kanban_board.html#aad7b6a997a005416eb46ef3d43f24083',1,'KanbanBoard']]],
+  ['getiterationlength_4',['getIterationLength',['../class_iteration.html#a3916caddbf3506d71452ddad246b4545',1,'Iteration']]],
+  ['getiterationname_5',['getIterationName',['../class_iteration.html#ae2cfe59147235b43fb29eb959d856a36',1,'Iteration']]],
+  ['getiterationtype_6',['getIterationType',['../class_iteration.html#aa54c195b9d2f69eaa456eb40b5afb517',1,'Iteration']]],
+  ['getmatrix_7',['getMatrix',['../class_backlog.html#aa0a295da40fb006e79eba374aa6c1e75',1,'Backlog']]],
+  ['getproductbacklog_8',['getProductBacklog',['../class_backlog.html#a3bdd38a28ac99df2e29c81d01faaed0c',1,'Backlog']]],
+  ['getrow_9',['getRow',['../class_backlog.html#a0551ffd9da379949fb618edaf86e083b',1,'Backlog']]],
+  ['getstatus_10',['getStatus',['../class_user_story.html#a153978cfc2646a7af20037d6535ab836',1,'UserStory']]],
+  ['getstatusstring_11',['getStatusString',['../class_user_story.html#a90e3f6788f5382d6a64e18bc129c35e3',1,'UserStory']]],
+  ['getstorybody_12',['getStoryBody',['../class_user_story.html#a51530e3bc2c8f26c7bf0b5be4e6ea356',1,'UserStory']]],
+  ['getstoryname_13',['getStoryName',['../class_user_story.html#ad51bf32aa623a0a8226fd37b1400ff5d',1,'UserStory']]],
+  ['getstorypoints_14',['getStoryPoints',['../class_user_story.html#a6018ae9e3f7b518554bd7f7d49dc55e7',1,'UserStory']]],
+  ['gettodouserstory_15',['getToDoUserStory',['../class_kanban_board.html#a1798e0bf4d418e104c857cfc109774a1',1,'KanbanBoard']]]
+];
