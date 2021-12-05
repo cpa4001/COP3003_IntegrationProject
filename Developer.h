@@ -9,7 +9,11 @@
 #include "Collaborator.h"
 // LO2
 // LO2a
-// Developer inherits from Collaborator with public visibility
+
+/**
+ * @brief A collaborator whose role is a developer
+ *        Developer inherits from Collaborator with public visibility
+ */
 class Developer : public Collaborator {
  public:
   Developer(std::string name);

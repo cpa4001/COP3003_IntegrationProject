@@ -1,20 +1,17 @@
 ﻿  Backlog.cpp
-  Board.cpp
   Collaborator.cpp
   Developer.cpp
   Iteration.cpp
-  KanbanBoard.cpp
   Release.cpp
   ScrumMaster.cpp
   Source.cpp
   Sprint.cpp
-  UserStory.cpp
   Running Code Analysis for C/C++...
   Generating Code...
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory(723,9): warning G61A85D37: destructor called on non-final 'Collaborator' that has virtual functions but non-virtual destructor [clang-diagnostic-delete-non-abstract-non-virtual-dtor]
           _Ptr->~_Uty();
           ^
-  Suppressed 250777 warnings (250777 in non-user code).
+  Suppressed 250773 warnings (250773 in non-user code).
   Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
   C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory:950:39: note: in instantiation of function template specialization 'std::_Default_allocator_traits<std::allocator<Collaborator>>::destroy<Collaborator>' requested here
               allocator_traits<_Alloc>::destroy(_Al, _Unfancy(_First));
@@ -66,10 +63,10 @@ C:\Users\chris\source\repos\Userstoryconsole\UserStory.cpp(25,16): warning GF015
   int UserStory::storyID = 0;
                  ^
   Userstoryconsole.vcxproj -> C:\Users\chris\source\repos\Userstoryconsole\Debug\Userstoryconsole.exe
-C:\Users\chris\source\repos\Userstoryconsole\UserStory.h(56): warning C26812: The enum type 'UserStory::Status' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).
+C:\Users\chris\source\repos\Userstoryconsole\UserStory.h(60): warning C26812: The enum type 'UserStory::Status' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).
 C:\Users\chris\source\repos\Userstoryconsole\Collaborator.cpp(15): warning C26447: The function is declared 'noexcept' but calls function 'operator=()' which may throw exceptions (f.6).
-C:\Users\chris\source\repos\Userstoryconsole\Collaborator.cpp(40): warning C26436: The type 'class Collaborator' with a virtual function needs either public virtual or protected non-virtual destructor (c.35).
-C:\Users\chris\source\repos\Userstoryconsole\Collaborator.cpp(40): warning C26440: Function 'Collaborator::assignStory' can be declared 'noexcept' (f.6).
+C:\Users\chris\source\repos\Userstoryconsole\Collaborator.cpp(45): warning C26436: The type 'class Collaborator' with a virtual function needs either public virtual or protected non-virtual destructor (c.35).
+C:\Users\chris\source\repos\Userstoryconsole\Collaborator.cpp(45): warning C26440: Function 'Collaborator::assignStory' can be declared 'noexcept' (f.6).
 C:\Users\chris\source\repos\Userstoryconsole\Developer.cpp(25): warning C26436: The type 'class Developer' with a virtual function needs either public virtual or protected non-virtual destructor (c.35).
 C:\Users\chris\source\repos\Userstoryconsole\Iteration.cpp(94): warning C26460: The reference argument 'userstory' for function 'Iteration::addUserStory' can be marked as const (con.3).
 C:\Users\chris\source\repos\Userstoryconsole\KanbanBoard.cpp(50): warning C26436: The type 'class KanbanBoard' with a virtual function needs either public virtual or protected non-virtual destructor (c.35).

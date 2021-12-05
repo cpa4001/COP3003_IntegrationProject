@@ -10,12 +10,12 @@
 
 #include "Backlog.h"
 
-#include <iostream>
 #include <gsl/gsl>
+#include <iostream>
 
 /** @brief default Backlog constructor
  *
- *  Intialize Backlog and add all the stories from the Userstories.csv to 
+ *  Intialize Backlog and add all the stories from the Userstories.csv to
  *   create a temporary backlog as a vector of strings where each element is a
  *   line from the file
  *
@@ -38,7 +38,7 @@ Backlog::Backlog(std::ifstream& readFromUserStories) {
  *
  *  Appends to a vector of UserStory objects
  *
- *  @param userstory		userstory object
+ *  @param userStory		userstory object
  */
 void Backlog::addUserStory(const UserStory& userStory) {
   productBacklog.push_back(userStory);
@@ -50,8 +50,8 @@ void Backlog::addUserStory(const UserStory& userStory) {
  */
 void Backlog::addToRow(std::string newRow) { row.push_back(newRow); }
 
-/** @brief Iterates through row vector and prints each element on seperate      
-           lines
+/** @brief Iterates through row vector and prints each element on seperate
+ *         lines
  */
 void Backlog::printStories() {
   for (auto& fileLine : row) {
@@ -60,14 +60,14 @@ void Backlog::printStories() {
 }
 
 /** @brief updates the status of a user sotry in UserStories.csv
-*   
-*   Iterates through the csv file and finds the line with the storyID
-*   and updates it to the new status. Currently there is no way to edit
-*   a specific location in the file
-*  
-*   @param storyID    the id of the story that needs to be changed
-*   @param newStatus  the new status of the selected story
-*/
+ *
+ *   Iterates through the csv file and finds the line with the storyID
+ *   and updates it to the new status. Currently there is no way to edit
+ *   a specific location in the file
+ *
+ *   @param storyID    the id of the story that needs to be changed
+ *   @param newStatus  the new status of the selected story
+ */
 void Backlog::updateStoryStatus(int storyID, int newStatus) {
   for (size_t line = 0; line < row.size(); ++line) {
     std::string tempStoryID = row.at(line).substr(0, row.at(line).find(","));
@@ -89,8 +89,7 @@ void Backlog::updateStoryStatus(int storyID, int newStatus) {
         previousStatus = "Done";
       }
       row.at(line).replace(row.at(line).find(previousStatus),
-                           row.at(line).find(","),
-                        newStatusString);
+                           row.at(line).find(","), newStatusString);
     }
   }
 }
@@ -98,10 +97,10 @@ void Backlog::updateStoryStatus(int storyID, int newStatus) {
 /** @brief updates user sotry in UserStories.csv with the collaborators
  *
  *   Iterates through the csv file and finds the line with the storyID
- *   and writes collaborators that are working on the story. Currently 
+ *   and writes collaborators that are working on the story. Currently
  *   there is no way to edit a specific location in the file
  *
- *   @param storyID           the id of the story that needs to be changed      
+ *   @param storyID           the id of the story that needs to be changed
  *   @param CollaboratorName  the name of the
  *
  */
@@ -128,7 +127,7 @@ void Backlog::updateStoryWithCollaborator(int storyID,
 }
 
 /** @brief getter for matrix attribute
- * 
+ *
  *  @return matrix      2D vector of strings
  */
 auto Backlog::getMatrix() -> std::vector<std::vector<std::string>> {
@@ -154,10 +153,10 @@ auto Backlog::getRow() -> std::vector<std::string> { return row; }
  *
  *  returns the most recent created user story if backlog has been created
  *  otherwise returns error message
- * 
+ *
  *  @param backlog  backlog object
- * 
- *  @return the most recently created User Story 
+ *
+ *  @return the most recently created User Story
  */
 auto operator-(Backlog& backlog) -> std::string {
   const int backlogSize = gsl::narrow_cast<int>(backlog.row.size());

@@ -9,7 +9,9 @@
 #include <string>
 #include <vector>
 
-
+/**
+ * @brief any person that makes changes toward implementing a user story
+ */
 class Collaborator {
  private:
   std::string collaboratorName;
@@ -17,10 +19,15 @@ class Collaborator {
   std::string role;
 
  protected:
+  /**
+   * @brief the story IDs that the collaborator is working on
+   */
   std::vector<int> storiesWorkingOn;
-  std::vector<int> developers;
 
  public:
+  /**
+   * @brief unique ID to track developers
+   */
   static int collaboratorID;
   Collaborator() noexcept;
   Collaborator(std::string collaboratorName, std::string role);

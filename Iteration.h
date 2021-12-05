@@ -12,6 +12,11 @@
 #include "Backlog.h"
 #include "Collaborator.h"
 #include "UserStory.h"
+
+/**
+ * @brief a period of time in the development process where a team works on a
+ *         set amount of user stories
+ */
 class Iteration {
  private:
   // Backlog backlog;

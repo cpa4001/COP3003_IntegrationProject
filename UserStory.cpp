@@ -2,8 +2,8 @@
  *   @brief: Implementation file for UserStory class
  *
  *	Implementation of Userstory Class and blueprint for
- *	user stories in file, all method definitions 
- * 
+ *	user stories in file, all method definitions
+ *
  *	@author Christian Apostoli
  *	@bug No known bugs
  */
@@ -12,8 +12,8 @@
 
 // LO1a
 
-// LO4: Include a comment in which you compare and contrast the procedural/functional
-// approach and the object-oriented approach
+// LO4: Include a comment in which you compare and contrast the
+// procedural/functional approach and the object-oriented approach
 /*
     The object-oriented approach utlizes classes to store the data
     and behaviors of a UserStory and objects to implement the functionality of
@@ -24,9 +24,8 @@
 
 int UserStory::storyID = 0;
 
-
 /**
-    @brief default constructor - intialize empty UserStory
+*    @brief default constructor - intialize empty UserStory
 */
 /*
 UserStory::UserStory() noexcept {
@@ -39,14 +38,14 @@ UserStory::UserStory() noexcept {
 }
 */
 
-//LO1b
+// LO1b
 /**
-*  @brief default constructor - intialize empty UserStory
-*  @param storyName	Name of user story
-*  @param storyBody	Description of user story
-*  @param storyPoints	integer value of points assigned to story
-*
-*/
+ *  @brief default constructor - intialize empty UserStory
+ *  @param storyName	Name of user story
+ *  @param storyBody	Description of user story
+ *  @param storyPoints	integer value of points assigned to story
+ *
+ */
 UserStory::UserStory(std::string storyName, std::string storyBody,
                      int storyPoints) {
   this->storyName = storyName;
@@ -62,12 +61,11 @@ UserStory::UserStory(std::string storyName, std::string storyBody,
   storyID++;
 }
 
-
 /**
-*   @brief getter for storyName attribute
-*   
-*   @return storyName name of the story as a string
-*/
+ *   @brief getter for storyName attribute
+ *
+ *   @return storyName name of the story as a string
+ */
 auto UserStory::getStoryName() -> std::string { return storyName; }
 
 /**
@@ -91,7 +89,6 @@ auto UserStory::getStoryPoints() const noexcept -> int { return storyPoints; }
  */
 auto UserStory::getStatus() noexcept -> int { return status; }
 
-
 /**
  *   @brief returns the meaning of the status enum
  *
@@ -109,7 +106,6 @@ auto UserStory::getStatusString() -> std::string {
       return "Status Unknown";
   }
 }
-
 
 /**
  *   @brief setter for storyName attribute

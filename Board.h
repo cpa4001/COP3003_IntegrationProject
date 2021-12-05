@@ -7,10 +7,15 @@
  *	@bug No known bugs
  */
 
-#pragma once
+#ifndef BOARD_H
+#define BOARD_H
 #include "Backlog.h"
 #include "UserStory.h"
 // LO6
+
+/**
+ * @brief any type of diagram that can aid in development
+ */
 class Board {
  public:
   virtual void printBoard() = 0;
@@ -21,3 +26,4 @@ class Board {
   virtual void addStoryToMap(UserStory& userStory) = 0;
   virtual void updateStatus(int storyID, int newStatus) = 0;
 };
+#endif BOARD_H

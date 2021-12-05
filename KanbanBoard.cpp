@@ -13,7 +13,6 @@
 
 // LO2
 
-
 /**
  *   @brief Creates the KanbanBoard and intializes the statusMap
  *
@@ -24,7 +23,8 @@
  */
 KanbanBoard::KanbanBoard(std::vector<std::string> fileRows) {
   for (size_t row = 1; row < fileRows.size(); row++) {
-    std::string storyID = fileRows.at(row).substr(0, fileRows.at(row).find(","));
+    std::string storyID =
+        fileRows.at(row).substr(0, fileRows.at(row).find(","));
 
     /*
     code for the condition in if statement was pulled from
@@ -43,10 +43,10 @@ KanbanBoard::KanbanBoard(std::vector<std::string> fileRows) {
   }
 }
 
-/* LO5
-    @brief Prints the name of the stories under each category based on their
-    status.
-*/
+/** LO5
+ *    @brief Prints the name of the stories under each category
+ *           based on their status.
+ */
 void KanbanBoard::printBoard() {
   // Variables could be used in formatting text
   // int maxToDoSpaces = 0;
@@ -97,16 +97,15 @@ void KanbanBoard::getToDoUserStory() {
 }
 
 /** LO5
-*   @brief Adds a story name and the status of that story to the statusMap 
-*    hashmap
-*   
-*   @param userStory   userstory object
-*/
+ *   @brief Adds a story name and the status of that story to the statusMap
+ *    hashmap
+ *
+ *   @param userStory   userstory object
+ */
 void KanbanBoard::addStoryToMap(UserStory& userStory) {
   statusMap.insert(std::pair<std::string, int>(
       std::to_string(UserStory::storyID), userStory.getStatus()));
 }
-
 
 /** LO5
  *   @brief used to update status in the statusMap

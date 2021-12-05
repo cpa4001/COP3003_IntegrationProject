@@ -27,10 +27,12 @@ Iteration::Iteration(std::string iterationName, std::string iterationType,
 
 /**
  * @brief getter for iterationName attribute
- * 
+ *
  * @return iterationName the name of the iteration as a string
  */
-auto Iteration::getIterationName() const -> std::string{ return iterationName; }
+auto Iteration::getIterationName() const -> std::string {
+  return iterationName;
+}
 
 /**
  * @brief getter for iterationLength attribute
@@ -46,7 +48,9 @@ auto Iteration::getIterationLength() const noexcept -> int {
  *
  * @return iterationType the type of iteration as a string
  */
-auto Iteration::getIterationType() const -> std::string{ return iterationType; }
+auto Iteration::getIterationType() const -> std::string {
+  return iterationType;
+}
 
 /**
  * @brief getter for estimatedVelocity attribute
@@ -77,18 +81,22 @@ void Iteration::setIterationType(std::string value) { iterationType = value; }
  *
  * @param value the length of the iteration as an int
  */
-void Iteration::setIterationLength(int value) noexcept{ iterationLength = value; }
+void Iteration::setIterationLength(int value) noexcept {
+  iterationLength = value;
+}
 
 /**
  * @brief setter for estimatedVelocity attribute
  *
  * @param value the estimated velocity of the iteration
  */
-void Iteration::setEstimatedVelocity(int value) noexcept{ estimatedVelocity = value; }
+void Iteration::setEstimatedVelocity(int value) noexcept {
+  estimatedVelocity = value;
+}
 
 /**
  * @brief adds UserStory to the backlog(list of userstories)
- * 
+ *
  * @param userstory		userstory object to be added
  */
 void Iteration::addUserStory(UserStory& userstory) {
@@ -96,8 +104,8 @@ void Iteration::addUserStory(UserStory& userstory) {
 }
 
 /**
- * @brief prints the stories that are in the iteration  
- * 
+ * @brief prints the stories that are in the iteration
+ *
  * @param prints names of user stories in the iteration's backolog to console
  */
 void Iteration::printStories() {

@@ -43,9 +43,9 @@
                   "uri": "file:///C:/Users/chris/source/repos/Userstoryconsole/UserStory.h"
                 },
                 "region": {
-                  "startLine": 56,
+                  "startLine": 60,
                   "startColumn": 1,
-                  "endLine": 56,
+                  "endLine": 60,
                   "endColumn": 1
                 }
               },
@@ -69,34 +69,11 @@
       },
       "invocations": [
         {
-          "commandLine": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\c1xx.dll\" -ACf{1F7B090C-16DB-4822-966A-A93D26ED4681} -ACpmspft140.dll -Alint -D_PREFAST_ -D_AST_FE_ -Analyze -zm0x0033D1C0 -il C:\\Users\\chris\\AppData\\Local\\Temp\\_CL_50e2a119ast -typedil -f Iteration.cpp -Ze -D_MSC_EXTENSIONS -Zp8 -Gs -pc \\:/ -D_MSC_VER=1929 -D_MSC_FULL_VER=192930133 -D_MSC_BUILD=0 -D_WIN32 -D_M_IX86=600 -D_M_IX86_FP=2 -GR -D_CPPRTTI -I C:\\Program Files\\gsl_lib\\GSL-main\\include -nologo -W 3 -diagnostics:column -D_GUARDOVERFLOW_CRT_ALLOCATORS=1 -Ot -DCODE_ANALYSIS -DWIN32 -D_DEBUG -D_CONSOLE -D_UNICODE -DUNICODE -EHs -D_CPPUNWIND -EHc -D__MSVC_RUNTIME_CHECKS -RTCs -RTCu -MDd -D_DEBUG -D_MT -D_DLL -GS -D_M_FP_PRECISE -permissive- -Zc:wchar_t -Zc:forScope -FoDebug\\Iteration.obj -FdDebug\\vc142.pdb -external:W 3 -Gd -analyze:projectdirectory C:\\Users\\chris\\source\\repos\\Userstoryconsole -analyze:rulesetdirectory ;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Team Tools\\Static Analysis Tools\\\\Rule Sets; -analyze:ruleset CorePlusReccomended.ruleset -analyze:quiet -analyze:plugin C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\EspXEngine.dll -FC -errorreport:prompt -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\include -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -external:I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um -I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um",
+          "commandLine": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\c1xx.dll\" -ACf{1F7B090C-16DB-4822-966A-A93D26ED4681} -ACpmspft140.dll -Alint -D_PREFAST_ -D_AST_FE_ -Analyze -zm0x0033D1C0 -il C:\\Users\\chris\\AppData\\Local\\Temp\\_CL_09854a28ast -typedil -f Iteration.cpp -Ze -D_MSC_EXTENSIONS -Zp8 -Gs -pc \\:/ -D_MSC_VER=1929 -D_MSC_FULL_VER=192930133 -D_MSC_BUILD=0 -D_WIN32 -D_M_IX86=600 -D_M_IX86_FP=2 -GR -D_CPPRTTI -I C:\\Program Files\\gsl_lib\\GSL-main\\include -nologo -W 3 -diagnostics:column -D_GUARDOVERFLOW_CRT_ALLOCATORS=1 -Ot -DCODE_ANALYSIS -DWIN32 -D_DEBUG -D_CONSOLE -D_UNICODE -DUNICODE -EHs -D_CPPUNWIND -EHc -D__MSVC_RUNTIME_CHECKS -RTCs -RTCu -MDd -D_DEBUG -D_MT -D_DLL -GS -D_M_FP_PRECISE -permissive- -Zc:wchar_t -Zc:forScope -FoDebug\\Iteration.obj -FdDebug\\vc142.pdb -external:W 3 -Gd -analyze:projectdirectory C:\\Users\\chris\\source\\repos\\Userstoryconsole -analyze:rulesetdirectory ;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Team Tools\\Static Analysis Tools\\\\Rule Sets; -analyze:ruleset CorePlusReccomended.ruleset -analyze:quiet -analyze:plugin C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\EspXEngine.dll -FC -errorreport:prompt -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\include -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -external:I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um -I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um",
           "executionSuccessful": true
         }
       ],
       "artifacts": [
-        {
-          "location": {
-            "uri": "file:///C:/Users/chris/source/repos/Userstoryconsole/UserStory.cpp"
-          },
-          "roles": [
-            "analysisTarget",
-            "resultFile"
-          ],
-          "hashes": {
-            "md5": "009d9b6b1c4e1772cc0222a28925e31b"
-          }
-        },
-        {
-          "location": {
-            "uri": "file:///c:/users/chris/source/repos/userstoryconsole/userstory.h"
-          },
-          "roles": [
-            "resultFile"
-          ],
-          "hashes": {
-            "md5": "c197c2085d87ee7169f38fa60a2e897b"
-          }
-        },
         {
           "location": {
             "uri": "file:///c:/users/chris/source/repos/userstoryconsole/sprint.cpp"
@@ -113,7 +90,7 @@
             "uri": "file:///c:/users/chris/source/repos/userstoryconsole/sprint.h"
           },
           "hashes": {
-            "md5": "afbc2e138288537dfa159009e8fd7f4f"
+            "md5": "1f2258afaf3b20e00811ae20700c8bcc"
           }
         },
         {
@@ -121,7 +98,7 @@
             "uri": "file:///c:/users/chris/source/repos/userstoryconsole/iteration.h"
           },
           "hashes": {
-            "md5": "0fe6b3cd8a85f7d6d07c41806af77ad6"
+            "md5": "371e1c33c1942b5db49e02d7036b0ba6"
           }
         },
         {
@@ -129,7 +106,18 @@
             "uri": "file:///c:/users/chris/source/repos/userstoryconsole/backlog.h"
           },
           "hashes": {
-            "md5": "e62224099265e7ff3adccf3bda9842e8"
+            "md5": "40f02dc039e1a7152ec0e7bfd6e3ddeb"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/chris/source/repos/userstoryconsole/userstory.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "a35c507941b6ca4ef5b53c214a9cedbc"
           }
         },
         {
@@ -137,7 +125,7 @@
             "uri": "file:///c:/users/chris/source/repos/userstoryconsole/collaborator.h"
           },
           "hashes": {
-            "md5": "f990f924d4b78c04bd684bccd2b598cc"
+            "md5": "2dc9cdcd4e45848b15fd772ea7351d5c"
           }
         },
         {
@@ -157,7 +145,7 @@
             "uri": "file:///c:/users/chris/source/repos/userstoryconsole/developer.h"
           },
           "hashes": {
-            "md5": "db459df8e95b56ced7bd3871e6095a55"
+            "md5": "d2416d9a5d6ad81c61a79419ed66db27"
           }
         },
         {
@@ -165,7 +153,7 @@
             "uri": "file:///c:/users/chris/source/repos/userstoryconsole/kanbanboard.h"
           },
           "hashes": {
-            "md5": "2c769cbaca8d62c64203cad6c6940c3e"
+            "md5": "61a78df0f5b7d2dd98d731657a50a13d"
           }
         },
         {
@@ -173,7 +161,7 @@
             "uri": "file:///c:/users/chris/source/repos/userstoryconsole/board.h"
           },
           "hashes": {
-            "md5": "fa73f2a60c54b79f8168dc797092fdb0"
+            "md5": "2fb5d67861d76afa5a24962fa850585a"
           }
         },
         {
@@ -181,7 +169,7 @@
             "uri": "file:///c:/users/chris/source/repos/userstoryconsole/release.h"
           },
           "hashes": {
-            "md5": "a060f7922546b30dae9e795a51ffcb0e"
+            "md5": "92d16f2d537158225e08f1c1ce97b693"
           }
         },
         {
@@ -189,7 +177,7 @@
             "uri": "file:///c:/users/chris/source/repos/userstoryconsole/scrummaster.h"
           },
           "hashes": {
-            "md5": "fca87c67a59cf33952ceb77fe12231fc"
+            "md5": "dbadcd2147573b387b6e6105480e4a6b"
           }
         },
         {
@@ -212,19 +200,7 @@
             "analysisTarget"
           ],
           "hashes": {
-            "md5": "73fc8cefb0836a2b9993212d6ae3a5e6"
-          }
-        },
-        {
-          "location": {
-            "uri": "file:///C:/Users/chris/source/repos/Userstoryconsole/KanbanBoard.cpp"
-          },
-          "roles": [
-            "analysisTarget",
-            "resultFile"
-          ],
-          "hashes": {
-            "md5": "854900c8eebca316f2c3ba81e8ddde72"
+            "md5": "1dea1d1349617845b7b6a46935ebbdfe"
           }
         },
         {

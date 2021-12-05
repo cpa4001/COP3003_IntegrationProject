@@ -10,7 +10,7 @@
 
 /**
  * @brief Constructor for Sprint - Calls Iteration constructor
- * 
+ *
  * @param sprintName				Name of sprint
  * @param iterationLengthInDays	    lenght of the iteration in days
  */

@@ -16,7 +16,11 @@
 
 #include "UserStory.h"
 
-//LO1a
+// LO1a
+
+/**
+ * @brief a list of user stories
+ */
 class Backlog {
  private:
   // vector<UserStory> productBacklog;
@@ -36,7 +40,7 @@ class Backlog {
   void printStories();
   void updateStoryStatus(int storyID, int newStatus);
   void updateStoryWithCollaborator(int storyID, std::string CollaboratorName);
- 
+
   auto getMatrix() -> std::vector<std::vector<std::string>>;
   auto getProductBacklog() -> std::vector<UserStory>;
   auto getRow() -> std::vector<std::string>;

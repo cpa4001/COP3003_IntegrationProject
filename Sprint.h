@@ -1,6 +1,6 @@
 /** @file Sprint.h
  *  @brief Declaration file for Sprint class
-           inherits from Iteration class
+ *          inherits from Iteration class
  *  @author Christian Apostoli
  *  @bug No known bugs.
  */
@@ -9,7 +9,10 @@
 #include "Iteration.h"
 // LO2
 // LO2a
-// Sprint inherits from Iteration with public visibility
+
+/**
+ * @brief Sprint inherits from Iteration with public visibility
+ */
 class Sprint : public Iteration {
  private:
  public:

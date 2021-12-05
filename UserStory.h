@@ -1,22 +1,23 @@
 /** @file UserStory.h
-*   @brief: Declaration file for UserStory class
-*	
-*	Declaration of Userstory Class and blueprint for
-*	user stories in file
-* 
-*	@author Christian Apostoli
-*	@bug No known bugs
-*/
+ *   @brief: Declaration file for UserStory class
+ *
+ *	Declaration of Userstory Class and blueprint for
+ *	user stories in file
+ *
+ *	@author Christian Apostoli
+ *	@bug No known bugs
+ */
 
 #ifndef USERSTORY_H
 #define USERSTORY_H
 
 #include <string>
 
-
-
-
 // LO1a
+
+/**
+ * @brief a feature that is desired to be implemented by team
+ */
 class UserStory {
  private:
   std::string storyName;
@@ -24,18 +25,19 @@ class UserStory {
   int storyPoints;
 
   /**
-   * @brief The status of the 
-  */
+   * @brief The status of the
+   */
   enum Status { to_do, in_progress, done };
 
   Status status;
 
  public:
-  // Id used to track stories
+  /**
+   * @brief unique ID to track user stories
+   */
   static int storyID;
 
   // constructors
-  // UserStory() noexcept;
   UserStory(std::string storyName, std::string storyBody, int storyPoints);
   // UserStory(UserStory& userstory);
 

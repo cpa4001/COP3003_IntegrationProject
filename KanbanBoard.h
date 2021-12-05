@@ -18,7 +18,11 @@
 // LO1a
 // LO2
 // LO2a
-// KanbanBoard inherits from Board interface with public visibility
+
+/**
+ *	@brief a board that shows user stories in all three statuses
+ *	KanbanBoard inherits from Board interface with public visibility
+ */
 class KanbanBoard : public Board {
  private:
   std::vector<std::string> toDoUserStoryNames;

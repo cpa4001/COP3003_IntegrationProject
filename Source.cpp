@@ -174,7 +174,7 @@ int main() {
           } while (inputInt >= UserStory::storyID);
           std::cout << "What is the Scrum Master's name? ";
           std::cin >> inputString;
- 
+
           // LO5
           // point to the necessary collaborator and assign the story to them
           collaborator = new ScrumMaster(inputString);
@@ -342,7 +342,7 @@ auto createUserStory(Backlog& backlog) -> UserStory {
       << "You can see your new story in the \nUserstories.csv file in the "
          "same directory as this project"
       << std::endl;
-  //LO1
+  // LO1
   UserStory newStory(storyName, storyBody, storyPoints);
   return newStory;
 }
@@ -351,11 +351,11 @@ auto createUserStory(Backlog& backlog) -> UserStory {
  * @brief writes UserStory object to csv
  *
  * adds string to backlogs vector and adds story to kanbanboard's hashmap
- * 
+ *
  * @param userstory				userstory object
  * @param savedUserStories		ofstream object of output file
  * @param backlog               backlog object that holds use stories
- * @param kanbanBoard           kanbanboard object  
+ * @param kanbanBoard           kanbanboard object
  */
 void saveUserStory(UserStory& userstory, std::ofstream& savedUserStories,
                    Backlog& backlog, KanbanBoard& kanbanBoard) {
@@ -379,27 +379,28 @@ void saveUserStory(UserStory& userstory, std::ofstream& savedUserStories,
 }
 
 /**
-* @brief sees if a file is empty
-* 
-* Code was taken from
-* https://newbedev.com/checking-for-an-empty-file-in-c
-* 
-* @param pFile		ifstream object or input file
-*   
-* @return bool      
-*/
+ * @brief sees if a file is empty
+ *
+ * Code was taken from
+ * https://newbedev.com/checking-for-an-empty-file-in-c
+ *
+ * @param pFile		ifstream object or input file
+ *
+ * @return bool
+ */
 auto is_empty(std::ifstream& pFile) -> bool {
   return pFile.peek() == std::ifstream::traits_type::eof();
 }
 
 /**
  * @brief creates UserStory object and calls the saveUserStory function
- * 
+ *
  * @param writeToUserStories		ofstream object of output file
  * @param backlog                   backlog object that holds user stories
  * @param kanbanBoard               kanbanBoard object
  */
-void createAndSaveStory(std::ofstream& writeToUserStories, Backlog& backlog, KanbanBoard& kanbanBoard) {
+void createAndSaveStory(std::ofstream& writeToUserStories, Backlog& backlog,
+                        KanbanBoard& kanbanBoard) {
   // LO1
   // ask for input
   // create userstory based on input
@@ -417,10 +418,10 @@ void createBorder() {
 }
 
 /**  LO7
-*   @brief demonstration of passing functions as parameters
-*
-*   can call any void function with no parameters in main
-* 
-*   @param (*func)()   the memory location of a function
-*/
+ *   @brief demonstration of passing functions as parameters
+ *
+ *   can call any void function with no parameters in main
+ *
+ *   @param (*func)()   the memory location of a function
+ */
 void invokeFunc(void (*func)()) noexcept { return func(); }
