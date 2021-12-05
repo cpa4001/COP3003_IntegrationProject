@@ -6,6 +6,8 @@ As a who      (**Who** wants to accomplish something) <br>
 I want a what (**What** I want to accomplish)         <br>
 So that       (**Why** I want to accomplish)          <br>
 
+## Demonstration
+
 ## Documentation
 External documentation for this project can be found at https://cpa4001.github.io/COP3003_IntegrationProject/html/ </br>
 Make sure to click on the classes or files button and select the class/file that you would like to read more about. </br>
