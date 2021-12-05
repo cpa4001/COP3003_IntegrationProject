@@ -2,14 +2,14 @@
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>UserStory.h</FILENAME>
-      <LINE>53</LINE>
+      <LINE>56</LINE>
       <COLUMN>0</COLUMN>
     </SFA>
     <DEFECTCODE>26812</DEFECTCODE>
     <DESCRIPTION>The enum type 'UserStory::Status' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
     <FUNCTION>UserStory::{ctor}</FUNCTION>
     <DECORATED>??0UserStory@@QAE@ABV0@@Z</DECORATED>
-    <FUNCLINE>53</FUNCLINE>
+    <FUNCLINE>56</FUNCLINE>
     <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
