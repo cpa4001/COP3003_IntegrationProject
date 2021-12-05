@@ -35,6 +35,20 @@ ClassDiagram.cd has all class diagrams in a file that is compatible with Visual 
 - Future Goals or Contributions
   - Create a frontend using a GUI or website
   - Decrease stamp coupling
+
+## Author
+- Christian Apostoli
+
+## License
+This project is licensed under the MIT License.
+
+## Acknowledgments
+
+* https://github.com/jfg357
+* https://github.com/jehna/readme-best-practices/edit/master/README-default.md
+* https://gist.github.com/PurpleBooth/109311bb0361f32d87a2
+* Professor Vanselow
+* Jairo Garciga
  
  ## History
 
@@ -54,11 +68,10 @@ Milestone 2:
 Final Milestone:
 - File Header comments for every file
 - Function header comments for function
-- Class Diagram
+- Class Diagrams
 - Reduced compiler warnings
-
-## Author
-- Christian Apostoli
+- External documentation generated through Doxygen
+- code styled according to the Google style guide for C++
 
 ## Learning Objectives
 - Design and implement a class. [Usage]
@@ -83,15 +96,3 @@ Final Milestone:
 - Define and use iterators and other operations on aggregates, including operations that take functions as arguments. [Usage]
   - Shown in the use of overloaded operators including overloading the unary (-) operator with a Backlog object
   - Shown in the methods of the Backlog class 
-
-
-## License
-This project is licensed under the MIT License.
-
-## Acknowledgments
-
-* https://github.com/jfg357
-* https://github.com/jehna/readme-best-practices/edit/master/README-default.md
-* https://gist.github.com/PurpleBooth/109311bb0361f32d87a2
-* Professor Vanselow
-* Jairo Garciga
