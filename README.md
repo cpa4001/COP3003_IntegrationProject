@@ -77,7 +77,7 @@ Final Milestone:
 - External documentation generated through Doxygen
 - code styled according to the Google style guide for C++
 
-## Learning Objectives
+## Key Programming Concepts Utilized
 - Design and implement a class. [Usage]
   - Shown in the use of multiple classes and separating class declaration in a header file and class implementation in a cpp file
   - Comparison of OO approach and procedural approach on top of UserStory.cpp
