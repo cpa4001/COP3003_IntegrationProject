@@ -99,7 +99,7 @@ void Iteration::setEstimatedVelocity(int value) noexcept {
  *
  * @param userstory		userstory object to be added
  */
-void Iteration::addUserStory(UserStory& userstory) {
+void Iteration::addUserStory(const UserStory& userstory) {
   productBacklog.push_back(userstory);
 }
 

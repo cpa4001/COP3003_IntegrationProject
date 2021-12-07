@@ -10,7 +10,7 @@ int Collaborator::collaboratorID = 0;
 
 /** @brief default Collaborator constructor given no parameters
  */
-Collaborator::Collaborator() noexcept {
+Collaborator::Collaborator() {
   collaboratorName = "";
 
   collaboratorID++;
@@ -44,3 +44,4 @@ auto Collaborator::getcollaboratorName() -> std::string {
  * @param storyID the id of the story the collaborator is working on
  */
 void Collaborator::assignStory(int storyID) {}
+

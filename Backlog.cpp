@@ -69,7 +69,7 @@ void Backlog::printStories() {
  *   @param newStatus  the new status of the selected story
  */
 void Backlog::updateStoryStatus(int storyID, int newStatus) {
-  for (size_t line = 0; line < row.size(); ++line) {
+  for (size_t line = 0; line < row.size(); line++) {
     std::string tempStoryID = row.at(line).substr(0, row.at(line).find(","));
     const int lineStoryID = std::stoi(tempStoryID);
 

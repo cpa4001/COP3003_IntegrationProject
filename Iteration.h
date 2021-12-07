@@ -51,7 +51,7 @@ class Iteration {
   void setIterationLength(int value) noexcept;
   void setEstimatedVelocity(int value) noexcept;
 
-  void addUserStory(UserStory& userstory);
+  void addUserStory(const UserStory& userstory);
   void printStories();
 };
 

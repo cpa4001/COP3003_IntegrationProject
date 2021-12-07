@@ -29,7 +29,7 @@ class Collaborator {
    * @brief unique ID to track developers
    */
   static int collaboratorID;
-  Collaborator() noexcept;
+  Collaborator();
   Collaborator(std::string collaboratorName, std::string role);
 
   virtual void assignStory(int storyID);

@@ -4,42 +4,42 @@
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Collaborator.cpp</FILENAME>
-      <LINE>15</LINE>
-      <COLUMN>19</COLUMN>
+      <LINE>13</LINE>
+      <COLUMN>14</COLUMN>
     </SFA>
-    <DEFECTCODE>26447</DEFECTCODE>
-    <DESCRIPTION>The function is declared 'noexcept' but calls function 'operator=()' which may throw exceptions (f.6).</DESCRIPTION>
+    <DEFECTCODE>26455</DEFECTCODE>
+    <DESCRIPTION>Default constructor may not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
     <FUNCTION>Collaborator::{ctor}</FUNCTION>
     <DECORATED>??0Collaborator@@QAE@XZ</DECORATED>
-    <FUNCLINE>14</FUNCLINE>
+    <FUNCLINE>13</FUNCLINE>
     <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Collaborator.cpp</FILENAME>
-      <LINE>45</LINE>
+      <LINE>46</LINE>
       <COLUMN>19</COLUMN>
     </SFA>
     <DEFECTCODE>26436</DEFECTCODE>
     <DESCRIPTION>The type 'class Collaborator' with a virtual function needs either public virtual or protected non-virtual destructor (c.35).</DESCRIPTION>
     <FUNCTION>Collaborator::assignStory</FUNCTION>
     <DECORATED>?assignStory@Collaborator@@UAEXH@Z</DECORATED>
-    <FUNCLINE>45</FUNCLINE>
+    <FUNCLINE>46</FUNCLINE>
     <PATH></PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Collaborator.cpp</FILENAME>
-      <LINE>45</LINE>
+      <LINE>46</LINE>
       <COLUMN>19</COLUMN>
     </SFA>
     <DEFECTCODE>26440</DEFECTCODE>
     <DESCRIPTION>Function 'Collaborator::assignStory' can be declared 'noexcept' (f.6).</DESCRIPTION>
     <FUNCTION>Collaborator::assignStory</FUNCTION>
     <DECORATED>?assignStory@Collaborator@@UAEXH@Z</DECORATED>
-    <FUNCLINE>45</FUNCLINE>
+    <FUNCLINE>46</FUNCLINE>
     <PATH></PATH>
   </DEFECT>
 </DEFECTS>

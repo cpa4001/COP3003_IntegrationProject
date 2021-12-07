@@ -7,6 +7,7 @@
 
 #include <fstream>
 #include <iostream>
+#include <gsl/gsl>
 #include <string>
 
 #include "Backlog.h"
@@ -77,7 +78,7 @@ int main() {
   }
 
   // update the storyID so that the next userstory gets the correct storyID
-  UserStory::storyID = static_cast<int>(masterBacklog.getRow().size() - 1);
+  UserStory::storyID = gsl::narrow_cast<int>(masterBacklog.getRow().size() - 1);
 
   /*
   // if the file is open and if the first line can be recieved
@@ -107,7 +108,7 @@ int main() {
   int userInputKey = 0;
   bool continueProgramFlag = false;
   do {
-    std::cout << "Please Pick an option(0-7)" << std::endl;
+    std::cout << "Please Pick an option(Enter an integer 0-7)" << std::endl;
     std::cout << "Add a User Story                      (1)" << std::endl;
     std::cout << "Look up Product Backlog               (2)" << std::endl;
     std::cout << "Assign a User Story to a Collaborator (3)" << std::endl;
@@ -122,23 +123,11 @@ int main() {
     std::cin.ignore();
     createBorder();
 
-    /* Will try to implement input validation
-    // Input validation to get to an integer
-    if (std::cin >> userInputKey) {
-      break;
-    } else {
-      // handles any input that is not an integer
-      std::cout << "Please enter an integer (0-5)";
-      std::cin.clear();
-      std::cin.ignore();
-    }
-
-    std::cin.clear();
-    std::cin.ignore();
-    */
+    
 
     // LO1
     // declare pointers here because initialization is not allowed within switch
+    // we are leaving these unitialized to for polymorphism to perform at runtime
     Collaborator* collaborator;
     Iteration* iteration;
 
@@ -159,12 +148,14 @@ int main() {
       case LOOK_UP_BACKLOG:
         // Print out all records of the userstory.csv file
         // lookUpProductBackLog();
+        std::cout << "Product Backlog: " << std::endl;
         masterBacklog.printStories();
         createBorder();
         break;
       case ADD_COLLABORATOR:
         // prompt the user about details for the collaborator
         std::cout << "Are you a:\n(1) Scrum Master\n(2) Developer" << std::endl;
+        std::cout << "Enter an integer 1-2" << std::endl;
         std::cin >> inputInt;
 
         if (inputInt == 1) {
@@ -217,6 +208,7 @@ int main() {
 
         std::cout << "Will this iteration be a:\n(1) Release\n(2) Sprint"
                   << std::endl;
+        std::cout << "(Enter an Integer 1-2)" << std::endl;
         std::cin >> inputInt;
 
         // LO1, LO5
@@ -230,7 +222,7 @@ int main() {
           iteration = new Iteration(inputString, "Iteration", 0);
         }
 
-        std::cout << "How long will this Iteration consist of (in days)? ";
+        std::cout << "How long will this Iteration consist of in days? (Enter an integer) ";
         std::cin >> inputInt;
         // LO3
         iteration->setIterationLength(inputInt);
@@ -243,11 +235,13 @@ int main() {
         // hashmap in the kanbanBoard object this is done when Kanbanboard
         // object is created
 
+         std::cout << "Kanban Board: " << std::endl;
         // print the user story ids
         kanbanBoard.printBoard();
         createBorder();
         break;
       case MOST_RECENT_USER_STORY:
+        std::cout << " The most recent user story entered was: " << std::endl; 
         // get the most recent user story details by using the overloaded -
         // operator
         std::cout << -masterBacklog << std::endl;
@@ -263,7 +257,7 @@ int main() {
             << std::endl;
         std::cin >> inputInt;
 
-        std::cout << "What is its new status?" << std::endl;
+        std::cout << "What is its new status? (Enter an Integer 1-3)" << std::endl;
         std::cout << "(1) To Do \n(2) In Progress \n(3) Done" << std::endl;
         std::cin >> status;
         // iterate through backlog
@@ -317,23 +311,23 @@ auto operator<<(std::ostream& out, UserStory& userstory) -> std::ostream& {
  * @return newStory	    new UserStory object created
  */
 auto createUserStory(Backlog& backlog) -> UserStory {
-  std::cout << "Enter User Story details (Please do not use commas)\n";
+  std::cout << "Enter User Story details as a sequence of words (Please do not use commas)\n";
   std::string storyName;
   std::string storyBody;
   int storyPoints = 0;
 
-  std::cout << "Story Name: ";
+  std::cout << "Enter the Story Name: ";
   // std::cin >> storyName;
   std::getline(std::cin, storyName);
   std::cout << std::endl;
 
   std::cin.clear();
 
-  std::cout << "Story Description: ";
+  std::cout << "Enter the Story Description: ";
   std::getline(std::cin, storyBody);
   std::cout << std::endl;
 
-  std::cout << "Story Points: ";
+  std::cout << "Enter the Story Points as an Integer: ";
   std::cin >> storyPoints;
   std::cout << std::endl;
   createBorder();

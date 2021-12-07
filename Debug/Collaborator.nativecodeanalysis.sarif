@@ -5,9 +5,9 @@
     {
       "results": [
         {
-          "ruleId": "C26447",
+          "ruleId": "C26455",
           "message": {
-            "text": "The function is declared 'noexcept' but calls function 'operator=()' which may throw exceptions (f.6)."
+            "text": "Default constructor may not throw. Declare it 'noexcept' (f.6)."
           },
           "locations": [
             {
@@ -16,10 +16,10 @@
                   "uri": "file:///C:/Users/chris/source/repos/Userstoryconsole/Collaborator.cpp"
                 },
                 "region": {
-                  "startLine": 15,
-                  "startColumn": 3,
-                  "endLine": 15,
-                  "endColumn": 22
+                  "startLine": 13,
+                  "startColumn": 15,
+                  "endLine": 13,
+                  "endColumn": 15
                 }
               },
               "logicalLocations": [
@@ -43,9 +43,9 @@
                   "uri": "file:///C:/Users/chris/source/repos/Userstoryconsole/Collaborator.cpp"
                 },
                 "region": {
-                  "startLine": 45,
+                  "startLine": 46,
                   "startColumn": 20,
-                  "endLine": 45,
+                  "endLine": 46,
                   "endColumn": 20
                 }
               },
@@ -70,9 +70,9 @@
                   "uri": "file:///C:/Users/chris/source/repos/Userstoryconsole/Collaborator.cpp"
                 },
                 "region": {
-                  "startLine": 45,
+                  "startLine": 46,
                   "startColumn": 20,
-                  "endLine": 45,
+                  "endLine": 46,
                   "endColumn": 20
                 }
               },
@@ -96,7 +96,7 @@
       },
       "invocations": [
         {
-          "commandLine": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\c1xx.dll\" -ACf{1F7B090C-16DB-4822-966A-A93D26ED4681} -ACpmspft140.dll -Alint -D_PREFAST_ -D_AST_FE_ -Analyze -zm0x0033D1C0 -il C:\\Users\\chris\\AppData\\Local\\Temp\\_CL_741cfa70ast -typedil -f Collaborator.cpp -Ze -D_MSC_EXTENSIONS -Zp8 -Gs -pc \\:/ -D_MSC_VER=1929 -D_MSC_FULL_VER=192930133 -D_MSC_BUILD=0 -D_WIN32 -D_M_IX86=600 -D_M_IX86_FP=2 -GR -D_CPPRTTI -I C:\\Program Files\\gsl_lib\\GSL-main\\include -nologo -W 3 -diagnostics:column -D_GUARDOVERFLOW_CRT_ALLOCATORS=1 -Ot -DCODE_ANALYSIS -DWIN32 -D_DEBUG -D_CONSOLE -D_UNICODE -DUNICODE -EHs -D_CPPUNWIND -EHc -D__MSVC_RUNTIME_CHECKS -RTCs -RTCu -MDd -D_DEBUG -D_MT -D_DLL -GS -D_M_FP_PRECISE -permissive- -Zc:wchar_t -Zc:forScope -FoDebug\\Collaborator.obj -FdDebug\\vc142.pdb -external:W 3 -Gd -analyze:projectdirectory C:\\Users\\chris\\source\\repos\\Userstoryconsole -analyze:rulesetdirectory ;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Team Tools\\Static Analysis Tools\\\\Rule Sets; -analyze:ruleset CorePlusReccomended.ruleset -analyze:quiet -analyze:plugin C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\EspXEngine.dll -FC -errorreport:prompt -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\include -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -external:I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um -I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um",
+          "commandLine": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\c1xx.dll\" -ACf{1F7B090C-16DB-4822-966A-A93D26ED4681} -ACpmspft140.dll -Alint -D_PREFAST_ -D_AST_FE_ -Analyze -zm0x004ED1C0 -il C:\\Users\\chris\\AppData\\Local\\Temp\\_CL_627c5b13ast -typedil -f Collaborator.cpp -Ze -D_MSC_EXTENSIONS -Zp8 -Gs -pc \\:/ -D_MSC_VER=1929 -D_MSC_FULL_VER=192930133 -D_MSC_BUILD=0 -D_WIN32 -D_M_IX86=600 -D_M_IX86_FP=2 -GR -D_CPPRTTI -I C:\\Program Files\\gsl_lib\\GSL-main\\include -nologo -W 3 -diagnostics:column -D_GUARDOVERFLOW_CRT_ALLOCATORS=1 -Ot -DCODE_ANALYSIS -DWIN32 -D_DEBUG -D_CONSOLE -D_UNICODE -DUNICODE -EHs -D_CPPUNWIND -EHc -D__MSVC_RUNTIME_CHECKS -RTCs -RTCu -MDd -D_DEBUG -D_MT -D_DLL -GS -D_M_FP_PRECISE -permissive- -Zc:wchar_t -Zc:forScope -FoDebug\\Collaborator.obj -FdDebug\\vc142.pdb -external:W 3 -Gd -analyze:projectdirectory C:\\Users\\chris\\source\\repos\\Userstoryconsole -analyze:rulesetdirectory ;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Team Tools\\Static Analysis Tools\\\\Rule Sets; -analyze:ruleset CorePlusReccomended.ruleset -analyze:quiet -analyze:plugin C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\EspXEngine.dll -FC -errorreport:prompt -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\include -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -external:I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um -I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um",
           "executionSuccessful": true
         }
       ],
@@ -109,7 +109,7 @@
             "analysisTarget"
           ],
           "hashes": {
-            "md5": "1cbb38e901d7aaa6521287c88e7d2e44"
+            "md5": "7ea5cb3b8a248588d9333d268eac7b46"
           }
         },
         {
@@ -117,7 +117,7 @@
             "uri": "file:///c:/users/chris/source/repos/userstoryconsole/sprint.h"
           },
           "hashes": {
-            "md5": "1f2258afaf3b20e00811ae20700c8bcc"
+            "md5": "3d64f74b6beda3d0632d19c559775aff"
           }
         },
         {
@@ -125,7 +125,7 @@
             "uri": "file:///c:/users/chris/source/repos/userstoryconsole/iteration.h"
           },
           "hashes": {
-            "md5": "371e1c33c1942b5db49e02d7036b0ba6"
+            "md5": "573e8910ede4619f54051dd8158cdab3"
           }
         },
         {
@@ -133,7 +133,7 @@
             "uri": "file:///c:/users/chris/source/repos/userstoryconsole/backlog.h"
           },
           "hashes": {
-            "md5": "40f02dc039e1a7152ec0e7bfd6e3ddeb"
+            "md5": "1cd5a1064c9125511bcc404cd14111fb"
           }
         },
         {
@@ -144,7 +144,7 @@
             "resultFile"
           ],
           "hashes": {
-            "md5": "a35c507941b6ca4ef5b53c214a9cedbc"
+            "md5": "c7973bcdbe9667f6c0bf7feacab175b7"
           }
         },
         {
@@ -152,7 +152,7 @@
             "uri": "file:///c:/users/chris/source/repos/userstoryconsole/collaborator.h"
           },
           "hashes": {
-            "md5": "2dc9cdcd4e45848b15fd772ea7351d5c"
+            "md5": "f55aa3ff5fb4be69e663e5def3008013"
           }
         },
         {
@@ -164,7 +164,87 @@
             "resultFile"
           ],
           "hashes": {
-            "md5": "082c8be5f6a687ad87eced5f5bce7ca5"
+            "md5": "30a29274a124ceaf903e80e4aed27f50"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/gsl_lib/gsl-main/include/gsl/gsl"
+          },
+          "hashes": {
+            "md5": "1ce2c448f190e86bfd4e749633b495e9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/gsl_lib/gsl-main/include/gsl/algorithm"
+          },
+          "hashes": {
+            "md5": "562b5e10ac448f8df2e3fa7047755ed9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/gsl_lib/gsl-main/include/gsl/assert"
+          },
+          "hashes": {
+            "md5": "3561e4c0ba3c541f40d53110fe60260b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/gsl_lib/gsl-main/include/gsl/span"
+          },
+          "hashes": {
+            "md5": "d96d43efb81c659574746487ea77944c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/gsl_lib/gsl-main/include/gsl/byte"
+          },
+          "hashes": {
+            "md5": "4f62b762675df0d53cbc2b053ab00fea"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/gsl_lib/gsl-main/include/gsl/util"
+          },
+          "hashes": {
+            "md5": "2c37cecc11801c6c0cf9571f5ddaa16b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/gsl_lib/gsl-main/include/gsl/span_ext"
+          },
+          "hashes": {
+            "md5": "7a4ef026790affbfac0c95ffcab6d9fc"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/gsl_lib/gsl-main/include/gsl/pointers"
+          },
+          "hashes": {
+            "md5": "bbb00cef5ed667271fcda5d67df766f9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/gsl_lib/gsl-main/include/gsl/string_span"
+          },
+          "hashes": {
+            "md5": "bff47883e17699e00c318ae5e33dee7f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/gsl_lib/gsl-main/include/gsl/narrow"
+          },
+          "hashes": {
+            "md5": "06f2df0f60a0c947c6ba47c8351a3112"
           }
         },
         {
@@ -172,7 +252,7 @@
             "uri": "file:///c:/users/chris/source/repos/userstoryconsole/developer.h"
           },
           "hashes": {
-            "md5": "d2416d9a5d6ad81c61a79419ed66db27"
+            "md5": "cbe849a439c6d95542c876a6faa18fe9"
           }
         },
         {
@@ -180,7 +260,7 @@
             "uri": "file:///c:/users/chris/source/repos/userstoryconsole/kanbanboard.h"
           },
           "hashes": {
-            "md5": "61a78df0f5b7d2dd98d731657a50a13d"
+            "md5": "bf8ebda537b2b84e577164b477aa9c5a"
           }
         },
         {
@@ -188,7 +268,7 @@
             "uri": "file:///c:/users/chris/source/repos/userstoryconsole/board.h"
           },
           "hashes": {
-            "md5": "2fb5d67861d76afa5a24962fa850585a"
+            "md5": "615a0806daa497726534e6201545e15d"
           }
         },
         {
@@ -196,7 +276,7 @@
             "uri": "file:///c:/users/chris/source/repos/userstoryconsole/release.h"
           },
           "hashes": {
-            "md5": "92d16f2d537158225e08f1c1ce97b693"
+            "md5": "5dca26f2b50abdad27d0399159d501a6"
           }
         },
         {
@@ -204,7 +284,7 @@
             "uri": "file:///c:/users/chris/source/repos/userstoryconsole/scrummaster.h"
           },
           "hashes": {
-            "md5": "dbadcd2147573b387b6e6105480e4a6b"
+            "md5": "060caf04eb8dd0558c96846f4b8fae9b"
           }
         },
         {
@@ -216,7 +296,7 @@
             "resultFile"
           ],
           "hashes": {
-            "md5": "1c1a55945ae5b076fa7f289b0553937d"
+            "md5": "ac4e1a4b029e3b868de1b48d49f85d9f"
           }
         },
         {
@@ -227,19 +307,18 @@
             "analysisTarget"
           ],
           "hashes": {
-            "md5": "1dea1d1349617845b7b6a46935ebbdfe"
+            "md5": "a4eec27c358b9af19ca7da0000f90b92"
           }
         },
         {
           "location": {
-            "uri": "file:///C:/Users/chris/source/repos/Userstoryconsole/Iteration.cpp"
+            "uri": "file:///c:/users/chris/source/repos/userstoryconsole/iteration.cpp"
           },
           "roles": [
-            "analysisTarget",
-            "resultFile"
+            "analysisTarget"
           ],
           "hashes": {
-            "md5": "967e30a3218db25c34397416d2e6a84e"
+            "md5": "7687da46505e2f6894a36f7d0a90c437"
           }
         },
         {
@@ -251,7 +330,7 @@
             "resultFile"
           ],
           "hashes": {
-            "md5": "cae1d5c34a47d6a9a83a2fd3f5e8bd44"
+            "md5": "bb0b4e5ebcdfb7d2b2eddaef2f0c6bae"
           }
         },
         {
@@ -263,7 +342,7 @@
             "resultFile"
           ],
           "hashes": {
-            "md5": "02b9d75c3ac974ec3959d0cca0ce926b"
+            "md5": "a2ddd6c553d5b2d941265aacd3064307"
           }
         }
       ]
