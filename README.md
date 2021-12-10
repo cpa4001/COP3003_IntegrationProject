@@ -7,6 +7,7 @@ I want a what (**What** I want to accomplish)         <br>
 So that       (**Why** I want to accomplish)          <br>
 
 ## Demonstration
+https://user-images.githubusercontent.com/54412557/145521598-5a32eee4-a7f7-403f-87ab-1ae743b4bea5.mp4
 
 ## Documentation
 External documentation for this project can be found at https://cpa4001.github.io/COP3003_IntegrationProject/html/ </br>
