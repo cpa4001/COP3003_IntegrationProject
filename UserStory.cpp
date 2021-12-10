@@ -22,21 +22,8 @@
     behaviors.
 */
 
+// intialize story id where the first one created will be 1
 int UserStory::storyID = 0;
-
-/**
-*    @brief default constructor - intialize empty UserStory
-*/
-/*
-UserStory::UserStory() noexcept {
-  storyName = "";
-  storyBody = "";
-  storyPoints = 0;
-  status = to_do;
-
-  storyID++;
-}
-*/
 
 // LO1b
 /**

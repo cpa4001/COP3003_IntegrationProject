@@ -6,6 +6,7 @@
 
 #include "Collaborator.h"
 
+// intialize collaboratorID where the first one created will be 1
 int Collaborator::collaboratorID = 0;
 
 /** @brief default Collaborator constructor given no parameters
@@ -13,6 +14,7 @@ int Collaborator::collaboratorID = 0;
 Collaborator::Collaborator() {
   collaboratorName = "";
 
+  // Increment every time collaborator is created to have unique id
   collaboratorID++;
 }
 
@@ -26,6 +28,7 @@ Collaborator::Collaborator(std::string collaboratorName, std::string role) {
   this->collaboratorName = collaboratorName;
   this->role = role;
 
+  // Increment every time collaborator is created to have unique id
   collaboratorID++;
 }
 

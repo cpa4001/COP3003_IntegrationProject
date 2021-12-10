@@ -6,8 +6,8 @@
  */
 
 #include <fstream>
-#include <iostream>
 #include <gsl/gsl>
+#include <iostream>
 #include <string>
 
 #include "Backlog.h"
@@ -18,7 +18,6 @@
 #include "Sprint.h"
 #include "UserStory.h"
 
-// could have some of these functions in a file class
 auto operator<<(std::ostream& out, UserStory& userstory) -> std::ostream&;
 auto createUserStory(Backlog& backlog) -> UserStory;
 void saveUserStory(UserStory& userstory, std::ofstream& savedUserStories,
@@ -28,6 +27,8 @@ void createAndSaveStory(std::ofstream& writeToUserStories, Backlog& backlog,
                         KanbanBoard& kanbanBoard);
 void createBorder();
 void invokeFunc(void (*func)()) noexcept;
+auto replace(std::string& str, const std::string& from, const std::string& to) -> bool;
+auto validateIntegerInput();
 
 constexpr int EXIT = 0;
 constexpr int CREATE_USER_STORY = 1;
@@ -38,6 +39,10 @@ constexpr int KANBAN_BOARD = 5;
 constexpr int MOST_RECENT_USER_STORY = 6;
 constexpr int UPDATE_STATUS = 7;
 
+/**
+ * @brief implementation of program for user story management tool
+ * @return status code for program
+ */
 int main() {
   std::cout << "Welcome to a user story project management \ntool developed by "
                "Christian Apostoli. ";
@@ -80,7 +85,6 @@ int main() {
   // update the storyID so that the next userstory gets the correct storyID
   UserStory::storyID = gsl::narrow_cast<int>(masterBacklog.getRow().size() - 1);
 
-
   // give the menu until the user chooses to exit
   // standard length for menu options is 42 character
   int userInputKey = 0;
@@ -101,11 +105,10 @@ int main() {
     std::cin.ignore();
     createBorder();
 
-    
-
     // LO1
     // declare pointers here because initialization is not allowed within switch
-    // we are leaving these unitialized to for polymorphism to perform at runtime
+    // we are leaving these unitialized for polymorphism to perform at
+    // runtime
     Collaborator* collaborator;
     Iteration* iteration;
 
@@ -137,6 +140,7 @@ int main() {
         std::cin >> inputInt;
 
         if (inputInt == 1) {
+          // prompt the user for an ID until ID is valid
           do {
             std::cout << "What Story ID is the Scrum Master woking on: ";
             std::cin >> inputInt;
@@ -154,6 +158,7 @@ int main() {
           std::cout << inputString << " is now working on storyID " << inputInt
                     << std::endl;
         } else if (inputInt == 2) {
+          // prompt the user for an ID until ID is valid
           do {
             std::cout << "What Story ID is the developer woking on: ";
             std::cin >> inputInt;
@@ -191,7 +196,6 @@ int main() {
 
         // LO1, LO5
         // point the iteration to the correct subclass
-        // additional use of polymorphism
         if (inputInt == 1) {
           iteration = new Release(inputString, 0);
         } else if (inputInt == 2) {
@@ -200,30 +204,30 @@ int main() {
           iteration = new Iteration(inputString, "Iteration", 0);
         }
 
-        std::cout << "How long will this Iteration consist of in days? (Enter an integer) ";
+        std::cout << "How long will this Iteration consist of in days? (Enter "
+                     "a positive integer) ";
         std::cin >> inputInt;
         // LO3
+        // additional use of polymorphism
         iteration->setIterationLength(inputInt);
 
         createBorder();
         break;
 
       case KANBAN_BOARD:
-        // iterate through the product backlog and add the statuses to the
-        // hashmap in the kanbanBoard object this is done when Kanbanboard
-        // object is created
 
-         std::cout << "Kanban Board: " << std::endl;
-        // print the user story ids
+        std::cout << "Kanban Board: " << std::endl;
+        // print the user story ids with their statuses
         kanbanBoard.printBoard();
         createBorder();
         break;
       case MOST_RECENT_USER_STORY:
-        std::cout << " The most recent user story entered was: " << std::endl; 
+        std::cout << " The most recent user story entered was: " << std::endl;
         // get the most recent user story details by using the overloaded -
         // operator
         std::cout << -masterBacklog << std::endl;
 
+        // LO7
         // passing in a the address of createBorder() to return that void
         // function
         invokeFunc(&createBorder);
@@ -235,13 +239,16 @@ int main() {
             << std::endl;
         std::cin >> inputInt;
 
-        std::cout << "What is its new status? (Enter an Integer 1-3)" << std::endl;
+        std::cout << "What is its new status? (Enter an positive integer 1-3)"
+                  << std::endl;
         std::cout << "(1) To Do \n(2) In Progress \n(3) Done" << std::endl;
         std::cin >> status;
+
         // iterate through backlog
         // find row with story ID
         // update to new status
         // masterBacklog.updateStoryStatus(inputInt, status);
+
         kanbanBoard.updateStatus(inputInt - 1, status);
         std::cout << "Story ID, " << inputInt << ", has been changed to status "
                   << status << std::endl;
@@ -254,6 +261,7 @@ int main() {
         createBorder();
     }
 
+    // avoid narrow conversion warning
     continueProgramFlag = bool(userInputKey);
   } while (continueProgramFlag);
 
@@ -289,7 +297,8 @@ auto operator<<(std::ostream& out, UserStory& userstory) -> std::ostream& {
  * @return newStory	    new UserStory object created
  */
 auto createUserStory(Backlog& backlog) -> UserStory {
-  std::cout << "Enter User Story details as a sequence of words (Please do not use commas)\n";
+  std::cout << "Enter User Story details as a sequence of words (Please do not "
+               "use commas)\n";
   std::string storyName;
   std::string storyBody;
   int storyPoints = 0;
@@ -298,17 +307,28 @@ auto createUserStory(Backlog& backlog) -> UserStory {
   // std::cin >> storyName;
   std::getline(std::cin, storyName);
   std::cout << std::endl;
-
   std::cin.clear();
+
+  // strips away all commas so values can be in one cell in csv
+  replace(storyName, ",", "");
 
   std::cout << "Enter the Story Description: ";
   std::getline(std::cin, storyBody);
   std::cout << std::endl;
 
-  std::cout << "Enter the Story Points as an Integer: ";
+   // strips away all commas so values can be in one cell in csv
+  replace(storyBody, ",", "");
+
+  std::cout << "Enter the Story Points as a positive integer: ";
   std::cin >> storyPoints;
   std::cout << std::endl;
+
+  while (storyPoints <= 0) {
+    std::cout << "Invalid. Enter the Story Points as a positive integer: ";
+    std::cin >> storyPoints;
+  }
   createBorder();
+
   std::cout << storyName << " has been added to Userstories.csv" << std::endl;
   std::cout
       << "You can see your new story in the \nUserstories.csv file in the "
@@ -342,6 +362,7 @@ void saveUserStory(UserStory& userstory, std::ofstream& savedUserStories,
               << std::endl;
   }
 
+  // adds the user story to backlog and the kanbanBoard
   backlog.addToRow(std::to_string(UserStory::storyID) + ", " +
                    userstory.getStoryName() + "," + userstory.getStoryBody() +
                    ", " + std::to_string(userstory.getStoryPoints()) + ", " +
@@ -397,3 +418,29 @@ void createBorder() {
  *   @param (*func)()   the memory location of a function
  */
 void invokeFunc(void (*func)()) noexcept { return func(); }
+
+/**
+ * @brief replaces all occurances of a string with another string
+ * 
+ *  uses recursion to replace a substring until substring can not be found
+ *  code was found at https://stackoverflow.com/questions/3418231/replace-
+    part-of-a-string-with-another-string
+ * 
+ * @param str   string to be edited
+ * @param from  substring to be replaced
+ * @param to    substring that will replace from
+ * @return
+ */
+auto replace(std::string& str, const std::string& from, const std::string& to) -> bool {
+  const size_t start_pos = str.find(from);
+  if (start_pos == std::string::npos) {
+    return false;
+  }
+  str.replace(start_pos, from.length(), to);
+  return true;
+}
+
+
+auto validateIntegerInput() {
+
+}

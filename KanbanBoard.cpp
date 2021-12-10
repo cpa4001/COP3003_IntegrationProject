@@ -30,6 +30,11 @@ KanbanBoard::KanbanBoard(std::vector<std::string> fileRows) {
     code for the condition in if statement was pulled from
     https://stackoverflow.com/questions/2340281/
     check-if-a-string-contains-a-string-in-c
+
+    inserts into the statusMap and creates value based on status
+    1 - > To Do
+    2 - > In Progress
+    3 - > Done
     */
     if (fileRows.at(row).find("To Do") != std::string::npos) {
       statusMap.insert(std::pair<std::string, int>(storyID, 0));
@@ -114,6 +119,7 @@ void KanbanBoard::addStoryToMap(UserStory& userStory) {
  *   @param newStatus   the new status of the story
  */
 void KanbanBoard::updateStatus(int storyID, int newStatus) {
+    // if the story is in the map, update it
   if (statusMap.find(std::to_string(storyID)) != statusMap.end()) {
     statusMap[std::to_string(storyID)] = newStatus;
   } else {

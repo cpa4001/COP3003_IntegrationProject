@@ -22,8 +22,6 @@ class Iteration {
   // Backlog backlog;
   std::string iterationName;
 
-  // we could have type and length left blank
-  // and subclasses itnitalize
   std::string iterationType;
   int iterationLength;
 
@@ -31,7 +29,14 @@ class Iteration {
   int storyPointsLeftToComplete;
   int estimatedVelocity;
 
+  /**
+   * @brief vector to hold user story objects in the iteration
+   */
   std::vector<UserStory> productBacklog;
+
+  /**
+   * @brief Collaborators objects that are working on stories in this iteration
+   */
   std::vector<Collaborator> collaborators;
 
  public:

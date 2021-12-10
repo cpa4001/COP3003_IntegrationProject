@@ -26,4 +26,4 @@ class Board {
   virtual void addStoryToMap(UserStory& userStory) = 0;
   virtual void updateStatus(int storyID, int newStatus) = 0;
 };
-#endif BOARD_H
+#endif

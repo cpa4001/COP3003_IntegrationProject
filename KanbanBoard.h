@@ -28,7 +28,12 @@ class KanbanBoard : public Board {
   std::vector<std::string> toDoUserStoryNames;
   std::vector<std::string> inProgressUserStoryNames;
   std::vector<std::string> doneUserStoryNames;
+
+  /**
+   * @brief hash map to store story ids and statuses
+   */
   std::map<std::string, int> statusMap;
+
   std::map<std::string, int>::iterator map_iterator;
 
  public:

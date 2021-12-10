@@ -15,40 +15,40 @@
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Collaborator.cpp</FILENAME>
-      <LINE>13</LINE>
+      <LINE>14</LINE>
       <COLUMN>14</COLUMN>
     </SFA>
     <DEFECTCODE>26455</DEFECTCODE>
     <DESCRIPTION>Default constructor may not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
     <FUNCTION>Collaborator::{ctor}</FUNCTION>
     <DECORATED>??0Collaborator@@QAE@XZ</DECORATED>
-    <FUNCLINE>13</FUNCLINE>
+    <FUNCLINE>14</FUNCLINE>
     <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Collaborator.cpp</FILENAME>
-      <LINE>46</LINE>
+      <LINE>49</LINE>
       <COLUMN>19</COLUMN>
     </SFA>
     <DEFECTCODE>26436</DEFECTCODE>
     <DESCRIPTION>The type 'class Collaborator' with a virtual function needs either public virtual or protected non-virtual destructor (c.35).</DESCRIPTION>
     <FUNCTION>Collaborator::assignStory</FUNCTION>
     <DECORATED>?assignStory@Collaborator@@UAEXH@Z</DECORATED>
-    <FUNCLINE>46</FUNCLINE>
+    <FUNCLINE>49</FUNCLINE>
     <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Collaborator.cpp</FILENAME>
-      <LINE>46</LINE>
+      <LINE>49</LINE>
       <COLUMN>19</COLUMN>
     </SFA>
     <DEFECTCODE>26440</DEFECTCODE>
     <DESCRIPTION>Function 'Collaborator::assignStory' can be declared 'noexcept' (f.6).</DESCRIPTION>
     <FUNCTION>Collaborator::assignStory</FUNCTION>
     <DECORATED>?assignStory@Collaborator@@UAEXH@Z</DECORATED>
-    <FUNCLINE>46</FUNCLINE>
+    <FUNCLINE>49</FUNCLINE>
     <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
@@ -67,14 +67,14 @@
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>KanbanBoard.cpp</FILENAME>
-      <LINE>50</LINE>
+      <LINE>55</LINE>
       <COLUMN>18</COLUMN>
     </SFA>
     <DEFECTCODE>26436</DEFECTCODE>
     <DESCRIPTION>The type 'class KanbanBoard' with a virtual function needs either public virtual or protected non-virtual destructor (c.35).</DESCRIPTION>
     <FUNCTION>KanbanBoard::printBoard</FUNCTION>
     <DECORATED>?printBoard@KanbanBoard@@UAEXXZ</DECORATED>
-    <FUNCLINE>50</FUNCLINE>
+    <FUNCLINE>55</FUNCLINE>
     <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
@@ -93,53 +93,53 @@
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Source.cpp</FILENAME>
-      <LINE>196</LINE>
+      <LINE>199</LINE>
       <COLUMN>33</COLUMN>
     </SFA>
     <DEFECTCODE>26409</DEFECTCODE>
     <DESCRIPTION>Avoid calling new and delete explicitly, use std::make_unique&lt;T&gt; instead (r.11).</DESCRIPTION>
     <FUNCTION>main</FUNCTION>
     <DECORATED>main</DECORATED>
-    <FUNCLINE>41</FUNCLINE>
+    <FUNCLINE>45</FUNCLINE>
     <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Source.cpp</FILENAME>
-      <LINE>200</LINE>
+      <LINE>203</LINE>
       <COLUMN>35</COLUMN>
     </SFA>
     <DEFECTCODE>26409</DEFECTCODE>
     <DESCRIPTION>Avoid calling new and delete explicitly, use std::make_unique&lt;T&gt; instead (r.11).</DESCRIPTION>
     <FUNCTION>main</FUNCTION>
     <DECORATED>main</DECORATED>
-    <FUNCLINE>41</FUNCLINE>
+    <FUNCLINE>45</FUNCLINE>
     <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Source.cpp</FILENAME>
-      <LINE>198</LINE>
+      <LINE>201</LINE>
       <COLUMN>32</COLUMN>
     </SFA>
     <DEFECTCODE>26409</DEFECTCODE>
     <DESCRIPTION>Avoid calling new and delete explicitly, use std::make_unique&lt;T&gt; instead (r.11).</DESCRIPTION>
     <FUNCTION>main</FUNCTION>
     <DECORATED>main</DECORATED>
-    <FUNCLINE>41</FUNCLINE>
+    <FUNCLINE>45</FUNCLINE>
     <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Source.cpp</FILENAME>
-      <LINE>109</LINE>
+      <LINE>111</LINE>
       <COLUMN>18</COLUMN>
     </SFA>
     <DEFECTCODE>26494</DEFECTCODE>
     <DESCRIPTION>Variable 'collaborator' is uninitialized. Always initialize an object (type.5).</DESCRIPTION>
     <FUNCTION>main</FUNCTION>
     <DECORATED>main</DECORATED>
-    <FUNCLINE>41</FUNCLINE>
+    <FUNCLINE>45</FUNCLINE>
     <ADDITIONALINFO>
       <targetSymbol>collaborator</targetSymbol>
     </ADDITIONALINFO>
@@ -148,14 +148,14 @@
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Source.cpp</FILENAME>
-      <LINE>110</LINE>
+      <LINE>112</LINE>
       <COLUMN>15</COLUMN>
     </SFA>
     <DEFECTCODE>26494</DEFECTCODE>
     <DESCRIPTION>Variable 'iteration' is uninitialized. Always initialize an object (type.5).</DESCRIPTION>
     <FUNCTION>main</FUNCTION>
     <DECORATED>main</DECORATED>
-    <FUNCLINE>41</FUNCLINE>
+    <FUNCLINE>45</FUNCLINE>
     <ADDITIONALINFO>
       <targetSymbol>iteration</targetSymbol>
     </ADDITIONALINFO>
@@ -164,26 +164,26 @@
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Source.cpp</FILENAME>
-      <LINE>399</LINE>
+      <LINE>419</LINE>
       <COLUMN>5</COLUMN>
     </SFA>
     <DEFECTCODE>26429</DEFECTCODE>
     <DESCRIPTION>Symbol 'func' is never tested for nullness, it can be marked as not_null (f.23).</DESCRIPTION>
     <FUNCTION>invokeFunc</FUNCTION>
     <DECORATED>?invokeFunc@@YAXP6AXXZ@Z</DECORATED>
-    <FUNCLINE>399</FUNCLINE>
+    <FUNCLINE>419</FUNCLINE>
     <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>UserStory.cpp</FILENAME>
-      <LINE>59</LINE>
+      <LINE>46</LINE>
       <COLUMN>9</COLUMN>
     </SFA>
     <DEFECTCODE>26812</DEFECTCODE>
     <DESCRIPTION>The enum type 'UserStory::Status' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
     <FUNCTION>UserStory::{ctor}</FUNCTION>
     <DECORATED>??0UserStory@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0H@Z</DECORATED>
-    <FUNCLINE>49</FUNCLINE>
+    <FUNCLINE>36</FUNCLINE>
     <PATH></PATH>
   </DEFECT></DEFECTS>

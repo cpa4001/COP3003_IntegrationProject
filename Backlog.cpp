@@ -26,6 +26,7 @@ Backlog::Backlog(std::ifstream& readFromUserStories) {
   std::string line;
   if (readFromUserStories.is_open()) {
     while (getline(readFromUserStories, line)) {
+      //append each line from the file to the row vector
       row.push_back(line);
     }
     readFromUserStories.close();
@@ -69,6 +70,7 @@ void Backlog::printStories() {
  *   @param newStatus  the new status of the selected story
  */
 void Backlog::updateStoryStatus(int storyID, int newStatus) {
+    // go through each line in the file
   for (size_t line = 0; line < row.size(); line++) {
     std::string tempStoryID = row.at(line).substr(0, row.at(line).find(","));
     const int lineStoryID = std::stoi(tempStoryID);
@@ -76,10 +78,12 @@ void Backlog::updateStoryStatus(int storyID, int newStatus) {
     std::string previousStatus;
     std::string newStatusString;
 
+    // if the storyID matches the desired
     if (lineStoryID == storyID) {
       // row[line].replace(row[line].find("To Do"), row[line].find(","),
       // newStatus);
 
+        // find the previous status
       if (row.at(line).find("To Do") != std::string::npos) {
         previousStatus = "To Do";
       } else if (row.at(line).find("In Progress") != std::string::npos) {
@@ -91,6 +95,8 @@ void Backlog::updateStoryStatus(int storyID, int newStatus) {
       row.at(line).replace(row.at(line).find(previousStatus),
                            row.at(line).find(","), newStatusString);
     }
+    // Issue is how to change the status in the file itself since we can only 
+    // append to the file and not change a specific location
   }
 }
 
@@ -112,6 +118,8 @@ void Backlog::updateStoryWithCollaborator(int storyID,
   readFromUserStories.open("UserStories.csv");
 
   std::string line;
+  // attempts to write the collaborator name to end of row in csv
+  // have not found a great way to do this yet
   if (readFromUserStories.is_open()) {
     while (getline(readFromUserStories, line)) {
       if (line.find(gsl::narrow_cast<char>(storyID)) != std::string::npos) {
@@ -163,6 +171,7 @@ auto operator-(Backlog& backlog) -> std::string {
 
   std::string returnString;
 
+  // If the backlog contains stories return last index
   if (backlogSize > 1) {
     returnString = backlog.row.at(backlogSize - 1);
   } else {

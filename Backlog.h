@@ -23,17 +23,23 @@
  */
 class Backlog {
  private:
-  // vector<UserStory> productBacklog;
-  // UserStory* productBacklog = new UserStory[];
-
-  // dynamic collection to hold multiple user stories
+  /**
+   * @brief vector to hold user story objects
+   */
   std::vector<UserStory> productBacklog;
+
+  /**
+   * @brief 2D vector mimicing a csv holding individual elements
+   */
   std::vector<std::vector<std::string>> matrix;
+
+  /**
+   * @brief  vector containing each line from the csv
+   */
   std::vector<std::string> row;
 
  public:
   explicit Backlog(std::ifstream& readFromUserStories);
-  //~Backlog(); needed if using a dynamic array
 
   void addUserStory(const UserStory& userStory);
   void addToRow(std::string row);

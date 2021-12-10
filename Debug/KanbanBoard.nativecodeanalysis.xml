@@ -4,14 +4,14 @@
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>KanbanBoard.cpp</FILENAME>
-      <LINE>50</LINE>
+      <LINE>55</LINE>
       <COLUMN>18</COLUMN>
     </SFA>
     <DEFECTCODE>26436</DEFECTCODE>
     <DESCRIPTION>The type 'class KanbanBoard' with a virtual function needs either public virtual or protected non-virtual destructor (c.35).</DESCRIPTION>
     <FUNCTION>KanbanBoard::printBoard</FUNCTION>
     <DECORATED>?printBoard@KanbanBoard@@UAEXXZ</DECORATED>
-    <FUNCLINE>50</FUNCLINE>
+    <FUNCLINE>55</FUNCLINE>
     <PATH></PATH>
   </DEFECT>
 </DEFECTS>
