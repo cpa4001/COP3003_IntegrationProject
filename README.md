@@ -51,6 +51,7 @@ This project is licensed under the MIT License.
 * https://gist.github.com/PurpleBooth/109311bb0361f32d87a2
 * https://stackoverflow.com/questions/2340281/check-if-a-string-contains-a-string-in-c
 * https://newbedev.com/checking-for-an-empty-file-in-c
+* https://stackoverflow.com/questions/3418231/replace-part-of-a-string-with-another-string
 * Professor Vanselow
 * Jairo Garciga
  
