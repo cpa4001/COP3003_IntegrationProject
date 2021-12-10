@@ -80,28 +80,6 @@ int main() {
   // update the storyID so that the next userstory gets the correct storyID
   UserStory::storyID = gsl::narrow_cast<int>(masterBacklog.getRow().size() - 1);
 
-  /*
-  // if the file is open and if the first line can be recieved
-  if (!getline(readFromUserStories, line)) {
-    // if the first line is not the header write the header
-    std::cout << " get line is false" << std::endl;
-    if (line != fileHeader) {
-      writeToUserStories << fileHeader;
-    }
-  } else {
-    writeToUserStories << fileHeader;
-    std::cout << " get line is true" << std::endl;
-
-  }
-  //readFromUserStories.close();
-
-  else if (!getline(readFromUserStories, line)) {
-    if (line != fileHeader) {
-      writeToUserStories << fileHeader;
-      readFromUserStories.close();
-    }
-  }
-  */
 
   // give the menu until the user chooses to exit
   // standard length for menu options is 42 character

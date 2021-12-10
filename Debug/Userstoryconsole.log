@@ -1,11 +1,14 @@
 ﻿  Backlog.cpp
+  Board.cpp
   Collaborator.cpp
   Developer.cpp
   Iteration.cpp
+  KanbanBoard.cpp
   Release.cpp
   ScrumMaster.cpp
   Source.cpp
   Sprint.cpp
+  UserStory.cpp
   Running Code Analysis for C/C++...
   Generating Code...
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory(723,9): warning G61A85D37: destructor called on non-final 'Collaborator' that has virtual functions but non-virtual destructor [clang-diagnostic-delete-non-abstract-non-virtual-dtor]
@@ -45,15 +48,15 @@ C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(41,5): warning GB5504D48
   int main() {
   ~~~ ^
   auto       -> int
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(131,19): warning GF0156036: variable 'collaborator' is not initialized [cppcoreguidelines-init-variables]
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(109,19): warning GF0156036: variable 'collaborator' is not initialized [cppcoreguidelines-init-variables]
       Collaborator* collaborator;
                     ^
                                  = nullptr
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(132,16): warning GF0156036: variable 'iteration' is not initialized [cppcoreguidelines-init-variables]
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(110,16): warning GF0156036: variable 'iteration' is not initialized [cppcoreguidelines-init-variables]
       Iteration* iteration;
                  ^
                            = nullptr
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(222,11): warning G3A9ADC90: assigning newly created 'gsl::owner<>' to non-owner 'Iteration *' [cppcoreguidelines-owning-memory]
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(200,11): warning G3A9ADC90: assigning newly created 'gsl::owner<>' to non-owner 'Iteration *' [cppcoreguidelines-owning-memory]
             iteration = new Iteration(inputString, "Iteration", 0);
             ^
 C:\Users\chris\source\repos\Userstoryconsole\UserStory.cpp(25,16): warning GF0156036: variable 'storyID' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
@@ -67,10 +70,10 @@ C:\Users\chris\source\repos\Userstoryconsole\Collaborator.cpp(46): warning C2644
 C:\Users\chris\source\repos\Userstoryconsole\Developer.cpp(25): warning C26436: The type 'class Developer' with a virtual function needs either public virtual or protected non-virtual destructor (c.35).
 C:\Users\chris\source\repos\Userstoryconsole\KanbanBoard.cpp(50): warning C26436: The type 'class KanbanBoard' with a virtual function needs either public virtual or protected non-virtual destructor (c.35).
 C:\Users\chris\source\repos\Userstoryconsole\ScrumMaster.cpp(26): warning C26436: The type 'class ScrumMaster' with a virtual function needs either public virtual or protected non-virtual destructor (c.35).
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(218): warning C26409: Avoid calling new and delete explicitly, use std::make_unique<T> instead (r.11).
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(222): warning C26409: Avoid calling new and delete explicitly, use std::make_unique<T> instead (r.11).
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(220): warning C26409: Avoid calling new and delete explicitly, use std::make_unique<T> instead (r.11).
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(131): warning C26494: Variable 'collaborator' is uninitialized. Always initialize an object (type.5).
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(132): warning C26494: Variable 'iteration' is uninitialized. Always initialize an object (type.5).
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(421): warning C26429: Symbol 'func' is never tested for nullness, it can be marked as not_null (f.23).
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(196): warning C26409: Avoid calling new and delete explicitly, use std::make_unique<T> instead (r.11).
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(200): warning C26409: Avoid calling new and delete explicitly, use std::make_unique<T> instead (r.11).
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(198): warning C26409: Avoid calling new and delete explicitly, use std::make_unique<T> instead (r.11).
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(109): warning C26494: Variable 'collaborator' is uninitialized. Always initialize an object (type.5).
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(110): warning C26494: Variable 'iteration' is uninitialized. Always initialize an object (type.5).
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(399): warning C26429: Symbol 'func' is never tested for nullness, it can be marked as not_null (f.23).
 C:\Users\chris\source\repos\Userstoryconsole\UserStory.cpp(59): warning C26812: The enum type 'UserStory::Status' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).

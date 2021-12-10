@@ -4,7 +4,7 @@
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Source.cpp</FILENAME>
-      <LINE>218</LINE>
+      <LINE>196</LINE>
       <COLUMN>33</COLUMN>
     </SFA>
     <DEFECTCODE>26409</DEFECTCODE>
@@ -18,7 +18,7 @@
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Source.cpp</FILENAME>
-      <LINE>222</LINE>
+      <LINE>200</LINE>
       <COLUMN>35</COLUMN>
     </SFA>
     <DEFECTCODE>26409</DEFECTCODE>
@@ -32,7 +32,7 @@
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Source.cpp</FILENAME>
-      <LINE>220</LINE>
+      <LINE>198</LINE>
       <COLUMN>32</COLUMN>
     </SFA>
     <DEFECTCODE>26409</DEFECTCODE>
@@ -46,7 +46,7 @@
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Source.cpp</FILENAME>
-      <LINE>131</LINE>
+      <LINE>109</LINE>
       <COLUMN>18</COLUMN>
     </SFA>
     <DEFECTCODE>26494</DEFECTCODE>
@@ -63,7 +63,7 @@
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Source.cpp</FILENAME>
-      <LINE>132</LINE>
+      <LINE>110</LINE>
       <COLUMN>15</COLUMN>
     </SFA>
     <DEFECTCODE>26494</DEFECTCODE>
@@ -94,14 +94,14 @@
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Source.cpp</FILENAME>
-      <LINE>421</LINE>
+      <LINE>399</LINE>
       <COLUMN>5</COLUMN>
     </SFA>
     <DEFECTCODE>26429</DEFECTCODE>
     <DESCRIPTION>Symbol 'func' is never tested for nullness, it can be marked as not_null (f.23).</DESCRIPTION>
     <FUNCTION>invokeFunc</FUNCTION>
     <DECORATED>?invokeFunc@@YAXP6AXXZ@Z</DECORATED>
-    <FUNCLINE>421</FUNCLINE>
+    <FUNCLINE>399</FUNCLINE>
     <PATH></PATH>
   </DEFECT>
 </DEFECTS>

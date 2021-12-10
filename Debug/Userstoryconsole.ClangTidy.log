@@ -35,15 +35,15 @@ C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:41:5: warning: use a tra
 int main() {
 ~~~ ^
 auto       -> int
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:131:19: warning: variable 'collaborator' is not initialized [cppcoreguidelines-init-variables]
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:109:19: warning: variable 'collaborator' is not initialized [cppcoreguidelines-init-variables]
     Collaborator* collaborator;
                   ^
                                = nullptr
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:132:16: warning: variable 'iteration' is not initialized [cppcoreguidelines-init-variables]
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:110:16: warning: variable 'iteration' is not initialized [cppcoreguidelines-init-variables]
     Iteration* iteration;
                ^
                          = nullptr
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:222:11: warning: assigning newly created 'gsl::owner<>' to non-owner 'Iteration *' [cppcoreguidelines-owning-memory]
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:200:11: warning: assigning newly created 'gsl::owner<>' to non-owner 'Iteration *' [cppcoreguidelines-owning-memory]
           iteration = new Iteration(inputString, "Iteration", 0);
           ^
 C:\Users\chris\source\repos\Userstoryconsole\UserStory.cpp:25:16: warning: variable 'storyID' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]

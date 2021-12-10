@@ -5,7 +5,8 @@
  *  @bug No known bugs.
  */
 
-#pragma once
+#ifndef SPRINT_H
+#define SPRINT_H
 #include "Iteration.h"
 // LO2
 // LO2a
@@ -18,3 +19,4 @@ class Sprint : public Iteration {
  public:
   Sprint(std::string sprintName, int iterationLengthInDays);
 };
+#endif

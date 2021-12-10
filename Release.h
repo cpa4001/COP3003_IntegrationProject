@@ -5,7 +5,9 @@
  *  @bug No known bugs.
  */
 
-#pragma once
+#ifndef RELEASE_H
+#define RELEASE_H
+
 #include "Iteration.h"
 // LO2
 // LO2a
@@ -18,3 +20,4 @@ class Release : public Iteration {
  public:
   Release(std::string releaseName, int iterationLengthInDays);
 };
+#endif
