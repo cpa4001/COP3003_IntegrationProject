@@ -27,8 +27,10 @@ void createAndSaveStory(std::ofstream& writeToUserStories, Backlog& backlog,
                         KanbanBoard& kanbanBoard);
 void createBorder();
 void invokeFunc(void (*func)()) noexcept;
-auto replace(std::string& str, const std::string& from, const std::string& to) -> bool;
-auto validateIntegerInput();
+auto replace(std::string& str, const std::string& from, const std::string& to)
+    -> bool;
+auto validateIntegerInput(int inputInt, std::string errorMessage, 
+                          int lowerBound, int upperBound) -> int;
 
 constexpr int EXIT = 0;
 constexpr int CREATE_USER_STORY = 1;
@@ -100,7 +102,13 @@ int main() {
     std::cout << "Set User Story Status                 (7)" << std::endl;
     std::cout << "Exit                                  (0)" << std::endl;
 
+    /*
     std::cin >> userInputKey;
+    std::cin.clear();
+    std::cin.ignore();
+    */
+    userInputKey =
+        validateIntegerInput(userInputKey, "positive integer (0-7)", 0, 7);
     std::cin.clear();
     std::cin.ignore();
     createBorder();
@@ -137,14 +145,16 @@ int main() {
         // prompt the user about details for the collaborator
         std::cout << "Are you a:\n(1) Scrum Master\n(2) Developer" << std::endl;
         std::cout << "Enter an integer 1-2" << std::endl;
-        std::cin >> inputInt;
+
+        inputInt = validateIntegerInput(inputInt, "positive integer (1-2)", 1, 2);
 
         if (inputInt == 1) {
           // prompt the user for an ID until ID is valid
-          do {
-            std::cout << "What Story ID is the Scrum Master woking on: ";
-            std::cin >> inputInt;
-          } while (inputInt >= UserStory::storyID);
+          std::cout << "What Story ID is the Scrum Master woking on: ";
+
+          inputInt = validateIntegerInput(inputInt, "valid story ID", 1, 
+                                          UserStory::storyID);
+
           std::cout << "What is the Scrum Master's name? ";
           std::cin >> inputString;
 
@@ -159,10 +169,10 @@ int main() {
                     << std::endl;
         } else if (inputInt == 2) {
           // prompt the user for an ID until ID is valid
-          do {
-            std::cout << "What Story ID is the developer woking on: ";
-            std::cin >> inputInt;
-          } while (inputInt >= UserStory::storyID);
+          std::cout << "What Story ID is the developer woking on: ";
+
+          inputInt = validateIntegerInput(inputInt, "valid story ID", 1,
+                                          UserStory::storyID);
           // std::cout << std::endl;
 
           std::cout << "What is this Developer's Name? ";
@@ -192,7 +202,8 @@ int main() {
         std::cout << "Will this iteration be a:\n(1) Release\n(2) Sprint"
                   << std::endl;
         std::cout << "(Enter an Integer 1-2)" << std::endl;
-        std::cin >> inputInt;
+
+        inputInt = validateIntegerInput(inputInt, "positive integer (1-2)", 1, 2);
 
         // LO1, LO5
         // point the iteration to the correct subclass
@@ -206,7 +217,9 @@ int main() {
 
         std::cout << "How long will this Iteration consist of in days? (Enter "
                      "a positive integer) ";
-        std::cin >> inputInt;
+
+        inputInt =
+            validateIntegerInput(inputInt, "a positive integer", 1, INT_MAX);
         // LO3
         // additional use of polymorphism
         iteration->setIterationLength(inputInt);
@@ -237,12 +250,15 @@ int main() {
         std::cout
             << "What is the ID of the story that you would like to change? "
             << std::endl;
-        std::cin >> inputInt;
+
+        inputInt = validateIntegerInput(inputInt, "valid story ID", 1,
+                                          UserStory::storyID);
 
         std::cout << "What is its new status? (Enter an positive integer 1-3)"
                   << std::endl;
         std::cout << "(1) To Do \n(2) In Progress \n(3) Done" << std::endl;
-        std::cin >> status;
+
+        status = validateIntegerInput(status, "postive intger (1-3)", 1, 3);
 
         // iterate through backlog
         // find row with story ID
@@ -316,17 +332,15 @@ auto createUserStory(Backlog& backlog) -> UserStory {
   std::getline(std::cin, storyBody);
   std::cout << std::endl;
 
-   // strips away all commas so values can be in one cell in csv
+  // strips away all commas so values can be in one cell in csv
   replace(storyBody, ",", "");
 
   std::cout << "Enter the Story Points as a positive integer: ";
   std::cin >> storyPoints;
   std::cout << std::endl;
 
-  while (storyPoints <= 0) {
-    std::cout << "Invalid. Enter the Story Points as a positive integer: ";
-    std::cin >> storyPoints;
-  }
+  storyPoints =
+      validateIntegerInput(storyPoints, "enter a positive integer", 1, INT_MAX);
   createBorder();
 
   std::cout << storyName << " has been added to Userstories.csv" << std::endl;
@@ -421,17 +435,18 @@ void invokeFunc(void (*func)()) noexcept { return func(); }
 
 /**
  * @brief replaces all occurances of a string with another string
- * 
+ *
  *  uses recursion to replace a substring until substring can not be found
  *  code was found at https://stackoverflow.com/questions/3418231/replace-
     part-of-a-string-with-another-string
- * 
+ *
  * @param str   string to be edited
  * @param from  substring to be replaced
  * @param to    substring that will replace from
  * @return
  */
-auto replace(std::string& str, const std::string& from, const std::string& to) -> bool {
+auto replace(std::string& str, const std::string& from, const std::string& to)
+    -> bool {
   const size_t start_pos = str.find(from);
   if (start_pos == std::string::npos) {
     return false;
@@ -440,7 +455,34 @@ auto replace(std::string& str, const std::string& from, const std::string& to) -
   return true;
 }
 
+/**
+ * @brief verifies the integer the user inputs
+ * 
+ * Continuosly
+ * https://stackoverflow.com/questions/16934183/integer-validation-for-input
+ *
+ * @param inputInt       the input that needs to validated
+ * @param errorMessage   the message that goes with the prompt
+ * @param lowerBound     the smallest value the integer input coule be
+ * @param upperBound     the biggest value the integer input could be
+ */
+auto validateIntegerInput(int inputInt, std::string errorMessage, 
+                          int lowerBound, int upperBound) -> int {
+  bool valid = false;
+  do {
+    std::cin >> inputInt;
+    if (std::cin.good() && inputInt >= lowerBound && inputInt <= upperBound) {
+      // everything went well, we'll get out of the loop and return the value
+      valid = true;
+    } else {
+      // something went wrong, we reset the buffer's state to good
+      std::cin.clear();
+      // and empty it
+      std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+      std::cout << "Invalid input; please enter a " << errorMessage
+                << std::endl;
+    }
+  } while (!valid);
 
-auto validateIntegerInput() {
-
+  return (inputInt);
 }

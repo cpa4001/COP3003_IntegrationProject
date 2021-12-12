@@ -93,53 +93,14 @@
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Source.cpp</FILENAME>
-      <LINE>199</LINE>
-      <COLUMN>33</COLUMN>
-    </SFA>
-    <DEFECTCODE>26409</DEFECTCODE>
-    <DESCRIPTION>Avoid calling new and delete explicitly, use std::make_unique&lt;T&gt; instead (r.11).</DESCRIPTION>
-    <FUNCTION>main</FUNCTION>
-    <DECORATED>main</DECORATED>
-    <FUNCLINE>45</FUNCLINE>
-    <PATH></PATH>
-  </DEFECT><DEFECT>
-    <SFA>
-      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
-      <FILENAME>Source.cpp</FILENAME>
-      <LINE>203</LINE>
-      <COLUMN>35</COLUMN>
-    </SFA>
-    <DEFECTCODE>26409</DEFECTCODE>
-    <DESCRIPTION>Avoid calling new and delete explicitly, use std::make_unique&lt;T&gt; instead (r.11).</DESCRIPTION>
-    <FUNCTION>main</FUNCTION>
-    <DECORATED>main</DECORATED>
-    <FUNCLINE>45</FUNCLINE>
-    <PATH></PATH>
-  </DEFECT><DEFECT>
-    <SFA>
-      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
-      <FILENAME>Source.cpp</FILENAME>
-      <LINE>201</LINE>
-      <COLUMN>32</COLUMN>
-    </SFA>
-    <DEFECTCODE>26409</DEFECTCODE>
-    <DESCRIPTION>Avoid calling new and delete explicitly, use std::make_unique&lt;T&gt; instead (r.11).</DESCRIPTION>
-    <FUNCTION>main</FUNCTION>
-    <DECORATED>main</DECORATED>
-    <FUNCLINE>45</FUNCLINE>
-    <PATH></PATH>
-  </DEFECT><DEFECT>
-    <SFA>
-      <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
-      <FILENAME>Source.cpp</FILENAME>
-      <LINE>111</LINE>
+      <LINE>120</LINE>
       <COLUMN>18</COLUMN>
     </SFA>
     <DEFECTCODE>26494</DEFECTCODE>
     <DESCRIPTION>Variable 'collaborator' is uninitialized. Always initialize an object (type.5).</DESCRIPTION>
     <FUNCTION>main</FUNCTION>
     <DECORATED>main</DECORATED>
-    <FUNCLINE>45</FUNCLINE>
+    <FUNCLINE>48</FUNCLINE>
     <ADDITIONALINFO>
       <targetSymbol>collaborator</targetSymbol>
     </ADDITIONALINFO>
@@ -148,14 +109,14 @@
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Source.cpp</FILENAME>
-      <LINE>112</LINE>
+      <LINE>121</LINE>
       <COLUMN>15</COLUMN>
     </SFA>
     <DEFECTCODE>26494</DEFECTCODE>
     <DESCRIPTION>Variable 'iteration' is uninitialized. Always initialize an object (type.5).</DESCRIPTION>
     <FUNCTION>main</FUNCTION>
     <DECORATED>main</DECORATED>
-    <FUNCLINE>45</FUNCLINE>
+    <FUNCLINE>48</FUNCLINE>
     <ADDITIONALINFO>
       <targetSymbol>iteration</targetSymbol>
     </ADDITIONALINFO>
@@ -164,14 +125,14 @@
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Source.cpp</FILENAME>
-      <LINE>419</LINE>
+      <LINE>434</LINE>
       <COLUMN>5</COLUMN>
     </SFA>
     <DEFECTCODE>26429</DEFECTCODE>
     <DESCRIPTION>Symbol 'func' is never tested for nullness, it can be marked as not_null (f.23).</DESCRIPTION>
     <FUNCTION>invokeFunc</FUNCTION>
     <DECORATED>?invokeFunc@@YAXP6AXXZ@Z</DECORATED>
-    <FUNCLINE>419</FUNCLINE>
+    <FUNCLINE>434</FUNCLINE>
     <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>
