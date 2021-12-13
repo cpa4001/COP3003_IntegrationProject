@@ -19,8 +19,9 @@ ClassDiagram.cd has all class diagrams in a file that is compatible with Visual 
 
 ## Getting Started
 ``` sh
-> git clone https://github.com/cpa4001/COP3003_IntegrationProject UserStoryApp
+> git clone https://github.com/cpa4001/COP3003_IntegrationProject newProjectName
 ```
+Open solution in Visual Studio or IDE of choice
 
 ## Built With
 
@@ -29,6 +30,8 @@ ClassDiagram.cd has all class diagrams in a file that is compatible with Visual 
 - Doxygen
 
 ## Contributing
+Current Warnings: </br>
+![Warning_LIST_Christian_Apostoli_21](https://user-images.githubusercontent.com/54412557/145846737-ae3319d2-165c-4834-8635-581a9e2584b7.PNG)
 - Curent Challenges
    - storyID jumping by two occasionally
    - changing the status of a story and having the csv reflect the change
@@ -36,7 +39,7 @@ ClassDiagram.cd has all class diagrams in a file that is compatible with Visual 
 
 - Future Goals or Contributions
   - Create a frontend using a GUI or website
-  - Decrease stamp coupling
+  - Decrease coupling
 
 ## Author
 - Christian Apostoli
@@ -52,6 +55,7 @@ This project is licensed under the MIT License.
 * https://stackoverflow.com/questions/2340281/check-if-a-string-contains-a-string-in-c
 * https://newbedev.com/checking-for-an-empty-file-in-c
 * https://stackoverflow.com/questions/3418231/replace-part-of-a-string-with-another-string
+* https://stackoverflow.com/questions/16934183/integer-validation-for-input
 * Professor Vanselow
 * Jairo Garciga
  
