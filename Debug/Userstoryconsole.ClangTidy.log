@@ -46,7 +46,7 @@ C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:121:16: warning: variabl
     Iteration* iteration;
                ^
                          = nullptr
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:215:11: warning: assigning newly created 'gsl::owner<>' to non-owner 'Iteration *' [cppcoreguidelines-owning-memory]
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp:217:11: warning: assigning newly created 'gsl::owner<>' to non-owner 'Iteration *' [cppcoreguidelines-owning-memory]
           iteration = new Iteration(inputString, "Iteration", 0);
           ^
 C:\Users\chris\source\repos\Userstoryconsole\UserStory.cpp:26:16: warning: variable 'storyID' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]

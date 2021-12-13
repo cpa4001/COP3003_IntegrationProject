@@ -125,14 +125,14 @@
     <SFA>
       <FILEPATH>C:\Users\chris\source\repos\Userstoryconsole\</FILEPATH>
       <FILENAME>Source.cpp</FILENAME>
-      <LINE>436</LINE>
+      <LINE>437</LINE>
       <COLUMN>5</COLUMN>
     </SFA>
     <DEFECTCODE>26429</DEFECTCODE>
     <DESCRIPTION>Symbol 'func' is never tested for nullness, it can be marked as not_null (f.23).</DESCRIPTION>
     <FUNCTION>invokeFunc</FUNCTION>
     <DECORATED>?invokeFunc@@YAXP6AXXZ@Z</DECORATED>
-    <FUNCLINE>436</FUNCLINE>
+    <FUNCLINE>437</FUNCLINE>
     <PATH></PATH>
   </DEFECT><DEFECT>
     <SFA>

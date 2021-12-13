@@ -8,7 +8,6 @@
 #ifndef DEVELOPER_H
 #define DEVELOPER_H
 
-
 #include "Collaborator.h"
 // LO2
 // LO2a
@@ -24,4 +23,4 @@ class Developer : public Collaborator {
   void assignStory(int storyID) override;
 };
 
-#endif 
+#endif

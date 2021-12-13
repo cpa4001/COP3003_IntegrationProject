@@ -119,7 +119,7 @@ void KanbanBoard::addStoryToMap(UserStory& userStory) {
  *   @param newStatus   the new status of the story
  */
 void KanbanBoard::updateStatus(int storyID, int newStatus) {
-    // if the story is in the map, update it
+  // if the story is in the map, update it
   if (statusMap.find(std::to_string(storyID)) != statusMap.end()) {
     statusMap[std::to_string(storyID)] = newStatus;
   } else {

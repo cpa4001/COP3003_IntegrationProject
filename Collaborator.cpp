@@ -47,4 +47,3 @@ auto Collaborator::getcollaboratorName() -> std::string {
  * @param storyID the id of the story the collaborator is working on
  */
 void Collaborator::assignStory(int storyID) {}
-

@@ -29,7 +29,7 @@ void createBorder();
 void invokeFunc(void (*func)()) noexcept;
 auto replace(std::string& str, const std::string& from, const std::string& to)
     -> bool;
-auto validateIntegerInput(int inputInt, std::string errorMessage, 
+auto validateIntegerInput(int inputInt, std::string errorMessage,
                           int lowerBound, int upperBound) -> int;
 
 constexpr int EXIT = 0;
@@ -146,13 +146,14 @@ int main() {
         std::cout << "Are you a:\n(1) Scrum Master\n(2) Developer" << std::endl;
         std::cout << "Enter an integer 1-2" << std::endl;
 
-        inputInt = validateIntegerInput(inputInt, "positive integer (1-2)", 1, 2);
+        inputInt =
+            validateIntegerInput(inputInt, "positive integer (1-2)", 1, 2);
 
         if (inputInt == 1) {
           // prompt the user for an ID until ID is valid
           std::cout << "What Story ID is the Scrum Master woking on: ";
 
-          inputInt = validateIntegerInput(inputInt, "valid story ID", 1, 
+          inputInt = validateIntegerInput(inputInt, "valid story ID", 1,
                                           UserStory::storyID);
 
           std::cout << "What is the Scrum Master's name? ";
@@ -203,7 +204,8 @@ int main() {
                   << std::endl;
         std::cout << "(Enter an Integer 1-2)" << std::endl;
 
-        inputInt = validateIntegerInput(inputInt, "positive integer (1-2)", 1, 2);
+        inputInt =
+            validateIntegerInput(inputInt, "positive integer (1-2)", 1, 2);
 
         // LO1, LO5
         // point the iteration to the correct subclass
@@ -254,7 +256,7 @@ int main() {
             << std::endl;
 
         inputInt = validateIntegerInput(inputInt, "valid story ID", 1,
-                                          UserStory::storyID);
+                                        UserStory::storyID);
 
         std::cout << "What is its new status? (Enter an positive integer 1-3)"
                   << std::endl;
@@ -338,7 +340,6 @@ auto createUserStory(Backlog& backlog) -> UserStory {
   replace(storyBody, ",", "");
 
   std::cout << "Enter the Story Points as a positive integer: ";
-  std::cin >> storyPoints;
   std::cout << std::endl;
 
   storyPoints =
@@ -459,8 +460,10 @@ auto replace(std::string& str, const std::string& from, const std::string& to)
 
 /**
  * @brief verifies the integer the user inputs
- * 
- * Continuosly
+ *
+ * Continuosly prompts the user for correct input that is an integer
+ * and within lowerBound and upperBound
+ * Code modified from:
  * https://stackoverflow.com/questions/16934183/integer-validation-for-input
  *
  * @param inputInt       the input that needs to validated
@@ -468,7 +471,7 @@ auto replace(std::string& str, const std::string& from, const std::string& to)
  * @param lowerBound     the smallest value the integer input coule be
  * @param upperBound     the biggest value the integer input could be
  */
-auto validateIntegerInput(int inputInt, std::string errorMessage, 
+auto validateIntegerInput(int inputInt, std::string errorMessage,
                           int lowerBound, int upperBound) -> int {
   bool valid = false;
   do {

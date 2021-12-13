@@ -1,5 +1,5 @@
 /** @file UserStory.cpp
- *   @brief: Implementation file for UserStory class
+ *   @brief Implementation file for UserStory class
  *
  *	Implementation of Userstory Class and blueprint for
  *	user stories in file, all method definitions

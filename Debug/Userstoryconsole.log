@@ -59,7 +59,7 @@ C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(121,16): warning GF01560
       Iteration* iteration;
                  ^
                            = nullptr
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(215,11): warning G3A9ADC90: assigning newly created 'gsl::owner<>' to non-owner 'Iteration *' [cppcoreguidelines-owning-memory]
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(217,11): warning G3A9ADC90: assigning newly created 'gsl::owner<>' to non-owner 'Iteration *' [cppcoreguidelines-owning-memory]
             iteration = new Iteration(inputString, "Iteration", 0);
             ^
 C:\Users\chris\source\repos\Userstoryconsole\UserStory.cpp(26,16): warning GF0156036: variable 'storyID' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
@@ -75,5 +75,5 @@ C:\Users\chris\source\repos\Userstoryconsole\KanbanBoard.cpp(55): warning C26436
 C:\Users\chris\source\repos\Userstoryconsole\ScrumMaster.cpp(26): warning C26436: The type 'class ScrumMaster' with a virtual function needs either public virtual or protected non-virtual destructor (c.35).
 C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(120): warning C26494: Variable 'collaborator' is uninitialized. Always initialize an object (type.5).
 C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(121): warning C26494: Variable 'iteration' is uninitialized. Always initialize an object (type.5).
-C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(436): warning C26429: Symbol 'func' is never tested for nullness, it can be marked as not_null (f.23).
+C:\Users\chris\source\repos\Userstoryconsole\Source.cpp(437): warning C26429: Symbol 'func' is never tested for nullness, it can be marked as not_null (f.23).
 C:\Users\chris\source\repos\Userstoryconsole\UserStory.cpp(46): warning C26812: The enum type 'UserStory::Status' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).

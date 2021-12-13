@@ -1,5 +1,5 @@
 /** @file UserStory.h
- *   @brief: Declaration file for UserStory class
+ *   @brief Declaration file for UserStory class
  *
  *	Declaration of Userstory Class and blueprint for
  *	user stories in file
