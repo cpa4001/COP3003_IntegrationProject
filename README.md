@@ -30,6 +30,8 @@ Open solution in Visual Studio or IDE of choice
 - Doxygen
 
 ## Contributing
+Current Warnings: </br>
+![Warning_LIST_Christian_Apostoli_21](https://user-images.githubusercontent.com/54412557/145846737-ae3319d2-165c-4834-8635-581a9e2584b7.PNG)
 - Curent Challenges
    - storyID jumping by two occasionally
    - changing the status of a story and having the csv reflect the change
