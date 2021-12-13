@@ -6,6 +6,7 @@ Main implementation file for program.
 
 
 {\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$gsl/gsl$>$}\newline
 {\ttfamily \#include $<$iostream$>$}\newline
 {\ttfamily \#include $<$string$>$}\newline
 {\ttfamily \#include \char`\"{}Backlog.\+h\char`\"{}}\newline
@@ -33,9 +34,12 @@ void {\bfseries create\+Border} ()
 \begin{DoxyCompactList}\small\item\em Prints border to screen. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{_source_8cpp_aff0010d8635d56411bcda9716614438d}{invoke\+Func}} (void($\ast$func)()) noexcept
 \begin{DoxyCompactList}\small\item\em demonstration of passing functions as parameters \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{_source_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{_source_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
-int {\bfseries main} ()
-\end{DoxyCompactItemize}
+auto \mbox{\hyperlink{_source_8cpp_a86399f796dceee4c7419ae434e728c57}{replace}} (std\+::string \&str, const std\+::string \&from, const std\+::string \&to) -\/$>$ bool
+\begin{DoxyCompactList}\small\item\em replaces all occurances of a string with another string \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{_source_8cpp_a29bf9b543d3e49b206717fc8a90321b2}{validate\+Integer\+Input}} (int input\+Int, std\+::string error\+Message, int lower\+Bound, int upper\+Bound) -\/$>$ int
+\begin{DoxyCompactList}\small\item\em verifies the integer the user inputs \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_source_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em implementation of program for user story management tool \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -156,6 +160,19 @@ Code was taken from \href{https://newbedev.com/checking-for-an-empty-file-in-c}{
 \begin{DoxyReturn}{Returns}
 bool 
 \end{DoxyReturn}
+\mbox{\Hypertarget{_source_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{_source_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{Source.cpp@{Source.cpp}!main@{main}}
+\index{main@{main}!Source.cpp@{Source.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+implementation of program for user story management tool 
+
+\begin{DoxyReturn}{Returns}
+status code for program 
+\end{DoxyReturn}
 \mbox{\Hypertarget{_source_8cpp_a7bb3d9a385b5de452a5ca927a0c90568}\label{_source_8cpp_a7bb3d9a385b5de452a5ca927a0c90568}} 
 \index{Source.cpp@{Source.cpp}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!Source.cpp@{Source.cpp}}
@@ -175,6 +192,30 @@ LO7
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 out output stream 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_source_8cpp_a86399f796dceee4c7419ae434e728c57}\label{_source_8cpp_a86399f796dceee4c7419ae434e728c57}} 
+\index{Source.cpp@{Source.cpp}!replace@{replace}}
+\index{replace@{replace}!Source.cpp@{Source.cpp}}
+\doxysubsubsection{\texorpdfstring{replace()}{replace()}}
+{\footnotesize\ttfamily auto replace (\begin{DoxyParamCaption}\item[{std\+::string \&}]{str,  }\item[{const std\+::string \&}]{from,  }\item[{const std\+::string \&}]{to }\end{DoxyParamCaption}) -\/$>$  bool}
+
+
+
+replaces all occurances of a string with another string 
+
+uses recursion to replace a substring until substring can not be found code was found at \href{https://stackoverflow.com/questions/3418231/replace-}{\texttt{ https\+://stackoverflow.\+com/questions/3418231/replace-\/}} part-\/of-\/a-\/string-\/with-\/another-\/string
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & string to be edited \\
+\hline
+{\em from} & substring to be replaced \\
+\hline
+{\em to} & substring that will replace from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
 \end{DoxyReturn}
 \mbox{\Hypertarget{_source_8cpp_a332e074f88da45a65e79eaaaab93e542}\label{_source_8cpp_a332e074f88da45a65e79eaaaab93e542}} 
 \index{Source.cpp@{Source.cpp}!saveUserStory@{saveUserStory}}
@@ -197,5 +238,28 @@ adds string to backlogs vector and adds story to kanbanboard\textquotesingle{}s 
 {\em backlog} & backlog object that holds use stories \\
 \hline
 {\em kanban\+Board} & kanbanboard object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_source_8cpp_a29bf9b543d3e49b206717fc8a90321b2}\label{_source_8cpp_a29bf9b543d3e49b206717fc8a90321b2}} 
+\index{Source.cpp@{Source.cpp}!validateIntegerInput@{validateIntegerInput}}
+\index{validateIntegerInput@{validateIntegerInput}!Source.cpp@{Source.cpp}}
+\doxysubsubsection{\texorpdfstring{validateIntegerInput()}{validateIntegerInput()}}
+{\footnotesize\ttfamily auto validate\+Integer\+Input (\begin{DoxyParamCaption}\item[{int}]{input\+Int,  }\item[{std\+::string}]{error\+Message,  }\item[{int}]{lower\+Bound,  }\item[{int}]{upper\+Bound }\end{DoxyParamCaption}) -\/$>$  int}
+
+
+
+verifies the integer the user inputs 
+
+Continuosly \href{https://stackoverflow.com/questions/16934183/integer-validation-for-input}{\texttt{ https\+://stackoverflow.\+com/questions/16934183/integer-\/validation-\/for-\/input}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+Int} & the input that needs to validated \\
+\hline
+{\em error\+Message} & the message that goes with the prompt \\
+\hline
+{\em lower\+Bound} & the smallest value the integer input coule be \\
+\hline
+{\em upper\+Bound} & the biggest value the integer input could be \\
 \hline
 \end{DoxyParams}

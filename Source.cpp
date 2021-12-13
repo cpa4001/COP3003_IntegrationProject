@@ -70,7 +70,7 @@ int main() {
 
   const std::string fileHeader =
       "Story ID, Story Name, Description, Story Points, "
-      "Status, Current Developers";
+      "Status";
 
   readFromUserStories.open("UserStories.csv");
   // used for reading from the file in case 4
@@ -223,6 +223,8 @@ int main() {
         // LO3
         // additional use of polymorphism
         iteration->setIterationLength(inputInt);
+
+        std::cout << "Iteration Created." << std::endl;
 
         createBorder();
         break;

@@ -9,7 +9,7 @@
 /**
  * @brief Constructor for Iteration
  * @param iterationName		Name of the iteration
- * @param iterationType		Type of iteration: sprint, release, iteration,
+ * @param iterationType		Type of iteration: sprint, release, iteration
  * @param iterationLength	Lenght of iteration in days
  */
 Iteration::Iteration(std::string iterationName, std::string iterationType,

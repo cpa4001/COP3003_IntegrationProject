@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['collaborator_0',['Collaborator',['../class_collaborator.html',1,'Collaborator'],['../class_collaborator.html#a1d6e4ca8fc6c4c2466b2896b30c25f0b',1,'Collaborator::Collaborator() noexcept'],['../class_collaborator.html#a77e204d8e71b14006e9f32b489b7e36d',1,'Collaborator::Collaborator(std::string collaboratorName, std::string role)']]],
+  ['collaborator_0',['Collaborator',['../class_collaborator.html',1,'Collaborator'],['../class_collaborator.html#a3ff682efe16bc351a07a4908e130e2eb',1,'Collaborator::Collaborator()'],['../class_collaborator.html#a77e204d8e71b14006e9f32b489b7e36d',1,'Collaborator::Collaborator(std::string collaboratorName, std::string role)']]],
   ['collaborator_2ecpp_1',['Collaborator.cpp',['../_collaborator_8cpp.html',1,'']]],
   ['collaborator_2eh_2',['Collaborator.h',['../_collaborator_8h.html',1,'']]],
   ['collaboratorid_3',['collaboratorID',['../class_collaborator.html#ad98d61ad77b479631a68d5cbfa9f9297',1,'Collaborator']]],

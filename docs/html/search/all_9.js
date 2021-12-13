@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['release_0',['Release',['../class_release.html',1,'Release'],['../class_release.html#a500dad7c63b5f7d5fb8f9192fe260315',1,'Release::Release()']]],
-  ['release_2ecpp_1',['Release.cpp',['../_release_8cpp.html',1,'']]],
-  ['release_2eh_2',['Release.h',['../_release_8h.html',1,'']]]
+  ['printboard_0',['printBoard',['../class_kanban_board.html#ae862d3ac0fd4bb4bbe48ba0dc8b3c33e',1,'KanbanBoard']]],
+  ['printstories_1',['printStories',['../class_backlog.html#aa271fa097de41d7ad3d215d9e5ee95d1',1,'Backlog::printStories()'],['../class_iteration.html#a89a8401c2c7b47c6bddd6449164f0d64',1,'Iteration::printStories()']]]
 ];

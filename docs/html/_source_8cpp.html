@@ -72,6 +72,7 @@ $(function() {
 <p>Main implementation file for program.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;gsl/gsl&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &quot;<a class="el" href="_backlog_8h_source.html">Backlog.h</a>&quot;</code><br />
@@ -106,8 +107,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>createBorder</b> ()</
 <tr class="memitem:aff0010d8635d56411bcda9716614438d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_source_8cpp.html#aff0010d8635d56411bcda9716614438d">invokeFunc</a> (void(*func)()) noexcept</td></tr>
 <tr class="memdesc:aff0010d8635d56411bcda9716614438d"><td class="mdescLeft">&#160;</td><td class="mdescRight">demonstration of passing functions as parameters  <a href="_source_8cpp.html#aff0010d8635d56411bcda9716614438d">More...</a><br /></td></tr>
 <tr class="separator:aff0010d8635d56411bcda9716614438d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top"><a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> ()</td></tr>
+<tr class="memitem:a86399f796dceee4c7419ae434e728c57"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_source_8cpp.html#a86399f796dceee4c7419ae434e728c57">replace</a> (std::string &amp;str, const std::string &amp;from, const std::string &amp;to) -&gt; bool</td></tr>
+<tr class="memdesc:a86399f796dceee4c7419ae434e728c57"><td class="mdescLeft">&#160;</td><td class="mdescRight">replaces all occurances of a string with another string  <a href="_source_8cpp.html#a86399f796dceee4c7419ae434e728c57">More...</a><br /></td></tr>
+<tr class="separator:a86399f796dceee4c7419ae434e728c57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29bf9b543d3e49b206717fc8a90321b2"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_source_8cpp.html#a29bf9b543d3e49b206717fc8a90321b2">validateIntegerInput</a> (int inputInt, std::string errorMessage, int lowerBound, int upperBound) -&gt; int</td></tr>
+<tr class="memdesc:a29bf9b543d3e49b206717fc8a90321b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">verifies the integer the user inputs  <a href="_source_8cpp.html#a29bf9b543d3e49b206717fc8a90321b2">More...</a><br /></td></tr>
+<tr class="separator:a29bf9b543d3e49b206717fc8a90321b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_source_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">implementation of program for user story management tool  <a href="_source_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">More...</a><br /></td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
@@ -280,6 +287,26 @@ constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>UPDATE_STATU
 
 </div>
 </div>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>implementation of program for user story management tool </p>
+<dl class="section return"><dt>Returns</dt><dd>status code for program </dd></dl>
+
+</div>
+</div>
 <a id="a7bb3d9a385b5de452a5ca927a0c90568" name="a7bb3d9a385b5de452a5ca927a0c90568"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7bb3d9a385b5de452a5ca927a0c90568">&#9670;&nbsp;</a></span>operator&lt;&lt;()</h2>
 
@@ -315,6 +342,52 @@ constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>UPDATE_STATU
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>out output stream </dd></dl>
+
+</div>
+</div>
+<a id="a86399f796dceee4c7419ae434e728c57" name="a86399f796dceee4c7419ae434e728c57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86399f796dceee4c7419ae434e728c57">&#9670;&nbsp;</a></span>replace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto replace </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>to</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt;  bool</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>replaces all occurances of a string with another string </p>
+<p >uses recursion to replace a substring until substring can not be found code was found at <a href="https://stackoverflow.com/questions/3418231/replace-">https://stackoverflow.com/questions/3418231/replace-</a> part-of-a-string-with-another-string</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>string to be edited </td></tr>
+    <tr><td class="paramname">from</td><td>substring to be replaced </td></tr>
+    <tr><td class="paramname">to</td><td>substring that will replace from </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -364,6 +437,58 @@ constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>UPDATE_STATU
     <tr><td class="paramname">savedUserStories</td><td>ofstream object of output file </td></tr>
     <tr><td class="paramname">backlog</td><td>backlog object that holds use stories </td></tr>
     <tr><td class="paramname">kanbanBoard</td><td>kanbanboard object </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a29bf9b543d3e49b206717fc8a90321b2" name="a29bf9b543d3e49b206717fc8a90321b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29bf9b543d3e49b206717fc8a90321b2">&#9670;&nbsp;</a></span>validateIntegerInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto validateIntegerInput </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>inputInt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>errorMessage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lowerBound</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>upperBound</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt;  int</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>verifies the integer the user inputs </p>
+<p >Continuosly <a href="https://stackoverflow.com/questions/16934183/integer-validation-for-input">https://stackoverflow.com/questions/16934183/integer-validation-for-input</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inputInt</td><td>the input that needs to validated </td></tr>
+    <tr><td class="paramname">errorMessage</td><td>the message that goes with the prompt </td></tr>
+    <tr><td class="paramname">lowerBound</td><td>the smallest value the integer input coule be </td></tr>
+    <tr><td class="paramname">upperBound</td><td>the biggest value the integer input could be </td></tr>
   </table>
   </dd>
 </dl>

@@ -18,21 +18,23 @@
 \DoxyCodeLine{28   std::vector<std::string> toDoUserStoryNames;}
 \DoxyCodeLine{29   std::vector<std::string> inProgressUserStoryNames;}
 \DoxyCodeLine{30   std::vector<std::string> doneUserStoryNames;}
-\DoxyCodeLine{31   std::map<std::string, int> statusMap;}
-\DoxyCodeLine{32   std::map<std::string, int>::iterator map\_iterator;}
-\DoxyCodeLine{33 }
-\DoxyCodeLine{34  \textcolor{keyword}{public}:}
-\DoxyCodeLine{35   \mbox{\hyperlink{class_kanban_board}{KanbanBoard}}() \textcolor{keyword}{noexcept} = \textcolor{keywordflow}{default};}
-\DoxyCodeLine{36   \textcolor{keyword}{explicit} \mbox{\hyperlink{class_kanban_board}{KanbanBoard}}(std::vector<std::string> fileRows);}
-\DoxyCodeLine{37   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_kanban_board_ae862d3ac0fd4bb4bbe48ba0dc8b3c33e}{printBoard}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{35   std::map<std::string, int> statusMap;}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37   std::map<std::string, int>::iterator map\_iterator;}
 \DoxyCodeLine{38 }
-\DoxyCodeLine{39   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_kanban_board_a77d87420f460a20dde026a45134b2f18}{getDoneUserStory}}() \textcolor{keyword}{override};}
-\DoxyCodeLine{40   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_kanban_board_aad7b6a997a005416eb46ef3d43f24083}{getInProgressUserStory}}() \textcolor{keyword}{override};}
-\DoxyCodeLine{41   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_kanban_board_a1798e0bf4d418e104c857cfc109774a1}{getToDoUserStory}}() \textcolor{keyword}{override};}
-\DoxyCodeLine{42   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_kanban_board_ae2425470983e0bfd39eabac56e280053}{addStoryToMap}}(\mbox{\hyperlink{class_user_story}{UserStory}}\& userStory) \textcolor{keyword}{override};}
+\DoxyCodeLine{39  \textcolor{keyword}{public}:}
+\DoxyCodeLine{40   \mbox{\hyperlink{class_kanban_board}{KanbanBoard}}() \textcolor{keyword}{noexcept} = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{41   \textcolor{keyword}{explicit} \mbox{\hyperlink{class_kanban_board}{KanbanBoard}}(std::vector<std::string> fileRows);}
+\DoxyCodeLine{42   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_kanban_board_ae862d3ac0fd4bb4bbe48ba0dc8b3c33e}{printBoard}}() \textcolor{keyword}{override};}
 \DoxyCodeLine{43 }
-\DoxyCodeLine{44   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_kanban_board_a1b12fa0b85cb3c26baadd06ab1ff56b2}{updateStatus}}(\textcolor{keywordtype}{int} storyID, \textcolor{keywordtype}{int} newStatus) \textcolor{keyword}{override};}
-\DoxyCodeLine{45 \};}
-\DoxyCodeLine{46 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{44   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_kanban_board_a77d87420f460a20dde026a45134b2f18}{getDoneUserStory}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{45   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_kanban_board_aad7b6a997a005416eb46ef3d43f24083}{getInProgressUserStory}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{46   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_kanban_board_a1798e0bf4d418e104c857cfc109774a1}{getToDoUserStory}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{47   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_kanban_board_ae2425470983e0bfd39eabac56e280053}{addStoryToMap}}(\mbox{\hyperlink{class_user_story}{UserStory}}\& userStory) \textcolor{keyword}{override};}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_kanban_board_a1b12fa0b85cb3c26baadd06ab1ff56b2}{updateStatus}}(\textcolor{keywordtype}{int} storyID, \textcolor{keywordtype}{int} newStatus) \textcolor{keyword}{override};}
+\DoxyCodeLine{50 \};}
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

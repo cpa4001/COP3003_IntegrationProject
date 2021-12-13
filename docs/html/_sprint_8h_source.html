@@ -66,19 +66,21 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="_sprint_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="_iteration_8h.html">Iteration.h</a>&quot;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">// LO2</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// LO2a</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_sprint.html">   16</a></span><span class="keyword">class </span><a class="code hl_class" href="class_sprint.html">Sprint</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_iteration.html">Iteration</a> {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  <a class="code hl_function" href="class_sprint.html#a369f99a4c2f61c3e13f4e71a25612c16">Sprint</a>(std::string sprintName, <span class="keywordtype">int</span> iterationLengthInDays);</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>};</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#ifndef SPRINT_H</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define SPRINT_H</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="_iteration_8h.html">Iteration.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// LO2</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// LO2a</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_sprint.html">   17</a></span><span class="keyword">class </span><a class="code hl_class" href="class_sprint.html">Sprint</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_iteration.html">Iteration</a> {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <a class="code hl_function" href="class_sprint.html#a369f99a4c2f61c3e13f4e71a25612c16">Sprint</a>(std::string sprintName, <span class="keywordtype">int</span> iterationLengthInDays);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>};</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="a_iteration_8h_html"><div class="ttname"><a href="_iteration_8h.html">Iteration.h</a></div><div class="ttdoc">Declaration file for Iteration class.</div></div>
 <div class="ttc" id="aclass_iteration_html"><div class="ttname"><a href="class_iteration.html">Iteration</a></div><div class="ttdoc">a period of time in the development process where a team works on a set amount of user stories</div><div class="ttdef"><b>Definition:</b> Iteration.h:20</div></div>
-<div class="ttc" id="aclass_sprint_html"><div class="ttname"><a href="class_sprint.html">Sprint</a></div><div class="ttdoc">Sprint inherits from Iteration with public visibility.</div><div class="ttdef"><b>Definition:</b> Sprint.h:16</div></div>
+<div class="ttc" id="aclass_sprint_html"><div class="ttname"><a href="class_sprint.html">Sprint</a></div><div class="ttdoc">Sprint inherits from Iteration with public visibility.</div><div class="ttdef"><b>Definition:</b> Sprint.h:17</div></div>
 <div class="ttc" id="aclass_sprint_html_a369f99a4c2f61c3e13f4e71a25612c16"><div class="ttname"><a href="class_sprint.html#a369f99a4c2f61c3e13f4e71a25612c16">Sprint::Sprint</a></div><div class="ttdeci">Sprint(std::string sprintName, int iterationLengthInDays)</div><div class="ttdoc">Constructor for Sprint - Calls Iteration constructor.</div><div class="ttdef"><b>Definition:</b> Sprint.cpp:17</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
