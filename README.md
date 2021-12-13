@@ -19,8 +19,9 @@ ClassDiagram.cd has all class diagrams in a file that is compatible with Visual 
 
 ## Getting Started
 ``` sh
-> git clone https://github.com/cpa4001/COP3003_IntegrationProject UserStoryApp
+> git clone https://github.com/cpa4001/COP3003_IntegrationProject newProjectName
 ```
+Open solution in Visual Studio or IDE of choice
 
 ## Built With
 
