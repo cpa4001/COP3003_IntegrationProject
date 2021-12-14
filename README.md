@@ -111,5 +111,5 @@ Final Milestone:
   - Shown by following google style guide
 
 - Follow best practices for documentation
-- shown in external documentation with doxygen
-- shown in header comment docs for every file and function definition, and for most data structures
+   - shown in external documentation with doxygen
+   - shown in header comment docs for every file and function definition, and for most data structures
