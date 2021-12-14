@@ -107,5 +107,9 @@ Final Milestone:
   - Shown in the methods of the Backlog class 
 
 - Follow best practices for style and readability
+  - Shown in decreased compiler warnings using ClangTidy using bugprone*, cppcoreguidelines*, google*, modernize*, readability* checks
+  - Shown by following google style guide
 
 - Follow best practices for documentation
+- shown in external documentation with doxygen
+- shown in header comment docs for every file and function definition, and for most data structures
