@@ -1,16 +1,4 @@
-﻿  Backlog.cpp
-  Board.cpp
-  Collaborator.cpp
-  Developer.cpp
-  Iteration.cpp
-  KanbanBoard.cpp
-  Release.cpp
-  ScrumMaster.cpp
-  Source.cpp
-  Sprint.cpp
-  UserStory.cpp
-  Running Code Analysis for C/C++...
-  Generating Code...
+﻿  ScrumMaster.cpp
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory(723,9): warning G61A85D37: destructor called on non-final 'Collaborator' that has virtual functions but non-virtual destructor [clang-diagnostic-delete-non-abstract-non-virtual-dtor]
           _Ptr->~_Uty();
           ^
