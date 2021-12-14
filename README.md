@@ -33,9 +33,9 @@ Open solution in Visual Studio or IDE of choice
 Current Warnings: </br>
 ![Warning_LIST_Christian_Apostoli_21](https://user-images.githubusercontent.com/54412557/145846737-ae3319d2-165c-4834-8635-581a9e2584b7.PNG)
 - Curent Challenges
-   - storyID jumping by two occasionally
-   - changing the status of a story and having the csv reflect the change
-   - writing developers into the csv
+   - StoryID jumping by two occasionally
+   - Changing the status of a story and having the csv reflect the change
+   - Writing developers into the csv
 
 - Future Goals or Contributions
   - Create a frontend using a GUI or website
@@ -80,7 +80,7 @@ Final Milestone:
 - Class Diagrams
 - Reduced compiler warnings
 - External documentation generated through Doxygen
-- code styled according to the Google style guide for C++
+- Code styled according to the Google style guide for C++
 
 ## Key Programming Concepts Utilized
 - Design and implement a class. [Usage]
@@ -111,5 +111,5 @@ Final Milestone:
   - Shown by following google style guide
 
 - Follow best practices for documentation
-   - shown in external documentation with doxygen
-   - shown in header comment docs for every file and function definition, and for most data structures
+   - Shown in external documentation with doxygen
+   - Shown in header comment docs for every file and function definition, and for most data structures
